@@ -1,0 +1,280 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: RHS_NORM
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at error.f(67,11)
+   remark #15389: vectorization support: reference rms(m) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.300
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 2.500 
+   remark #15478: estimated potential speedup: 1.170 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at error.f(67,11)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at error.f(87,14)
+<Distributed chunk1>
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at error.f(86,11)
+      remark #15388: vectorization support: reference grid_points(d) has aligned access   [ error.f(87,23) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.579
+      remark #15355: vectorization support: rms(m) is double type reduction   [ error.f(87,14) ]
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 33 
+      remark #15477: vector cost: 19.000 
+      remark #15478: estimated potential speedup: 1.060 
+      remark #15486: divides: 1 
+      remark #15487: type converts: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at error.f(86,11)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at error.f(87,14)
+<Peeled loop for vectorization, Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at error.f(87,14)
+<Distributed chunk2>
+   remark #15388: vectorization support: reference rms(m) has aligned access   [ error.f(89,11) ]
+   remark #15388: vectorization support: reference rms(m) has aligned access   [ error.f(89,26) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.147
+   remark #15301: PARTIAL LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 44 
+   remark #15477: vector cost: 17.000 
+   remark #15478: estimated potential speedup: 1.800 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at error.f(87,14)
+<Remainder loop for vectorization, Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at error.f(70,7)
+   remark #15388: vectorization support: reference %.2.7_2fast_red_auto.48(:) has aligned access
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 2.000 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at error.f(70,7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at error.f(73,8)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at error.f(75,14)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at error.f(76,17)
+         remark #15389: vectorization support: reference rhs_(m,i,j,k) has unaligned access   [ error.f(77,20) ]
+         remark #15388: vectorization support: reference %.2.7_2fast_red_auto.48(m) has aligned access   [ error.f(78,20) ]
+         remark #15388: vectorization support: reference %.2.7_2fast_red_auto.48(m) has aligned access   [ error.f(78,29) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.208
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 12 
+         remark #15477: vector cost: 6.000 
+         remark #15478: estimated potential speedup: 1.460 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at error.f(76,17)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at error.f(70,7)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between rms (70:7) and rms (70:7)
+   remark #15346: vector dependence: assumed ANTI dependence between rms (70:7) and rms (70:7)
+LOOP END
+
+LOOP BEGIN at error.f(70,7)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between (unknown,:)%%.2.7_2fast_red_tmpl.50(:) (70:7) and (unknown,:)%%.2.7_2fast_red_tmpl.50 (70:7)
+   remark #15346: vector dependence: assumed ANTI dependence between (unknown,:)%%.2.7_2fast_red_tmpl.50 (70:7) and (unknown,:)%%.2.7_2fast_red_tmpl.50(:) (70:7)
+LOOP END
+===========================================================================
+
+Begin optimization report for: ERROR_NORM
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at error.f(22,11)
+   remark #15389: vectorization support: reference rms(m) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.300
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 2.500 
+   remark #15478: estimated potential speedup: 1.170 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at error.f(22,11)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at error.f(48,14)
+<Distributed chunk1>
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at error.f(47,11)
+      remark #15388: vectorization support: reference grid_points(d) has aligned access   [ error.f(48,23) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.579
+      remark #15355: vectorization support: rms(m) is double type reduction   [ error.f(48,14) ]
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 33 
+      remark #15477: vector cost: 19.000 
+      remark #15478: estimated potential speedup: 1.060 
+      remark #15486: divides: 1 
+      remark #15487: type converts: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at error.f(47,11)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at error.f(48,14)
+<Peeled loop for vectorization, Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at error.f(48,14)
+<Distributed chunk2>
+   remark #15388: vectorization support: reference rms(m) has aligned access   [ error.f(50,11) ]
+   remark #15388: vectorization support: reference rms(m) has aligned access   [ error.f(50,26) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.147
+   remark #15301: PARTIAL LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 44 
+   remark #15477: vector cost: 17.000 
+   remark #15478: estimated potential speedup: 1.800 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at error.f(48,14)
+<Remainder loop for vectorization, Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at error.f(25,7)
+   remark #15388: vectorization support: reference %.2.8_2fast_red_auto.52(:) has aligned access
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 2.000 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at error.f(25,7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at error.f(29,8)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at error.f(33,14)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at error.f(38,26)
+         remark #15389: vectorization support: reference u_(m,i,j,k) has unaligned access
+         remark #15388: vectorization support: reference u_exact(m) has aligned access
+         remark #15388: vectorization support: reference %.2.8_2fast_red_auto.52(m) has aligned access   [ error.f(39,20) ]
+         remark #15388: vectorization support: reference %.2.8_2fast_red_auto.52(m) has aligned access   [ error.f(39,29) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.179
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 2 
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 15 
+         remark #15477: vector cost: 7.000 
+         remark #15478: estimated potential speedup: 1.560 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at error.f(38,26)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at error.f(25,7)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between rms (25:7) and rms (25:7)
+   remark #15346: vector dependence: assumed ANTI dependence between rms (25:7) and rms (25:7)
+LOOP END
+
+LOOP BEGIN at error.f(25,7)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between (unknown,:)%%.2.8_2fast_red_tmpl.54(:) (25:7) and (unknown,:)%%.2.8_2fast_red_tmpl.54 (25:7)
+   remark #15346: vector dependence: assumed ANTI dependence between (unknown,:)%%.2.8_2fast_red_tmpl.54 (25:7) and (unknown,:)%%.2.8_2fast_red_tmpl.54(:) (25:7)
+LOOP END
+===========================================================================

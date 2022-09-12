@@ -1,0 +1,1114 @@
+   ============================================
+   =      NAS PARALLEL BENCHMARKS 3.4         =
+   =      OpenMP Versions                     =
+   =      Fortran/C                           =
+   ============================================
+
+cd UA; make CLASS=B
+make[1]: Entering directory `/home/users/fpmjunior/sbac-2020-serpa/NPB/NPB3.4-OMP/UA'
+make[2]: Entering directory `/home/users/fpmjunior/sbac-2020-serpa/NPB/NPB3.4-OMP/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/users/fpmjunior/sbac-2020-serpa/NPB/NPB3.4-OMP/sys'
+../sys/setparams ua B
+make.def modified. Rebuilding npbparams.h just in case
+rm -f npbparams.h
+../sys/setparams ua B
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 ua_data.f
+Obsolescent: ua_data.f, line 9: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 ua.f
+Obsolescent: ua.f, line 44: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: vec( 103): ua.f, line 122: Unvectorized loop.
+nfort: vec( 110): ua.f, line 122: Vectorization obstructive procedure reference.: TIMER_CLEAR
+nfort: vec( 103): ua.f, line 166: Unvectorized loop.
+nfort: vec( 110): ua.f, line 166: Vectorization obstructive procedure reference.: TIMER_CLEAR
+nfort: par(1801): ua.f, line 182: Parallel routine generated.: MAIN_$1
+nfort: vec( 110): ua.f, line 184: Vectorization obstructive procedure reference.: LAPLACIAN
+nfort: par(1803): ua.f, line 184: Parallelized by "do".
+nfort: vec( 103): ua.f, line 184: Unvectorized loop.
+nfort: par(1803): ua.f, line 190: Parallelized by "do".
+nfort: vec( 103): ua.f, line 190: Unvectorized loop.
+nfort: vec( 113): ua.f, line 190: Overhead of loop division is too large.
+nfort: vec( 101): ua.f, line 191: Vectorized loop.
+nfort: opt(1418): ua.f, line 192: Constant-length loop is expanded.
+nfort: opt(1418): ua.f, line 193: Constant-length loop is expanded.
+nfort: par(1801): ua.f, line 208: Parallel routine generated.: MAIN_$2
+nfort: par(1803): ua.f, line 209: Parallelized by "do".
+nfort: vec( 103): ua.f, line 210: Unvectorized loop.
+nfort: vec( 110): ua.f, line 210: Vectorization obstructive procedure reference.: FACEV
+nfort: vec( 103): ua.f, line 260: Unvectorized loop.
+nfort: vec( 110): ua.f, line 260: Vectorization obstructive procedure reference.: TIMER_READ
+nfort: vec( 103): ua.f, line 267: Unvectorized loop.
+nfort: vec( 180): ua.f, line 267: I/O statement obstructs vectorization.
+nfort: opt(1118): ua.f, line 268: This I/O statement inhibits optimization of loop.
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 convect.f
+Obsolescent: convect.f, line 2: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: opt(1418): convect.f, line 33: Constant-length loop is expanded.
+nfort: par(1801): convect.f, line 39: Parallel routine generated.: CONVECT$1
+nfort: par(1803): convect.f, line 43: Parallelized by "do".
+nfort: opt(1418): convect.f, line 48: Constant-length loop is expanded.
+nfort: opt(1418): convect.f, line 51: Constant-length loop is expanded.
+nfort: opt(1418): convect.f, line 54: Constant-length loop is expanded.
+nfort: vec( 102): convect.f, line 58: Partially vectorized loop.
+nfort: vec( 101): convect.f, line 59: Vectorized loop.
+nfort: vec( 101): convect.f, line 60: Vectorized loop.
+nfort: vec( 128): convect.f, line 61: Fused multiply-add operation applied.
+nfort: opt(1418): convect.f, line 69: Constant-length loop is expanded.
+nfort: vec( 128): convect.f, line 70: Fused multiply-add operation applied.
+nfort: opt(1418): convect.f, line 74: Constant-length loop is expanded.
+nfort: vec( 128): convect.f, line 75: Fused multiply-add operation applied.
+nfort: opt(1418): convect.f, line 79: Constant-length loop is expanded.
+nfort: vec( 128): convect.f, line 80: Fused multiply-add operation applied.
+nfort: vec( 128): convect.f, line 84: Fused multiply-add operation applied.
+nfort: vec( 128): convect.f, line 85: Fused multiply-add operation applied.
+nfort: vec( 102): convect.f, line 91: Partially vectorized loop.
+nfort: vec( 101): convect.f, line 92: Vectorized loop.
+nfort: vec( 101): convect.f, line 93: Vectorized loop.
+nfort: vec( 128): convect.f, line 94: Fused multiply-add operation applied.
+nfort: opt(1418): convect.f, line 102: Constant-length loop is expanded.
+nfort: vec( 128): convect.f, line 103: Fused multiply-add operation applied.
+nfort: opt(1418): convect.f, line 107: Constant-length loop is expanded.
+nfort: vec( 128): convect.f, line 108: Fused multiply-add operation applied.
+nfort: opt(1418): convect.f, line 112: Constant-length loop is expanded.
+nfort: vec( 128): convect.f, line 113: Fused multiply-add operation applied.
+nfort: vec( 128): convect.f, line 117: Fused multiply-add operation applied.
+nfort: vec( 128): convect.f, line 118: Fused multiply-add operation applied.
+nfort: vec( 102): convect.f, line 123: Partially vectorized loop.
+nfort: vec( 101): convect.f, line 124: Vectorized loop.
+nfort: vec( 101): convect.f, line 125: Vectorized loop.
+nfort: vec( 128): convect.f, line 126: Fused multiply-add operation applied.
+nfort: opt(1418): convect.f, line 134: Constant-length loop is expanded.
+nfort: vec( 128): convect.f, line 135: Fused multiply-add operation applied.
+nfort: opt(1418): convect.f, line 139: Constant-length loop is expanded.
+nfort: vec( 128): convect.f, line 140: Fused multiply-add operation applied.
+nfort: opt(1418): convect.f, line 144: Constant-length loop is expanded.
+nfort: vec( 128): convect.f, line 145: Fused multiply-add operation applied.
+nfort: vec( 128): convect.f, line 149: Fused multiply-add operation applied.
+nfort: vec( 128): convect.f, line 150: Fused multiply-add operation applied.
+nfort: vec( 102): convect.f, line 155: Partially vectorized loop.
+nfort: vec( 101): convect.f, line 156: Vectorized loop.
+nfort: vec( 101): convect.f, line 157: Vectorized loop.
+nfort: vec( 128): convect.f, line 158: Fused multiply-add operation applied.
+nfort: opt(1418): convect.f, line 166: Constant-length loop is expanded.
+nfort: vec( 128): convect.f, line 167: Fused multiply-add operation applied.
+nfort: opt(1418): convect.f, line 171: Constant-length loop is expanded.
+nfort: vec( 128): convect.f, line 172: Fused multiply-add operation applied.
+nfort: opt(1418): convect.f, line 176: Constant-length loop is expanded.
+nfort: vec( 128): convect.f, line 177: Fused multiply-add operation applied.
+nfort: vec( 128): convect.f, line 181: Fused multiply-add operation applied.
+nfort: vec( 128): convect.f, line 182: Fused multiply-add operation applied.
+nfort: vec( 103): convect.f, line 189: Unvectorized loop.
+nfort: vec( 110): convect.f, line 189: Vectorization obstructive procedure reference.: FACEV
+nfort: vec( 101): convect.f, line 196: Vectorized loop.
+nfort: opt(1418): convect.f, line 197: Constant-length loop is expanded.
+nfort: vec( 128): convect.f, line 198: Fused multiply-add operation applied.
+nfort: vec( 128): convect.f, line 200: Fused multiply-add operation applied.
+nfort: par(1801): convect.f, line 218: Parallel routine generated.: CONVECT$2
+nfort: par(1803): convect.f, line 219: Parallelized by "do".
+nfort: vec( 101): convect.f, line 219: Vectorized loop.
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 diffuse.f
+Warning: diffuse.f, line 243: Unused local variable IX
+Obsolescent: diffuse.f, line 2: Fixed source form
+[NEC Fortran Compiler normal termination, 2 warnings]
+nfort: par(1801): diffuse.f, line 25: Parallel routine generated.: DIFFUSION$1
+nfort: par(1803): diffuse.f, line 26: Parallelized by "do".
+nfort: vec( 101): diffuse.f, line 26: Vectorized loop.
+nfort: par(1801): diffuse.f, line 38: Parallel routine generated.: DIFFUSION$2
+nfort: par(1803): diffuse.f, line 40: Parallelized by "do".
+nfort: vec( 101): diffuse.f, line 42: Vectorized loop.
+nfort: opt(1418): diffuse.f, line 43: Constant-length loop is expanded.
+nfort: vec( 128): diffuse.f, line 45: Fused multiply-add operation applied.
+nfort: vec( 126): diffuse.f, line 45: Idiom detected.: SUM
+nfort: par(1803): diffuse.f, line 54: Parallelized by "do".
+nfort: vec( 101): diffuse.f, line 54: Vectorized loop.
+nfort: vec( 128): diffuse.f, line 56: Fused multiply-add operation applied.
+nfort: vec( 126): diffuse.f, line 56: Idiom detected.: SUM
+nfort: par(1807): diffuse.f, line 59: Critical-construct generated.
+nfort: par(1809): diffuse.f, line 59: Barrier synchronization.
+nfort: vec( 110): diffuse.f, line 65: Vectorization obstructive procedure reference.: ADDS2M1
+nfort: vec( 110): diffuse.f, line 65: Vectorization obstructive procedure reference.: ADDS1M1
+nfort: vec( 110): diffuse.f, line 65: Vectorization obstructive procedure reference.: TRANSFB
+nfort: vec( 110): diffuse.f, line 65: Vectorization obstructive procedure reference.: TIMER_STOP
+nfort: vec( 110): diffuse.f, line 65: Vectorization obstructive procedure reference.: TIMER_START
+nfort: vec( 110): diffuse.f, line 65: Vectorization obstructive procedure reference.: TRANSF
+nfort: vec( 109): diffuse.f, line 65: Vectorization obstructive statement.
+nfort: vec( 103): diffuse.f, line 65: Unvectorized loop.
+nfort: par(1801): diffuse.f, line 68: Parallel routine generated.: DIFFUSION$3
+nfort: par(1803): diffuse.f, line 72: Parallelized by "do".
+nfort: vec( 101): diffuse.f, line 74: Vectorized loop.
+nfort: opt(1418): diffuse.f, line 75: Constant-length loop is expanded.
+nfort: vec( 128): diffuse.f, line 77: Fused multiply-add operation applied.
+nfort: vec( 126): diffuse.f, line 77: Idiom detected.: SUM
+nfort: par(1803): diffuse.f, line 85: Parallelized by "do".
+nfort: vec( 101): diffuse.f, line 85: Vectorized loop.
+nfort: vec( 128): diffuse.f, line 87: Fused multiply-add operation applied.
+nfort: vec( 126): diffuse.f, line 87: Idiom detected.: SUM
+nfort: par(1807): diffuse.f, line 90: Critical-construct generated.
+nfort: par(1809): diffuse.f, line 90: Barrier synchronization.
+nfort: par(1801): diffuse.f, line 108: Parallel routine generated.: DIFFUSION$4
+nfort: vec( 110): diffuse.f, line 109: Vectorization obstructive procedure reference.: LAPLACIAN
+nfort: par(1803): diffuse.f, line 109: Parallelized by "do".
+nfort: vec( 103): diffuse.f, line 109: Unvectorized loop.
+nfort: par(1801): diffuse.f, line 121: Parallel routine generated.: DIFFUSION$5
+nfort: par(1803): diffuse.f, line 122: Parallelized by "do".
+nfort: vec( 103): diffuse.f, line 123: Unvectorized loop.
+nfort: vec( 110): diffuse.f, line 123: Vectorization obstructive procedure reference.: FACEV
+nfort: par(1801): diffuse.f, line 133: Parallel routine generated.: DIFFUSION$6
+nfort: par(1803): diffuse.f, line 135: Parallelized by "do".
+nfort: vec( 103): diffuse.f, line 135: Unvectorized loop.
+nfort: vec( 113): diffuse.f, line 135: Overhead of loop division is too large.
+nfort: vec( 101): diffuse.f, line 136: Vectorized loop.
+nfort: opt(1418): diffuse.f, line 137: Constant-length loop is expanded.
+nfort: opt(1418): diffuse.f, line 138: Constant-length loop is expanded.
+nfort: vec( 128): diffuse.f, line 139: Fused multiply-add operation applied.
+nfort: vec( 126): diffuse.f, line 139: Idiom detected.: SUM
+nfort: par(1803): diffuse.f, line 147: Parallelized by "do".
+nfort: vec( 101): diffuse.f, line 147: Vectorized loop.
+nfort: vec( 128): diffuse.f, line 149: Fused multiply-add operation applied.
+nfort: vec( 126): diffuse.f, line 149: Idiom detected.: SUM
+nfort: par(1807): diffuse.f, line 152: Critical-construct generated.
+nfort: par(1809): diffuse.f, line 152: Barrier synchronization.
+nfort: vec( 103): diffuse.f, line 191: Unvectorized loop.
+nfort: vec( 113): diffuse.f, line 191: Overhead of loop division is too large.
+nfort: vec( 101): diffuse.f, line 192: Vectorized loop.
+nfort: opt(1418): diffuse.f, line 193: Constant-length loop is expanded.
+nfort: opt(1418): diffuse.f, line 194: Constant-length loop is expanded.
+nfort: vec( 126): diffuse.f, line 195: Idiom detected.: SUM
+nfort: vec( 103): diffuse.f, line 202: Unvectorized loop.
+nfort: vec( 113): diffuse.f, line 202: Overhead of loop division is too large.
+nfort: vec( 101): diffuse.f, line 203: Vectorized loop.
+nfort: opt(1418): diffuse.f, line 204: Constant-length loop is expanded.
+nfort: opt(1418): diffuse.f, line 205: Constant-length loop is expanded.
+nfort: vec( 126): diffuse.f, line 206: Idiom detected.: SUM
+nfort: vec( 101): diffuse.f, line 214: Vectorized loop.
+nfort: opt(1418): diffuse.f, line 215: Constant-length loop is expanded.
+nfort: opt(1418): diffuse.f, line 216: Constant-length loop is expanded.
+nfort: vec( 128): diffuse.f, line 217: Fused multiply-add operation applied.
+nfort: vec( 101): diffuse.f, line 231: Vectorized loop.
+nfort: opt(1418): diffuse.f, line 232: Constant-length loop is expanded.
+nfort: opt(1418): diffuse.f, line 233: Constant-length loop is expanded.
+nfort: vec( 128): diffuse.f, line 234: Fused multiply-add operation applied.
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 adapt.f
+Warning: adapt.f, line 279: Unused local variable II
+Warning: adapt.f, line 279: Unused local variable NTEMP
+Warning: adapt.f, line 279: Unused local variable NTEMP1
+Warning: adapt.f, line 279: Unused local variable NTEMPMIN
+Warning: adapt.f, line 621: Unused local variable NTEMP1
+Warning: adapt.f, line 704: Unused local variable ISIDE
+Obsolescent: adapt.f, line 2: Fixed source form
+[NEC Fortran Compiler normal termination, 7 warnings]
+nfort: vec( 103): adapt.f, line 35: Unvectorized loop.
+nfort: vec( 110): adapt.f, line 35: Vectorization obstructive procedure reference.: CHECK_REFINE
+nfort: par(1801): adapt.f, line 56: Parallel routine generated.: ADAPTATION$1
+nfort: par(1803): adapt.f, line 57: Parallelized by "do".
+nfort: vec( 101): adapt.f, line 57: Vectorized loop.
+nfort: vec( 103): adapt.f, line 62: Unvectorized loop.
+nfort: vec( 110): adapt.f, line 62: Vectorization obstructive procedure reference.: FIND_COARSEN
+nfort: vec( 110): adapt.f, line 62: Vectorization obstructive procedure reference.: DO_COARSEN
+nfort: par(1801): adapt.f, line 91: Parallel routine generated.: ADAPTATION$2
+nfort: par(1803): adapt.f, line 92: Parallelized by "do".
+nfort: vec( 101): adapt.f, line 92: Vectorized loop.
+nfort: par(1801): adapt.f, line 138: Parallel routine generated.: DO_COARSEN$1
+nfort: par(1803): adapt.f, line 140: Parallelized by "do".
+nfort: vec( 101): adapt.f, line 140: Vectorized loop.
+nfort: par(1803): adapt.f, line 146: Parallelized by "do".
+nfort: vec( 101): adapt.f, line 146: Vectorized loop.
+nfort: par(1801): adapt.f, line 155: Parallel routine generated.: DO_COARSEN$2
+nfort: par(1803): adapt.f, line 158: Parallelized by "do".
+nfort: vec( 101): adapt.f, line 186: Vectorized loop.
+nfort: vec( 101): adapt.f, line 193: Vectorized loop.
+nfort: vec( 103): adapt.f, line 200: Unvectorized loop.
+nfort: vec( 110): adapt.f, line 200: Vectorization obstructive procedure reference.: ICHECK
+nfort: vec( 101): adapt.f, line 217: Vectorized loop.
+nfort: vec( 101): adapt.f, line 221: Vectorized loop.
+nfort: par(1801): adapt.f, line 242: Parallel routine generated.: DO_COARSEN$3
+nfort: par(1803): adapt.f, line 243: Parallelized by "do".
+nfort: vec( 101): adapt.f, line 243: Vectorized loop.
+nfort: par(1801): adapt.f, line 258: Parallel routine generated.: DO_COARSEN$4
+nfort: vec( 110): adapt.f, line 259: Vectorization obstructive procedure reference.: MERGING
+nfort: par(1803): adapt.f, line 259: Parallelized by "do".
+nfort: vec( 103): adapt.f, line 259: Unvectorized loop.
+nfort: par(1801): adapt.f, line 302: Parallel routine generated.: DO_REFINE$1
+nfort: par(1803): adapt.f, line 303: Parallelized by "do".
+nfort: vec( 101): adapt.f, line 303: Vectorized loop.
+nfort: par(1801): adapt.f, line 323: Parallel routine generated.: DO_REFINE$2
+nfort: par(1803): adapt.f, line 324: Parallelized by "do".
+nfort: vec( 101): adapt.f, line 324: Vectorized loop.
+nfort: par(1801): adapt.f, line 335: Parallel routine generated.: DO_REFINE$3
+nfort: par(1803): adapt.f, line 336: Parallelized by "do".
+nfort: vec( 101): adapt.f, line 336: Vectorized loop.
+nfort: par(1801): adapt.f, line 362: Parallel routine generated.: DO_REFINE$4
+nfort: par(1803): adapt.f, line 366: Parallelized by "do".
+nfort: vec( 101): adapt.f, line 374: Vectorized loop.
+nfort: vec( 101): adapt.f, line 379: Vectorized loop.
+nfort: opt(1418): adapt.f, line 381: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 382: Constant-length loop is expanded.
+nfort: vec( 103): adapt.f, line 399: Unvectorized loop.
+nfort: vec( 110): adapt.f, line 399: Vectorization obstructive procedure reference.: R_INIT
+nfort: vec( 110): adapt.f, line 399: Vectorization obstructive procedure reference.: NR_INIT
+nfort: opt(1025): adapt.f, line 402: Reference to this procedure inhibits optimization.: NR_INIT
+nfort: vec( 101): adapt.f, line 411: Vectorized loop.
+nfort: opt(1418): adapt.f, line 425: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 426: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 432: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 433: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 439: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 444: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 452: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 460: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 461: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 467: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 475: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 479: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 484: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 485: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 490: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 491: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 496: Constant-length loop is expanded.
+nfort: opt(1033): adapt.f, line 509: Potential multiple store conflict -- use directive if OK.: SJE
+nfort: opt(1033): adapt.f, line 509: Potential multiple store conflict -- use directive if OK.: CBC
+nfort: vec( 103): adapt.f, line 509: Unvectorized loop.
+nfort: vec( 107): adapt.f, line 509: Iteration count is too small.
+nfort: opt(1418): adapt.f, line 516: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 527: Constant-length loop is expanded.
+nfort: opt(1033): adapt.f, line 529: Potential multiple store conflict -- use directive if OK.: SJE
+nfort: opt(1019): adapt.f, line 536: Feedback of scalar value from one loop pass to another.: NTEMP
+nfort: opt(1418): adapt.f, line 544: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 570: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 581: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 603: Constant-length loop is expanded.
+nfort: opt(1062): adapt.f, line 609: Too many data dependency problems.
+nfort: par(1801): adapt.f, line 722: Parallel routine generated.: FIND_COARSEN$1
+nfort: vec( 110): adapt.f, line 724: Vectorization obstructive procedure reference.: IFTOUCH
+nfort: par(1803): adapt.f, line 724: Parallelized by "do".
+nfort: vec( 101): adapt.f, line 729: Vectorized loop.
+nfort: par(1801): adapt.f, line 763: Parallel routine generated.: FIND_REFINE$1
+nfort: vec( 110): adapt.f, line 765: Vectorization obstructive procedure reference.: IFTOUCH
+nfort: par(1803): adapt.f, line 765: Parallelized by "do".
+nfort: vec( 103): adapt.f, line 765: Unvectorized loop.
+nfort: par(1801): adapt.f, line 796: Parallel routine generated.: CHECK_REFINE$1
+nfort: par(1803): adapt.f, line 798: Parallelized by "do".
+nfort: vec( 103): adapt.f, line 816: Unvectorized loop.
+nfort: vec( 110): adapt.f, line 816: Vectorization obstructive procedure reference.: IFCOR
+nfort: vec( 103): adapt.f, line 831: Unvectorized loop.
+nfort: vec( 113): adapt.f, line 831: Overhead of loop division is too large.
+nfort: vec( 122): adapt.f, line 835: Dependency unknown. Unvectorizable dependency is assumed.: ICH
+nfort: vec( 120): adapt.f, line 837: Unvectorizable dependency.: IFREPEAT$389
+nfort: vec( 101): adapt.f, line 923: Vectorized loop.
+nfort: opt(1418): adapt.f, line 924: Constant-length loop is expanded.
+nfort: vec( 128): adapt.f, line 925: Fused multiply-add operation applied.
+nfort: vec( 128): adapt.f, line 926: Fused multiply-add operation applied.
+nfort: vec( 101): adapt.f, line 932: Vectorized loop.
+nfort: opt(1418): adapt.f, line 933: Constant-length loop is expanded.
+nfort: vec( 128): adapt.f, line 934: Fused multiply-add operation applied.
+nfort: vec( 128): adapt.f, line 936: Fused multiply-add operation applied.
+nfort: vec( 128): adapt.f, line 938: Fused multiply-add operation applied.
+nfort: vec( 128): adapt.f, line 940: Fused multiply-add operation applied.
+nfort: vec( 101): adapt.f, line 950: Vectorized loop.
+nfort: opt(1800): adapt.f, line 951: Idiom detected (matrix multiply).
+nfort: vec( 128): adapt.f, line 953: Fused multiply-add operation applied.
+nfort: vec( 128): adapt.f, line 955: Fused multiply-add operation applied.
+nfort: vec( 128): adapt.f, line 957: Fused multiply-add operation applied.
+nfort: vec( 128): adapt.f, line 959: Fused multiply-add operation applied.
+nfort: vec( 128): adapt.f, line 961: Fused multiply-add operation applied.
+nfort: vec( 128): adapt.f, line 963: Fused multiply-add operation applied.
+nfort: opt(1800): adapt.f, line 965: Idiom detected (matrix multiply).
+nfort: opt(1418): adapt.f, line 1003: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 1006: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 1009: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 1013: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 1017: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 1020: Constant-length loop is expanded.
+nfort: vec( 102): adapt.f, line 1025: Partially vectorized loop.
+nfort: opt(1418): adapt.f, line 1028: Constant-length loop is expanded.
+nfort: opt(1036): adapt.f, line 1032: Potential feedback - use directive or compiler option if OK.: CBC
+nfort: opt(1036): adapt.f, line 1036: Potential feedback - use directive or compiler option if OK.: SJE
+nfort: vec( 122): adapt.f, line 1042: Dependency unknown. Unvectorizable dependency is assumed.: SJE
+nfort: vec( 122): adapt.f, line 1045: Dependency unknown. Unvectorizable dependency is assumed.: CBC
+nfort: opt(1418): adapt.f, line 1049: Constant-length loop is expanded.
+nfort: vec( 122): adapt.f, line 1051: Dependency unknown. Unvectorizable dependency is assumed.: CBC
+nfort: vec( 122): adapt.f, line 1052: Dependency unknown. Unvectorizable dependency is assumed.: SJE
+nfort: vec( 122): adapt.f, line 1053: Dependency unknown. Unvectorizable dependency is assumed.: IJEL
+nfort: vec( 122): adapt.f, line 1054: Dependency unknown. Unvectorizable dependency is assumed.: IJEL
+nfort: vec( 122): adapt.f, line 1055: Dependency unknown. Unvectorizable dependency is assumed.: SJE
+nfort: vec( 122): adapt.f, line 1056: Dependency unknown. Unvectorizable dependency is assumed.: IJEL
+nfort: vec( 122): adapt.f, line 1057: Dependency unknown. Unvectorizable dependency is assumed.: IJEL
+nfort: vec( 122): adapt.f, line 1059: Dependency unknown. Unvectorizable dependency is assumed.: CBC
+nfort: vec( 122): adapt.f, line 1065: Dependency unknown. Unvectorizable dependency is assumed.: CBC
+nfort: vec( 122): adapt.f, line 1066: Dependency unknown. Unvectorizable dependency is assumed.: IJEL
+nfort: vec( 122): adapt.f, line 1067: Dependency unknown. Unvectorizable dependency is assumed.: IJEL
+nfort: vec( 122): adapt.f, line 1068: Dependency unknown. Unvectorizable dependency is assumed.: SJE
+nfort: vec( 122): adapt.f, line 1069: Dependency unknown. Unvectorizable dependency is assumed.: SJE
+nfort: vec( 122): adapt.f, line 1070: Dependency unknown. Unvectorizable dependency is assumed.: SJE
+nfort: vec( 122): adapt.f, line 1071: Dependency unknown. Unvectorizable dependency is assumed.: SJE
+nfort: vec( 122): adapt.f, line 1073: Dependency unknown. Unvectorizable dependency is assumed.: CBC
+nfort: vec( 122): adapt.f, line 1074: Dependency unknown. Unvectorizable dependency is assumed.: IJEL
+nfort: vec( 122): adapt.f, line 1075: Dependency unknown. Unvectorizable dependency is assumed.: IJEL
+nfort: vec( 122): adapt.f, line 1076: Dependency unknown. Unvectorizable dependency is assumed.: SJE
+nfort: vec( 122): adapt.f, line 1079: Dependency unknown. Unvectorizable dependency is assumed.: CBC
+nfort: vec( 122): adapt.f, line 1080: Dependency unknown. Unvectorizable dependency is assumed.: SJE
+nfort: vec( 122): adapt.f, line 1081: Dependency unknown. Unvectorizable dependency is assumed.: SJE
+nfort: vec( 122): adapt.f, line 1082: Dependency unknown. Unvectorizable dependency is assumed.: SJE
+nfort: vec( 122): adapt.f, line 1083: Dependency unknown. Unvectorizable dependency is assumed.: SJE
+nfort: opt(1062): adapt.f, line 1086: Too many data dependency problems.
+nfort: opt(1593): adapt.f, line 1135: Loop nest collapsed into one loop.: IY
+nfort: vec( 101): adapt.f, line 1135: Vectorized loop.
+nfort: opt(1418): adapt.f, line 1140: Constant-length loop is expanded.
+nfort: vec( 128): adapt.f, line 1141: Fused multiply-add operation applied.
+nfort: opt(1418): adapt.f, line 1147: Constant-length loop is expanded.
+nfort: vec( 128): adapt.f, line 1148: Fused multiply-add operation applied.
+nfort: vec( 101): adapt.f, line 1172: Vectorized loop.
+nfort: opt(1418): adapt.f, line 1176: Constant-length loop is expanded.
+nfort: vec( 128): adapt.f, line 1177: Fused multiply-add operation applied.
+nfort: opt(1418): adapt.f, line 1183: Constant-length loop is expanded.
+nfort: vec( 128): adapt.f, line 1184: Fused multiply-add operation applied.
+nfort: opt(1593): adapt.f, line 1207: Loop nest collapsed into one loop.: IZ
+nfort: vec( 101): adapt.f, line 1207: Vectorized loop.
+nfort: opt(1418): adapt.f, line 1212: Constant-length loop is expanded.
+nfort: vec( 128): adapt.f, line 1213: Fused multiply-add operation applied.
+nfort: opt(1418): adapt.f, line 1219: Constant-length loop is expanded.
+nfort: vec( 128): adapt.f, line 1220: Fused multiply-add operation applied.
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 move.f
+Questionable: move.f, line 89: Variable JFACE set but never referenced
+Obsolescent: move.f, line 2: Fixed source form
+[NEC Fortran Compiler normal termination, 2 warnings]
+nfort: par(1801): move.f, line 18: Parallel routine generated.: MOVE$1
+nfort: vec( 110): move.f, line 21: Vectorization obstructive procedure reference.: COPY
+nfort: par(1803): move.f, line 21: Parallelized by "do".
+nfort: vec( 101): move.f, line 28: Vectorized loop.
+nfort: opt(1418): move.f, line 49: Constant-length loop is expanded.
+nfort: opt(1418): move.f, line 50: Constant-length loop is expanded.
+nfort: vec( 110): move.f, line 73: Vectorization obstructive procedure reference.: NCOPY
+nfort: vec( 110): move.f, line 73: Vectorization obstructive procedure reference.: COPY
+nfort: par(1803): move.f, line 73: Parallelized by "do".
+nfort: vec( 103): move.f, line 73: Unvectorized loop.
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 mason.f
+Obsolescent: mason.f, line 2: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): mason.f, line 37: Parallel routine generated.: MORTAR$1
+nfort: par(1803): mason.f, line 40: Parallelized by "do".
+nfort: vec( 101): mason.f, line 40: Vectorized loop.
+nfort: par(1801): mason.f, line 715: Parallel routine generated.: MORTAR$2
+nfort: par(1803): mason.f, line 716: Parallelized by "do".
+nfort: vec( 101): mason.f, line 716: Vectorized loop.
+nfort: par(1801): mason.f, line 728: Parallel routine generated.: MORTAR$3
+nfort: par(1803): mason.f, line 729: Parallelized by "do".
+nfort: vec( 110): mason.f, line 734: Vectorization obstructive procedure reference.: MORTAR_VERTEX
+nfort: vec( 103): mason.f, line 734: Unvectorized loop.
+nfort: opt(1025): mason.f, line 739: Reference to this procedure inhibits optimization.: MORTAR_VERTEX
+nfort: par(1801): mason.f, line 777: Parallel routine generated.: MORTAR$4
+nfort: par(1803): mason.f, line 780: Parallelized by "do".
+nfort: vec( 102): mason.f, line 780: Partially vectorized loop.
+nfort: vec( 113): mason.f, line 780: Overhead of loop division is too large.
+nfort: vec( 122): mason.f, line 844: Dependency unknown. Unvectorizable dependency is assumed.: NCON_EDGE
+nfort: vec( 122): mason.f, line 867: Dependency unknown. Unvectorizable dependency is assumed.: NCON_EDGE
+nfort: vec( 122): mason.f, line 906: Dependency unknown. Unvectorizable dependency is assumed.: NCON_EDGE
+nfort: vec( 122): mason.f, line 945: Dependency unknown. Unvectorizable dependency is assumed.: NCON_EDGE
+nfort: vec( 122): mason.f, line 998: Dependency unknown. Unvectorizable dependency is assumed.: NCON_EDGE
+nfort: vec( 122): mason.f, line 1033: Dependency unknown. Unvectorizable dependency is assumed.: NCON_EDGE
+nfort: vec( 122): mason.f, line 1053: Dependency unknown. Unvectorizable dependency is assumed.: NCON_EDGE
+nfort: vec( 122): mason.f, line 1102: Dependency unknown. Unvectorizable dependency is assumed.: NCON_EDGE
+nfort: vec( 122): mason.f, line 1137: Dependency unknown. Unvectorizable dependency is assumed.: NCON_EDGE
+nfort: vec( 122): mason.f, line 1157: Dependency unknown. Unvectorizable dependency is assumed.: NCON_EDGE
+nfort: vec( 122): mason.f, line 1177: Dependency unknown. Unvectorizable dependency is assumed.: NCON_EDGE
+nfort: par(1801): mason.f, line 1336: Parallel routine generated.: MORTAR$5
+nfort: par(1803): mason.f, line 1337: Parallelized by "do".
+nfort: vec( 101): mason.f, line 1337: Vectorized loop.
+nfort: par(1801): mason.f, line 1351: Parallel routine generated.: MORTAR$6
+nfort: par(1803): mason.f, line 1353: Parallelized by "do".
+nfort: vec( 110): mason.f, line 1379: Vectorization obstructive procedure reference.: MOR_NE
+nfort: vec( 110): mason.f, line 1379: Vectorization obstructive procedure reference.: MOR_EDGE
+nfort: vec( 110): mason.f, line 1379: Vectorization obstructive procedure reference.: MOR_ASSIGN
+nfort: vec( 103): mason.f, line 1379: Unvectorized loop.
+nfort: opt(1025): mason.f, line 1383: Reference to this procedure inhibits optimization.: MOR_ASSIGN
+nfort: opt(1418): mason.f, line 1442: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1443: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1455: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1456: Constant-length loop is expanded.
+nfort: par(1801): mason.f, line 1472: Parallel routine generated.: MORTAR$7
+nfort: par(1803): mason.f, line 1474: Parallelized by "do".
+nfort: vec( 110): mason.f, line 1475: Vectorization obstructive procedure reference.: EDGECOPY_S
+nfort: vec( 103): mason.f, line 1487: Unvectorized loop.
+nfort: vec( 107): mason.f, line 1487: Iteration count is too small.
+nfort: opt(1418): mason.f, line 1489: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1490: Constant-length loop is expanded.
+nfort: opt(1036): mason.f, line 1491: Potential feedback - use directive or compiler option if OK.: IDMO
+nfort: vec( 101): mason.f, line 1529: Vectorized loop.
+nfort: opt(1084): mason.f, line 1530: Branch out of the loop inhibits optimization.
+nfort: vec( 126): mason.f, line 1530: Idiom detected.: SEARCH
+nfort: opt(1418): mason.f, line 1577: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1600: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1605: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1610: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1615: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1646: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1650: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1665: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1671: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1682: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1688: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1699: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1704: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1730: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1733: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1737: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1740: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1744: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1747: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1751: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1754: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1777: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1781: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1787: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1791: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1797: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1801: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1807: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1811: Constant-length loop is expanded.
+nfort: vec( 101): mason.f, line 1835: Vectorized loop.
+nfort: opt(1418): mason.f, line 1844: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1863: Constant-length loop is expanded.
+nfort: vec( 110): mason.f, line 1932: Vectorization obstructive procedure reference.: IFSAME
+nfort: vec( 103): mason.f, line 1932: Unvectorized loop.
+nfort: opt(1025): mason.f, line 1947: Reference to this procedure inhibits optimization.: IFSAME
+nfort: opt(1418): mason.f, line 2222: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 2228: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 2235: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 2241: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 2248: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 2254: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 2261: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 2267: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 precond.f
+Obsolescent: precond.f, line 2: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: opt(1418): precond.f, line 16: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 17: Constant-length loop is expanded.
+nfort: par(1801): precond.f, line 24: Parallel routine generated.: SETUPPC$1
+nfort: vec( 110): precond.f, line 25: Vectorization obstructive procedure reference.: R_INIT
+nfort: par(1803): precond.f, line 25: Parallelized by "do".
+nfort: vec( 101): precond.f, line 29: Vectorized loop.
+nfort: opt(1418): precond.f, line 30: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 31: Constant-length loop is expanded.
+nfort: vec( 128): precond.f, line 32: Fused multiply-add operation applied.
+nfort: vec( 128): precond.f, line 37: Fused multiply-add operation applied.
+nfort: par(1801): precond.f, line 54: Parallel routine generated.: SETUPPC$2
+nfort: par(1803): precond.f, line 55: Parallelized by "do".
+nfort: vec( 101): precond.f, line 55: Vectorized loop.
+nfort: opt(1418): precond.f, line 90: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 91: Constant-length loop is expanded.
+nfort: vec( 101): precond.f, line 96: Vectorized loop.
+nfort: opt(1418): precond.f, line 99: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 100: Constant-length loop is expanded.
+nfort: vec( 128): precond.f, line 101: Fused multiply-add operation applied.
+nfort: par(1801): precond.f, line 107: Parallel routine generated.: SETPCMO_PRE$1
+nfort: par(1803): precond.f, line 109: Parallelized by "do".
+nfort: vec( 103): precond.f, line 119: Unvectorized loop.
+nfort: vec( 110): precond.f, line 119: Vectorization obstructive procedure reference.: LAPLACIAN
+nfort: vec( 110): precond.f, line 119: Vectorization obstructive procedure reference.: R_INIT
+nfort: opt(1025): precond.f, line 120: Reference to this procedure inhibits optimization.: R_INIT
+nfort: vec( 103): precond.f, line 143: Unvectorized loop.
+nfort: vec( 110): precond.f, line 143: Vectorization obstructive procedure reference.: LAPLACIAN
+nfort: vec( 110): precond.f, line 143: Vectorization obstructive procedure reference.: TRANSFB_NC1
+nfort: vec( 110): precond.f, line 143: Vectorization obstructive procedure reference.: TRANSF_NC
+nfort: vec( 110): precond.f, line 143: Vectorization obstructive procedure reference.: R_INIT
+nfort: opt(1025): precond.f, line 144: Reference to this procedure inhibits optimization.: R_INIT
+nfort: vec( 103): precond.f, line 173: Unvectorized loop.
+nfort: vec( 110): precond.f, line 173: Vectorization obstructive procedure reference.: TRANSFB_NC1
+nfort: vec( 110): precond.f, line 173: Vectorization obstructive procedure reference.: TRANSFB_NC2
+nfort: vec( 110): precond.f, line 173: Vectorization obstructive procedure reference.: LAPLACIAN
+nfort: vec( 110): precond.f, line 173: Vectorization obstructive procedure reference.: TRANSFB_NC0
+nfort: vec( 110): precond.f, line 173: Vectorization obstructive procedure reference.: TRANSF_NC
+nfort: vec( 110): precond.f, line 173: Vectorization obstructive procedure reference.: R_INIT
+nfort: opt(1025): precond.f, line 174: Reference to this procedure inhibits optimization.: R_INIT
+nfort: opt(1418): precond.f, line 184: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 188: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 230: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 239: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 240: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 261: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 269: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 276: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 294: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 295: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 308: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 336: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 344: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 353: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 363: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 364: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 373: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 374: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 378: Constant-length loop is expanded.
+nfort: vec( 103): precond.f, line 386: Unvectorized loop.
+nfort: vec( 113): precond.f, line 386: Overhead of loop division is too large.
+nfort: opt(1418): precond.f, line 387: Constant-length loop is expanded.
+nfort: opt(1034): precond.f, line 388: Multiple store conflict.: P0
+nfort: vec( 122): precond.f, line 388: Dependency unknown. Unvectorizable dependency is assumed.: P0$77
+nfort: vec( 103): precond.f, line 396: Unvectorized loop.
+nfort: vec( 113): precond.f, line 396: Overhead of loop division is too large.
+nfort: opt(1418): precond.f, line 397: Constant-length loop is expanded.
+nfort: opt(1034): precond.f, line 398: Multiple store conflict.: P0
+nfort: vec( 122): precond.f, line 398: Dependency unknown. Unvectorizable dependency is assumed.: P0$77
+nfort: par(1801): precond.f, line 425: Parallel routine generated.: SETPCMO$1
+nfort: par(1803): precond.f, line 427: Parallelized by "do".
+nfort: vec( 101): precond.f, line 427: Vectorized loop.
+nfort: par(1803): precond.f, line 433: Parallelized by "do".
+nfort: vec( 101): precond.f, line 434: Vectorized loop.
+nfort: opt(1418): precond.f, line 435: Constant-length loop is expanded.
+nfort: par(1801): precond.f, line 443: Parallel routine generated.: SETPCMO$2
+nfort: par(1803): precond.f, line 446: Parallelized by "do".
+nfort: vec( 103): precond.f, line 482: Unvectorized loop.
+nfort: vec( 110): precond.f, line 482: Vectorization obstructive procedure reference.: COM_DPC
+nfort: vec( 103): precond.f, line 531: Unvectorized loop.
+nfort: vec( 107): precond.f, line 531: Iteration count is too small.
+nfort: opt(1418): precond.f, line 532: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 533: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 534: Constant-length loop is expanded.
+nfort: opt(1033): precond.f, line 536: Potential multiple store conflict -- use directive if OK.: DPCMOR
+nfort: opt(1418): precond.f, line 546: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 559: Constant-length loop is expanded.
+nfort: vec( 103): precond.f, line 591: Unvectorized loop.
+nfort: vec( 113): precond.f, line 591: Overhead of loop division is too large.
+nfort: vec( 101): precond.f, line 591: Vectorized loop.
+nfort: opt(1418): precond.f, line 597: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 607: Constant-length loop is expanded.
+nfort: opt(1019): precond.f, line 617: Feedback of scalar value from one loop pass to another.: N
+nfort: vec( 121): precond.f, line 617: Unvectorizable dependency.
+nfort: vec( 121): precond.f, line 619: Unvectorizable dependency.
+nfort: vec( 121): precond.f, line 621: Unvectorizable dependency.
+nfort: vec( 121): precond.f, line 623: Unvectorizable dependency.
+nfort: vec( 121): precond.f, line 627: Unvectorizable dependency.
+nfort: vec( 121): precond.f, line 629: Unvectorizable dependency.
+nfort: vec( 121): precond.f, line 632: Unvectorizable dependency.
+nfort: vec( 121): precond.f, line 634: Unvectorizable dependency.
+nfort: vec( 101): precond.f, line 751: Vectorized loop.
+nfort: vec( 128): precond.f, line 753: Fused multiply-add operation applied.
+nfort: opt(1033): precond.f, line 757: Potential multiple store conflict -- use directive if OK.: DPCMOR
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 utils.f
+Obsolescent: utils.f, line 2: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): utils.f, line 12: Parallel routine generated.: RECIPROCAL$1
+nfort: par(1803): utils.f, line 13: Parallelized by "do".
+nfort: vec( 101): utils.f, line 13: Vectorized loop.
+nfort: par(1801): utils.f, line 31: Parallel routine generated.: R_INIT_OMP$1
+nfort: par(1803): utils.f, line 32: Parallelized by "do".
+nfort: vec( 101): utils.f, line 32: Vectorized loop.
+nfort: vec( 101): utils.f, line 50: Vectorized loop.
+nfort: par(1801): utils.f, line 66: Parallel routine generated.: NR_INIT_OMP$1
+nfort: par(1803): utils.f, line 67: Parallelized by "do".
+nfort: vec( 101): utils.f, line 67: Vectorized loop.
+nfort: vec( 101): utils.f, line 85: Vectorized loop.
+nfort: par(1801): utils.f, line 101: Parallel routine generated.: L_INIT_OMP$1
+nfort: par(1803): utils.f, line 102: Parallelized by "do".
+nfort: vec( 101): utils.f, line 102: Vectorized loop.
+nfort: vec( 101): utils.f, line 121: Vectorized loop.
+nfort: vec( 101): utils.f, line 139: Vectorized loop.
+nfort: par(1801): utils.f, line 155: Parallel routine generated.: ADDS2M1$1
+nfort: par(1803): utils.f, line 156: Parallelized by "do".
+nfort: vec( 101): utils.f, line 156: Vectorized loop.
+nfort: vec( 128): utils.f, line 157: Fused multiply-add operation applied.
+nfort: par(1801): utils.f, line 174: Parallel routine generated.: ADDS1M1$1
+nfort: par(1803): utils.f, line 175: Parallelized by "do".
+nfort: vec( 101): utils.f, line 175: Vectorized loop.
+nfort: vec( 128): utils.f, line 176: Fused multiply-add operation applied.
+nfort: par(1801): utils.f, line 194: Parallel routine generated.: COL2$1
+nfort: par(1803): utils.f, line 195: Parallelized by "do".
+nfort: vec( 101): utils.f, line 195: Vectorized loop.
+nfort: vec( 101): utils.f, line 213: Vectorized loop.
+nfort: par(1801): utils.f, line 230: Parallel routine generated.: ADD2$1
+nfort: par(1803): utils.f, line 231: Parallelized by "do".
+nfort: vec( 101): utils.f, line 231: Vectorized loop.
+nfort: par(1801): utils.f, line 252: Parallel routine generated.: CALC_NORM$1
+nfort: par(1803): utils.f, line 255: Parallelized by "do".
+nfort: vec( 103): utils.f, line 255: Unvectorized loop.
+nfort: vec( 113): utils.f, line 255: Overhead of loop division is too large.
+nfort: vec( 101): utils.f, line 258: Vectorized loop.
+nfort: opt(1418): utils.f, line 259: Constant-length loop is expanded.
+nfort: opt(1418): utils.f, line 260: Constant-length loop is expanded.
+nfort: vec( 128): utils.f, line 261: Fused multiply-add operation applied.
+nfort: vec( 126): utils.f, line 261: Idiom detected.: SUM
+nfort: par(1807): utils.f, line 268: Critical-construct generated.
+nfort: par(1809): utils.f, line 268: Barrier synchronization.
+nfort: vec( 103): utils.f, line 275: Unvectorized loop.
+nfort: vec( 108): utils.f, line 275: Unvectorizable loop structure.
+nfort: vec( 109): utils.f, line 293: Vectorization obstructive statement.
+nfort: vec( 103): utils.f, line 293: Unvectorized loop.
+nfort: par(1801): utils.f, line 295: Parallel routine generated.: PARALLEL_ADD$1
+nfort: par(1803): utils.f, line 296: Parallelized by "do".
+nfort: vec( 101): utils.f, line 298: Vectorized loop.
+nfort: par(1801): utils.f, line 308: Parallel routine generated.: PARALLEL_ADD$2
+nfort: par(1803): utils.f, line 309: Parallelized by "do".
+nfort: vec( 101): utils.f, line 309: Vectorized loop.
+nfort: opt(1589): utils.f, line 362: Outer loop moved inside inner loop(s).: IX
+nfort: vec( 101): utils.f, line 362: Vectorized loop.
+nfort: opt(1592): utils.f, line 364: Outer loop unrolled inside inner loop.: IZ
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 verify.f
+Obsolescent: verify.f, line 1: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 setup.f
+Obsolescent: setup.f, line 2: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: opt(1418): setup.f, line 14: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 19: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 26: Constant-length loop is expanded.
+nfort: vec( 101): setup.f, line 31: Vectorized loop.
+nfort: vec( 101): setup.f, line 76: Vectorized loop.
+nfort: opt(1418): setup.f, line 77: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 78: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 101: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 102: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 106: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 107: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 130: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 131: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 163: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 164: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 169: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 170: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 175: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 176: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 189: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 221: Constant-length loop is expanded.
+nfort: par(1801): setup.f, line 225: Parallel routine generated.: GEOM1$1
+nfort: par(1803): setup.f, line 227: Parallelized by "do".
+nfort: vec( 103): setup.f, line 227: Unvectorized loop.
+nfort: vec( 113): setup.f, line 227: Overhead of loop division is too large.
+nfort: vec( 103): setup.f, line 232: Unvectorized loop.
+nfort: vec( 113): setup.f, line 232: Overhead of loop division is too large.
+nfort: vec( 103): setup.f, line 233: Unvectorized loop.
+nfort: vec( 113): setup.f, line 233: Overhead of loop division is too large.
+nfort: vec( 101): setup.f, line 234: Vectorized loop.
+nfort: par(1801): setup.f, line 249: Parallel routine generated.: GEOM1$2
+nfort: par(1803): setup.f, line 250: Parallelized by "do".
+nfort: vec( 101): setup.f, line 252: Vectorized loop.
+nfort: opt(1418): setup.f, line 253: Constant-length loop is expanded.
+nfort: vec( 101): setup.f, line 281: Vectorized loop.
+nfort: opt(1418): setup.f, line 282: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 283: Constant-length loop is expanded.
+nfort: vec( 128): setup.f, line 284: Fused multiply-add operation applied.
+nfort: par(1801): setup.f, line 310: Parallel routine generated.: PREPWORK$1
+nfort: par(1803): setup.f, line 315: Parallelized by "do".
+nfort: vec( 101): setup.f, line 315: Vectorized loop.
+nfort: vec( 128): setup.f, line 316: Fused multiply-add operation applied.
+nfort: par(1803): setup.f, line 323: Parallelized by "do".
+nfort: vec( 103): setup.f, line 325: Unvectorized loop.
+nfort: vec( 110): setup.f, line 325: Vectorization obstructive procedure reference.: FACEV
+nfort: par(1803): setup.f, line 334: Parallelized by "do".
+nfort: vec( 101): setup.f, line 334: Vectorized loop.
+nfort: par(1803): setup.f, line 340: Parallelized by "do".
+nfort: vec( 103): setup.f, line 340: Unvectorized loop.
+nfort: vec( 113): setup.f, line 340: Overhead of loop division is too large.
+nfort: vec( 101): setup.f, line 341: Vectorized loop.
+nfort: opt(1418): setup.f, line 344: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 345: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 351: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 359: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 366: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 371: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 374: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 382: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 386: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 389: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 395: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 400: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 transfer.f
+Warning: transfer.f, line 610: Unused local variable TMP
+Obsolescent: transfer.f, line 2: Fixed source form
+[NEC Fortran Compiler normal termination, 2 warnings]
+nfort: par(1801): transfer.f, line 13: Parallel routine generated.: INIT_LOCKS$1
+nfort: par(1803): transfer.f, line 14: Parallelized by "do".
+nfort: vec( 103): transfer.f, line 14: Unvectorized loop.
+nfort: par(1801): transfer.f, line 39: Parallel routine generated.: TRANSF$1
+nfort: par(1803): transfer.f, line 41: Parallelized by "do".
+nfort: vec( 110): transfer.f, line 42: Vectorization obstructive procedure reference.: R_INIT
+nfort: opt(1025): transfer.f, line 75: Reference to this procedure inhibits optimization.: R_INIT
+nfort: vec( 102): transfer.f, line 78: Partially vectorized loop.
+nfort: opt(1036): transfer.f, line 79: Potential feedback - use directive or compiler option if OK.: TMP
+nfort: vec( 102): transfer.f, line 79: Partially vectorized loop.
+nfort: opt(1033): transfer.f, line 85: Potential multiple store conflict -- use directive if OK.: TMP
+nfort: opt(1036): transfer.f, line 85: Potential feedback - use directive or compiler option if OK.: TMP
+nfort: vec( 122): transfer.f, line 85: Dependency unknown. Unvectorizable dependency is assumed.: TMP$57
+nfort: opt(1418): transfer.f, line 89: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 91: Constant-length loop is expanded.
+nfort: opt(1036): transfer.f, line 93: Potential feedback - use directive or compiler option if OK.: TMP
+nfort: opt(1019): transfer.f, line 93: Feedback of scalar value from one loop pass to another.: TMP
+nfort: vec( 108): transfer.f, line 105: Unvectorizable loop structure.
+nfort: opt(1418): transfer.f, line 113: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 115: Constant-length loop is expanded.
+nfort: opt(1036): transfer.f, line 116: Potential feedback - use directive or compiler option if OK.
+nfort: opt(1019): transfer.f, line 116: Feedback of scalar value from one loop pass to another.
+nfort: vec( 103): transfer.f, line 122: Unvectorized loop.
+nfort: vec( 107): transfer.f, line 122: Iteration count is too small.
+nfort: opt(1036): transfer.f, line 128: Potential feedback - use directive or compiler option if OK.
+nfort: opt(1418): transfer.f, line 132: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 134: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 142: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 144: Constant-length loop is expanded.
+nfort: opt(1019): transfer.f, line 145: Feedback of scalar value from one loop pass to another.
+nfort: opt(1418): transfer.f, line 155: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 156: Constant-length loop is expanded.
+nfort: vec( 103): transfer.f, line 168: Unvectorized loop.
+nfort: vec( 107): transfer.f, line 168: Iteration count is too small.
+nfort: opt(1418): transfer.f, line 170: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 171: Constant-length loop is expanded.
+nfort: opt(1036): transfer.f, line 173: Potential feedback - use directive or compiler option if OK.
+nfort: opt(1418): transfer.f, line 180: Constant-length loop is expanded.
+nfort: vec( 103): transfer.f, line 189: Unvectorized loop.
+nfort: vec( 107): transfer.f, line 189: Iteration count is too small.
+nfort: opt(1418): transfer.f, line 191: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 192: Constant-length loop is expanded.
+nfort: opt(1036): transfer.f, line 194: Potential feedback - use directive or compiler option if OK.
+nfort: opt(1418): transfer.f, line 201: Constant-length loop is expanded.
+nfort: vec( 103): transfer.f, line 210: Unvectorized loop.
+nfort: vec( 107): transfer.f, line 210: Iteration count is too small.
+nfort: opt(1418): transfer.f, line 212: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 213: Constant-length loop is expanded.
+nfort: opt(1036): transfer.f, line 215: Potential feedback - use directive or compiler option if OK.
+nfort: opt(1418): transfer.f, line 222: Constant-length loop is expanded.
+nfort: vec( 103): transfer.f, line 231: Unvectorized loop.
+nfort: vec( 107): transfer.f, line 231: Iteration count is too small.
+nfort: opt(1418): transfer.f, line 233: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 234: Constant-length loop is expanded.
+nfort: opt(1036): transfer.f, line 236: Potential feedback - use directive or compiler option if OK.
+nfort: opt(1418): transfer.f, line 242: Constant-length loop is expanded.
+nfort: par(1801): transfer.f, line 277: Parallel routine generated.: TRANSFB$1
+nfort: par(1803): transfer.f, line 282: Parallelized by "do".
+nfort: vec( 101): transfer.f, line 282: Vectorized loop.
+nfort: par(1803): transfer.f, line 288: Parallelized by "do".
+nfort: vec( 102): transfer.f, line 336: Partially vectorized loop.
+nfort: vec( 113): transfer.f, line 336: Overhead of loop division is too large.
+nfort: vec( 102): transfer.f, line 338: Partially vectorized loop.
+nfort: opt(1033): transfer.f, line 342: Potential multiple store conflict -- use directive if OK.: TEMP
+nfort: opt(1036): transfer.f, line 342: Potential feedback - use directive or compiler option if OK.: TEMP
+nfort: vec( 122): transfer.f, line 342: Dependency unknown. Unvectorizable dependency is assumed.: TEMP$107
+nfort: opt(1418): transfer.f, line 348: Constant-length loop is expanded.
+nfort: vec( 128): transfer.f, line 350: Fused multiply-add operation applied.
+nfort: opt(1033): transfer.f, line 353: Potential multiple store conflict -- use directive if OK.: TOP
+nfort: opt(1418): transfer.f, line 357: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 359: Constant-length loop is expanded.
+nfort: vec( 128): transfer.f, line 361: Fused multiply-add operation applied.
+nfort: opt(1036): transfer.f, line 363: Potential feedback - use directive or compiler option if OK.: TEMP
+nfort: vec( 103): transfer.f, line 391: Unvectorized loop.
+nfort: opt(1418): transfer.f, line 393: Constant-length loop is expanded.
+nfort: opt(1097): transfer.f, line 398: This statement prevents loop optimization.
+nfort: vec( 103): transfer.f, line 415: Unvectorized loop.
+nfort: opt(1418): transfer.f, line 418: Constant-length loop is expanded.
+nfort: opt(1097): transfer.f, line 424: This statement prevents loop optimization.
+nfort: vec( 103): transfer.f, line 435: Unvectorized loop.
+nfort: opt(1418): transfer.f, line 436: Constant-length loop is expanded.
+nfort: opt(1097): transfer.f, line 440: This statement prevents loop optimization.
+nfort: vec( 103): transfer.f, line 451: Unvectorized loop.
+nfort: opt(1418): transfer.f, line 453: Constant-length loop is expanded.
+nfort: opt(1097): transfer.f, line 459: This statement prevents loop optimization.
+nfort: opt(1418): transfer.f, line 467: Constant-length loop is expanded.
+nfort: vec( 103): transfer.f, line 480: Unvectorized loop.
+nfort: opt(1418): transfer.f, line 482: Constant-length loop is expanded.
+nfort: opt(1097): transfer.f, line 488: This statement prevents loop optimization.
+nfort: opt(1418): transfer.f, line 496: Constant-length loop is expanded.
+nfort: vec( 103): transfer.f, line 509: Unvectorized loop.
+nfort: opt(1418): transfer.f, line 511: Constant-length loop is expanded.
+nfort: opt(1097): transfer.f, line 517: This statement prevents loop optimization.
+nfort: opt(1418): transfer.f, line 525: Constant-length loop is expanded.
+nfort: vec( 103): transfer.f, line 538: Unvectorized loop.
+nfort: opt(1418): transfer.f, line 540: Constant-length loop is expanded.
+nfort: opt(1097): transfer.f, line 546: This statement prevents loop optimization.
+nfort: opt(1418): transfer.f, line 554: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 593: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 598: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 604: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 632: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 634: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 640: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 645: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 652: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 653: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 658: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 665: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 666: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 670: Constant-length loop is expanded.
+nfort: vec( 101): transfer.f, line 696: Vectorized loop.
+nfort: opt(1418): transfer.f, line 699: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 700: Constant-length loop is expanded.
+nfort: vec( 128): transfer.f, line 701: Fused multiply-add operation applied.
+nfort: vec( 101): transfer.f, line 706: Vectorized loop.
+nfort: opt(1418): transfer.f, line 709: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 710: Constant-length loop is expanded.
+nfort: vec( 128): transfer.f, line 711: Fused multiply-add operation applied.
+nfort: opt(1418): transfer.f, line 733: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 734: Constant-length loop is expanded.
+nfort: vec( 101): transfer.f, line 764: Vectorized loop.
+nfort: opt(1418): transfer.f, line 768: Constant-length loop is expanded.
+nfort: vec( 128): transfer.f, line 769: Fused multiply-add operation applied.
+nfort: opt(1418): transfer.f, line 772: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 773: Constant-length loop is expanded.
+nfort: vec( 128): transfer.f, line 774: Fused multiply-add operation applied.
+nfort: opt(1418): transfer.f, line 784: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 785: Constant-length loop is expanded.
+nfort: vec( 103): transfer.f, line 791: Unvectorized loop.
+nfort: vec( 107): transfer.f, line 791: Iteration count is too small.
+nfort: opt(1418): transfer.f, line 793: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 794: Constant-length loop is expanded.
+nfort: vec( 101): transfer.f, line 826: Vectorized loop.
+nfort: opt(1418): transfer.f, line 830: Constant-length loop is expanded.
+nfort: vec( 128): transfer.f, line 831: Fused multiply-add operation applied.
+nfort: opt(1418): transfer.f, line 834: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 835: Constant-length loop is expanded.
+nfort: vec( 128): transfer.f, line 836: Fused multiply-add operation applied.
+nfort: opt(1418): transfer.f, line 844: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 845: Constant-length loop is expanded.
+nfort: vec( 103): transfer.f, line 855: Unvectorized loop.
+nfort: vec( 107): transfer.f, line 855: Iteration count is too small.
+nfort: opt(1418): transfer.f, line 857: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 858: Constant-length loop is expanded.
+nfort: par(1801): transfer.f, line 883: Parallel routine generated.: TRANSFB_C$1
+nfort: par(1803): transfer.f, line 887: Parallelized by "do".
+nfort: vec( 101): transfer.f, line 887: Vectorized loop.
+nfort: par(1803): transfer.f, line 893: Parallelized by "do".
+nfort: vec( 103): transfer.f, line 921: Unvectorized loop.
+nfort: opt(1418): transfer.f, line 922: Constant-length loop is expanded.
+nfort: opt(1097): transfer.f, line 926: This statement prevents loop optimization.
+nfort: opt(1418): transfer.f, line 933: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 944: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 955: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 966: Constant-length loop is expanded.
+nfort: par(1801): transfer.f, line 999: Parallel routine generated.: TRANSFB_C_2$1
+nfort: par(1803): transfer.f, line 1003: Parallelized by "do".
+nfort: vec( 101): transfer.f, line 1003: Vectorized loop.
+nfort: par(1803): transfer.f, line 1008: Parallelized by "do".
+nfort: vec( 101): transfer.f, line 1008: Vectorized loop.
+nfort: par(1803): transfer.f, line 1014: Parallelized by "do".
+nfort: vec( 103): transfer.f, line 1047: Unvectorized loop.
+nfort: opt(1418): transfer.f, line 1048: Constant-length loop is expanded.
+nfort: opt(1097): transfer.f, line 1052: This statement prevents loop optimization.
+nfort: opt(1418): transfer.f, line 1060: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 1072: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 1084: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 1096: Constant-length loop is expanded.
+make[2]: Entering directory `/home/users/fpmjunior/sbac-2020-serpa/NPB/NPB3.4-OMP/UA'
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 transfer_au.f
+Warning: transfer_au.f, line 577: Unused local variable TMP
+Obsolescent: transfer_au.f, line 2: Fixed source form
+[NEC Fortran Compiler normal termination, 2 warnings]
+nfort: par(1801): transfer_au.f, line 14: Parallel routine generated.: INIT_LOCKS$1
+nfort: par(1803): transfer_au.f, line 15: Parallelized by "do".
+nfort: vec( 103): transfer_au.f, line 15: Unvectorized loop.
+nfort: par(1801): transfer_au.f, line 40: Parallel routine generated.: TRANSF$1
+nfort: par(1803): transfer_au.f, line 42: Parallelized by "do".
+nfort: vec( 110): transfer_au.f, line 43: Vectorization obstructive procedure reference.: R_INIT
+nfort: opt(1025): transfer_au.f, line 76: Reference to this procedure inhibits optimization.: R_INIT
+nfort: vec( 102): transfer_au.f, line 79: Partially vectorized loop.
+nfort: opt(1036): transfer_au.f, line 80: Potential feedback - use directive or compiler option if OK.: TMP
+nfort: vec( 102): transfer_au.f, line 80: Partially vectorized loop.
+nfort: opt(1033): transfer_au.f, line 86: Potential multiple store conflict -- use directive if OK.: TMP
+nfort: opt(1036): transfer_au.f, line 86: Potential feedback - use directive or compiler option if OK.: TMP
+nfort: vec( 122): transfer_au.f, line 86: Dependency unknown. Unvectorizable dependency is assumed.: TMP$57
+nfort: opt(1418): transfer_au.f, line 90: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 92: Constant-length loop is expanded.
+nfort: opt(1036): transfer_au.f, line 94: Potential feedback - use directive or compiler option if OK.: TMP
+nfort: opt(1019): transfer_au.f, line 94: Feedback of scalar value from one loop pass to another.: TMP
+nfort: vec( 108): transfer_au.f, line 106: Unvectorizable loop structure.
+nfort: opt(1418): transfer_au.f, line 114: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 116: Constant-length loop is expanded.
+nfort: opt(1036): transfer_au.f, line 117: Potential feedback - use directive or compiler option if OK.
+nfort: opt(1019): transfer_au.f, line 117: Feedback of scalar value from one loop pass to another.
+nfort: vec( 103): transfer_au.f, line 123: Unvectorized loop.
+nfort: vec( 107): transfer_au.f, line 123: Iteration count is too small.
+nfort: opt(1036): transfer_au.f, line 129: Potential feedback - use directive or compiler option if OK.
+nfort: opt(1418): transfer_au.f, line 133: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 135: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 143: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 145: Constant-length loop is expanded.
+nfort: opt(1019): transfer_au.f, line 146: Feedback of scalar value from one loop pass to another.
+nfort: opt(1418): transfer_au.f, line 156: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 157: Constant-length loop is expanded.
+nfort: vec( 103): transfer_au.f, line 169: Unvectorized loop.
+nfort: vec( 107): transfer_au.f, line 169: Iteration count is too small.
+nfort: opt(1418): transfer_au.f, line 171: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 172: Constant-length loop is expanded.
+nfort: opt(1036): transfer_au.f, line 174: Potential feedback - use directive or compiler option if OK.
+nfort: opt(1418): transfer_au.f, line 181: Constant-length loop is expanded.
+nfort: vec( 103): transfer_au.f, line 190: Unvectorized loop.
+nfort: vec( 107): transfer_au.f, line 190: Iteration count is too small.
+nfort: opt(1418): transfer_au.f, line 192: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 193: Constant-length loop is expanded.
+nfort: opt(1036): transfer_au.f, line 195: Potential feedback - use directive or compiler option if OK.
+nfort: opt(1418): transfer_au.f, line 202: Constant-length loop is expanded.
+nfort: vec( 103): transfer_au.f, line 211: Unvectorized loop.
+nfort: vec( 107): transfer_au.f, line 211: Iteration count is too small.
+nfort: opt(1418): transfer_au.f, line 213: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 214: Constant-length loop is expanded.
+nfort: opt(1036): transfer_au.f, line 216: Potential feedback - use directive or compiler option if OK.
+nfort: opt(1418): transfer_au.f, line 223: Constant-length loop is expanded.
+nfort: vec( 103): transfer_au.f, line 232: Unvectorized loop.
+nfort: vec( 107): transfer_au.f, line 232: Iteration count is too small.
+nfort: opt(1418): transfer_au.f, line 234: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 235: Constant-length loop is expanded.
+nfort: opt(1036): transfer_au.f, line 237: Potential feedback - use directive or compiler option if OK.
+nfort: opt(1418): transfer_au.f, line 243: Constant-length loop is expanded.
+nfort: par(1801): transfer_au.f, line 278: Parallel routine generated.: TRANSFB$1
+nfort: par(1803): transfer_au.f, line 283: Parallelized by "do".
+nfort: vec( 101): transfer_au.f, line 283: Vectorized loop.
+nfort: par(1803): transfer_au.f, line 289: Parallelized by "do".
+nfort: par(3007): transfer_au.f, line 313: Atomic-construct generated.
+nfort: par(3007): transfer_au.f, line 315: Atomic-construct generated.
+nfort: par(3007): transfer_au.f, line 317: Atomic-construct generated.
+nfort: par(3007): transfer_au.f, line 319: Atomic-construct generated.
+nfort: vec( 102): transfer_au.f, line 329: Partially vectorized loop.
+nfort: vec( 113): transfer_au.f, line 329: Overhead of loop division is too large.
+nfort: vec( 102): transfer_au.f, line 331: Partially vectorized loop.
+nfort: opt(1033): transfer_au.f, line 335: Potential multiple store conflict -- use directive if OK.: TEMP
+nfort: opt(1036): transfer_au.f, line 335: Potential feedback - use directive or compiler option if OK.: TEMP
+nfort: vec( 122): transfer_au.f, line 335: Dependency unknown. Unvectorizable dependency is assumed.: TEMP$105
+nfort: opt(1418): transfer_au.f, line 341: Constant-length loop is expanded.
+nfort: vec( 128): transfer_au.f, line 343: Fused multiply-add operation applied.
+nfort: opt(1033): transfer_au.f, line 346: Potential multiple store conflict -- use directive if OK.: TOP
+nfort: opt(1418): transfer_au.f, line 350: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 352: Constant-length loop is expanded.
+nfort: vec( 128): transfer_au.f, line 354: Fused multiply-add operation applied.
+nfort: opt(1036): transfer_au.f, line 356: Potential feedback - use directive or compiler option if OK.: TEMP
+nfort: par(3007): transfer_au.f, line 375: Atomic-construct generated.
+nfort: vec( 103): transfer_au.f, line 382: Unvectorized loop.
+nfort: vec( 109): transfer_au.f, line 382: Vectorization obstructive statement.
+nfort: opt(1418): transfer_au.f, line 384: Constant-length loop is expanded.
+nfort: par(3007): transfer_au.f, line 388: Atomic-construct generated.
+nfort: par(3007): transfer_au.f, line 400: Atomic-construct generated.
+nfort: vec( 103): transfer_au.f, line 402: Unvectorized loop.
+nfort: vec( 109): transfer_au.f, line 402: Vectorization obstructive statement.
+nfort: opt(1418): transfer_au.f, line 405: Constant-length loop is expanded.
+nfort: par(3007): transfer_au.f, line 410: Atomic-construct generated.
+nfort: vec( 103): transfer_au.f, line 420: Unvectorized loop.
+nfort: vec( 109): transfer_au.f, line 420: Vectorization obstructive statement.
+nfort: opt(1418): transfer_au.f, line 421: Constant-length loop is expanded.
+nfort: par(3007): transfer_au.f, line 424: Atomic-construct generated.
+nfort: opt(1418): transfer_au.f, line 433: Constant-length loop is expanded.
+nfort: vec( 103): transfer_au.f, line 434: Unvectorized loop.
+nfort: vec( 109): transfer_au.f, line 434: Vectorization obstructive statement.
+nfort: opt(1418): transfer_au.f, line 436: Constant-length loop is expanded.
+nfort: par(3007): transfer_au.f, line 441: Atomic-construct generated.
+nfort: opt(1418): transfer_au.f, line 448: Constant-length loop is expanded.
+nfort: par(3007): transfer_au.f, line 451: Atomic-construct generated.
+nfort: opt(1418): transfer_au.f, line 458: Constant-length loop is expanded.
+nfort: vec( 103): transfer_au.f, line 459: Unvectorized loop.
+nfort: vec( 109): transfer_au.f, line 459: Vectorization obstructive statement.
+nfort: opt(1418): transfer_au.f, line 461: Constant-length loop is expanded.
+nfort: par(3007): transfer_au.f, line 466: Atomic-construct generated.
+nfort: opt(1418): transfer_au.f, line 473: Constant-length loop is expanded.
+nfort: par(3007): transfer_au.f, line 476: Atomic-construct generated.
+nfort: opt(1418): transfer_au.f, line 483: Constant-length loop is expanded.
+nfort: vec( 103): transfer_au.f, line 484: Unvectorized loop.
+nfort: vec( 109): transfer_au.f, line 484: Vectorization obstructive statement.
+nfort: opt(1418): transfer_au.f, line 486: Constant-length loop is expanded.
+nfort: par(3007): transfer_au.f, line 491: Atomic-construct generated.
+nfort: opt(1418): transfer_au.f, line 498: Constant-length loop is expanded.
+nfort: par(3007): transfer_au.f, line 501: Atomic-construct generated.
+nfort: opt(1418): transfer_au.f, line 508: Constant-length loop is expanded.
+nfort: vec( 103): transfer_au.f, line 509: Unvectorized loop.
+nfort: vec( 109): transfer_au.f, line 509: Vectorization obstructive statement.
+nfort: opt(1418): transfer_au.f, line 511: Constant-length loop is expanded.
+nfort: par(3007): transfer_au.f, line 516: Atomic-construct generated.
+nfort: opt(1418): transfer_au.f, line 523: Constant-length loop is expanded.
+nfort: par(3007): transfer_au.f, line 526: Atomic-construct generated.
+nfort: opt(1418): transfer_au.f, line 560: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 565: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 571: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 599: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 601: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 607: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 612: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 619: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 620: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 625: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 632: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 633: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 637: Constant-length loop is expanded.
+nfort: vec( 101): transfer_au.f, line 663: Vectorized loop.
+nfort: opt(1418): transfer_au.f, line 666: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 667: Constant-length loop is expanded.
+nfort: vec( 128): transfer_au.f, line 668: Fused multiply-add operation applied.
+nfort: vec( 101): transfer_au.f, line 673: Vectorized loop.
+nfort: opt(1418): transfer_au.f, line 676: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 677: Constant-length loop is expanded.
+nfort: vec( 128): transfer_au.f, line 678: Fused multiply-add operation applied.
+nfort: opt(1418): transfer_au.f, line 700: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 701: Constant-length loop is expanded.
+nfort: vec( 101): transfer_au.f, line 731: Vectorized loop.
+nfort: opt(1418): transfer_au.f, line 735: Constant-length loop is expanded.
+nfort: vec( 128): transfer_au.f, line 736: Fused multiply-add operation applied.
+nfort: opt(1418): transfer_au.f, line 739: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 740: Constant-length loop is expanded.
+nfort: vec( 128): transfer_au.f, line 741: Fused multiply-add operation applied.
+nfort: opt(1418): transfer_au.f, line 751: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 752: Constant-length loop is expanded.
+nfort: vec( 103): transfer_au.f, line 758: Unvectorized loop.
+nfort: vec( 107): transfer_au.f, line 758: Iteration count is too small.
+nfort: opt(1418): transfer_au.f, line 760: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 761: Constant-length loop is expanded.
+nfort: vec( 101): transfer_au.f, line 793: Vectorized loop.
+nfort: opt(1418): transfer_au.f, line 797: Constant-length loop is expanded.
+nfort: vec( 128): transfer_au.f, line 798: Fused multiply-add operation applied.
+nfort: opt(1418): transfer_au.f, line 801: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 802: Constant-length loop is expanded.
+nfort: vec( 128): transfer_au.f, line 803: Fused multiply-add operation applied.
+nfort: opt(1418): transfer_au.f, line 811: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 812: Constant-length loop is expanded.
+nfort: vec( 103): transfer_au.f, line 822: Unvectorized loop.
+nfort: vec( 107): transfer_au.f, line 822: Iteration count is too small.
+nfort: opt(1418): transfer_au.f, line 824: Constant-length loop is expanded.
+nfort: opt(1418): transfer_au.f, line 825: Constant-length loop is expanded.
+nfort: par(1801): transfer_au.f, line 850: Parallel routine generated.: TRANSFB_C$1
+nfort: par(1803): transfer_au.f, line 854: Parallelized by "do".
+nfort: vec( 101): transfer_au.f, line 854: Vectorized loop.
+nfort: par(1803): transfer_au.f, line 860: Parallelized by "do".
+nfort: par(3007): transfer_au.f, line 872: Atomic-construct generated.
+nfort: par(3007): transfer_au.f, line 874: Atomic-construct generated.
+nfort: par(3007): transfer_au.f, line 876: Atomic-construct generated.
+nfort: par(3007): transfer_au.f, line 878: Atomic-construct generated.
+nfort: vec( 103): transfer_au.f, line 881: Unvectorized loop.
+nfort: vec( 109): transfer_au.f, line 881: Vectorization obstructive statement.
+nfort: opt(1418): transfer_au.f, line 882: Constant-length loop is expanded.
+nfort: par(3007): transfer_au.f, line 885: Atomic-construct generated.
+nfort: opt(1418): transfer_au.f, line 891: Constant-length loop is expanded.
+nfort: par(3007): transfer_au.f, line 894: Atomic-construct generated.
+nfort: opt(1418): transfer_au.f, line 900: Constant-length loop is expanded.
+nfort: par(3007): transfer_au.f, line 903: Atomic-construct generated.
+nfort: opt(1418): transfer_au.f, line 909: Constant-length loop is expanded.
+nfort: par(3007): transfer_au.f, line 912: Atomic-construct generated.
+nfort: opt(1418): transfer_au.f, line 918: Constant-length loop is expanded.
+nfort: par(3007): transfer_au.f, line 921: Atomic-construct generated.
+nfort: par(1801): transfer_au.f, line 949: Parallel routine generated.: TRANSFB_C_2$1
+nfort: par(1803): transfer_au.f, line 953: Parallelized by "do".
+nfort: vec( 101): transfer_au.f, line 953: Vectorized loop.
+nfort: par(1803): transfer_au.f, line 958: Parallelized by "do".
+nfort: vec( 101): transfer_au.f, line 958: Vectorized loop.
+nfort: par(1803): transfer_au.f, line 964: Parallelized by "do".
+nfort: par(3007): transfer_au.f, line 977: Atomic-construct generated.
+nfort: par(3007): transfer_au.f, line 979: Atomic-construct generated.
+nfort: par(3007): transfer_au.f, line 981: Atomic-construct generated.
+nfort: par(3007): transfer_au.f, line 983: Atomic-construct generated.
+nfort: par(3007): transfer_au.f, line 985: Atomic-construct generated.
+nfort: par(3007): transfer_au.f, line 987: Atomic-construct generated.
+nfort: par(3007): transfer_au.f, line 989: Atomic-construct generated.
+nfort: par(3007): transfer_au.f, line 991: Atomic-construct generated.
+nfort: vec( 103): transfer_au.f, line 994: Unvectorized loop.
+nfort: vec( 109): transfer_au.f, line 994: Vectorization obstructive statement.
+nfort: opt(1418): transfer_au.f, line 995: Constant-length loop is expanded.
+nfort: par(3007): transfer_au.f, line 998: Atomic-construct generated.
+nfort: par(3007): transfer_au.f, line 1000: Atomic-construct generated.
+nfort: opt(1418): transfer_au.f, line 1006: Constant-length loop is expanded.
+nfort: par(3007): transfer_au.f, line 1009: Atomic-construct generated.
+nfort: par(3007): transfer_au.f, line 1011: Atomic-construct generated.
+nfort: opt(1418): transfer_au.f, line 1017: Constant-length loop is expanded.
+nfort: par(3007): transfer_au.f, line 1020: Atomic-construct generated.
+nfort: par(3007): transfer_au.f, line 1022: Atomic-construct generated.
+nfort: opt(1418): transfer_au.f, line 1028: Constant-length loop is expanded.
+nfort: par(3007): transfer_au.f, line 1031: Atomic-construct generated.
+nfort: par(3007): transfer_au.f, line 1033: Atomic-construct generated.
+nfort: opt(1418): transfer_au.f, line 1039: Constant-length loop is expanded.
+nfort: par(3007): transfer_au.f, line 1042: Atomic-construct generated.
+nfort: par(3007): transfer_au.f, line 1044: Atomic-construct generated.
+nfort -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 -o ../bin/ua-au.B.x ua.o ua_data.o convect.o diffuse.o adapt.o move.o mason.o precond.o utils.o verify.o setup.o transfer_au.o ../common/print_results.o ../common/timers.o ../common/wtime.o 
+make[2]: Leaving directory `/home/users/fpmjunior/sbac-2020-serpa/NPB/NPB3.4-OMP/UA'
+make[1]: Leaving directory `/home/users/fpmjunior/sbac-2020-serpa/NPB/NPB3.4-OMP/UA'

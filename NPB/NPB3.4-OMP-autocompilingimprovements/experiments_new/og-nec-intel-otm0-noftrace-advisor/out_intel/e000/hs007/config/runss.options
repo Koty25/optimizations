@@ -1,0 +1,16 @@
+-r
+/home/users/fpmjunior/ccpe/NPB/NPB3.4-OMP-autocompilingimprovements/experiments_new/og-nec-intel-otm0-noftrace-advisor/out_intel/e000/hs007
+-quiet
+--mrte-mode=auto
+--follow-child
+--strategy=ld-linux.so.2:notrace:notrace,ld-linux-x86-64.so.2:notrace:notrace
+--interval=10
+--data-limit-mb=500
+--stack-stitching
+--itt-config=frame,task,event,counter,model
+--stackwalk=offline
+--mrte-type=java,python
+--type=cpu:stack
+--opencl-trace-mode=default
+--
+bin/bin_intel/ua.C.x

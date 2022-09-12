@@ -1,0 +1,63 @@
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - MG Benchmark
+
+ No input file. Using compiled defaults 
+ Size:  512x 512x 512  (class C)
+ Iterations:                     20
+ Number of available threads:     8
+ 
+ Initialization time:           0.846 seconds
+
+  iter   1
+  iter   5
+  iter  10
+  iter  15
+  iter  20
+
+ Benchmark completed 
+ VERIFICATION SUCCESSFUL 
+ L2 Norm is  0.5706732285740E-06
+ Error is    0.3042752760998E-13
+
+
+ MG Benchmark Completed.
+ Class           =                        C
+ Size            =            512x 512x 512
+ Iterations      =                       20
+ Time in seconds =                     8.19
+ Total threads   =                        8
+ Avail threads   =                        8
+ Mop/s total     =                 19005.64
+ Mop/s/thread    =                  2375.71
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                      3.4
+ Compile date    =              19 May 2021
+
+ Compile options:
+    F77          = ifort
+    FLINK        = $(FC)
+    F_LIB        = (none)
+    F_INC        = (none)
+    FFLAGS       = -O4 -fopenmp -qopt-report=1 -qopt-report-ph...
+    FLINKFLAGS   = $(FFLAGS)
+    RAND         = randi8
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+  SECTION   Time (secs)
+         benchmk :    8.192  ( 100.00 %)
+         mg3P    :    5.786  (  70.63 %)
+         psinv   :    2.204  (  26.91 %)
+         resid   :    4.881  (  59.58 %)
+        mg-resid :    2.510  (  30.64 %)
+         rprj3   :    0.543  (   6.63 %)
+         interp  :    0.410  (   5.00 %)
+         norm2   :    0.035  (   0.43 %)
+         comm3   :    0.067  (   0.82 %)

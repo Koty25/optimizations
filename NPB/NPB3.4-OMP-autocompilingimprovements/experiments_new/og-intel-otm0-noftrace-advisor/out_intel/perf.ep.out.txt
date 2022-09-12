@@ -1,0 +1,23 @@
+# started on Thu May 20 22:50:15 2021
+
+
+ Performance counter stats for 'bin/bin_intel/ep.C.x !':
+
+   107,767,338,576      L1-dcache-loads                                               (36.37%)
+     2,175,481,891      L1-dcache-load-misses     #    2.02% of all L1-dcache hits    (36.37%)
+        36,052,603      L1-icache-load-misses                                         (36.36%)
+        16,516,499      LLC-loads                                                     (36.36%)
+           310,871      LLC-load-misses           #    1.88% of all LL-cache hits     (36.36%)
+     3,373,841,509      fp_arith_inst_retired.scalar_single #     15.8 GFLOPs                   (36.35%)
+   149,965,639,045      fp_arith_inst_retired.scalar_double                                     (36.36%)
+                 0      fp_arith_inst_retired.128b_packed_double                                     (36.36%)
+                 0      fp_arith_inst_retired.128b_packed_single                                     (36.37%)
+                 0      fp_arith_inst_retired.256b_packed_double                                     (36.37%)
+                 0      fp_arith_inst_retired.256b_packed_single                                     (36.37%)
+
+       9.732711143 seconds time elapsed
+
+      77.092690000 seconds user
+       0.056995000 seconds sys
+
+

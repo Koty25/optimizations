@@ -1,0 +1,88 @@
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - EP Benchmark
+
+ Number of random numbers generated:      2147483648
+
+EP Benchmark Results:
+
+CPU Time =   15.3151
+N = 2^   30
+No. Gaussian Pairs =     843345606.
+Sums =     4.033815542441876D+04   -2.660669192810488D+04
+Counts:
+  0     393058470.
+  1     375280898.
+  2      70460742.
+  3       4438852.
+  4        105691.
+  5           948.
+  6             5.
+  7             0.
+  8             0.
+  9             0.
+
+
+ EP Benchmark Completed.
+ Class           =                        B
+ Size            =               2147483648
+ Iterations      =                        0
+ Time in seconds =                    15.32
+ Mop/s total     =                   140.22
+ Operation type  = Random numbers generated
+ Verification    =               SUCCESSFUL
+ Version         =                      3.4
+ Compile date    =              09 Aug 2020
+
+ Compile options:
+    F77          = nfort
+    FLINK        = $(FC)
+    F_LIB        = (none)
+    F_INC        = (none)
+    FFLAGS       = -O3 -mparallel -report-all -fdiag-inline=2 ...
+    FLINKFLAGS   = $(FFLAGS)
+    RAND         = randi8
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+  SECTION   Time (secs)
+        Total :   15.315  ( 100.00 %)
+  Gausd_pairs :    9.058  (  59.15 %)
+     Random_n :    6.230  (  40.68 %)
+            ********  Program  Information  ********
+  Real Time (sec)                         :            15.338261
+  User Time (sec)                         :           122.177300
+  Vector Time (sec)                       :             1.229416
+  Inst. Count                             :          68084166604
+  V. Inst. Count                          :            412910716
+  V. Element Count                        :         105294151352
+  V. Load Element Count                   :           6459231803
+  FLOP Count                              :          96432143109
+  MOPS                                    :          1681.822652
+  MOPS (Real)                             :         13446.858082
+  MFLOPS                                  :           786.330467
+  MFLOPS (Real)                           :          6287.032811
+  A. V. Length                            :           255.004647
+  V. Op. Ratio (%)                        :            67.189917
+  L1 I-Cache Miss (sec)                   :             0.001280
+  L1 O-Cache Miss (sec)                   :             1.247952
+  L2 Cache Miss (sec)                     :             1.247159
+  FMA Element Count                       :          33285996544
+  Required B/F                            :             1.754824
+  Required Store B/F                      :             0.719636
+  Required Load B/F                       :             1.035189
+  Actual V. Load B/F                      :             0.000000
+  Power Throttling (sec)                  :             0.000000
+  Thermal Throttling (sec)                :             0.000000
+  Max Active Threads                      :                    8
+  Available CPU Cores                     :                    8
+  Average CPU Cores Used                  :             7.965525
+  Memory Size Used (MB)                   :          1412.000000
+
+  Start Time (date)        :        Sun Aug  9 17:20:06 2020 -03
+  End   Time (date)        :        Sun Aug  9 17:20:21 2020 -03

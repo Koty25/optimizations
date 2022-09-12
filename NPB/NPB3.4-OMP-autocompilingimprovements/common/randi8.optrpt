@@ -1,0 +1,23 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: VRANLC
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at randi8.f(71,7)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between lx (72:10) and lx (72:10)
+   remark #15346: vector dependence: assumed FLOW dependence between lx (72:10) and lx (72:10)
+LOOP END
+
+LOOP BEGIN at randi8.f(71,7)
+<Remainder>
+LOOP END
+===========================================================================

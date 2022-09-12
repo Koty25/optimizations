@@ -1,0 +1,53 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: ADD
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at add.f(21,8)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between u_(m,i,j,k) (25:20) and u_(m,i,j,k) (25:20)
+   remark #15346: vector dependence: assumed OUTPUT dependence between u_(m,i,j,k) (25:20) and u_(m,i,j,k) (25:20)
+
+   LOOP BEGIN at add.f(23,14)
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <u_(m,i,j,k)>, stride is unknown to compiler   [ add.f(25,20) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(m,i,j,k)>, stride is unknown to compiler   [ add.f(25,33) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <rhs_(m,i,j,k)>, stride is unknown to compiler   [ add.f(25,46) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.308
+      remark #15452: unmasked strided loads: 2 
+      remark #15453: unmasked strided stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 6 
+      remark #15477: vector cost: 6.500 
+      remark #15478: estimated potential speedup: 0.920 
+      remark #15488: --- end vector cost summary ---
+
+      LOOP BEGIN at add.f(24,17)
+         remark #15389: vectorization support: reference u_(m,i,j,k) has unaligned access   [ add.f(25,20) ]
+         remark #15389: vectorization support: reference u_(m,i,j,k) has unaligned access   [ add.f(25,33) ]
+         remark #15389: vectorization support: reference rhs_(m,i,j,k) has unaligned access   [ add.f(25,46) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.500
+         remark #15450: unmasked unaligned unit stride loads: 2 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 6 
+         remark #15477: vector cost: 4.500 
+         remark #15478: estimated potential speedup: 0.900 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================

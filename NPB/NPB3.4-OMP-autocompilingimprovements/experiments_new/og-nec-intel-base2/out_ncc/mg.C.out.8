@@ -1,0 +1,92 @@
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - MG Benchmark
+
+ No input file. Using compiled defaults 
+ Size:  512x 512x 512  (class C)
+ Iterations:                     20
+
+ Initialization time:           5.026 seconds
+
+  iter   1
+  iter   5
+  iter  10
+  iter  15
+  iter  20
+
+ Benchmark completed 
+ VERIFICATION SUCCESSFUL 
+ L2 Norm is  0.5706732285740E-06
+ Error is    0.8571657168178E-13
+
+
+ MG Benchmark Completed.
+ Class           =                        C
+ Size            =            512x 512x 512
+ Iterations      =                       20
+ Time in seconds =                     1.17
+ Mop/s total     =                133518.94
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                      3.4
+ Compile date    =              13 May 2021
+
+ Compile options:
+    F77          = nfort
+    FLINK        = $(FC)
+    F_LIB        = (none)
+    F_INC        = (none)
+    FFLAGS       = -O2 -mparallel -ftrace -report-all -fdiag-i...
+    FLINKFLAGS   = $(FFLAGS)
+    RAND         = randi8
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+  SECTION   Time (secs)
+         benchmk :    1.166  ( 100.00 %)
+         mg3P    :    0.897  (  76.92 %)
+         psinv   :    0.325  (  27.87 %)
+         resid   :    0.566  (  48.58 %)
+        mg-resid :    0.310  (  26.56 %)
+         rprj3   :    0.131  (  11.27 %)
+         interp  :    0.096  (   8.21 %)
+         norm2   :    0.012  (   1.01 %)
+         comm3   :    0.015  (   1.26 %)
+            ********  Program  Information  ********
+  Real Time (sec)                         :             6.230679
+  User Time (sec)                         :            49.018635
+  Vector Time (sec)                       :             9.141479
+  Inst. Count                             :          27201463034
+  V. Inst. Count                          :           1781699667
+  V. Element Count                        :         337925053966
+  V. Load Element Count                   :         164892632022
+  FLOP Count                              :         167899606532
+  MOPS                                    :          8077.135089
+  MOPS (Real)                             :         63642.417921
+  MFLOPS                                  :          3419.992147
+  MFLOPS (Real)                           :         26947.248884
+  A. V. Length                            :           189.664431
+  V. Op. Ratio (%)                        :            93.589534
+  L1 I-Cache Miss (sec)                   :             0.160404
+  L1 O-Cache Miss (sec)                   :             0.180741
+  L2 Cache Miss (sec)                     :             0.147998
+  FMA Element Count                       :          33190538594
+  Required B/F                            :             9.756233
+  Required Store B/F                      :             1.758803
+  Required Load B/F                       :             7.997429
+  Actual V. Load B/F                      :             2.247578
+  Power Throttling (sec)                  :             0.000000
+  Thermal Throttling (sec)                :             0.000000
+  Max Active Threads                      :                    8
+  Available CPU Cores                     :                    8
+  Average CPU Cores Used                  :             7.867303
+  Memory Size Used (MB)                   :          4938.000000
+  Non Swappable Memory Size Used (MB)     :           100.000000
+
+  Start Time (date)        :        Thu May 13 09:53:46 2021 -03
+  End   Time (date)        :        Thu May 13 09:53:53 2021 -03

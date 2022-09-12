@@ -1,0 +1,94 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: APPLU
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at lu.f(77,10)
+   remark #15389: vectorization support: reference t_names(Impl_lp+1,1) has unaligned access
+   remark #15389: vectorization support: reference at (77:29) has unaligned access   [ lu.f(77,29) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.375
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.720 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at lu.f(82,10)
+   remark #15389: vectorization support: reference t_names(Impl_lp+1,6) has unaligned access
+   remark #15389: vectorization support: reference at (82:29) has unaligned access   [ lu.f(82,29) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.375
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.720 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at lu.f(87,10)
+   remark #15389: vectorization support: reference t_names(Impl_lp+1,11) has unaligned access
+   remark #15389: vectorization support: reference at (87:30) has unaligned access   [ lu.f(87,30) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.375
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.760 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at lu.f(171,7)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at lu.f(184,13)
+   remark #15382: vectorization support: call to function for_write_seq_fmt cannot be vectorized   [ lu.f(181,13) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ lu.f(181,13) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ lu.f(181,13) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt cannot be vectorized   [ lu.f(185,13) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ lu.f(185,13) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ lu.f(185,13) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt cannot be vectorized   [ lu.f(187,13) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ lu.f(187,13) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ lu.f(187,13) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (181:13) and at (187:13)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (187:13) and at (181:13)
+LOOP END
+
+LOOP BEGIN at lu.f(184,13)
+   remark #15382: vectorization support: call to function for_write_seq_fmt cannot be vectorized   [ lu.f(181,13) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ lu.f(181,13) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ lu.f(181,13) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (181:13) and at (181:13)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (181:13) and at (181:13)
+LOOP END
+===========================================================================

@@ -1,0 +1,23 @@
+# started on Thu May 20 22:54:49 2021
+
+
+ Performance counter stats for 'bin/bin_intel/is.C.x !':
+
+     9,765,274,510      L1-dcache-loads                                               (36.35%)
+     1,398,567,816      L1-dcache-load-misses     #   14.32% of all L1-dcache hits    (36.35%)
+         9,367,356      L1-icache-load-misses                                         (36.34%)
+        15,961,013      LLC-loads                                                     (36.35%)
+         8,659,838      LLC-load-misses           #   54.26% of all LL-cache hits     (36.38%)
+                 0      fp_arith_inst_retired.scalar_single #      2.5 GFLOPs                   (36.40%)
+     8,737,648,796      fp_arith_inst_retired.scalar_double                                     (36.40%)
+               181      fp_arith_inst_retired.128b_packed_double                                     (36.38%)
+                 0      fp_arith_inst_retired.128b_packed_single                                     (36.36%)
+                 0      fp_arith_inst_retired.256b_packed_double                                     (36.35%)
+                 0      fp_arith_inst_retired.256b_packed_single                                     (36.35%)
+
+       3.434142332 seconds time elapsed
+
+      26.921628000 seconds user
+       0.305041000 seconds sys
+
+

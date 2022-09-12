@@ -1,0 +1,14 @@
+-r
+/home/users/fpmjunior/ccpe/NPB/NPB3.4-OMP-autocompilingimprovements/experiments_new/og-nec-intel-otm4-noftrace-advisor/out_intel/e000/trc007
+-quiet
+-cs-file
+/home/users/fpmjunior/ccpe/NPB/NPB3.4-OMP-autocompilingimprovements/experiments_new/og-nec-intel-otm4-noftrace-advisor/out_intel/e000/callstacks.def
+--cs-mode=no-count-loops,no-count-flops,stl-profiling,stack-stitching
+--target-loops=n
+--count-flops
+--benchmarks=dram,mcdram,cpu_cache,flop_peak,int
+--jit-profiling
+--gpu-collect-traffic
+--
+bin/bin_intel/ua.C.x
+!

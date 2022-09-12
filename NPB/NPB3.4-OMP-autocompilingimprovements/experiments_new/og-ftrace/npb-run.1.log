@@ -1,0 +1,7 @@
+Date: Thu Apr 15 03:55:42 -03 2021
+Host: tsubasa
+
+*** run ncc/bt.C.x nt=8 - FAILED
+*** run ncc/cg.C.x nt=8 - FAILED
+*** run ncc/ep.C.x nt=8 - FAILED
+*** run ncc/ft.C.x nt=8 - FAILED

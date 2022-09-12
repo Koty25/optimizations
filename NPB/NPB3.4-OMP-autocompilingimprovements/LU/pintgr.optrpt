@@ -1,0 +1,302 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: PINTGR
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at pintgr.f(36,7)
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(2,i,j,ki1)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(43,45) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(3,i,j,ki1)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(44,45) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(4,i,j,ki1)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(45,45) ]
+   remark #15329: vectorization support: irregularly indexed store was emulated for the variable <phi1_(i,j)>, part of index is nonlinearly computed   [ pintgr.f(42,13) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(5,i,j,ki1)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(42,31) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(1,i,j,ki1)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(46,33) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(2,i,j,ki2)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(51,45) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(3,i,j,ki2)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(52,45) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(4,i,j,ki2)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(53,45) ]
+   remark #15329: vectorization support: irregularly indexed store was emulated for the variable <phi2_(i,j)>, part of index is nonlinearly computed   [ pintgr.f(50,13) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(5,i,j,ki2)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(50,31) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(1,i,j,ki2)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(54,33) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.111
+   remark #15462: unmasked indexed (or gather) loads: 10 
+   remark #15463: unmasked indexed (or scatter) stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 189 
+   remark #15477: vector cost: 359.000 
+   remark #15478: estimated potential speedup: 0.520 
+   remark #15482: vectorized math library calls: 2 
+   remark #15486: divides: 2 
+   remark #15487: type converts: 22 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at pintgr.f(36,7)
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.051
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 50 
+   remark #15477: vector cost: 78.000 
+   remark #15478: estimated potential speedup: 0.640 
+   remark #15482: vectorized math library calls: 2 
+   remark #15487: type converts: 2 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at pintgr.f(64,7)
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <phi1_(i,j)>, part of index is nonlinearly computed   [ pintgr.f(67,30) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <phi1_(i+1,j)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(68,30) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <phi1_(i,j+1)>, part of index is nonlinearly computed   [ pintgr.f(69,30) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <phi1_(i+1,j+1)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(70,30) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <phi2_(i,j)>, part of index is nonlinearly computed   [ pintgr.f(71,30) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <phi2_(i+1,j)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(72,30) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <phi2_(i,j+1)>, part of index is nonlinearly computed   [ pintgr.f(73,30) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <phi2_(i+1,j+1)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(74,30) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.150
+   remark #15355: vectorization support: %frc1 is double type reduction   [ pintgr.f(67,13) ]
+   remark #15462: unmasked indexed (or gather) loads: 8 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 89 
+   remark #15477: vector cost: 169.500 
+   remark #15478: estimated potential speedup: 0.520 
+   remark #15482: vectorized math library calls: 2 
+   remark #15487: type converts: 10 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at pintgr.f(64,7)
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.051
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 50 
+   remark #15477: vector cost: 78.000 
+   remark #15478: estimated potential speedup: 0.640 
+   remark #15482: vectorized math library calls: 2 
+   remark #15487: type converts: 2 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at pintgr.f(85,7)
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(2,i,jbeg,k)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(89,48) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(3,i,jbeg,k)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(90,48) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(4,i,jbeg,k)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(91,48) ]
+   remark #15329: vectorization support: irregularly indexed store was emulated for the variable <phi1_(i,k)>, part of index is nonlinearly computed   [ pintgr.f(88,13) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(5,i,jbeg,k)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(88,31) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(1,i,jbeg,k)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(92,33) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.110
+   remark #15462: unmasked indexed (or gather) loads: 5 
+   remark #15463: unmasked indexed (or scatter) stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 119 
+   remark #15477: vector cost: 218.500 
+   remark #15478: estimated potential speedup: 0.540 
+   remark #15482: vectorized math library calls: 2 
+   remark #15486: divides: 1 
+   remark #15487: type converts: 12 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at pintgr.f(85,7)
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.051
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 50 
+   remark #15477: vector cost: 78.000 
+   remark #15478: estimated potential speedup: 0.640 
+   remark #15482: vectorized math library calls: 2 
+   remark #15487: type converts: 2 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at pintgr.f(97,7)
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(2,i,jfin,k)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(101,48) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(3,i,jfin,k)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(102,48) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(4,i,jfin,k)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(103,48) ]
+   remark #15329: vectorization support: irregularly indexed store was emulated for the variable <phi2_(i,k)>, part of index is nonlinearly computed   [ pintgr.f(100,13) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(5,i,jfin,k)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(100,31) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(1,i,jfin,k)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(104,33) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.110
+   remark #15462: unmasked indexed (or gather) loads: 5 
+   remark #15463: unmasked indexed (or scatter) stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 119 
+   remark #15477: vector cost: 218.500 
+   remark #15478: estimated potential speedup: 0.540 
+   remark #15482: vectorized math library calls: 2 
+   remark #15486: divides: 1 
+   remark #15487: type converts: 12 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at pintgr.f(97,7)
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.051
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 50 
+   remark #15477: vector cost: 78.000 
+   remark #15478: estimated potential speedup: 0.640 
+   remark #15482: vectorized math library calls: 2 
+   remark #15487: type converts: 2 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at pintgr.f(114,7)
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <phi1_(i,k)>, part of index is nonlinearly computed   [ pintgr.f(117,30) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <phi1_(i+1,k)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(118,30) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <phi1_(i,k+1)>, part of index is nonlinearly computed   [ pintgr.f(119,30) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <phi1_(i+1,k+1)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(120,30) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <phi2_(i,k)>, part of index is nonlinearly computed   [ pintgr.f(121,30) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <phi2_(i+1,k)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(122,30) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <phi2_(i,k+1)>, part of index is nonlinearly computed   [ pintgr.f(123,30) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <phi2_(i+1,k+1)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(124,30) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.150
+   remark #15355: vectorization support: %frc2 is double type reduction   [ pintgr.f(117,13) ]
+   remark #15462: unmasked indexed (or gather) loads: 8 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 89 
+   remark #15477: vector cost: 169.500 
+   remark #15478: estimated potential speedup: 0.520 
+   remark #15482: vectorized math library calls: 2 
+   remark #15487: type converts: 10 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at pintgr.f(114,7)
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.051
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 50 
+   remark #15477: vector cost: 78.000 
+   remark #15478: estimated potential speedup: 0.640 
+   remark #15482: vectorized math library calls: 2 
+   remark #15487: type converts: 2 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at pintgr.f(135,7)
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(2,ibeg,j,k)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(139,48) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(3,ibeg,j,k)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(140,48) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(4,ibeg,j,k)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(141,48) ]
+   remark #15329: vectorization support: irregularly indexed store was emulated for the variable <phi1_(j,k)>, part of index is nonlinearly computed   [ pintgr.f(138,13) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(5,ibeg,j,k)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(138,31) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(1,ibeg,j,k)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(142,33) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.110
+   remark #15462: unmasked indexed (or gather) loads: 5 
+   remark #15463: unmasked indexed (or scatter) stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 119 
+   remark #15477: vector cost: 218.500 
+   remark #15478: estimated potential speedup: 0.540 
+   remark #15482: vectorized math library calls: 2 
+   remark #15486: divides: 1 
+   remark #15487: type converts: 12 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at pintgr.f(135,7)
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.051
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 50 
+   remark #15477: vector cost: 78.000 
+   remark #15478: estimated potential speedup: 0.640 
+   remark #15482: vectorized math library calls: 2 
+   remark #15487: type converts: 2 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at pintgr.f(147,7)
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(2,ifin,j,k)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(151,48) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(3,ifin,j,k)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(152,48) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(4,ifin,j,k)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(153,48) ]
+   remark #15329: vectorization support: irregularly indexed store was emulated for the variable <phi2_(j,k)>, part of index is nonlinearly computed   [ pintgr.f(150,13) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(5,ifin,j,k)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(150,31) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u_(1,ifin,j,k)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(154,33) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.110
+   remark #15462: unmasked indexed (or gather) loads: 5 
+   remark #15463: unmasked indexed (or scatter) stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 119 
+   remark #15477: vector cost: 218.500 
+   remark #15478: estimated potential speedup: 0.540 
+   remark #15482: vectorized math library calls: 2 
+   remark #15486: divides: 1 
+   remark #15487: type converts: 12 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at pintgr.f(147,7)
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.051
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 50 
+   remark #15477: vector cost: 78.000 
+   remark #15478: estimated potential speedup: 0.640 
+   remark #15482: vectorized math library calls: 2 
+   remark #15487: type converts: 2 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at pintgr.f(164,7)
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <phi1_(j,k)>, part of index is nonlinearly computed   [ pintgr.f(167,30) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <phi1_(j+1,k)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(168,30) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <phi1_(j,k+1)>, part of index is nonlinearly computed   [ pintgr.f(169,30) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <phi1_(j+1,k+1)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(170,30) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <phi2_(j,k)>, part of index is nonlinearly computed   [ pintgr.f(171,30) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <phi2_(j+1,k)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(172,30) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <phi2_(j,k+1)>, part of index is nonlinearly computed   [ pintgr.f(173,30) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <phi2_(j+1,k+1)>, 64-bit indexed, part of index is nonlinearly computed   [ pintgr.f(174,30) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.150
+   remark #15355: vectorization support: %frc3 is double type reduction   [ pintgr.f(167,13) ]
+   remark #15462: unmasked indexed (or gather) loads: 8 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 89 
+   remark #15477: vector cost: 169.500 
+   remark #15478: estimated potential speedup: 0.520 
+   remark #15482: vectorized math library calls: 2 
+   remark #15487: type converts: 10 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at pintgr.f(164,7)
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.051
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 50 
+   remark #15477: vector cost: 78.000 
+   remark #15478: estimated potential speedup: 0.640 
+   remark #15482: vectorized math library calls: 2 
+   remark #15487: type converts: 2 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+===========================================================================

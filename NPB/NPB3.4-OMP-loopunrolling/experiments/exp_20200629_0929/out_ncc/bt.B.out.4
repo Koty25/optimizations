@@ -1,0 +1,82 @@
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - BT Benchmark
+
+ No input file inputbt.data. Using compiled defaults
+ Size:  102x 102x 102
+ Iterations:  200       dt:   0.0003000
+ Number of available threads:     4
+
+ Time step    1
+ Time step   20
+ Time step   40
+ Time step   60
+ Time step   80
+ Time step  100
+ Time step  120
+ Time step  140
+ Time step  160
+ Time step  180
+ Time step  200
+ Verification being performed for class B
+ accuracy setting for epsilon =  0.1000000000000E-07
+ Comparison of RMS-norms of residual
+           1 0.1423359722929E+04 0.1423359722929E+04 0.9744405422333E-14
+           2 0.9933052259015E+02 0.9933052259015E+02 0.3433592256150E-14
+           3 0.3564602564454E+03 0.3564602564454E+03 0.9089582404996E-14
+           4 0.3248544795908E+03 0.3248544795908E+03 0.8399096446986E-14
+           5 0.3270754125466E+04 0.3270754125466E+04 0.7785926631221E-14
+ Comparison of RMS-norms of solution error
+           1 0.5296984714094E+02 0.5296984714094E+02 0.9926432731880E-14
+           2 0.4463289611567E+01 0.4463289611567E+01 0.1631770213312E-13
+           3 0.1312257334221E+02 0.1312257334221E+02 0.4873194041348E-14
+           4 0.1200692532356E+02 0.1200692532356E+02 0.1109582673040E-13
+           5 0.1245957615104E+03 0.1245957615104E+03 0.1414290472905E-13
+ Verification Successful
+
+
+ BT Benchmark Completed.
+ Class           =                        B
+ Size            =            102x 102x 102
+ Iterations      =                      200
+ Time in seconds =                   106.43
+ Total threads   =                        4
+ Avail threads   =                        4
+ Mop/s total     =                  6597.41
+ Mop/s/thread    =                  1649.35
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                      3.4
+ Compile date    =              29 Jun 2020
+
+ Compile options:
+    F77          = nfort
+    FLINK        = $(FC)
+    F_LIB        = (none)
+    F_INC        = (none)
+    FFLAGS       = -O3 -fopenmp -report-all -fdiag-inline=2 -f...
+    FLINKFLAGS   = $(FFLAGS)
+    RAND         = (none)
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+  SECTION   Time (secs)
+  total   :  106.433  (100.00%)
+  rhsx    :    0.556  (  0.52%)
+  rhsy    :    0.185  (  0.17%)
+  rhsz    :    0.207  (  0.19%)
+  rhs     :    1.088  (  1.02%)
+    -->  sub-rhs:    0.948  (  0.89%)
+    --> rest-rhs:    0.140  (  0.13%)
+  xsolve  :   32.475  ( 30.51%)
+  ysolve  :   33.105  ( 31.10%)
+  zsolve  :   39.714  ( 37.31%)
+  redist1 :    0.000  (  0.00%)
+  solsubs :   86.508  ( 81.28%)
+    --> rest-sol:   18.787  ( 17.65%)
+  add     :    0.054  (  0.05%)

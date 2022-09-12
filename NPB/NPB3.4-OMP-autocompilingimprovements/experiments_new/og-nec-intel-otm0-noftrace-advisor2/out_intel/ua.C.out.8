@@ -1,0 +1,354 @@
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - UA Benchmark
+
+ No input file inputua.data. Using compiled defaults
+ Levels of refinement:               8
+ Adaptation frequency:               5
+ Time steps:                       200    dt:    0.156250E-03
+ CG iterations:                     10
+ Heat source radius:            0.0670
+ Number of available threads:        8
+ 
+Step    0: elements refined, merged, total:    4563       0   31942
+Step    5: elements refined, merged, total:     168    1160   32103
+Step   10: elements refined, merged, total:     173    1464   32033
+Step   15: elements refined, merged, total:     182    1728   31795
+Step   20: elements refined, merged, total:     156    1288   31760
+Step   25: elements refined, merged, total:     169    1520   31613
+Step   30: elements refined, merged, total:     210    1256   31984
+Step   35: elements refined, merged, total:     213    1480   32180
+Step   40: elements refined, merged, total:     161    1248   32215
+Step   45: elements refined, merged, total:     166    1672   31914
+Step   50: elements refined, merged, total:     188    1712   31732
+Step   55: elements refined, merged, total:     141    1528   31382
+Step   60: elements refined, merged, total:     173    1248   31501
+Step   65: elements refined, merged, total:     235    1400   31921
+Step   70: elements refined, merged, total:     193    1288   32145
+Step   75: elements refined, merged, total:     166    1560   31942
+Step   80: elements refined, merged, total:     188    1440   31998
+Step   85: elements refined, merged, total:     176    1496   31921
+Step   90: elements refined, merged, total:     159    1264   31928
+Step   95: elements refined, merged, total:     182    1376   31998
+Step  100: elements refined, merged, total:     201    1544   32054
+Step  105: elements refined, merged, total:     162    1200   32138
+Step  110: elements refined, merged, total:     180    1384   32187
+Step  115: elements refined, merged, total:     186    1664   32033
+Step  120: elements refined, merged, total:     152    1384   31886
+Step  125: elements refined, merged, total:     165    1488   31739
+Step  130: elements refined, merged, total:     174    1224   31886
+Step  135: elements refined, merged, total:     228    1464   32201
+Step  140: elements refined, merged, total:     162    1208   32278
+Step  145: elements refined, merged, total:     168    1664   31998
+Step  150: elements refined, merged, total:     189    1656   31872
+Step  155: elements refined, merged, total:     139    1272   31732
+Step  160: elements refined, merged, total:     196    1336   31935
+Step  165: elements refined, merged, total:     195    1424   32054
+Step  170: elements refined, merged, total:     182    1312   32180
+Step  175: elements refined, merged, total:     168    1504   32040
+Step  180: elements refined, merged, total:     183    1504   32005
+Step  185: elements refined, merged, total:     175    1776   31676
+Step  190: elements refined, merged, total:     151    1216   31669
+Step  195: elements refined, merged, total:     165    1352   31641
+ 
+ Verification being performed for class C
+ accuracy setting for epsilon =  0.1000000000000E-07
+ Comparison of temperature integrals
+           0.1544736587100E-04 0.1544736587100E-04 0.5658815935780E-13
+ Verification Successful
+
+
+ UA Benchmark Completed.
+ Class           =                        C
+ Size            =                        8
+ Iterations      =                      200
+ Time in seconds =                   114.66
+ Total threads   =                        8
+ Avail threads   =                        8
+ Mop/s total     =                    76.58
+ Mop/s/thread    =                     9.57
+ Operation type  =     coll. point advanced
+ Verification    =               SUCCESSFUL
+ Version         =                      3.4
+ Compile date    =              21 May 2021
+
+ Compile options:
+    F77          = ifort
+    FLINK        = $(FC)
+    F_LIB        = (none)
+    F_INC        = (none)
+    FFLAGS       = -O2 -fopenmp -qopt-report=5 -qopt-report-ph...
+    FLINKFLAGS   = $(FFLAGS)
+    RAND         = (none)
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+  SECTION     Time (secs)
+       total      :  114.662  ( 100.00 %)
+       init       :    1.012  (   0.88 %)
+       convect    :   12.837  (  11.20 %)
+       transfb_c  :    5.281  (   4.61 %)
+     sub-convect :    7.556  (   6.59 %)
+       diffusion  :   92.969  (  81.08 %)
+       transf     :    6.794  (   5.93 %)
+       transfb    :   61.390  (  53.54 %)
+     sub-diffuse :   24.785  (  21.62 %)
+       adaptation :    0.764  (   0.67 %)
+       transf+b   :    7.852  (   6.85 %)
+       add2       :    0.163  (   0.14 %)
+advisor: Warning: The Roofline is a special batch mode of data collection. It runs two analyses one by one. There are Survey Analysis and Trip Counts Analysis with FLOP respectively.
+advisor: Starting command line: advisor --collect survey --project-dir experiments_new/og-nec-intel-otm0-noftrace-advisor2/out_intel/ -- bin/bin_intel/ua.C.x !
+Intel(R) Advisor Command Line Tool
+Copyright (C) 2009-2020 Intel Corporation. All rights reserved.
+advisor: Opening result  0 %                                                   advisor: Opening result  0 % Preparing data for display of survey call tree    advisor: Opening result  2 % Preparing data for display of survey call tree    advisor: Opening result 25 % Preparing data for display of survey call tree    advisor: Opening result 25 % done                                              
+advisor: Preparing frequently used data  0 % done                              advisor: Preparing frequently used data  1 % done                              advisor: Preparing frequently used data  2 % done                              advisor: Preparing frequently used data  3 % done                              advisor: Preparing frequently used data  3 % done                              
+advisor: Preparing frequently used data 100 % done                             
+advisor: Collection started. To stop the collection, either press CTRL-C or enter from another console window: advisor -r /home/users/fpmjunior/ccpe/NPB/NPB3.4-OMP-autocompilingimprovements/experiments_new/og-nec-intel-otm0-noftrace-advisor2/out_intel/e000/hs007 -command stop.
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - UA Benchmark
+
+ No input file inputua.data. Using compiled defaults
+ Levels of refinement:               8
+ Adaptation frequency:               5
+ Time steps:                       200    dt:    0.156250E-03
+ CG iterations:                     10
+ Heat source radius:            0.0670
+ Number of available threads:        8
+ 
+Step    0: elements refined, merged, total:    4563       0   31942
+Step    5: elements refined, merged, total:     168    1160   32103
+Step   10: elements refined, merged, total:     173    1464   32033
+Step   15: elements refined, merged, total:     182    1728   31795
+Step   20: elements refined, merged, total:     156    1288   31760
+Step   25: elements refined, merged, total:     169    1520   31613
+Step   30: elements refined, merged, total:     210    1256   31984
+Step   35: elements refined, merged, total:     213    1480   32180
+Step   40: elements refined, merged, total:     161    1248   32215
+Step   45: elements refined, merged, total:     166    1672   31914
+Step   50: elements refined, merged, total:     188    1712   31732
+Step   55: elements refined, merged, total:     141    1528   31382
+Step   60: elements refined, merged, total:     173    1248   31501
+Step   65: elements refined, merged, total:     235    1400   31921
+Step   70: elements refined, merged, total:     193    1288   32145
+Step   75: elements refined, merged, total:     166    1560   31942
+Step   80: elements refined, merged, total:     188    1440   31998
+Step   85: elements refined, merged, total:     176    1496   31921
+Step   90: elements refined, merged, total:     159    1264   31928
+Step   95: elements refined, merged, total:     182    1376   31998
+Step  100: elements refined, merged, total:     201    1544   32054
+Step  105: elements refined, merged, total:     162    1200   32138
+Step  110: elements refined, merged, total:     180    1384   32187
+Step  115: elements refined, merged, total:     186    1664   32033
+Step  120: elements refined, merged, total:     152    1384   31886
+Step  125: elements refined, merged, total:     165    1488   31739
+Step  130: elements refined, merged, total:     174    1224   31886
+Step  135: elements refined, merged, total:     228    1464   32201
+Step  140: elements refined, merged, total:     162    1208   32278
+Step  145: elements refined, merged, total:     168    1664   31998
+Step  150: elements refined, merged, total:     189    1656   31872
+Step  155: elements refined, merged, total:     139    1272   31732
+Step  160: elements refined, merged, total:     196    1336   31935
+Step  165: elements refined, merged, total:     195    1424   32054
+Step  170: elements refined, merged, total:     182    1312   32180
+Step  175: elements refined, merged, total:     168    1504   32040
+Step  180: elements refined, merged, total:     183    1504   32005
+Step  185: elements refined, merged, total:     175    1776   31676
+Step  190: elements refined, merged, total:     151    1216   31669
+Step  195: elements refined, merged, total:     165    1352   31641
+ 
+ Verification being performed for class C
+ accuracy setting for epsilon =  0.1000000000000E-07
+ Comparison of temperature integrals
+           0.1544736587100E-04 0.1544736587100E-04 0.5658815935780E-13
+ Verification Successful
+
+
+ UA Benchmark Completed.
+ Class           =                        C
+ Size            =                        8
+ Iterations      =                      200
+ Time in seconds =                   117.41
+ Total threads   =                        8
+ Avail threads   =                        8
+ Mop/s total     =                    74.79
+ Mop/s/thread    =                     9.35
+ Operation type  =     coll. point advanced
+ Verification    =               SUCCESSFUL
+ Version         =                      3.4
+ Compile date    =              21 May 2021
+
+ Compile options:
+    F77          = ifort
+    FLINK        = $(FC)
+    F_LIB        = (none)
+    F_INC        = (none)
+    FFLAGS       = -O2 -fopenmp -qopt-report=5 -qopt-report-ph...
+    FLINKFLAGS   = $(FFLAGS)
+    RAND         = (none)
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+  SECTION     Time (secs)
+       total      :  117.407  ( 100.00 %)
+       init       :    1.049  (   0.89 %)
+       convect    :   13.010  (  11.08 %)
+       transfb_c  :    5.250  (   4.47 %)
+     sub-convect :    7.759  (   6.61 %)
+       diffusion  :   94.861  (  80.80 %)
+       transf     :    7.259  (   6.18 %)
+       transfb    :   60.649  (  51.66 %)
+     sub-diffuse :   26.953  (  22.96 %)
+       adaptation :    1.258  (   1.07 %)
+       transf+b   :    7.884  (   6.72 %)
+       add2       :    0.178  (   0.15 %)
+advisor: Collection stopped.
+advisor: Opening result  0 % done                                              advisor: Opening result  0 % Finalizing results                                advisor: Opening result  0 % Finalizing the result                             advisor: Opening result  0 % Clearing the database                             advisor: Opening result 10 % Clearing the database                             advisor: Opening result 10 % Loading raw data to the database                  advisor: Opening result 10 % Loading 'bandwidth_1621569450.hpc' file           advisor: Opening result 19 % Loading 'bandwidth_1621569450.hpc' file           advisor: Opening result 19 % Loading 'systemcollector-76975-tsubasa.sc' file   advisor: Opening result 19 % Loading '76975-76985.0.trace' file                advisor: Opening result 19 % Loading 'userapicollector-76985-a49bf78e.trace' fiadvisor: Opening result 19 % Loading 'tripcounts_51051_0.tcs' file             advisor: Opening result 27 % Loading 'tripcounts_51051_0.tcs' file             
+advisor: Error: Cannot load data file `/home/users/fpmjunior/ccpe/NPB/NPB3.4-OMP-autocompilingimprovements/experiments_new/og-nec-intel-otm0-noftrace-advisor2/out_intel/e000/hs007/data.1/advixe-runtrc.txt' ().
+advisor: Opening result 27 % Updating precomputed scalar metrics               advisor: Opening result 29 % Updating precomputed scalar metrics               advisor: Opening result 29 % Processing profile metrics and debug information  advisor: Opening result 29 % Setting data model parameters                     advisor: Opening result 29 % Resolving module symbols                          advisor: Opening result 29 % Resolving information for dangling locations      advisor: Opening result 29 % Resolving information for `ld-linux-x86-64.so.2'  advisor: Opening result 29 % Resolving information for `libittnotify_collector.advisor: Opening result 29 % Resolving information for `libpthread.so.0'       advisor: Opening result 29 % Resolving information for `ua.C.x'                advisor: Opening result 29 % Resolving information for `libc.so.6'             advisor: Opening result 29 % Resolving information for `sp.C.x'                advisor: Opening result 29 % Resolving information for `libiomp5.so'           
+advisor: Warning: Cannot locate debugging information for file `/lib64/libpthread.so.0'.
+advisor: Warning: Cannot locate debugging information for file `/lib64/ld-linux-x86-64.so.2'.
+advisor: Warning: Cannot locate debugging information for file `/home/intel/oneapi/advisor/2021.1.1/lib64/runtime/libittnotify_collector.so'.
+advisor: Opening result 30 % Resolving information for `libiomp5.so'           
+advisor: Warning: Cannot locate debugging information for file `/lib64/libc.so.6'.
+advisor: Opening result 30 % Resolving information for `libtpsstool.so'        advisor: Opening result 31 % Resolving information for `libtpsstool.so'        advisor: Opening result 32 % Resolving information for `libtpsstool.so'        
+advisor: Warning: Cannot locate debugging information for file `/home/intel/oneapi/advisor/2021.1.1/lib64/libtpsstool.so'.
+advisor: Warning: Cannot locate debugging information for file `/home/users/fpmjunior/ccpe/NPB/NPB3.4-OMP-autocompilingimprovements/bin/bin_intel/ua.C.x'.
+advisor: Warning: Cannot locate debugging information for file `/home/users/fpmjunior/ccpe/NPB/NPB3.4-OMP-autocompilingimprovements/bin/bin_intel/sp.C.x'.
+advisor: Opening result 33 % Resolving information for `libtpsstool.so'        advisor: Opening result 34 % Resolving information for `libtpsstool.so'        advisor: Opening result 34 % Resolving bottom user stack information           advisor: Opening result 35 % Resolving bottom user stack information           advisor: Opening result 36 % Resolving bottom user stack information           advisor: Opening result 36 % Resolving thread name information                 advisor: Opening result 37 % Resolving thread name information                 advisor: Opening result 37 % Resolving call target names for dynamic code      advisor: Opening result 39 % Resolving call target names for dynamic code      advisor: Opening result 40 % Resolving call target names for dynamic code      advisor: Opening result 40 % Processing profile metrics and debug information  advisor: Opening result 40 % Resolving FLOP information                        advisor: Opening result 43 % Resolving FLOP information                        advisor: Opening result 43 % Processing information for self instruction mix readvisor: Opening result 45 % Processing information for self instruction mix readvisor: Opening result 45 % Calculating function call count                   advisor: Opening result 48 % Calculating function call count                   advisor: Opening result 48 % Processing information for light dynamic instructiadvisor: Opening result 51 % Processing information for light dynamic instructiadvisor: Opening result 51 % Setting data model parameters                     advisor: Opening result 51 % Precomputing frequently used data                 advisor: Opening result 51 % Precomputing frequently used data                 advisor: Opening result 53 % Precomputing frequently used data                 advisor: Opening result 56 % Precomputing frequently used data                 advisor: Opening result 60 % Precomputing frequently used data                 advisor: Opening result 60 % Updating precomputed scalar metrics               advisor: Opening result 62 % Updating precomputed scalar metrics               advisor: Opening result 62 % Discarding redundant overtime data                advisor: Opening result 64 % Discarding redundant overtime data                advisor: Opening result 64 % Saving the result                                 advisor: Opening result 67 % Saving the result                                 advisor: Opening result 70 % Saving the result                                 advisor: Opening result 75 % Saving the result                                 advisor: Opening result 75 % Preparing data for display of survey call tree    advisor: Opening result 75 % Resolving module symbols                          advisor: Opening result 75 % Resolving bottom user stack information           advisor: Opening result 75 % Resolving thread name information                 advisor: Opening result 75 % Resolving call target names for dynamic code      advisor: Opening result 75 % Precomputing frequently used data                 advisor: Opening result 76 % Precomputing frequently used data                 advisor: Opening result 77 % Precomputing frequently used data                 advisor: Opening result 88 % Precomputing frequently used data                 advisor: Opening result 99 % Precomputing frequently used data                 advisor: Opening result 99 % done                                              
+advisor: Preparing frequently used data  0 % done                              advisor: Preparing frequently used data  1 % done                              advisor: Preparing frequently used data  2 % done                              advisor: Preparing frequently used data  3 % done                              advisor: Preparing frequently used data  4 % done                              advisor: Preparing frequently used data  4 % done                              
+advisor: Preparing frequently used data 100 % done                             
+
+Elapsed Time: 119.13s
+Total CPU time: 952.635
+Time in 29 vectorized loops: 131.242
+
+advisor: Starting command line: advisor --collect tripcounts --project-dir experiments_new/og-nec-intel-otm0-noftrace-advisor2/out_intel/ --flop --no-trip-counts -- bin/bin_intel/ua.C.x !
+Intel(R) Advisor Command Line Tool
+Copyright (C) 2009-2020 Intel Corporation. All rights reserved.
+advisor: Opening result  0 %                                                   advisor: Opening result  0 % Preparing data for display of survey call tree    advisor: Opening result  2 % Preparing data for display of survey call tree    advisor: Opening result 25 % Preparing data for display of survey call tree    advisor: Opening result 25 % done                                              
+advisor: Preparing frequently used data  0 % done                              advisor: Preparing frequently used data  1 % done                              advisor: Preparing frequently used data  2 % done                              advisor: Preparing frequently used data  3 % done                              advisor: Preparing frequently used data  4 % done                              advisor: Preparing frequently used data  4 % done                              
+advisor: Preparing frequently used data 100 % done                             
+advisor: Collection started. To stop the collection, either press CTRL-C or enter from another console window: advisor -r /home/users/fpmjunior/ccpe/NPB/NPB3.4-OMP-autocompilingimprovements/experiments_new/og-nec-intel-otm0-noftrace-advisor2/out_intel/e000/trc007 -command stop.
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - UA Benchmark
+
+ No input file inputua.data. Using compiled defaults
+ Levels of refinement:               8
+ Adaptation frequency:               5
+ Time steps:                       200    dt:    0.156250E-03
+ CG iterations:                     10
+ Heat source radius:            0.0670
+ Number of available threads:        8
+ 
+Step    0: elements refined, merged, total:    4563       0   31942
+Step    5: elements refined, merged, total:     168    1160   32103
+Step   10: elements refined, merged, total:     173    1464   32033
+Step   15: elements refined, merged, total:     182    1728   31795
+Step   20: elements refined, merged, total:     156    1288   31760
+Step   25: elements refined, merged, total:     169    1520   31613
+Step   30: elements refined, merged, total:     210    1256   31984
+Step   35: elements refined, merged, total:     213    1480   32180
+Step   40: elements refined, merged, total:     161    1248   32215
+Step   45: elements refined, merged, total:     166    1672   31914
+Step   50: elements refined, merged, total:     188    1712   31732
+Step   55: elements refined, merged, total:     141    1528   31382
+Step   60: elements refined, merged, total:     173    1248   31501
+Step   65: elements refined, merged, total:     235    1400   31921
+Step   70: elements refined, merged, total:     193    1288   32145
+Step   75: elements refined, merged, total:     166    1560   31942
+Step   80: elements refined, merged, total:     188    1440   31998
+Step   85: elements refined, merged, total:     176    1496   31921
+Step   90: elements refined, merged, total:     159    1264   31928
+Step   95: elements refined, merged, total:     182    1376   31998
+Step  100: elements refined, merged, total:     201    1544   32054
+Step  105: elements refined, merged, total:     162    1200   32138
+Step  110: elements refined, merged, total:     180    1384   32187
+Step  115: elements refined, merged, total:     186    1664   32033
+Step  120: elements refined, merged, total:     152    1384   31886
+Step  125: elements refined, merged, total:     165    1488   31739
+Step  130: elements refined, merged, total:     174    1224   31886
+Step  135: elements refined, merged, total:     228    1464   32201
+Step  140: elements refined, merged, total:     162    1208   32278
+Step  145: elements refined, merged, total:     168    1664   31998
+Step  150: elements refined, merged, total:     189    1656   31872
+Step  155: elements refined, merged, total:     139    1272   31732
+Step  160: elements refined, merged, total:     196    1336   31935
+Step  165: elements refined, merged, total:     195    1424   32054
+Step  170: elements refined, merged, total:     182    1312   32180
+Step  175: elements refined, merged, total:     168    1504   32040
+Step  180: elements refined, merged, total:     183    1504   32005
+Step  185: elements refined, merged, total:     175    1776   31676
+Step  190: elements refined, merged, total:     151    1216   31669
+Step  195: elements refined, merged, total:     165    1352   31641
+ 
+ Verification being performed for class C
+ accuracy setting for epsilon =  0.1000000000000E-07
+ Comparison of temperature integrals
+           0.1544736587100E-04 0.1544736587100E-04 0.5658815935780E-13
+ Verification Successful
+
+
+ UA Benchmark Completed.
+ Class           =                        C
+ Size            =                        8
+ Iterations      =                      200
+ Time in seconds =                   447.21
+ Total threads   =                        8
+ Avail threads   =                        8
+ Mop/s total     =                    19.63
+ Mop/s/thread    =                     2.45
+ Operation type  =     coll. point advanced
+ Verification    =               SUCCESSFUL
+ Version         =                      3.4
+ Compile date    =              21 May 2021
+
+ Compile options:
+    F77          = ifort
+    FLINK        = $(FC)
+    F_LIB        = (none)
+    F_INC        = (none)
+    FFLAGS       = -O2 -fopenmp -qopt-report=5 -qopt-report-ph...
+    FLINKFLAGS   = $(FFLAGS)
+    RAND         = (none)
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+  SECTION     Time (secs)
+       total      :  447.209  ( 100.00 %)
+       init       :    3.430  (   0.77 %)
+       convect    :   44.961  (  10.05 %)
+       transfb_c  :   26.388  (   5.90 %)
+     sub-convect :   18.573  (   4.15 %)
+       diffusion  :  365.315  (  81.69 %)
+       transf     :    9.094  (   2.03 %)
+       transfb    :  306.736  (  68.59 %)
+     sub-diffuse :   49.485  (  11.07 %)
+       adaptation :    2.205  (   0.49 %)
+       transf+b   :   34.382  (   7.69 %)
+       add2       :    0.185  (   0.04 %)
+advisor: Opening result  0 % done                                              advisor: Opening result  0 % Finalizing results                                advisor: Opening result  0 % Finalizing the result                             advisor: Opening result  0 % Loading raw data to the database                  advisor: Opening result  0 % Loading 'bandwidth_1621569982.hpc' file           advisor: Opening result 11 % Loading 'bandwidth_1621569982.hpc' file           advisor: Opening result 11 % Loading 'tripcounts_96971_0.tcs' file             advisor: Opening result 23 % Loading 'tripcounts_96971_0.tcs' file             advisor: Opening result 23 % Updating precomputed scalar metrics               advisor: Opening result 26 % Updating precomputed scalar metrics               advisor: Opening result 26 % Processing profile metrics and debug information  advisor: Opening result 26 % Setting data model parameters                     advisor: Opening result 26 % Resolving module symbols                          advisor: Opening result 41 % Resolving module symbols                          advisor: Opening result 41 % Processing profile metrics and debug information  advisor: Opening result 41 % Resolving FLOP information                        advisor: Opening result 45 % Resolving FLOP information                        advisor: Opening result 45 % Processing information for self instruction mix readvisor: Opening result 49 % Processing information for self instruction mix readvisor: Opening result 49 % Calculating function call count                   advisor: Opening result 52 % Calculating function call count                   advisor: Opening result 52 % Processing information for light dynamic instructiadvisor: Opening result 56 % Processing information for light dynamic instructiadvisor: Opening result 56 % Setting data model parameters                     advisor: Opening result 57 % Setting data model parameters                     advisor: Opening result 57 % Precomputing frequently used data                 advisor: Opening result 57 % Precomputing frequently used data                 advisor: Opening result 69 % Precomputing frequently used data                 advisor: Opening result 69 % Updating precomputed scalar metrics               advisor: Opening result 72 % Updating precomputed scalar metrics               advisor: Opening result 72 % Discarding redundant overtime data                advisor: Opening result 74 % Discarding redundant overtime data                advisor: Opening result 74 % Saving the result                                 advisor: Opening result 74 % Preparing data for display of survey call tree    advisor: Opening result 77 % Preparing data for display of survey call tree    advisor: Opening result 88 % Preparing data for display of survey call tree    advisor: Opening result 99 % Preparing data for display of survey call tree    advisor: Opening result 99 % done                                              
+advisor: Preparing frequently used data  0 % done                              advisor: Preparing frequently used data  1 % done                              advisor: Preparing frequently used data  2 % done                              advisor: Preparing frequently used data  3 % done                              advisor: Preparing frequently used data  4 % done                              advisor: Preparing frequently used data  4 % done                              
+advisor: Preparing frequently used data 100 % done                             
+
+Elapsed Time: 119.13s
+Total CPU time: 952.635
+Time in 29 vectorized loops: 131.242
+GFLOPS: 6.34
+

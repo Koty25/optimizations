@@ -1,0 +1,126 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: EMBAR
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at ep.f(140,10)
+   remark #15382: vectorization support: call to function randlc_ cannot be vectorized   [ ep.f(141,15) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+LOOP END
+
+LOOP BEGIN at ep.f(150,10)
+   remark #15389: vectorization support: reference q(i) has unaligned access   [ ep.f(151,10) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 5
+   remark #15309: vectorization support: normalized vectorization overhead 0.120
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 2.500 
+   remark #15478: estimated potential speedup: 1.420 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at ep.f(221,10)
+   remark #15389: vectorization support: reference q(i) has unaligned access   [ ep.f(222,10) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 5
+   remark #15309: vectorization support: normalized vectorization overhead 0.733
+   remark #15355: vectorization support: gc is double type reduction   [ ep.f(146,7) ]
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 3.000 
+   remark #15478: estimated potential speedup: 1.150 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at ep.f(268,7)
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between bc%bc (268:7) and bc (268:7)
+   remark #15346: vector dependence: assumed OUTPUT dependence between bc (268:7) and bc%bc (268:7)
+LOOP END
+
+LOOP BEGIN at ep.f(122,10)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at ep.f(122,10)
+   remark #15388: vectorization support: reference x(i) has aligned access   [ ep.f(123,10) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.833
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 2.660 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at ep.f(122,10)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at ep.f(162,10)
+   remark #15389: vectorization support: reference qq(i) has unaligned access   [ ep.f(163,10) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 5
+   remark #15309: vectorization support: normalized vectorization overhead 0.120
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 2.500 
+   remark #15478: estimated potential speedup: 1.420 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at ep.f(167,10)
+   remark #15382: vectorization support: call to function timer_start_ cannot be vectorized   [ ep.f(174,30) ]
+   remark #15382: vectorization support: call to function randlc_ cannot be vectorized   [ ep.f(177,38) ]
+   remark #15382: vectorization support: call to function randlc_ cannot be vectorized   [ ep.f(179,18) ]
+   remark #15382: vectorization support: call to function vranlc_ cannot be vectorized   [ ep.f(186,15) ]
+   remark #15382: vectorization support: call to function timer_stop_ cannot be vectorized   [ ep.f(187,30) ]
+   remark #15382: vectorization support: call to function timer_start_ cannot be vectorized   [ ep.f(193,30) ]
+   remark #15382: vectorization support: call to function timer_stop_ cannot be vectorized   [ ep.f(210,30) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between t1 (169:10) and t1 (198:13)
+   remark #15346: vector dependence: assumed OUTPUT dependence between t1 (198:13) and t1 (169:10)
+
+   LOOP BEGIN at ep.f(175,13)
+      remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria   [ ep.f(180,13) ]
+   LOOP END
+
+   LOOP BEGIN at ep.f(195,13)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between qq(l) (204:16) and qq(l) (204:16)
+      remark #15346: vector dependence: assumed ANTI dependence between qq(l) (204:16) and qq(l) (204:16)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at ep.f(215,10)
+   remark #15382: vectorization support: call to function __kmpc_atomic_float8_add cannot be vectorized   [ ep.f(217,10) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+LOOP END
+===========================================================================

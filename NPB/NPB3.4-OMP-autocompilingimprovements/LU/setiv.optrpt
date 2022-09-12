@@ -1,0 +1,46 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: SETIV
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at setiv.f(33,7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at setiv.f(37,13)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at setiv.f(53,19)
+         remark #15388: vectorization support: reference ue_1jk(m) has aligned access   [ setiv.f(46,37) ]
+         remark #15388: vectorization support: reference ue_nx0jk(m) has aligned access   [ setiv.f(46,44) ]
+         remark #15388: vectorization support: reference ue_i1k(m) has aligned access   [ setiv.f(48,37) ]
+         remark #15388: vectorization support: reference ue_iny0k(m) has aligned access   [ setiv.f(48,45) ]
+         remark #15388: vectorization support: reference ue_ij1(m) has aligned access   [ setiv.f(50,37) ]
+         remark #15388: vectorization support: reference ue_ijnz(m) has aligned access   [ setiv.f(50,46) ]
+         remark #15389: vectorization support: reference u_(m,i,j,k) has unaligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.415
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 6 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 71 
+         remark #15477: vector cost: 32.500 
+         remark #15478: estimated potential speedup: 1.550 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at setiv.f(53,19)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================

@@ -1,0 +1,189 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: Y_SOLVE
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at y_solve.f(32,8)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at y_solve.f(45,14)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at y_solve.f(45,14)
+      remark #15388: vectorization support: reference cv(j) has aligned access   [ y_solve.f(47,17) ]
+      remark #15388: vectorization support: reference rhov(j) has aligned access   [ y_solve.f(48,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <rho_i_(i,j,k)>, stride is unknown to compiler   [ y_solve.f(46,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <vs_(i,j,k)>, stride is unknown to compiler   [ y_solve.f(47,17) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.443
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 2 
+      remark #15452: unmasked strided loads: 2 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 42 
+      remark #15477: vector cost: 35.000 
+      remark #15478: estimated potential speedup: 1.190 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at y_solve.f(45,14)
+   <Alternate Alignment Vectorized Loop>
+   LOOP END
+
+   LOOP BEGIN at y_solve.f(45,14)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at y_solve.f(54,14)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at y_solve.f(54,14)
+      remark #15389: vectorization support: reference rhov(j) has unaligned access   [ y_solve.f(57,17) ]
+      remark #15388: vectorization support: reference cv(j-1) has aligned access   [ y_solve.f(56,17) ]
+      remark #15389: vectorization support: reference rhov(j-1) has unaligned access   [ y_solve.f(56,28) ]
+      remark #15388: vectorization support: reference cv(j+1) has aligned access   [ y_solve.f(58,17) ]
+      remark #15389: vectorization support: reference rhov(j+1) has unaligned access   [ y_solve.f(58,35) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(1,j)>, stride is 5   [ y_solve.f(55,17) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(5,j)>, stride is 5   [ y_solve.f(59,17) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(3,j)>, stride is 5   [ y_solve.f(57,17) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(2,j)>, stride is 5   [ y_solve.f(56,17) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(4,j)>, stride is 5   [ y_solve.f(58,17) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.527
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 2 
+      remark #15450: unmasked unaligned unit stride loads: 3 
+      remark #15453: unmasked strided stores: 5 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 40 
+      remark #15477: vector cost: 27.500 
+      remark #15478: estimated potential speedup: 1.430 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at y_solve.f(54,14)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at y_solve.f(76,14)
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(1,j)>, stride is 5   [ y_solve.f(77,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <lhs(1,j)>, stride is 5   [ y_solve.f(77,17) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(2,j)>, stride is 5   [ y_solve.f(78,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <lhs(2,j)>, stride is 5   [ y_solve.f(78,17) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(3,j)>, stride is 5   [ y_solve.f(79,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <lhs(3,j)>, stride is 5   [ y_solve.f(79,17) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(4,j)>, stride is 5   [ y_solve.f(80,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <lhs(4,j)>, stride is 5   [ y_solve.f(80,17) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(5,j)>, stride is 5   [ y_solve.f(81,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <lhs(5,j)>, stride is 5   [ y_solve.f(81,17) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.200
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15452: unmasked strided loads: 5 
+      remark #15453: unmasked strided stores: 5 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 31 
+      remark #15477: vector cost: 25.000 
+      remark #15478: estimated potential speedup: 1.230 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at y_solve.f(76,14)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at y_solve.f(97,14)
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhsp(1,j)>, stride is 5   [ y_solve.f(98,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <lhs(1,j)>, stride is 5   [ y_solve.f(98,17) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhsp(3,j)>, stride is 5   [ y_solve.f(101,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <lhs(3,j)>, stride is 5   [ y_solve.f(101,17) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhsp(5,j)>, stride is 5   [ y_solve.f(104,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <lhs(5,j)>, stride is 5   [ y_solve.f(104,17) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhsm(1,j)>, stride is 5   [ y_solve.f(105,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <lhs(1,j)>, stride is 5   [ y_solve.f(105,17) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhsm(3,j)>, stride is 5   [ y_solve.f(108,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <lhs(3,j)>, stride is 5   [ y_solve.f(108,17) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhsm(5,j)>, stride is 5   [ y_solve.f(111,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <lhs(5,j)>, stride is 5   [ y_solve.f(111,17) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhsp(2,j)>, stride is 5   [ y_solve.f(99,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <lhs(2,j)>, stride is 5   [ y_solve.f(99,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <speed_(i,j-1,k)>, stride is unknown to compiler   [ y_solve.f(100,43) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhsp(4,j)>, stride is 5   [ y_solve.f(102,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <lhs(4,j)>, stride is 5   [ y_solve.f(102,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <speed_(i,j+1,k)>, stride is unknown to compiler   [ y_solve.f(103,43) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhsm(2,j)>, stride is 5   [ y_solve.f(106,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <lhs(2,j)>, stride is 5   [ y_solve.f(106,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <speed_(i,j-1,k)>, stride is unknown to compiler   [ y_solve.f(107,43) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhsm(4,j)>, stride is 5   [ y_solve.f(109,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <lhs(4,j)>, stride is 5   [ y_solve.f(109,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <speed_(i,j+1,k)>, stride is unknown to compiler   [ y_solve.f(110,43) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.051
+      remark #15452: unmasked strided loads: 14 
+      remark #15453: unmasked strided stores: 10 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 57 
+      remark #15477: vector cost: 78.000 
+      remark #15478: estimated potential speedup: 0.730 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at y_solve.f(126,40)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed OUTPUT dependence between lhs(4,j) (123:17) and lhs(4,j+1) (130:17)
+      remark #15346: vector dependence: assumed OUTPUT dependence between lhs(4,j+1) (130:17) and lhs(4,j) (123:17)
+
+      LOOP BEGIN at y_solve.f(125,17)
+      LOOP END
+
+      LOOP BEGIN at y_solve.f(132,17)
+      LOOP END
+
+      LOOP BEGIN at y_solve.f(140,17)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at y_solve.f(157,14)
+   LOOP END
+
+   LOOP BEGIN at y_solve.f(164,14)
+   LOOP END
+
+   LOOP BEGIN at y_solve.f(172,14)
+   LOOP END
+
+   LOOP BEGIN at y_solve.f(179,14)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed OUTPUT dependence between lhsm(4,j) (201:17) and lhsm(4,j+1) (206:17)
+      remark #15346: vector dependence: assumed OUTPUT dependence between lhsm(4,j+1) (206:17) and lhsm(4,j) (201:17)
+   LOOP END
+
+   LOOP BEGIN at y_solve.f(258,14)
+   LOOP END
+
+   LOOP BEGIN at y_solve.f(271,14)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between rhs_(m,i,j,k) (275:20) and rhs_(m,i,j+1,k) (275:20)
+      remark #15346: vector dependence: assumed ANTI dependence between rhs_(m,i,j+1,k) (275:20) and rhs_(m,i,j,k) (275:20)
+      remark #15346: vector dependence: assumed FLOW dependence between rhs_(m,i,j,k) (275:20) and rhs_(m,i,j+2,k) (275:20)
+      remark #15346: vector dependence: assumed ANTI dependence between rhs_(m,i,j+2,k) (275:20) and rhs_(m,i,j,k) (275:20)
+
+      LOOP BEGIN at y_solve.f(274,17)
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================

@@ -1,0 +1,125 @@
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - SP Benchmark
+
+ No input file inputsp.data. Using compiled defaults
+ Size:  102x 102x 102
+ Iterations:  400    dt:    0.0010000
+
+ Time step    1
+ Time step   20
+ Time step   40
+ Time step   60
+ Time step   80
+ Time step  100
+ Time step  120
+ Time step  140
+ Time step  160
+ Time step  180
+ Time step  200
+ Time step  220
+ Time step  240
+ Time step  260
+ Time step  280
+ Time step  300
+ Time step  320
+ Time step  340
+ Time step  360
+ Time step  380
+ Time step  400
+ Verification being performed for class B
+ accuracy setting for epsilon =  0.1000000000000E-07
+ Comparison of RMS-norms of residual
+           1 0.6903293579998E+02 0.6903293579998E+02 0.5393431254569E-13
+           2 0.3095134488084E+02 0.3095134488084E+02 0.8344783900123E-13
+           3 0.4103336647017E+02 0.4103336647017E+02 0.1142870414843E-12
+           4 0.3864769009604E+02 0.3864769009604E+02 0.3382863582661E-13
+           5 0.5643482272596E+02 0.5643482272596E+02 0.6131574364918E-13
+ Comparison of RMS-norms of solution error
+           1 0.9810006190188E-02 0.9810006190188E-02 0.4208602719287E-13
+           2 0.1022827905670E-02 0.1022827905670E-02 0.3987736891299E-12
+           3 0.1720597911692E-02 0.1720597911692E-02 0.1471986137909E-12
+           4 0.1694479428231E-02 0.1694479428231E-02 0.8292375771172E-13
+           5 0.1847456263981E-01 0.1847456263981E-01 0.7455496873076E-13
+ Verification Successful
+
+
+ SP Benchmark Completed.
+ Class           =                        B
+ Size            =            102x 102x 102
+ Iterations      =                      400
+ Time in seconds =                   236.71
+ Mop/s total     =                  1499.78
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                      3.4
+ Compile date    =              09 Aug 2020
+
+ Compile options:
+    F77          = nfort
+    FLINK        = $(FC)
+    F_LIB        = (none)
+    F_INC        = (none)
+    FFLAGS       = -O3 -mparallel -report-all -fdiag-inline=2 ...
+    FLINKFLAGS   = $(FFLAGS)
+    RAND         = (none)
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+  SECTION   Time (secs)
+      total   :  236.710  ( 100.00 %)
+      rhsx    :    0.646  (   0.27 %)
+      rhsy    :    0.280  (   0.12 %)
+      rhsz    :    0.347  (   0.15 %)
+      rhs     :    1.511  (   0.64 %)
+      sub-rhs :    1.272  (   0.54 %)
+     rest-rhs :    0.238  (   0.10 %)
+      xsolve  :   55.749  (  23.55 %)
+      ysolve  :   57.020  (  24.09 %)
+      zsolve  :  122.033  (  51.55 %)
+     sub-zsol :  122.033  (  51.55 %)
+      redist1 :    0.000  (   0.00 %)
+      redist2 :    0.000  (   0.00 %)
+       redist :    0.000  (   0.00 %)
+      txinvr  :    0.082  (   0.03 %)
+      pinvr   :    0.060  (   0.03 %)
+      ninvr   :    0.060  (   0.03 %)
+      tzetar  :    0.088  (   0.04 %)
+      add     :    0.100  (   0.04 %)
+            ********  Program  Information  ********
+  Real Time (sec)                         :           239.406224
+  User Time (sec)                         :          1914.295447
+  Vector Time (sec)                       :            23.137401
+  Inst. Count                             :         929577007772
+  V. Inst. Count                          :           3645012432
+  V. Element Count                        :         363591000731
+  V. Load Element Count                   :         126077385030
+  FLOP Count                              :         366733429122
+  MOPS                                    :           722.730064
+  MOPS (Real)                             :          5781.005937
+  MFLOPS                                  :           191.508375
+  MFLOPS (Real)                           :          1531.845852
+  A. V. Length                            :            99.750277
+  V. Op. Ratio (%)                        :            33.097824
+  L1 I-Cache Miss (sec)                   :             0.033612
+  L1 O-Cache Miss (sec)                   :           101.208610
+  L2 Cache Miss (sec)                     :            97.349793
+  FMA Element Count                       :          94485798624
+  Required B/F                            :             9.029890
+  Required Store B/F                      :             2.730134
+  Required Load B/F                       :             6.299757
+  Actual V. Load B/F                      :             1.279228
+  Power Throttling (sec)                  :             0.000000
+  Thermal Throttling (sec)                :             0.000000
+  Max Active Threads                      :                    8
+  Available CPU Cores                     :                    8
+  Average CPU Cores Used                  :             7.996014
+  Memory Size Used (MB)                   :          1540.000000
+
+  Start Time (date)        :        Sun Aug  9 17:21:27 2020 -03
+  End   Time (date)        :        Sun Aug  9 17:25:26 2020 -03

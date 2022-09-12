@@ -1,0 +1,25 @@
+Date: Qui Jul 23 21:56:07 -03 2020
+Host: tsubasa
+
+>>> run ncc/bt.B.x nt=8 - successful
+>>> run ncc/cg.B.x nt=8 - successful
+>>> run ncc/ep.B.x nt=8 - successful
+>>> run ncc/ft.B.x nt=8 - successful
+>>> run ncc/is.B.x nt=8 - successful
+>>> run ncc/mg.B.x nt=8 - successful
+>>> run ncc/sp.B.x nt=8 - successful
+>>> run ncc/ua.B.x nt=8 - successful
+>>> run intel/bt.B.x nt=8 - successful
+>>> run intel/cg.B.x nt=8 - successful
+>>> run intel/ep.B.x nt=8 - successful
+>>> run intel/ft.B.x nt=8 - successful
+>>> run intel/is.B.x nt=8 - successful
+>>> run intel/mg.B.x nt=8 - successful
+>>> run intel/sp.B.x nt=8 - successful
+>>> run intel/ua.B.x nt=8 - successful
+
+Date: Qui Jul 23 22:03:37 -03 2020
+Total number of cases: 16
+Total number of FAILED cases: 0
+Total number of not present cases: 0
+

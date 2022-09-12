@@ -1,0 +1,798 @@
+   ============================================
+   =      NAS PARALLEL BENCHMARKS 3.4         =
+   =      OpenMP Versions                     =
+   =      Fortran/C                           =
+   ============================================
+
+cd BT; make CLASS=B VERSION=blk
+make[1]: Entering directory `/home/users/fpmjunior/sbac-2020-serpa/NPB/NPB3.4-OMP/BT'
+make[2]: Entering directory `/home/users/fpmjunior/sbac-2020-serpa/NPB/NPB3.4-OMP/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/users/fpmjunior/sbac-2020-serpa/NPB/NPB3.4-OMP/sys'
+../sys/setparams bt B
+make[2]: Entering directory `/home/users/fpmjunior/sbac-2020-serpa/NPB/NPB3.4-OMP/BT'
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 bt_data.f
+Obsolescent: bt_data.f, line 9: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+sed -e 's/= 0/= 8/' blk_par0.h > blk_par.h_wk
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 bt.f
+Obsolescent: bt.f, line 48: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: vec( 103): bt.f, line 128: Unvectorized loop.
+nfort: vec( 110): bt.f, line 128: Vectorization obstructive procedure reference.: TIMER_CLEAR
+nfort: vec( 103): bt.f, line 146: Unvectorized loop.
+nfort: vec( 110): bt.f, line 146: Vectorization obstructive procedure reference.: TIMER_CLEAR
+nfort: vec( 180): bt.f, line 151: I/O statement obstructs vectorization.
+nfort: vec( 110): bt.f, line 151: Vectorization obstructive procedure reference.: ADI
+nfort: vec( 103): bt.f, line 151: Unvectorized loop.
+nfort: opt(1118): bt.f, line 155: This I/O statement inhibits optimization of loop.
+nfort: vec( 103): bt.f, line 188: Unvectorized loop.
+nfort: vec( 110): bt.f, line 188: Vectorization obstructive procedure reference.: TIMER_READ
+nfort: vec( 103): bt.f, line 195: Unvectorized loop.
+nfort: vec( 180): bt.f, line 195: I/O statement obstructs vectorization.
+nfort: opt(1118): bt.f, line 196: This I/O statement inhibits optimization of loop.
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 initialize.f
+Obsolescent: initialize.f, line 4: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): initialize.f, line 22: Parallel routine generated.: INITIALIZE$1
+nfort: par(1803): initialize.f, line 31: Parallelized by "do".
+nfort: opt(2495): initialize.f, line 31: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): initialize.f, line 31: Vectorized loop.
+nfort: vec( 101): initialize.f, line 33: Vectorized loop.
+nfort: opt(1418): initialize.f, line 34: Constant-length loop is expanded.
+nfort: par(1803): initialize.f, line 49: Parallelized by "do".
+nfort: opt(2495): initialize.f, line 49: Loop nest collapsed by "collapse" clause.
+nfort: vec( 110): initialize.f, line 53: Vectorization obstructive procedure reference.: EXACT_SOLUTION
+nfort: vec( 103): initialize.f, line 53: Unvectorized loop.
+nfort: opt(1418): initialize.f, line 56: Constant-length loop is expanded.
+nfort: opt(1025): initialize.f, line 57: Reference to this procedure inhibits optimization.: EXACT_SOLUTION
+nfort: opt(1418): initialize.f, line 61: Constant-length loop is expanded.
+nfort: opt(1418): initialize.f, line 66: Constant-length loop is expanded.
+nfort: opt(1418): initialize.f, line 71: Constant-length loop is expanded.
+nfort: vec( 110): initialize.f, line 99: Vectorization obstructive procedure reference.: EXACT_SOLUTION
+nfort: par(1803): initialize.f, line 99: Parallelized by "do".
+nfort: opt(2495): initialize.f, line 99: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): initialize.f, line 99: Unvectorized loop.
+nfort: opt(1418): initialize.f, line 104: Constant-length loop is expanded.
+nfort: vec( 110): initialize.f, line 118: Vectorization obstructive procedure reference.: EXACT_SOLUTION
+nfort: par(1803): initialize.f, line 118: Parallelized by "do".
+nfort: opt(2495): initialize.f, line 118: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): initialize.f, line 118: Unvectorized loop.
+nfort: opt(1418): initialize.f, line 123: Constant-length loop is expanded.
+nfort: vec( 110): initialize.f, line 136: Vectorization obstructive procedure reference.: EXACT_SOLUTION
+nfort: par(1803): initialize.f, line 136: Parallelized by "do".
+nfort: opt(2495): initialize.f, line 136: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): initialize.f, line 136: Unvectorized loop.
+nfort: opt(1418): initialize.f, line 141: Constant-length loop is expanded.
+nfort: vec( 110): initialize.f, line 155: Vectorization obstructive procedure reference.: EXACT_SOLUTION
+nfort: par(1803): initialize.f, line 155: Parallelized by "do".
+nfort: opt(2495): initialize.f, line 155: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): initialize.f, line 155: Unvectorized loop.
+nfort: opt(1418): initialize.f, line 160: Constant-length loop is expanded.
+nfort: vec( 110): initialize.f, line 173: Vectorization obstructive procedure reference.: EXACT_SOLUTION
+nfort: par(1803): initialize.f, line 173: Parallelized by "do".
+nfort: opt(2495): initialize.f, line 173: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): initialize.f, line 173: Unvectorized loop.
+nfort: opt(1418): initialize.f, line 178: Constant-length loop is expanded.
+nfort: vec( 110): initialize.f, line 191: Vectorization obstructive procedure reference.: EXACT_SOLUTION
+nfort: par(1803): initialize.f, line 191: Parallelized by "do".
+nfort: opt(2495): initialize.f, line 191: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): initialize.f, line 191: Unvectorized loop.
+nfort: opt(1418): initialize.f, line 196: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 exact_solution.f
+Obsolescent: exact_solution.f, line 4: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: opt(1418): exact_solution.f, line 19: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 exact_rhs.f
+Obsolescent: exact_rhs.f, line 5: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): exact_rhs.f, line 20: Parallel routine generated.: EXACT_RHS$1
+nfort: par(1803): exact_rhs.f, line 26: Parallelized by "do".
+nfort: opt(2495): exact_rhs.f, line 26: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): exact_rhs.f, line 26: Vectorized loop.
+nfort: vec( 101): exact_rhs.f, line 28: Vectorized loop.
+nfort: opt(1418): exact_rhs.f, line 29: Constant-length loop is expanded.
+nfort: par(1803): exact_rhs.f, line 40: Parallelized by "do".
+nfort: opt(2495): exact_rhs.f, line 40: Loop nest collapsed by "collapse" clause.
+nfort: vec( 110): exact_rhs.f, line 45: Vectorization obstructive procedure reference.: EXACT_SOLUTION
+nfort: vec( 103): exact_rhs.f, line 45: Unvectorized loop.
+nfort: opt(1025): exact_rhs.f, line 48: Reference to this procedure inhibits optimization.: EXACT_SOLUTION
+nfort: opt(1418): exact_rhs.f, line 49: Constant-length loop is expanded.
+nfort: opt(1418): exact_rhs.f, line 55: Constant-length loop is expanded.
+nfort: vec( 124): exact_rhs.f, line 67: Iteration count is assumed. Iteration count.: 103
+nfort: vec( 101): exact_rhs.f, line 67: Vectorized loop.
+nfort: vec( 128): exact_rhs.f, line 71: Fused multiply-add operation applied.
+nfort: vec( 128): exact_rhs.f, line 75: Fused multiply-add operation applied.
+nfort: vec( 128): exact_rhs.f, line 81: Fused multiply-add operation applied.
+nfort: vec( 128): exact_rhs.f, line 86: Fused multiply-add operation applied.
+nfort: vec( 128): exact_rhs.f, line 91: Fused multiply-add operation applied.
+nfort: opt(1418): exact_rhs.f, line 105: Constant-length loop is expanded.
+nfort: vec( 101): exact_rhs.f, line 115: Vectorized loop.
+nfort: opt(1418): exact_rhs.f, line 116: Constant-length loop is expanded.
+nfort: vec( 128): exact_rhs.f, line 117: Fused multiply-add operation applied.
+nfort: opt(1418): exact_rhs.f, line 123: Constant-length loop is expanded.
+nfort: par(1803): exact_rhs.f, line 141: Parallelized by "do".
+nfort: opt(2495): exact_rhs.f, line 141: Loop nest collapsed by "collapse" clause.
+nfort: vec( 110): exact_rhs.f, line 146: Vectorization obstructive procedure reference.: EXACT_SOLUTION
+nfort: vec( 103): exact_rhs.f, line 146: Unvectorized loop.
+nfort: opt(1025): exact_rhs.f, line 149: Reference to this procedure inhibits optimization.: EXACT_SOLUTION
+nfort: opt(1418): exact_rhs.f, line 150: Constant-length loop is expanded.
+nfort: opt(1418): exact_rhs.f, line 156: Constant-length loop is expanded.
+nfort: vec( 124): exact_rhs.f, line 167: Iteration count is assumed. Iteration count.: 103
+nfort: vec( 101): exact_rhs.f, line 167: Vectorized loop.
+nfort: vec( 128): exact_rhs.f, line 171: Fused multiply-add operation applied.
+nfort: vec( 128): exact_rhs.f, line 175: Fused multiply-add operation applied.
+nfort: vec( 128): exact_rhs.f, line 180: Fused multiply-add operation applied.
+nfort: vec( 128): exact_rhs.f, line 186: Fused multiply-add operation applied.
+nfort: vec( 128): exact_rhs.f, line 191: Fused multiply-add operation applied.
+nfort: opt(1418): exact_rhs.f, line 204: Constant-length loop is expanded.
+nfort: vec( 101): exact_rhs.f, line 214: Vectorized loop.
+nfort: opt(1418): exact_rhs.f, line 215: Constant-length loop is expanded.
+nfort: vec( 128): exact_rhs.f, line 216: Fused multiply-add operation applied.
+nfort: opt(1418): exact_rhs.f, line 222: Constant-length loop is expanded.
+nfort: par(1803): exact_rhs.f, line 241: Parallelized by "do".
+nfort: opt(2495): exact_rhs.f, line 241: Loop nest collapsed by "collapse" clause.
+nfort: vec( 110): exact_rhs.f, line 246: Vectorization obstructive procedure reference.: EXACT_SOLUTION
+nfort: vec( 103): exact_rhs.f, line 246: Unvectorized loop.
+nfort: opt(1025): exact_rhs.f, line 249: Reference to this procedure inhibits optimization.: EXACT_SOLUTION
+nfort: opt(1418): exact_rhs.f, line 250: Constant-length loop is expanded.
+nfort: opt(1418): exact_rhs.f, line 256: Constant-length loop is expanded.
+nfort: vec( 124): exact_rhs.f, line 267: Iteration count is assumed. Iteration count.: 103
+nfort: vec( 101): exact_rhs.f, line 267: Vectorized loop.
+nfort: vec( 128): exact_rhs.f, line 271: Fused multiply-add operation applied.
+nfort: vec( 128): exact_rhs.f, line 275: Fused multiply-add operation applied.
+nfort: vec( 128): exact_rhs.f, line 280: Fused multiply-add operation applied.
+nfort: vec( 128): exact_rhs.f, line 285: Fused multiply-add operation applied.
+nfort: vec( 128): exact_rhs.f, line 291: Fused multiply-add operation applied.
+nfort: opt(1418): exact_rhs.f, line 304: Constant-length loop is expanded.
+nfort: vec( 101): exact_rhs.f, line 314: Vectorized loop.
+nfort: opt(1418): exact_rhs.f, line 315: Constant-length loop is expanded.
+nfort: vec( 128): exact_rhs.f, line 316: Fused multiply-add operation applied.
+nfort: opt(1418): exact_rhs.f, line 322: Constant-length loop is expanded.
+nfort: par(1803): exact_rhs.f, line 340: Parallelized by "do".
+nfort: opt(2495): exact_rhs.f, line 340: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): exact_rhs.f, line 340: Vectorized loop.
+nfort: vec( 101): exact_rhs.f, line 342: Vectorized loop.
+nfort: opt(1418): exact_rhs.f, line 343: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 set_constants.f
+Obsolescent: set_constants.f, line 4: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 adi.f
+Obsolescent: adi.f, line 4: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 rhs.f
+Obsolescent: rhs.f, line 4: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): rhs.f, line 19: Parallel routine generated.: COMPUTE_RHS$1
+nfort: par(1803): rhs.f, line 27: Parallelized by "do".
+nfort: opt(2495): rhs.f, line 27: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): rhs.f, line 27: Vectorized loop.
+nfort: vec( 101): rhs.f, line 29: Vectorized loop.
+nfort: vec( 128): rhs.f, line 35: Fused multiply-add operation applied.
+nfort: par(1803): rhs.f, line 52: Parallelized by "do".
+nfort: opt(2495): rhs.f, line 52: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): rhs.f, line 52: Vectorized loop.
+nfort: vec( 101): rhs.f, line 54: Vectorized loop.
+nfort: opt(1418): rhs.f, line 55: Constant-length loop is expanded.
+nfort: par(1805): rhs.f, line 64: Master-construct generated.
+nfort: par(1803): rhs.f, line 71: Parallelized by "do".
+nfort: opt(2495): rhs.f, line 71: Loop nest collapsed by "collapse" clause.
+nfort: vec( 102): rhs.f, line 71: Partially vectorized loop.
+nfort: vec( 101): rhs.f, line 73: Vectorized loop.
+nfort: vec( 128): rhs.f, line 78: Fused multiply-add operation applied.
+nfort: vec( 128): rhs.f, line 83: Fused multiply-add operation applied.
+nfort: vec( 128): rhs.f, line 93: Fused multiply-add operation applied.
+nfort: vec( 128): rhs.f, line 101: Fused multiply-add operation applied.
+nfort: vec( 128): rhs.f, line 109: Fused multiply-add operation applied.
+nfort: opt(1418): rhs.f, line 129: Constant-length loop is expanded.
+nfort: opt(1418): rhs.f, line 136: Constant-length loop is expanded.
+nfort: vec( 101): rhs.f, line 142: Vectorized loop.
+nfort: opt(1418): rhs.f, line 143: Constant-length loop is expanded.
+nfort: vec( 128): rhs.f, line 144: Fused multiply-add operation applied.
+nfort: opt(1418): rhs.f, line 152: Constant-length loop is expanded.
+nfort: opt(1418): rhs.f, line 159: Constant-length loop is expanded.
+nfort: par(1805): rhs.f, line 167: Master-construct generated.
+nfort: par(1803): rhs.f, line 176: Parallelized by "do".
+nfort: opt(2495): rhs.f, line 176: Loop nest collapsed by "collapse" clause.
+nfort: vec( 102): rhs.f, line 176: Partially vectorized loop.
+nfort: vec( 101): rhs.f, line 178: Vectorized loop.
+nfort: vec( 128): rhs.f, line 182: Fused multiply-add operation applied.
+nfort: vec( 128): rhs.f, line 186: Fused multiply-add operation applied.
+nfort: vec( 128): rhs.f, line 193: Fused multiply-add operation applied.
+nfort: vec( 128): rhs.f, line 202: Fused multiply-add operation applied.
+nfort: vec( 128): rhs.f, line 209: Fused multiply-add operation applied.
+nfort: vec( 101): rhs.f, line 229: Vectorized loop.
+nfort: opt(1418): rhs.f, line 230: Constant-length loop is expanded.
+nfort: vec( 128): rhs.f, line 231: Fused multiply-add operation applied.
+nfort: vec( 101): rhs.f, line 238: Vectorized loop.
+nfort: opt(1418): rhs.f, line 239: Constant-length loop is expanded.
+nfort: vec( 128): rhs.f, line 240: Fused multiply-add operation applied.
+nfort: vec( 101): rhs.f, line 247: Vectorized loop.
+nfort: opt(1418): rhs.f, line 248: Constant-length loop is expanded.
+nfort: vec( 128): rhs.f, line 249: Fused multiply-add operation applied.
+nfort: vec( 101): rhs.f, line 256: Vectorized loop.
+nfort: opt(1418): rhs.f, line 257: Constant-length loop is expanded.
+nfort: vec( 128): rhs.f, line 258: Fused multiply-add operation applied.
+nfort: vec( 101): rhs.f, line 265: Vectorized loop.
+nfort: opt(1418): rhs.f, line 266: Constant-length loop is expanded.
+nfort: vec( 128): rhs.f, line 267: Fused multiply-add operation applied.
+nfort: par(1805): rhs.f, line 277: Master-construct generated.
+nfort: par(1803): rhs.f, line 286: Parallelized by "do".
+nfort: opt(2495): rhs.f, line 286: Loop nest collapsed by "collapse" clause.
+nfort: vec( 102): rhs.f, line 286: Partially vectorized loop.
+nfort: vec( 101): rhs.f, line 288: Vectorized loop.
+nfort: vec( 128): rhs.f, line 293: Fused multiply-add operation applied.
+nfort: vec( 128): rhs.f, line 297: Fused multiply-add operation applied.
+nfort: vec( 128): rhs.f, line 304: Fused multiply-add operation applied.
+nfort: vec( 128): rhs.f, line 311: Fused multiply-add operation applied.
+nfort: vec( 128): rhs.f, line 320: Fused multiply-add operation applied.
+nfort: vec( 101): rhs.f, line 340: Vectorized loop.
+nfort: opt(1418): rhs.f, line 341: Constant-length loop is expanded.
+nfort: vec( 128): rhs.f, line 342: Fused multiply-add operation applied.
+nfort: vec( 101): rhs.f, line 349: Vectorized loop.
+nfort: opt(1418): rhs.f, line 350: Constant-length loop is expanded.
+nfort: vec( 128): rhs.f, line 351: Fused multiply-add operation applied.
+nfort: vec( 101): rhs.f, line 358: Vectorized loop.
+nfort: opt(1418): rhs.f, line 359: Constant-length loop is expanded.
+nfort: vec( 128): rhs.f, line 360: Fused multiply-add operation applied.
+nfort: vec( 101): rhs.f, line 367: Vectorized loop.
+nfort: opt(1418): rhs.f, line 368: Constant-length loop is expanded.
+nfort: vec( 128): rhs.f, line 369: Fused multiply-add operation applied.
+nfort: vec( 101): rhs.f, line 376: Vectorized loop.
+nfort: opt(1418): rhs.f, line 377: Constant-length loop is expanded.
+nfort: vec( 128): rhs.f, line 378: Fused multiply-add operation applied.
+nfort: par(1805): rhs.f, line 388: Master-construct generated.
+nfort: par(1803): rhs.f, line 393: Parallelized by "do".
+nfort: opt(2495): rhs.f, line 393: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): rhs.f, line 393: Vectorized loop.
+nfort: vec( 101): rhs.f, line 395: Vectorized loop.
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 work_lhs_blk.f
+Obsolescent: work_lhs_blk.f, line 9: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: opt(1589): work_lhs_blk.f, line 48: Outer loop moved inside inner loop(s).: JB
+nfort: vec( 101): work_lhs_blk.f, line 48: Vectorized loop.
+nfort: opt(1418): work_lhs_blk.f, line 52: Constant-length loop is expanded.
+nfort: opt(1034): work_lhs_blk.f, line 54: Multiple store conflict.: LHSB
+nfort: opt(1033): work_lhs_blk.f, line 54: Potential multiple store conflict -- use directive if OK.: LHSB
+nfort: vec( 101): work_lhs_blk.f, line 66: Vectorized loop.
+nfort: opt(1418): work_lhs_blk.f, line 68: Constant-length loop is expanded.
+nfort: opt(1418): work_lhs_blk.f, line 70: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 x_solve_blk.f
+Obsolescent: x_solve_blk.f, line 5: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): x_solve_blk.f, line 48: Parallel routine generated.: X_SOLVE$1
+nfort: par(1803): x_solve_blk.f, line 54: Parallelized by "do".
+nfort: opt(2495): x_solve_blk.f, line 54: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): x_solve_blk.f, line 59: Vectorized loop.
+nfort: opt(1034): x_solve_blk.f, line 61: Multiple store conflict.: RHSX
+nfort: opt(1034): x_solve_blk.f, line 62: Multiple store conflict.: RHSX
+nfort: opt(1034): x_solve_blk.f, line 63: Multiple store conflict.: RHSX
+nfort: opt(1034): x_solve_blk.f, line 64: Multiple store conflict.: RHSX
+nfort: opt(1135): x_solve_blk.f, line 73: Outer loop conditionally executes inner loop.
+nfort: vec( 110): x_solve_blk.f, line 73: Vectorization obstructive procedure reference.: BINVRHS
+nfort: vec( 110): x_solve_blk.f, line 73: Vectorization obstructive procedure reference.: MATMUL_SUB
+nfort: vec( 110): x_solve_blk.f, line 73: Vectorization obstructive procedure reference.: TIMER_STOP
+nfort: vec( 110): x_solve_blk.f, line 73: Vectorization obstructive procedure reference.: BINVCRHS
+nfort: vec( 110): x_solve_blk.f, line 73: Vectorization obstructive procedure reference.: MATVEC_SUB
+nfort: vec( 110): x_solve_blk.f, line 73: Vectorization obstructive procedure reference.: TIMER_START
+nfort: vec( 101): x_solve_blk.f, line 80: Vectorized loop.
+nfort: opt(1034): x_solve_blk.f, line 89: Multiple store conflict.: FJAC
+nfort: vec( 128): x_solve_blk.f, line 95: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 116: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 119: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 153: Fused multiply-add operation applied.
+nfort: opt(1062): x_solve_blk.f, line 166: Too many data dependency problems.
+nfort: vec( 101): x_solve_blk.f, line 174: Vectorized loop.
+nfort: vec( 128): x_solve_blk.f, line 179: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 182: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 184: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 186: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 188: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 191: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 193: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 196: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 198: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 200: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 203: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 205: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 207: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 210: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 212: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 215: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 217: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 219: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 221: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 224: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 227: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 229: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 231: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 233: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 235: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 239: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 248: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 257: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 266: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 275: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 279: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 282: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 284: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 286: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 288: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 291: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 293: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 296: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 298: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 300: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 303: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 305: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 307: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 310: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 312: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 315: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 317: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 319: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 321: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 324: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 327: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 329: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 331: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 333: Fused multiply-add operation applied.
+nfort: vec( 128): x_solve_blk.f, line 335: Fused multiply-add operation applied.
+nfort: vec( 101): x_solve_blk.f, line 432: Vectorized loop.
+nfort: opt(1418): x_solve_blk.f, line 434: Constant-length loop is expanded.
+nfort: opt(1036): x_solve_blk.f, line 435: Potential feedback - use directive or compiler option if OK.: RHSX
+nfort: opt(1037): x_solve_blk.f, line 435: Feedback of array elements.: RHSX
+nfort: vec( 128): x_solve_blk.f, line 435: Fused multiply-add operation applied.
+nfort: opt(1135): x_solve_blk.f, line 443: Outer loop conditionally executes inner loop.
+nfort: vec( 101): x_solve_blk.f, line 446: Vectorized loop.
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 y_solve_blk.f
+Obsolescent: y_solve_blk.f, line 4: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): y_solve_blk.f, line 46: Parallel routine generated.: Y_SOLVE$1
+nfort: par(1803): y_solve_blk.f, line 52: Parallelized by "do".
+nfort: opt(2495): y_solve_blk.f, line 52: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): y_solve_blk.f, line 57: Vectorized loop.
+nfort: opt(1034): y_solve_blk.f, line 59: Multiple store conflict.: RHSX
+nfort: opt(1034): y_solve_blk.f, line 60: Multiple store conflict.: RHSX
+nfort: opt(1034): y_solve_blk.f, line 61: Multiple store conflict.: RHSX
+nfort: opt(1034): y_solve_blk.f, line 62: Multiple store conflict.: RHSX
+nfort: opt(1135): y_solve_blk.f, line 71: Outer loop conditionally executes inner loop.
+nfort: vec( 110): y_solve_blk.f, line 71: Vectorization obstructive procedure reference.: BINVRHS
+nfort: vec( 110): y_solve_blk.f, line 71: Vectorization obstructive procedure reference.: MATMUL_SUB
+nfort: vec( 110): y_solve_blk.f, line 71: Vectorization obstructive procedure reference.: TIMER_STOP
+nfort: vec( 110): y_solve_blk.f, line 71: Vectorization obstructive procedure reference.: BINVCRHS
+nfort: vec( 110): y_solve_blk.f, line 71: Vectorization obstructive procedure reference.: MATVEC_SUB
+nfort: vec( 110): y_solve_blk.f, line 71: Vectorization obstructive procedure reference.: TIMER_START
+nfort: vec( 101): y_solve_blk.f, line 78: Vectorized loop.
+nfort: opt(1034): y_solve_blk.f, line 85: Multiple store conflict.: FJAC
+nfort: vec( 128): y_solve_blk.f, line 98: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 113: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 118: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 150: Fused multiply-add operation applied.
+nfort: opt(1062): y_solve_blk.f, line 164: Too many data dependency problems.
+nfort: vec( 101): y_solve_blk.f, line 172: Vectorized loop.
+nfort: vec( 128): y_solve_blk.f, line 177: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 180: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 182: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 184: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 186: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 189: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 191: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 194: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 196: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 198: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 201: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 203: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 205: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 208: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 210: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 213: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 215: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 217: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 219: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 222: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 225: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 227: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 229: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 231: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 233: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 237: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 246: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 255: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 264: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 273: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 277: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 280: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 282: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 284: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 286: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 289: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 291: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 294: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 296: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 298: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 301: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 303: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 305: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 308: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 310: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 313: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 315: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 317: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 319: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 322: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 325: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 327: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 329: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 331: Fused multiply-add operation applied.
+nfort: vec( 128): y_solve_blk.f, line 333: Fused multiply-add operation applied.
+nfort: vec( 101): y_solve_blk.f, line 430: Vectorized loop.
+nfort: opt(1418): y_solve_blk.f, line 432: Constant-length loop is expanded.
+nfort: opt(1036): y_solve_blk.f, line 433: Potential feedback - use directive or compiler option if OK.: RHSX
+nfort: opt(1037): y_solve_blk.f, line 433: Feedback of array elements.: RHSX
+nfort: vec( 128): y_solve_blk.f, line 433: Fused multiply-add operation applied.
+nfort: opt(1135): y_solve_blk.f, line 441: Outer loop conditionally executes inner loop.
+nfort: vec( 101): y_solve_blk.f, line 444: Vectorized loop.
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 solve_subs_blk.f
+Obsolescent: solve_subs_blk.f, line 5: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: vec( 101): solve_subs_blk.f, line 27: Vectorized loop.
+nfort: vec( 128): solve_subs_blk.f, line 28: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 33: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 38: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 43: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 48: Fused multiply-add operation applied.
+nfort: vec( 101): solve_subs_blk.f, line 81: Vectorized loop.
+nfort: vec( 128): solve_subs_blk.f, line 82: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 87: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 92: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 97: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 102: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 107: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 112: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 117: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 122: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 127: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 132: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 137: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 142: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 147: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 152: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 157: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 162: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 167: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 172: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 177: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 182: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 187: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 192: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 197: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 202: Fused multiply-add operation applied.
+nfort: vec( 101): solve_subs_blk.f, line 240: Vectorized loop.
+nfort: vec( 128): solve_subs_blk.f, line 254: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 255: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 256: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 257: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 258: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 259: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 260: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 261: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 262: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 263: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 266: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 267: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 268: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 269: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 270: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 271: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 272: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 273: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 274: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 275: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 278: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 279: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 280: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 281: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 282: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 283: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 284: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 285: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 286: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 287: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 290: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 291: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 292: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 293: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 294: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 295: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 296: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 297: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 298: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 299: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 325: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 326: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 327: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 328: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 329: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 330: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 331: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 332: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 333: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 336: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 337: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 338: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 339: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 340: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 341: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 342: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 343: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 344: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 347: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 348: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 349: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 350: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 351: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 352: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 353: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 354: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 355: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 369: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 370: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 371: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 372: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 373: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 374: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 375: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 376: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 389: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 390: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 391: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 392: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 393: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 394: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 395: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 396: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 399: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 400: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 401: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 402: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 403: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 404: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 405: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 406: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 419: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 420: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 421: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 422: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 423: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 424: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 425: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 428: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 429: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 430: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 431: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 432: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 433: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 434: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 446: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 447: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 448: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 449: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 450: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 451: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 452: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 464: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 465: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 466: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 467: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 468: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 469: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 472: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 473: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 474: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 475: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 476: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 477: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 480: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 481: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 482: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 483: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 484: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 485: Fused multiply-add operation applied.
+nfort: vec( 101): solve_subs_blk.f, line 528: Vectorized loop.
+nfort: vec( 128): solve_subs_blk.f, line 538: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 539: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 540: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 541: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 542: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 545: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 546: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 547: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 548: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 549: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 552: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 553: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 554: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 555: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 556: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 559: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 560: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 561: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 562: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 563: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 579: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 580: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 581: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 582: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 585: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 586: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 587: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 588: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 591: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 592: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 593: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 594: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 603: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 604: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 605: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 613: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 614: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 615: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 618: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 619: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 620: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 628: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 629: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 632: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 633: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 640: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 641: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 648: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 651: Fused multiply-add operation applied.
+nfort: vec( 128): solve_subs_blk.f, line 654: Fused multiply-add operation applied.
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 z_solve_blk.f
+Obsolescent: z_solve_blk.f, line 4: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): z_solve_blk.f, line 46: Parallel routine generated.: Z_SOLVE$1
+nfort: par(1803): z_solve_blk.f, line 52: Parallelized by "do".
+nfort: opt(2495): z_solve_blk.f, line 52: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): z_solve_blk.f, line 57: Vectorized loop.
+nfort: opt(1034): z_solve_blk.f, line 59: Multiple store conflict.: RHSX
+nfort: opt(1034): z_solve_blk.f, line 60: Multiple store conflict.: RHSX
+nfort: opt(1034): z_solve_blk.f, line 61: Multiple store conflict.: RHSX
+nfort: opt(1034): z_solve_blk.f, line 62: Multiple store conflict.: RHSX
+nfort: opt(1135): z_solve_blk.f, line 71: Outer loop conditionally executes inner loop.
+nfort: vec( 110): z_solve_blk.f, line 71: Vectorization obstructive procedure reference.: BINVRHS
+nfort: vec( 110): z_solve_blk.f, line 71: Vectorization obstructive procedure reference.: MATMUL_SUB
+nfort: vec( 110): z_solve_blk.f, line 71: Vectorization obstructive procedure reference.: TIMER_STOP
+nfort: vec( 110): z_solve_blk.f, line 71: Vectorization obstructive procedure reference.: BINVCRHS
+nfort: vec( 110): z_solve_blk.f, line 71: Vectorization obstructive procedure reference.: MATVEC_SUB
+nfort: vec( 110): z_solve_blk.f, line 71: Vectorization obstructive procedure reference.: TIMER_START
+nfort: vec( 101): z_solve_blk.f, line 78: Vectorized loop.
+nfort: opt(1034): z_solve_blk.f, line 85: Multiple store conflict.: FJAC
+nfort: vec( 128): z_solve_blk.f, line 105: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 113: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 120: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 150: Fused multiply-add operation applied.
+nfort: opt(1062): z_solve_blk.f, line 164: Too many data dependency problems.
+nfort: vec( 101): z_solve_blk.f, line 172: Vectorized loop.
+nfort: vec( 128): z_solve_blk.f, line 177: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 180: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 182: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 184: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 186: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 189: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 191: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 194: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 196: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 198: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 201: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 203: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 205: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 208: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 210: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 213: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 215: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 217: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 219: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 222: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 225: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 227: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 229: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 231: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 233: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 237: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 246: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 255: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 264: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 273: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 277: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 280: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 282: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 284: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 286: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 289: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 291: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 294: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 296: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 298: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 301: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 303: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 305: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 308: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 310: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 313: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 315: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 317: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 319: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 322: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 325: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 327: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 329: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 331: Fused multiply-add operation applied.
+nfort: vec( 128): z_solve_blk.f, line 333: Fused multiply-add operation applied.
+nfort: vec( 101): z_solve_blk.f, line 443: Vectorized loop.
+nfort: opt(1418): z_solve_blk.f, line 445: Constant-length loop is expanded.
+nfort: opt(1036): z_solve_blk.f, line 446: Potential feedback - use directive or compiler option if OK.: RHSX
+nfort: opt(1037): z_solve_blk.f, line 446: Feedback of array elements.: RHSX
+nfort: vec( 128): z_solve_blk.f, line 446: Fused multiply-add operation applied.
+nfort: opt(1135): z_solve_blk.f, line 454: Outer loop conditionally executes inner loop.
+nfort: vec( 101): z_solve_blk.f, line 457: Vectorized loop.
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 add.f
+Obsolescent: add.f, line 4: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): add.f, line 19: Parallel routine generated.: ADD$1
+nfort: par(1803): add.f, line 20: Parallelized by "do".
+nfort: opt(2495): add.f, line 20: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): add.f, line 20: Vectorized loop.
+nfort: vec( 101): add.f, line 22: Vectorized loop.
+nfort: opt(1418): add.f, line 23: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 error.f
+Obsolescent: error.f, line 4: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: opt(1418): error.f, line 20: Constant-length loop is expanded.
+nfort: par(1801): error.f, line 24: Parallel routine generated.: ERROR_NORM$1
+nfort: opt(1418): error.f, line 24: Constant-length loop is expanded.
+nfort: par(1803): error.f, line 26: Parallelized by "do".
+nfort: opt(2495): error.f, line 26: Loop nest collapsed by "collapse" clause.
+nfort: vec( 110): error.f, line 30: Vectorization obstructive procedure reference.: EXACT_SOLUTION
+nfort: vec( 103): error.f, line 30: Unvectorized loop.
+nfort: opt(1025): error.f, line 32: Reference to this procedure inhibits optimization.: EXACT_SOLUTION
+nfort: opt(1418): error.f, line 34: Constant-length loop is expanded.
+nfort: par(1807): error.f, line 41: Critical-construct generated.
+nfort: par(1809): error.f, line 41: Barrier synchronization.
+nfort: opt(1418): error.f, line 41: Constant-length loop is expanded.
+nfort: opt(1418): error.f, line 43: Constant-length loop is expanded.
+nfort: opt(1418): error.f, line 44: Constant-length loop is expanded.
+nfort: opt(1418): error.f, line 68: Constant-length loop is expanded.
+nfort: par(1801): error.f, line 72: Parallel routine generated.: RHS_NORM$1
+nfort: opt(1418): error.f, line 72: Constant-length loop is expanded.
+nfort: par(1803): error.f, line 74: Parallelized by "do".
+nfort: opt(2495): error.f, line 74: Loop nest collapsed by "collapse" clause.
+nfort: vec( 108): error.f, line 74: Unvectorizable loop structure.
+nfort: vec( 101): error.f, line 76: Vectorized loop.
+nfort: opt(1418): error.f, line 77: Constant-length loop is expanded.
+nfort: vec( 128): error.f, line 79: Fused multiply-add operation applied.
+nfort: vec( 126): error.f, line 79: Idiom detected.: SUM
+nfort: par(1807): error.f, line 84: Critical-construct generated.
+nfort: par(1809): error.f, line 84: Barrier synchronization.
+nfort: opt(1418): error.f, line 84: Constant-length loop is expanded.
+nfort: opt(1418): error.f, line 86: Constant-length loop is expanded.
+nfort: opt(1418): error.f, line 87: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 verify.f
+Obsolescent: verify.f, line 5: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: opt(1418): verify.f, line 40: Constant-length loop is expanded.
+nfort: opt(1418): verify.f, line 48: Constant-length loop is expanded.
+nfort: opt(1418): verify.f, line 304: Constant-length loop is expanded.
+nfort: vec( 103): verify.f, line 341: Unvectorized loop.
+nfort: vec( 110): verify.f, line 341: Vectorization obstructive procedure reference.: IEEE_ARITHMETIC::IEEE_IS_NAN
+nfort: vec( 180): verify.f, line 341: I/O statement obstructs vectorization.
+nfort: opt(1118): verify.f, line 343: This I/O statement inhibits optimization of loop.
+nfort: vec( 103): verify.f, line 361: Unvectorized loop.
+nfort: vec( 110): verify.f, line 361: Vectorization obstructive procedure reference.: IEEE_ARITHMETIC::IEEE_IS_NAN
+nfort: vec( 180): verify.f, line 361: I/O statement obstructs vectorization.
+nfort: opt(1118): verify.f, line 363: This I/O statement inhibits optimization of loop.
+nfort -O3 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 -o ../bin/bt-blk.B.x bt.o bt_data.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o  rhs.o x_solve_blk.o y_solve_blk.o solve_subs_blk.o z_solve_blk.o add.o error.o verify.o work_lhs_blk.o ../common/print_results.o ../common/timers.o ../common/wtime.o 
+make[2]: Leaving directory `/home/users/fpmjunior/sbac-2020-serpa/NPB/NPB3.4-OMP/BT'
+make[1]: Leaving directory `/home/users/fpmjunior/sbac-2020-serpa/NPB/NPB3.4-OMP/BT'

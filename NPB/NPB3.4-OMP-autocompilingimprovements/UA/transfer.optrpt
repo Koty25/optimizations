@@ -1,0 +1,2678 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: TRANSF
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at transfer.f(41,7)
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+   LOOP BEGIN at transfer.f(42,9)
+      remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+      LOOP BEGIN at transfer.f(78,15)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between tmp(v_end(ije2),col,ije1) (85:19) and tmp(i,col,ije1) (93:23)
+         remark #15346: vector dependence: assumed OUTPUT dependence between tmp(i,col,ije1) (93:23) and tmp(v_end(ije2),col,ije1) (85:19)
+
+         LOOP BEGIN at transfer.f(84,22)
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15329: vectorization support: non-unit strided store was emulated for the variable <tmp(v_end(ije2),col,ije1)>, stride is 25   [ transfer.f(85,19) ]
+            remark #15328: vectorization support: non-unit strided load was emulated for the variable <idmo_(v_end(ije2),col,ije1,ije2,iface,ie)>, stride is unknown to compiler   [ transfer.f(84,19) ]
+            remark #15328: vectorization support: irregularly indexed load was emulated for the variable <tmor(idmo_(v_end(ije2),col,ije1,ije2,iface,ie))>, part of index is read from memory   [ transfer.f(85,19) ]
+            remark #15329: vectorization support: non-unit strided store was emulated for the variable <tmp(i,col,ije1)>, stride is 25   [ transfer.f(93,23) ]
+            remark #15328: vectorization support: non-unit strided load was emulated for the variable <tmp(i,col,ije1)>, stride is 25   [ transfer.f(93,23) ]
+            remark #15328: vectorization support: non-unit strided load was emulated for the variable <idmo_(j,col,ije1,ije2,iface,ie)>, stride is unknown to compiler   [ transfer.f(92,23) ]
+            remark #15328: vectorization support: irregularly indexed load was emulated for the variable <tmor(idmo_(j,col,ije1,ije2,iface,ie))>, part of index is read from memory   [ transfer.f(94,41) ]
+            remark #15305: vectorization support: vector length 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.070
+            remark #15452: unmasked strided loads: 3 
+            remark #15453: unmasked strided stores: 2 
+            remark #15462: unmasked indexed (or gather) loads: 2 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 21 
+            remark #15477: vector cost: 28.500 
+            remark #15478: estimated potential speedup: 0.680 
+            remark #15488: --- end vector cost summary ---
+
+            LOOP BEGIN at transfer.f(79,17)
+               remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+               remark #15329: vectorization support: non-unit strided store was emulated for the variable <tmp(v_end(ije2),col,ije1)>, stride is 5   [ transfer.f(85,19) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <idmo_(v_end(ije2),col,ije1,ije2,iface,ie)>, stride is unknown to compiler   [ transfer.f(84,19) ]
+               remark #15328: vectorization support: irregularly indexed load was emulated for the variable <tmor(idmo_(v_end(ije2),col,ije1,ije2,iface,ie))>, part of index is read from memory   [ transfer.f(85,19) ]
+               remark #15329: vectorization support: non-unit strided store was emulated for the variable <tmp(i,col,ije1)>, stride is 5   [ transfer.f(93,23) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <tmp(i,col,ije1)>, stride is 5   [ transfer.f(93,23) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <idmo_(j,col,ije1,ije2,iface,ie)>, stride is unknown to compiler   [ transfer.f(92,23) ]
+               remark #15328: vectorization support: irregularly indexed load was emulated for the variable <tmor(idmo_(j,col,ije1,ije2,iface,ie))>, part of index is read from memory   [ transfer.f(94,41) ]
+               remark #15305: vectorization support: vector length 2
+               remark #15309: vectorization support: normalized vectorization overhead 0.071
+               remark #15452: unmasked strided loads: 3 
+               remark #15453: unmasked strided stores: 2 
+               remark #15462: unmasked indexed (or gather) loads: 2 
+               remark #15475: --- begin vector cost summary ---
+               remark #15476: scalar cost: 21 
+               remark #15477: vector cost: 28.000 
+               remark #15478: estimated potential speedup: 0.760 
+               remark #15488: --- end vector cost summary ---
+
+               LOOP BEGIN at transfer.f(91,21)
+                  remark #15344: loop was not vectorized: vector dependence prevents vectorization
+                  remark #15346: vector dependence: assumed OUTPUT dependence between tmp(i,col,ije1) (93:23) and tmp(i,col,ije1) (93:23)
+                  remark #15346: vector dependence: assumed OUTPUT dependence between tmp(i,col,ije1) (93:23) and tmp(i,col,ije1) (93:23)
+
+                  LOOP BEGIN at transfer.f(89,19)
+                     remark #15389: vectorization support: reference tmp(i,col,ije1) has unaligned access   [ transfer.f(93,23) ]
+                     remark #15389: vectorization support: reference tmp(i,col,ije1) has unaligned access   [ transfer.f(93,23) ]
+                     remark #15389: vectorization support: reference qbnew(i-1,j,ije2) has unaligned access   [ transfer.f(93,23) ]
+                     remark #15381: vectorization support: unaligned access used inside loop body
+                     remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+                     remark #15305: vectorization support: vector length 2
+                     remark #15309: vectorization support: normalized vectorization overhead 0.917
+                     remark #15450: unmasked unaligned unit stride loads: 2 
+                     remark #15451: unmasked unaligned unit stride stores: 1 
+                     remark #15475: --- begin vector cost summary ---
+                     remark #15476: scalar cost: 11 
+                     remark #15477: vector cost: 6.000 
+                     remark #15478: estimated potential speedup: 0.970 
+                     remark #15488: --- end vector cost summary ---
+                  LOOP END
+
+                  LOOP BEGIN at transfer.f(89,19)
+                  LOOP END
+
+                  LOOP BEGIN at transfer.f(89,19)
+                  LOOP END
+
+                  LOOP BEGIN at transfer.f(89,19)
+                  LOOP END
+
+                  LOOP BEGIN at transfer.f(89,19)
+                  LOOP END
+               LOOP END
+
+               LOOP BEGIN at transfer.f(91,21)
+
+                  LOOP BEGIN at transfer.f(89,19)
+                  LOOP END
+
+                  LOOP BEGIN at transfer.f(89,19)
+                  LOOP END
+
+                  LOOP BEGIN at transfer.f(89,19)
+                  LOOP END
+
+                  LOOP BEGIN at transfer.f(89,19)
+                  LOOP END
+
+                  LOOP BEGIN at transfer.f(89,19)
+                  LOOP END
+               LOOP END
+
+               LOOP BEGIN at transfer.f(91,21)
+
+                  LOOP BEGIN at transfer.f(89,19)
+                  LOOP END
+
+                  LOOP BEGIN at transfer.f(89,19)
+                  LOOP END
+
+                  LOOP BEGIN at transfer.f(89,19)
+                  LOOP END
+
+                  LOOP BEGIN at transfer.f(89,19)
+                  LOOP END
+
+                  LOOP BEGIN at transfer.f(89,19)
+                  LOOP END
+               LOOP END
+
+               LOOP BEGIN at transfer.f(91,21)
+
+                  LOOP BEGIN at transfer.f(89,19)
+                  LOOP END
+
+                  LOOP BEGIN at transfer.f(89,19)
+                  LOOP END
+
+                  LOOP BEGIN at transfer.f(89,19)
+                  LOOP END
+
+                  LOOP BEGIN at transfer.f(89,19)
+                  LOOP END
+
+                  LOOP BEGIN at transfer.f(89,19)
+                  LOOP END
+               LOOP END
+
+               LOOP BEGIN at transfer.f(91,21)
+
+                  LOOP BEGIN at transfer.f(89,19)
+                  LOOP END
+
+                  LOOP BEGIN at transfer.f(89,19)
+                  LOOP END
+
+                  LOOP BEGIN at transfer.f(89,19)
+                  LOOP END
+
+                  LOOP BEGIN at transfer.f(89,19)
+                  LOOP END
+
+                  LOOP BEGIN at transfer.f(89,19)
+                  LOOP END
+               LOOP END
+            LOOP END
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at transfer.f(114,21)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between tx(il) (116:21) and tx(il) (145:19)
+         remark #15346: vector dependence: assumed OUTPUT dependence between tx(il) (145:19) and tx(il) (116:21)
+
+         LOOP BEGIN at transfer.f(113,15)
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed OUTPUT dependence between tx(il) (116:21) and tx(il) (116:21)
+            remark #15346: vector dependence: assumed OUTPUT dependence between tx(il) (116:21) and tx(il) (116:21)
+
+            LOOP BEGIN at transfer.f(115,17)
+               remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <qbnew(i-1,j,ije1)>, stride is 3   [ transfer.f(116,30) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <tmp(1,j,ije1)>, stride is 5   [ transfer.f(116,30) ]
+               remark #15305: vectorization support: vector length 2
+               remark #15399: vectorization support: unroll factor set to 2
+               remark #15309: vectorization support: normalized vectorization overhead 0.633
+               remark #15355: vectorization support: tx(il) is double type reduction   [ transfer.f(116,21) ]
+               remark #15452: unmasked strided loads: 2 
+               remark #15475: --- begin vector cost summary ---
+               remark #15476: scalar cost: 11 
+               remark #15477: vector cost: 7.500 
+               remark #15478: estimated potential speedup: 0.910 
+               remark #15488: --- end vector cost summary ---
+            LOOP END
+
+            LOOP BEGIN at transfer.f(115,17)
+            LOOP END
+
+            LOOP BEGIN at transfer.f(115,17)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at transfer.f(113,15)
+
+            LOOP BEGIN at transfer.f(115,17)
+            LOOP END
+
+            LOOP BEGIN at transfer.f(115,17)
+            LOOP END
+
+            LOOP BEGIN at transfer.f(115,17)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at transfer.f(122,15)
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed OUTPUT dependence between tx(il) (128:17) and tx(il) (135:21)
+            remark #15346: vector dependence: assumed OUTPUT dependence between tx(il) (135:21) and tx(il) (128:17)
+
+            LOOP BEGIN at transfer.f(132,17)
+               remark #15344: loop was not vectorized: vector dependence prevents vectorization
+               remark #15346: vector dependence: assumed OUTPUT dependence between tx(il) (135:21) and tx(il) (135:21)
+               remark #15346: vector dependence: assumed OUTPUT dependence between tx(il) (135:21) and tx(il) (135:21)
+
+               LOOP BEGIN at transfer.f(134,19)
+                  remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+                  remark #15328: vectorization support: non-unit strided load was emulated for the variable <qbnew(i-1,j,ije1)>, stride is 3   [ transfer.f(135,30) ]
+                  remark #15328: vectorization support: non-unit strided load was emulated for the variable <tmp(col,j,ije1)>, stride is 5   [ transfer.f(135,30) ]
+                  remark #15305: vectorization support: vector length 2
+                  remark #15399: vectorization support: unroll factor set to 2
+                  remark #15309: vectorization support: normalized vectorization overhead 0.792
+                  remark #15355: vectorization support: tx(il) is double type reduction   [ transfer.f(135,21) ]
+                  remark #15452: unmasked strided loads: 2 
+                  remark #15475: --- begin vector cost summary ---
+                  remark #15476: scalar cost: 9 
+                  remark #15477: vector cost: 6.000 
+                  remark #15478: estimated potential speedup: 0.860 
+                  remark #15488: --- end vector cost summary ---
+               LOOP END
+
+               LOOP BEGIN at transfer.f(134,19)
+               LOOP END
+
+               LOOP BEGIN at transfer.f(134,19)
+               LOOP END
+            LOOP END
+
+            LOOP BEGIN at transfer.f(132,17)
+
+               LOOP BEGIN at transfer.f(134,19)
+               LOOP END
+
+               LOOP BEGIN at transfer.f(134,19)
+               LOOP END
+
+               LOOP BEGIN at transfer.f(134,19)
+               LOOP END
+            LOOP END
+
+            LOOP BEGIN at transfer.f(132,17)
+
+               LOOP BEGIN at transfer.f(134,19)
+               LOOP END
+
+               LOOP BEGIN at transfer.f(134,19)
+               LOOP END
+
+               LOOP BEGIN at transfer.f(134,19)
+               LOOP END
+            LOOP END
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at transfer.f(155,13)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between tx(idel_(i,col,iface,ie)) (159:17) and tx(idel_(i,col,iface,ie)) (159:17)
+         remark #15346: vector dependence: assumed OUTPUT dependence between tx(idel_(i,col,iface,ie)) (159:17) and tx(idel_(i,col,iface,ie)) (159:17)
+
+         LOOP BEGIN at transfer.f(156,15)
+            remark #15389: vectorization support: reference idel_(i,col,iface,ie) has unaligned access   [ transfer.f(157,17) ]
+            remark #15389: vectorization support: reference idmo_(i,col,1,1,iface,ie) has unaligned access   [ transfer.f(158,17) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15329: vectorization support: irregularly indexed store was emulated for the variable <tx(idel_(i,col,iface,ie))>, part of index is read from memory   [ transfer.f(159,17) ]
+            remark #15328: vectorization support: irregularly indexed load was emulated for the variable <tmor(idmo_(i,col,1,1,iface,ie))>, part of index is read from memory   [ transfer.f(159,17) ]
+            remark #15305: vectorization support: vector length 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.353
+            remark #15450: unmasked unaligned unit stride loads: 2 
+            remark #15462: unmasked indexed (or gather) loads: 1 
+            remark #15463: unmasked indexed (or scatter) stores: 1 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 7 
+            remark #15477: vector cost: 8.500 
+            remark #15478: estimated potential speedup: 0.700 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at transfer.f(156,15)
+         LOOP END
+
+         LOOP BEGIN at transfer.f(156,15)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at transfer.f(168,15)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between tx(il) (173:21) and tx(il) (173:21)
+         remark #15346: vector dependence: assumed OUTPUT dependence between tx(il) (173:21) and tx(il) (173:21)
+
+         LOOP BEGIN at transfer.f(170,17)
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15328: vectorization support: non-unit strided load was emulated for the variable <qbnew(i-1,j,ije1)>, stride is 15   [ transfer.f(173,30) ]
+            remark #15328: vectorization support: non-unit strided load was emulated for the variable <idmo_(j,1,1,ije1,iface,ie)>, stride is unknown to compiler   [ transfer.f(172,21) ]
+            remark #15328: vectorization support: irregularly indexed load was emulated for the variable <tmor(idmo_(j,1,1,ije1,iface,ie))>, part of index is read from memory   [ transfer.f(173,57) ]
+            remark #15305: vectorization support: vector length 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.760
+            remark #15355: vectorization support: tx(il) is double type reduction   [ transfer.f(173,21) ]
+            remark #15452: unmasked strided loads: 2 
+            remark #15462: unmasked indexed (or gather) loads: 1 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 13 
+            remark #15477: vector cost: 12.500 
+            remark #15478: estimated potential speedup: 0.590 
+            remark #15488: --- end vector cost summary ---
+
+            LOOP BEGIN at transfer.f(171,19)
+               remark #15389: vectorization support: reference idmo_(j,1,1,ije1,iface,ie) has unaligned access   [ transfer.f(172,21) ]
+               remark #15381: vectorization support: unaligned access used inside loop body
+               remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <qbnew(i-1,j,ije1)>, stride is 3   [ transfer.f(173,30) ]
+               remark #15328: vectorization support: irregularly indexed load was emulated for the variable <tmor(idmo_(j,1,1,ije1,iface,ie))>, part of index is read from memory   [ transfer.f(173,57) ]
+               remark #15305: vectorization support: vector length 2
+               remark #15399: vectorization support: unroll factor set to 2
+               remark #15309: vectorization support: normalized vectorization overhead 0.083
+               remark #15355: vectorization support: tx(il) is double type reduction   [ transfer.f(173,21) ]
+               remark #15450: unmasked unaligned unit stride loads: 1 
+               remark #15452: unmasked strided loads: 1 
+               remark #15462: unmasked indexed (or gather) loads: 1 
+               remark #15475: --- begin vector cost summary ---
+               remark #15476: scalar cost: 13 
+               remark #15477: vector cost: 9.000 
+               remark #15478: estimated potential speedup: 1.250 
+               remark #15488: --- end vector cost summary ---
+            LOOP END
+
+            LOOP BEGIN at transfer.f(171,19)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at transfer.f(170,17)
+
+            LOOP BEGIN at transfer.f(171,19)
+            LOOP END
+
+            LOOP BEGIN at transfer.f(171,19)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at transfer.f(170,17)
+
+            LOOP BEGIN at transfer.f(171,19)
+            LOOP END
+
+            LOOP BEGIN at transfer.f(171,19)
+            LOOP END
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at transfer.f(180,15)
+         remark #15389: vectorization support: reference idel_(i,1,iface,ie) has unaligned access   [ transfer.f(181,17) ]
+         remark #15389: vectorization support: reference idmo_(i,1,1,1,iface,ie) has unaligned access   [ transfer.f(182,17) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15329: vectorization support: irregularly indexed store was emulated for the variable <tx(idel_(i,1,iface,ie))>, part of index is read from memory   [ transfer.f(183,17) ]
+         remark #15328: vectorization support: irregularly indexed load was emulated for the variable <tmor(idmo_(i,1,1,1,iface,ie))>, part of index is read from memory   [ transfer.f(183,17) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.353
+         remark #15450: unmasked unaligned unit stride loads: 2 
+         remark #15462: unmasked indexed (or gather) loads: 1 
+         remark #15463: unmasked indexed (or scatter) stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 7 
+         remark #15477: vector cost: 8.500 
+         remark #15478: estimated potential speedup: 0.700 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at transfer.f(189,15)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between tx(il) (194:21) and tx(il) (194:21)
+         remark #15346: vector dependence: assumed OUTPUT dependence between tx(il) (194:21) and tx(il) (194:21)
+
+         LOOP BEGIN at transfer.f(191,17)
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15328: vectorization support: non-unit strided load was emulated for the variable <qbnew(i-1,j,ije1)>, stride is 15   [ transfer.f(194,30) ]
+            remark #15328: vectorization support: non-unit strided load was emulated for the variable <idmo_(5,j,ije1,2,iface,ie)>, stride is unknown to compiler   [ transfer.f(193,21) ]
+            remark #15328: vectorization support: irregularly indexed load was emulated for the variable <tmor(idmo_(5,j,ije1,2,iface,ie))>, part of index is read from memory   [ transfer.f(194,57) ]
+            remark #15305: vectorization support: vector length 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.760
+            remark #15355: vectorization support: tx(il) is double type reduction   [ transfer.f(194,21) ]
+            remark #15452: unmasked strided loads: 2 
+            remark #15462: unmasked indexed (or gather) loads: 1 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 13 
+            remark #15477: vector cost: 12.500 
+            remark #15478: estimated potential speedup: 0.590 
+            remark #15488: --- end vector cost summary ---
+
+            LOOP BEGIN at transfer.f(192,19)
+               remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <qbnew(i-1,j,ije1)>, stride is 3   [ transfer.f(194,30) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <idmo_(5,j,ije1,2,iface,ie)>, stride is unknown to compiler   [ transfer.f(193,21) ]
+               remark #15328: vectorization support: irregularly indexed load was emulated for the variable <tmor(idmo_(5,j,ije1,2,iface,ie))>, part of index is read from memory   [ transfer.f(194,57) ]
+               remark #15305: vectorization support: vector length 2
+               remark #15399: vectorization support: unroll factor set to 2
+               remark #15355: vectorization support: tx(il) is double type reduction   [ transfer.f(194,21) ]
+               remark #15452: unmasked strided loads: 2 
+               remark #15462: unmasked indexed (or gather) loads: 1 
+               remark #15475: --- begin vector cost summary ---
+               remark #15476: scalar cost: 13 
+               remark #15477: vector cost: 12.000 
+               remark #15478: estimated potential speedup: 1.060 
+               remark #15488: --- end vector cost summary ---
+            LOOP END
+
+            LOOP BEGIN at transfer.f(192,19)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at transfer.f(191,17)
+
+            LOOP BEGIN at transfer.f(192,19)
+            LOOP END
+
+            LOOP BEGIN at transfer.f(192,19)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at transfer.f(191,17)
+
+            LOOP BEGIN at transfer.f(192,19)
+            LOOP END
+
+            LOOP BEGIN at transfer.f(192,19)
+            LOOP END
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at transfer.f(201,15)
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <idel_(5,i,iface,ie)>, stride is unknown to compiler   [ transfer.f(202,17) ]
+         remark #15329: vectorization support: irregularly indexed store was emulated for the variable <tx(idel_(5,i,iface,ie))>, part of index is read from memory   [ transfer.f(204,17) ]
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <idmo_(5,i,1,1,iface,ie)>, stride is unknown to compiler   [ transfer.f(203,17) ]
+         remark #15328: vectorization support: irregularly indexed load was emulated for the variable <tmor(idmo_(5,i,1,1,iface,ie))>, part of index is read from memory   [ transfer.f(204,17) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15452: unmasked strided loads: 2 
+         remark #15462: unmasked indexed (or gather) loads: 1 
+         remark #15463: unmasked indexed (or scatter) stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 7 
+         remark #15477: vector cost: 12.500 
+         remark #15478: estimated potential speedup: 0.650 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at transfer.f(210,15)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between tx(il) (215:21) and tx(il) (215:21)
+         remark #15346: vector dependence: assumed OUTPUT dependence between tx(il) (215:21) and tx(il) (215:21)
+
+         LOOP BEGIN at transfer.f(212,17)
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15328: vectorization support: non-unit strided load was emulated for the variable <qbnew(i-1,j,ije1)>, stride is 15   [ transfer.f(215,30) ]
+            remark #15328: vectorization support: non-unit strided load was emulated for the variable <idmo_(j,5,2,ije1,iface,ie)>, stride is unknown to compiler   [ transfer.f(214,21) ]
+            remark #15328: vectorization support: irregularly indexed load was emulated for the variable <tmor(idmo_(j,5,2,ije1,iface,ie))>, part of index is read from memory   [ transfer.f(215,57) ]
+            remark #15305: vectorization support: vector length 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.760
+            remark #15355: vectorization support: tx(il) is double type reduction   [ transfer.f(215,21) ]
+            remark #15452: unmasked strided loads: 2 
+            remark #15462: unmasked indexed (or gather) loads: 1 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 13 
+            remark #15477: vector cost: 12.500 
+            remark #15478: estimated potential speedup: 0.590 
+            remark #15488: --- end vector cost summary ---
+
+            LOOP BEGIN at transfer.f(213,19)
+               remark #15389: vectorization support: reference idmo_(j,5,2,ije1,iface,ie) has unaligned access   [ transfer.f(214,21) ]
+               remark #15381: vectorization support: unaligned access used inside loop body
+               remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <qbnew(i-1,j,ije1)>, stride is 3   [ transfer.f(215,30) ]
+               remark #15328: vectorization support: irregularly indexed load was emulated for the variable <tmor(idmo_(j,5,2,ije1,iface,ie))>, part of index is read from memory   [ transfer.f(215,57) ]
+               remark #15305: vectorization support: vector length 2
+               remark #15399: vectorization support: unroll factor set to 2
+               remark #15309: vectorization support: normalized vectorization overhead 0.083
+               remark #15355: vectorization support: tx(il) is double type reduction   [ transfer.f(215,21) ]
+               remark #15450: unmasked unaligned unit stride loads: 1 
+               remark #15452: unmasked strided loads: 1 
+               remark #15462: unmasked indexed (or gather) loads: 1 
+               remark #15475: --- begin vector cost summary ---
+               remark #15476: scalar cost: 13 
+               remark #15477: vector cost: 9.000 
+               remark #15478: estimated potential speedup: 1.250 
+               remark #15488: --- end vector cost summary ---
+            LOOP END
+
+            LOOP BEGIN at transfer.f(213,19)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at transfer.f(212,17)
+
+            LOOP BEGIN at transfer.f(213,19)
+            LOOP END
+
+            LOOP BEGIN at transfer.f(213,19)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at transfer.f(212,17)
+
+            LOOP BEGIN at transfer.f(213,19)
+            LOOP END
+
+            LOOP BEGIN at transfer.f(213,19)
+            LOOP END
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at transfer.f(222,15)
+         remark #15389: vectorization support: reference idel_(i,5,iface,ie) has unaligned access   [ transfer.f(223,17) ]
+         remark #15389: vectorization support: reference idmo_(i,5,1,1,iface,ie) has unaligned access   [ transfer.f(224,17) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15329: vectorization support: irregularly indexed store was emulated for the variable <tx(idel_(i,5,iface,ie))>, part of index is read from memory   [ transfer.f(225,17) ]
+         remark #15328: vectorization support: irregularly indexed load was emulated for the variable <tmor(idmo_(i,5,1,1,iface,ie))>, part of index is read from memory   [ transfer.f(225,17) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.353
+         remark #15450: unmasked unaligned unit stride loads: 2 
+         remark #15462: unmasked indexed (or gather) loads: 1 
+         remark #15463: unmasked indexed (or scatter) stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 7 
+         remark #15477: vector cost: 8.500 
+         remark #15478: estimated potential speedup: 0.700 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at transfer.f(231,15)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between tx(il) (236:21) and tx(il) (236:21)
+         remark #15346: vector dependence: assumed OUTPUT dependence between tx(il) (236:21) and tx(il) (236:21)
+
+         LOOP BEGIN at transfer.f(233,17)
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15328: vectorization support: non-unit strided load was emulated for the variable <qbnew(i-1,j,ije1)>, stride is 15   [ transfer.f(236,30) ]
+            remark #15328: vectorization support: non-unit strided load was emulated for the variable <idmo_(1,j,ije1,1,iface,ie)>, stride is unknown to compiler   [ transfer.f(235,21) ]
+            remark #15328: vectorization support: irregularly indexed load was emulated for the variable <tmor(idmo_(1,j,ije1,1,iface,ie))>, part of index is read from memory   [ transfer.f(236,57) ]
+            remark #15305: vectorization support: vector length 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.760
+            remark #15355: vectorization support: tx(il) is double type reduction   [ transfer.f(236,21) ]
+            remark #15452: unmasked strided loads: 2 
+            remark #15462: unmasked indexed (or gather) loads: 1 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 13 
+            remark #15477: vector cost: 12.500 
+            remark #15478: estimated potential speedup: 0.590 
+            remark #15488: --- end vector cost summary ---
+
+            LOOP BEGIN at transfer.f(234,19)
+               remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <qbnew(i-1,j,ije1)>, stride is 3   [ transfer.f(236,30) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <idmo_(1,j,ije1,1,iface,ie)>, stride is unknown to compiler   [ transfer.f(235,21) ]
+               remark #15328: vectorization support: irregularly indexed load was emulated for the variable <tmor(idmo_(1,j,ije1,1,iface,ie))>, part of index is read from memory   [ transfer.f(236,57) ]
+               remark #15305: vectorization support: vector length 2
+               remark #15399: vectorization support: unroll factor set to 2
+               remark #15355: vectorization support: tx(il) is double type reduction   [ transfer.f(236,21) ]
+               remark #15452: unmasked strided loads: 2 
+               remark #15462: unmasked indexed (or gather) loads: 1 
+               remark #15475: --- begin vector cost summary ---
+               remark #15476: scalar cost: 13 
+               remark #15477: vector cost: 12.000 
+               remark #15478: estimated potential speedup: 1.060 
+               remark #15488: --- end vector cost summary ---
+            LOOP END
+
+            LOOP BEGIN at transfer.f(234,19)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at transfer.f(233,17)
+
+            LOOP BEGIN at transfer.f(234,19)
+            LOOP END
+
+            LOOP BEGIN at transfer.f(234,19)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at transfer.f(233,17)
+
+            LOOP BEGIN at transfer.f(234,19)
+            LOOP END
+
+            LOOP BEGIN at transfer.f(234,19)
+            LOOP END
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at transfer.f(242,15)
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <idel_(1,i,iface,ie)>, stride is unknown to compiler   [ transfer.f(243,17) ]
+         remark #15329: vectorization support: irregularly indexed store was emulated for the variable <tx(idel_(1,i,iface,ie))>, part of index is read from memory   [ transfer.f(245,17) ]
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <idmo_(1,i,1,1,iface,ie)>, stride is unknown to compiler   [ transfer.f(244,17) ]
+         remark #15328: vectorization support: irregularly indexed load was emulated for the variable <tmor(idmo_(1,i,1,1,iface,ie))>, part of index is read from memory   [ transfer.f(245,17) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15452: unmasked strided loads: 2 
+         remark #15462: unmasked indexed (or gather) loads: 1 
+         remark #15463: unmasked indexed (or scatter) stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 7 
+         remark #15477: vector cost: 12.500 
+         remark #15478: estimated potential speedup: 0.650 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: TRANSFB
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at transfer.f(281,7)
+   remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+   LOOP BEGIN at transfer.f(281,7)
+      remark #15389: vectorization support: reference tmor(ie) has unaligned access   [ transfer.f(283,9) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.300
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 2.500 
+      remark #15478: estimated potential speedup: 1.450 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at transfer.f(281,7)
+   <Remainder>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at transfer.f(341,20)
+<Distributed chunk1>
+   remark #15388: vectorization support: reference v_end(ije2) has aligned access   [ transfer.f(342,44) ]
+   remark #15388: vectorization support: reference v_end(ije2) has aligned access   [ transfer.f(341,17) ]
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: irregularly indexed store was emulated for the variable <temp(col,v_end(ije2),ije2)>, part of index is read from memory   [ transfer.f(342,17) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <idel_(col,v_end(ije2),iface,ie)>, part of index is read from memory   [ transfer.f(341,17) ]
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <tx(idel_(col,v_end(ije2),iface,ie))>, part of index is read from memory   [ transfer.f(342,17) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.226
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15462: unmasked indexed (or gather) loads: 2 
+   remark #15463: unmasked indexed (or scatter) stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 13 
+   remark #15477: vector cost: 26.500 
+   remark #15478: estimated potential speedup: 0.400 
+   remark #15488: --- end vector cost summary ---
+
+   LOOP BEGIN at transfer.f(357,17)
+   <Distributed chunk2>
+      remark #15389: vectorization support: reference temp(col,v_end(ije2),ije2) has unaligned access   [ transfer.f(342,17) ]
+      remark #15389: vectorization support: reference idel_(col,v_end(ije2),iface,ie) has unaligned access   [ transfer.f(341,17) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15328: vectorization support: irregularly indexed load was emulated for the variable <tx(idel_(col,v_end(ije2),iface,ie))>, part of index is read from memory   [ transfer.f(342,17) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.250
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15462: unmasked indexed (or gather) loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 13 
+      remark #15477: vector cost: 6.000 
+      remark #15478: estimated potential speedup: 1.510 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at transfer.f(357,17)
+   <Distributed chunk2>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at transfer.f(341,20)
+<Distributed chunk2>
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive   [ transfer.f(357,17) ]
+
+   LOOP BEGIN at transfer.f(357,17)
+   <Distributed chunk3>
+      remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+      LOOP BEGIN at transfer.f(357,17)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed FLOW dependence between temp(col,j,ije2) (363:19) and temp(col,j,ije2) (363:19)
+         remark #15346: vector dependence: assumed ANTI dependence between temp(col,j,ije2) (363:19) and temp(col,j,ije2) (363:19)
+
+         LOOP BEGIN at transfer.f(359,19)
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at transfer.f(341,20)
+<Distributed chunk3>
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive   [ transfer.f(357,17) ]
+
+   LOOP BEGIN at transfer.f(357,17)
+   <Distributed chunk1>
+      remark #15389: vectorization support: reference idel_(col,i,iface,ie) has unaligned access   [ transfer.f(349,19) ]
+      remark #15389: vectorization support: reference top(col,ije2) has unaligned access   [ transfer.f(353,17) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15328: vectorization support: irregularly indexed load was emulated for the variable <tx(idel_(col,i,iface,ie))>, part of index is read from memory   [ transfer.f(350,49) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.542
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15462: unmasked indexed (or gather) loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 17 
+      remark #15477: vector cost: 12.000 
+      remark #15478: estimated potential speedup: 1.080 
+      remark #15488: --- end vector cost summary ---
+
+      LOOP BEGIN at transfer.f(348,17)
+         remark #15389: vectorization support: reference qbnew(i-1,j,ije2) has unaligned access   [ transfer.f(350,19) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <idel_(col,i,iface,ie)>, stride is unknown to compiler   [ transfer.f(349,19) ]
+         remark #15328: vectorization support: irregularly indexed load was emulated for the variable <tx(idel_(col,i,iface,ie))>, part of index is read from memory   [ transfer.f(350,49) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 1.100
+         remark #15355: vectorization support: tmp is double type reduction   [ transfer.f(350,19) ]
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15452: unmasked strided loads: 1 
+         remark #15462: unmasked indexed (or gather) loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 10 
+         remark #15477: vector cost: 10.000 
+         remark #15478: estimated potential speedup: 0.570 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at transfer.f(348,17)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(348,17)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(348,17)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(348,17)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at transfer.f(357,17)
+   <Distributed chunk1>
+
+      LOOP BEGIN at transfer.f(348,17)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(348,17)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(348,17)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(348,17)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(348,17)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at transfer.f(370,13)
+   remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(383,24) ]
+   remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(383,24) ]
+   remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(385,24) ]
+   remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(385,24) ]
+   remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(398,26) ]
+   remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(398,26) ]
+   remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(400,26) ]
+   remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(400,26) ]
+   remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(412,22) ]
+   remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(412,22) ]
+   remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(414,22) ]
+   remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(414,22) ]
+   remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(424,24) ]
+   remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(424,24) ]
+   remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(426,24) ]
+   remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(426,24) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (383:24) and at (383:24)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (383:24) and at (383:24)
+
+   LOOP BEGIN at transfer.f(375,17)
+      remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(383,24) ]
+      remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(383,24) ]
+      remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(385,24) ]
+      remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(385,24) ]
+      remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(398,26) ]
+      remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(398,26) ]
+      remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(400,26) ]
+      remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(400,26) ]
+      remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(412,22) ]
+      remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(412,22) ]
+      remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(414,22) ]
+      remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(414,22) ]
+      remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(424,24) ]
+      remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(424,24) ]
+      remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(426,24) ]
+      remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(426,24) ]
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed OUTPUT dependence between at (383:24) and at (383:24)
+      remark #15346: vector dependence: assumed OUTPUT dependence between at (383:24) and at (383:24)
+
+      LOOP BEGIN at transfer.f(375,17)
+         remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(383,24) ]
+         remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(383,24) ]
+         remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(385,24) ]
+         remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(385,24) ]
+         remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(398,26) ]
+         remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(398,26) ]
+         remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(400,26) ]
+         remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(400,26) ]
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (383:24) and tlock(ig) (400:26)
+         remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (400:26) and tlock(ig) (383:24)
+
+         LOOP BEGIN at transfer.f(391,19)
+            remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(398,26) ]
+            remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(398,26) ]
+            remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(400,26) ]
+            remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(400,26) ]
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (398:26) and tlock(ig) (400:26)
+            remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (400:26) and tlock(ig) (398:26)
+
+            LOOP BEGIN at transfer.f(393,21)
+               remark #15389: vectorization support: reference qbnew(i-1,j,ije2) has unaligned access   [ transfer.f(394,23) ]
+               remark #15389: vectorization support: reference temp(i,col,ije1) has unaligned access   [ transfer.f(394,23) ]
+               remark #15381: vectorization support: unaligned access used inside loop body
+               remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+               remark #15305: vectorization support: vector length 2
+               remark #15309: vectorization support: normalized vectorization overhead 2.500
+               remark #15355: vectorization support: tmp is double type reduction   [ transfer.f(394,23) ]
+               remark #15450: unmasked unaligned unit stride loads: 2 
+               remark #15475: --- begin vector cost summary ---
+               remark #15476: scalar cost: 8 
+               remark #15477: vector cost: 5.000 
+               remark #15478: estimated potential speedup: 0.550 
+               remark #15488: --- end vector cost summary ---
+            LOOP END
+
+            LOOP BEGIN at transfer.f(393,21)
+            LOOP END
+
+            LOOP BEGIN at transfer.f(393,21)
+            LOOP END
+
+            LOOP BEGIN at transfer.f(393,21)
+            LOOP END
+
+            LOOP BEGIN at transfer.f(393,21)
+            LOOP END
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at transfer.f(415,17)
+         remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(424,24) ]
+         remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(424,24) ]
+         remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(426,24) ]
+         remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(426,24) ]
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (424:24) and tlock(ig) (426:24)
+         remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (426:24) and tlock(ig) (424:24)
+
+         LOOP BEGIN at transfer.f(418,19)
+            remark #15389: vectorization support: reference qbnew(i-1,j,ije2) has unaligned access   [ transfer.f(419,21) ]
+            remark #15389: vectorization support: reference temp(i,col,ije1) has unaligned access   [ transfer.f(419,21) ]
+            remark #15389: vectorization support: reference qbnew(i-1,j,ije2) has unaligned access   [ transfer.f(420,21) ]
+            remark #15389: vectorization support: reference top(i,ije1) has unaligned access   [ transfer.f(420,21) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15305: vectorization support: vector length 2
+            remark #15309: vectorization support: normalized vectorization overhead 2.474
+            remark #15355: vectorization support: tmp is double type reduction   [ transfer.f(452,19) ]
+            remark #15355: vectorization support: tmp1 is double type reduction   [ transfer.f(417,19) ]
+            remark #15450: unmasked unaligned unit stride loads: 3 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 17 
+            remark #15477: vector cost: 9.500 
+            remark #15478: estimated potential speedup: 0.610 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at transfer.f(418,19)
+         LOOP END
+
+         LOOP BEGIN at transfer.f(418,19)
+         LOOP END
+
+         LOOP BEGIN at transfer.f(418,19)
+         LOOP END
+
+         LOOP BEGIN at transfer.f(418,19)
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at transfer.f(435,13)
+   remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(440,22) ]
+   remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(440,22) ]
+   remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(442,22) ]
+   remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(442,22) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (440:22) and at (440:22)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (440:22) and at (440:22)
+
+   LOOP BEGIN at transfer.f(436,15)
+      remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(440,22) ]
+      remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(440,22) ]
+      remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(442,22) ]
+      remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(442,22) ]
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (440:22) and tlock(ig) (442:22)
+      remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (442:22) and tlock(ig) (440:22)
+   LOOP END
+
+   LOOP BEGIN at transfer.f(436,15)
+   LOOP END
+
+   LOOP BEGIN at transfer.f(436,15)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at transfer.f(450,15)
+   remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(459,24) ]
+   remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(459,24) ]
+   remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(461,24) ]
+   remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(461,24) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (459:24) and at (459:24)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (459:24) and at (459:24)
+
+   LOOP BEGIN at transfer.f(451,17)
+      remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(459,24) ]
+      remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(459,24) ]
+      remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(461,24) ]
+      remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(461,24) ]
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (459:24) and tlock(ig) (461:24)
+      remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (461:24) and tlock(ig) (459:24)
+
+      LOOP BEGIN at transfer.f(454,21)
+         remark #15389: vectorization support: reference qbnew(i-1,j,ije) has unaligned access   [ transfer.f(455,21) ]
+         remark #15389: vectorization support: reference idel_(i,1,iface,ie) has unaligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15328: vectorization support: irregularly indexed load was emulated for the variable <tx(idel_(i,1,iface,ie))>, part of index is read from memory   [ transfer.f(455,49) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 1.786
+         remark #15355: vectorization support: tmp is double type reduction   [ transfer.f(455,21) ]
+         remark #15450: unmasked unaligned unit stride loads: 2 
+         remark #15462: unmasked indexed (or gather) loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 10 
+         remark #15477: vector cost: 7.000 
+         remark #15478: estimated potential speedup: 0.610 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at transfer.f(454,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(454,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(454,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(454,21)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at transfer.f(451,17)
+
+      LOOP BEGIN at transfer.f(454,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(454,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(454,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(454,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(454,21)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at transfer.f(467,15)
+   remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(471,22) ]
+   remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(471,22) ]
+   remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(473,22) ]
+   remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(473,22) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (471:22) and tlock(ig) (473:22)
+   remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (473:22) and tlock(ig) (471:22)
+LOOP END
+
+LOOP BEGIN at transfer.f(479,15)
+   remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(488,24) ]
+   remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(488,24) ]
+   remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(490,24) ]
+   remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(490,24) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (488:24) and at (488:24)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (488:24) and at (488:24)
+
+   LOOP BEGIN at transfer.f(480,17)
+      remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(488,24) ]
+      remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(488,24) ]
+      remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(490,24) ]
+      remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(490,24) ]
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (488:24) and tlock(ig) (490:24)
+      remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (490:24) and tlock(ig) (488:24)
+
+      LOOP BEGIN at transfer.f(483,21)
+         remark #15389: vectorization support: reference qbnew(i-1,j,ije) has unaligned access   [ transfer.f(484,21) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <idel_(5,i,iface,ie)>, stride is unknown to compiler
+         remark #15328: vectorization support: irregularly indexed load was emulated for the variable <tx(idel_(5,i,iface,ie))>, part of index is read from memory   [ transfer.f(484,50) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 1.100
+         remark #15355: vectorization support: tmp is double type reduction   [ transfer.f(484,21) ]
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15452: unmasked strided loads: 1 
+         remark #15462: unmasked indexed (or gather) loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 10 
+         remark #15477: vector cost: 10.000 
+         remark #15478: estimated potential speedup: 0.570 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at transfer.f(483,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(483,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(483,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(483,21)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at transfer.f(480,17)
+
+      LOOP BEGIN at transfer.f(483,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(483,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(483,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(483,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(483,21)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at transfer.f(496,15)
+   remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(500,22) ]
+   remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(500,22) ]
+   remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(502,22) ]
+   remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(502,22) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (500:22) and tlock(ig) (502:22)
+   remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (502:22) and tlock(ig) (500:22)
+LOOP END
+
+LOOP BEGIN at transfer.f(508,15)
+   remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(517,24) ]
+   remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(517,24) ]
+   remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(519,24) ]
+   remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(519,24) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (517:24) and at (517:24)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (517:24) and at (517:24)
+
+   LOOP BEGIN at transfer.f(509,17)
+      remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(517,24) ]
+      remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(517,24) ]
+      remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(519,24) ]
+      remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(519,24) ]
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (517:24) and tlock(ig) (519:24)
+      remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (519:24) and tlock(ig) (517:24)
+
+      LOOP BEGIN at transfer.f(512,21)
+         remark #15389: vectorization support: reference qbnew(i-1,j,ije) has unaligned access   [ transfer.f(513,21) ]
+         remark #15389: vectorization support: reference idel_(i,5,iface,ie) has unaligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15328: vectorization support: irregularly indexed load was emulated for the variable <tx(idel_(i,5,iface,ie))>, part of index is read from memory   [ transfer.f(513,50) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 1.786
+         remark #15355: vectorization support: tmp is double type reduction   [ transfer.f(513,21) ]
+         remark #15450: unmasked unaligned unit stride loads: 2 
+         remark #15462: unmasked indexed (or gather) loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 10 
+         remark #15477: vector cost: 7.000 
+         remark #15478: estimated potential speedup: 0.610 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at transfer.f(512,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(512,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(512,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(512,21)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at transfer.f(509,17)
+
+      LOOP BEGIN at transfer.f(512,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(512,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(512,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(512,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(512,21)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at transfer.f(525,15)
+   remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(529,22) ]
+   remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(529,22) ]
+   remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(531,22) ]
+   remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(531,22) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (529:22) and tlock(ig) (531:22)
+   remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (531:22) and tlock(ig) (529:22)
+LOOP END
+
+LOOP BEGIN at transfer.f(537,15)
+   remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(546,24) ]
+   remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(546,24) ]
+   remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(548,24) ]
+   remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(548,24) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (546:24) and at (546:24)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (546:24) and at (546:24)
+
+   LOOP BEGIN at transfer.f(538,17)
+      remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(546,24) ]
+      remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(546,24) ]
+      remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(548,24) ]
+      remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(548,24) ]
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (546:24) and tlock(ig) (548:24)
+      remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (548:24) and tlock(ig) (546:24)
+
+      LOOP BEGIN at transfer.f(541,21)
+         remark #15389: vectorization support: reference qbnew(i-1,j,ije) has unaligned access   [ transfer.f(542,21) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <idel_(1,i,iface,ie)>, stride is unknown to compiler
+         remark #15328: vectorization support: irregularly indexed load was emulated for the variable <tx(idel_(1,i,iface,ie))>, part of index is read from memory   [ transfer.f(542,50) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 1.100
+         remark #15355: vectorization support: tmp is double type reduction   [ transfer.f(542,21) ]
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15452: unmasked strided loads: 1 
+         remark #15462: unmasked indexed (or gather) loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 10 
+         remark #15477: vector cost: 10.000 
+         remark #15478: estimated potential speedup: 0.570 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at transfer.f(541,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(541,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(541,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(541,21)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at transfer.f(538,17)
+
+      LOOP BEGIN at transfer.f(541,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(541,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(541,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(541,21)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(541,21)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at transfer.f(554,15)
+   remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(558,22) ]
+   remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(558,22) ]
+   remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(560,22) ]
+   remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(560,22) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (558:22) and tlock(ig) (560:22)
+   remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (560:22) and tlock(ig) (558:22)
+LOOP END
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at transfer.f(288,7)
+   remark #15536: loop was not vectorized: inner loop throttling prevents vectorization of this outer loop. Refer to inner loop message for more details.   [ transfer.f(564,9) ]
+
+   LOOP BEGIN at transfer.f(564,9)
+      remark #15533: loop was not vectorized: loop exceeds complexity limits. Consider overriding limits (-override-limits) or using simd directive.
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: TRANSFB_COR_E
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at transfer.f(593,7)
+   remark #15389: vectorization support: reference qbnew(i-1,1,1) has unaligned access   [ transfer.f(594,9) ]
+   remark #15389: vectorization support: reference tx(i,1,1) has unaligned access   [ transfer.f(594,37) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 2.500
+   remark #15355: vectorization support: tmor is double type reduction   [ transfer.f(599,11) ]
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 8 
+   remark #15477: vector cost: 5.000 
+   remark #15478: estimated potential speedup: 0.550 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at transfer.f(598,9)
+   remark #15389: vectorization support: reference qbnew(i-1,1,1) has unaligned access   [ transfer.f(599,11) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <tx(1,i,1)>, stride is 5   [ transfer.f(599,39) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 2.000
+   remark #15355: vectorization support: tmor is double type reduction   [ transfer.f(599,11) ]
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15452: unmasked strided loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 8 
+   remark #15477: vector cost: 5.500 
+   remark #15478: estimated potential speedup: 0.580 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at transfer.f(604,9)
+   remark #15389: vectorization support: reference qbnew(i-1,1,1) has unaligned access   [ transfer.f(605,11) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <tx(1,1,i)>, stride is 25   [ transfer.f(605,39) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 2.000
+   remark #15355: vectorization support: tmor is double type reduction   [ transfer.f(599,11) ]
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15452: unmasked strided loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 8 
+   remark #15477: vector cost: 5.500 
+   remark #15478: estimated potential speedup: 0.580 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+===========================================================================
+
+Begin optimization report for: TRANSFB_COR_F
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at transfer.f(632,7)
+<Peeled, Distributed chunk1>
+   remark #15389: vectorization support: reference temp(col) has unaligned access   [ transfer.f(633,9) ]
+   remark #15389: vectorization support: reference tx(col,1,1) has unaligned access   [ transfer.f(633,9) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 4.000
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 3.000 
+   remark #15478: estimated potential speedup: 0.350 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at transfer.f(632,7)
+<Peeled>
+   remark #15389: vectorization support: reference temp(col) has unaligned access   [ transfer.f(635,11) ]
+   remark #15389: vectorization support: reference temp(col) has unaligned access   [ transfer.f(635,11) ]
+   remark #15389: vectorization support: reference tx(col,i,1) has unaligned access   [ transfer.f(635,50) ]
+   remark #15389: vectorization support: reference temp(col) has unaligned access   [ transfer.f(635,11) ]
+   remark #15389: vectorization support: reference temp(col) has unaligned access   [ transfer.f(635,11) ]
+   remark #15389: vectorization support: reference tx(col,i,1) has unaligned access   [ transfer.f(635,50) ]
+   remark #15389: vectorization support: reference temp(col) has unaligned access   [ transfer.f(635,11) ]
+   remark #15389: vectorization support: reference temp(col) has unaligned access   [ transfer.f(635,11) ]
+   remark #15389: vectorization support: reference tx(col,i,1) has unaligned access   [ transfer.f(635,50) ]
+   remark #15389: vectorization support: reference qbnew_(i-1,1,1) has unaligned access   [ transfer.f(641,9) ]
+   remark #15389: vectorization support: reference temp(i) has unaligned access   [ transfer.f(641,9) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.860
+   remark #15355: vectorization support: tmor is double type reduction   [ transfer.f(641,9) ]
+   remark #15450: unmasked unaligned unit stride loads: 5 
+   remark #15451: unmasked unaligned unit stride stores: 3 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 35 
+   remark #15477: vector cost: 21.500 
+   remark #15478: estimated potential speedup: 0.910 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at transfer.f(640,7)
+<Peeled>
+LOOP END
+
+LOOP BEGIN at transfer.f(645,9)
+   remark #15389: vectorization support: reference qbnew_(i-1,1,1) has unaligned access   [ transfer.f(646,11) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <tx(1,1,i)>, stride is 25   [ transfer.f(646,41) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 2.000
+   remark #15355: vectorization support: tmor is double type reduction   [ transfer.f(646,11) ]
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15452: unmasked strided loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 8 
+   remark #15477: vector cost: 5.500 
+   remark #15478: estimated potential speedup: 0.580 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at transfer.f(653,11)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between temp(col) (654:13) and temp(col) (654:13)
+   remark #15346: vector dependence: assumed OUTPUT dependence between temp(col) (654:13) and temp(col) (654:13)
+
+   LOOP BEGIN at transfer.f(652,9)
+      remark #15388: vectorization support: reference temp(col) has aligned access   [ transfer.f(654,13) ]
+      remark #15388: vectorization support: reference temp(col) has aligned access   [ transfer.f(654,13) ]
+      remark #15389: vectorization support: reference tx(col,1,i) has unaligned access   [ transfer.f(654,52) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.278
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 9 
+      remark #15477: vector cost: 4.500 
+      remark #15478: estimated potential speedup: 1.400 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at transfer.f(652,9)
+   LOOP END
+
+   LOOP BEGIN at transfer.f(652,9)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at transfer.f(658,9)
+   remark #15389: vectorization support: reference qbnew_(i-1,1,1) has unaligned access   [ transfer.f(659,11) ]
+   remark #15389: vectorization support: reference temp(i) has unaligned access   [ transfer.f(659,11) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 2.200
+   remark #15355: vectorization support: tmor is double type reduction   [ transfer.f(659,11) ]
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 8 
+   remark #15477: vector cost: 5.000 
+   remark #15478: estimated potential speedup: 0.600 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at transfer.f(665,9)
+<Peeled loop for vectorization, Distributed chunk1>
+LOOP END
+
+LOOP BEGIN at transfer.f(665,9)
+<Distributed chunk1>
+   remark #15388: vectorization support: reference temp(col) has aligned access   [ transfer.f(667,13) ]
+   remark #15388: vectorization support: reference temp(col) has aligned access   [ transfer.f(667,13) ]
+   remark #15388: vectorization support: reference temp(col) has aligned access   [ transfer.f(667,13) ]
+   remark #15388: vectorization support: reference temp(col) has aligned access   [ transfer.f(667,13) ]
+   remark #15388: vectorization support: reference temp(col) has aligned access   [ transfer.f(667,13) ]
+   remark #15388: vectorization support: reference temp(col) has aligned access   [ transfer.f(667,13) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <tx(1,col,i)>, stride is 5   [ transfer.f(667,52) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <tx(1,col,i)>, stride is 5   [ transfer.f(667,52) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <tx(1,col,i)>, stride is 5   [ transfer.f(667,52) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.162
+   remark #15301: PERMUTED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 3 
+   remark #15452: unmasked strided loads: 3 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 26 
+   remark #15477: vector cost: 18.500 
+   remark #15478: estimated potential speedup: 1.130 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at transfer.f(671,11)
+LOOP END
+
+LOOP BEGIN at transfer.f(665,9)
+<Distributed chunk2>
+   remark #15389: vectorization support: reference qbnew_(i-1,1,1) has unaligned access   [ transfer.f(671,11) ]
+   remark #15389: vectorization support: reference temp(i) has unaligned access   [ transfer.f(671,11) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 2.200
+   remark #15355: vectorization support: tmor is double type reduction   [ transfer.f(646,11) ]
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 8 
+   remark #15477: vector cost: 5.000 
+   remark #15478: estimated potential speedup: 0.600 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+===========================================================================
+
+Begin optimization report for: TRANSF_NC
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at transfer.f(696,7)
+<Distributed chunk1>
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <tmp(1,col)>, stride is 5   [ transfer.f(698,9) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <tmor(1,col)>, stride is 5   [ transfer.f(698,9) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15452: unmasked strided loads: 1 
+   remark #15453: unmasked strided stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 1.000 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at transfer.f(696,7)
+<Distributed chunk2>
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive   [ transfer.f(699,9) ]
+
+   LOOP BEGIN at transfer.f(700,11)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed OUTPUT dependence between tmp(i,col) (701:13) and tmp(i,col) (701:13)
+      remark #15346: vector dependence: assumed OUTPUT dependence between tmp(i,col) (701:13) and tmp(i,col) (701:13)
+
+      LOOP BEGIN at transfer.f(699,9)
+         remark #15389: vectorization support: reference tmp(i,col) has unaligned access   [ transfer.f(701,13) ]
+         remark #15389: vectorization support: reference tmp(i,col) has unaligned access   [ transfer.f(701,13) ]
+         remark #15389: vectorization support: reference qbnew_(i-1,j,1) has unaligned access   [ transfer.f(701,13) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.917
+         remark #15450: unmasked unaligned unit stride loads: 2 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 9 
+         remark #15477: vector cost: 6.000 
+         remark #15478: estimated potential speedup: 0.840 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at transfer.f(699,9)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(699,9)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(699,9)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(699,9)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at transfer.f(700,11)
+
+      LOOP BEGIN at transfer.f(699,9)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(699,9)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(699,9)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(699,9)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(699,9)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at transfer.f(700,11)
+
+      LOOP BEGIN at transfer.f(699,9)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(699,9)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(699,9)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(699,9)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(699,9)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at transfer.f(700,11)
+
+      LOOP BEGIN at transfer.f(699,9)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(699,9)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(699,9)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(699,9)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(699,9)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at transfer.f(700,11)
+
+      LOOP BEGIN at transfer.f(699,9)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(699,9)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(699,9)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(699,9)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(699,9)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at transfer.f(706,7)
+<Distributed chunk1>
+   remark #15389: vectorization support: reference tx(col,1) has unaligned access   [ transfer.f(708,9) ]
+   remark #15389: vectorization support: reference tx(col,1) has unaligned access   [ transfer.f(708,23) ]
+   remark #15388: vectorization support: reference tmp(col,1) has aligned access   [ transfer.f(708,23) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.375
+   remark #15301: PARTIAL LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 1.070 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at transfer.f(710,11)
+<Distributed chunk2>
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between tx(col,i) (711:13) and tx(col,i) (711:13)
+   remark #15346: vector dependence: assumed OUTPUT dependence between tx(col,i) (711:13) and tx(col,i) (711:13)
+
+   LOOP BEGIN at transfer.f(709,9)
+      remark #15541: outer loop was not auto-vectorized: consider using SIMD directive   [ transfer.f(706,7) ]
+
+      LOOP BEGIN at transfer.f(706,7)
+         remark #15389: vectorization support: reference tx(col,i) has unaligned access   [ transfer.f(711,13) ]
+         remark #15389: vectorization support: reference tx(col,i) has unaligned access   [ transfer.f(711,25) ]
+         remark #15389: vectorization support: reference tmp(col,j) has unaligned access   [ transfer.f(711,25) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.458
+         remark #15450: unmasked unaligned unit stride loads: 2 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 9 
+         remark #15477: vector cost: 6.000 
+         remark #15478: estimated potential speedup: 1.020 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at transfer.f(706,7)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(706,7)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at transfer.f(709,9)
+
+      LOOP BEGIN at transfer.f(706,7)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(706,7)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(706,7)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at transfer.f(709,9)
+
+      LOOP BEGIN at transfer.f(706,7)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(706,7)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(706,7)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at transfer.f(709,9)
+
+      LOOP BEGIN at transfer.f(706,7)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(706,7)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(706,7)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at transfer.f(709,9)
+
+      LOOP BEGIN at transfer.f(706,7)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(706,7)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(706,7)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at transfer.f(706,7)
+<Remainder loop for vectorization, Distributed chunk1>
+LOOP END
+===========================================================================
+
+Begin optimization report for: TRANSFB_NC0
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at transfer.f(733,7)
+   remark #15389: vectorization support: reference tmor(j,1) has unaligned access   [ transfer.f(735,11) ]
+   remark #15389: vectorization support: reference tmor(j,1) has unaligned access   [ transfer.f(735,22) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <qbnew_(i-1,j,1)>, stride is 3   [ transfer.f(735,22) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.714
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15452: unmasked strided loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 9 
+   remark #15477: vector cost: 7.000 
+   remark #15478: estimated potential speedup: 0.950 
+   remark #15488: --- end vector cost summary ---
+
+   LOOP BEGIN at transfer.f(734,9)
+      remark #15389: vectorization support: reference qbnew_(i-1,j,1) has unaligned access   [ transfer.f(735,22) ]
+      remark #15389: vectorization support: reference tx(i,1,1) has unaligned access   [ transfer.f(735,51) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15355: vectorization support: tmor(j,1) is double type reduction   [ transfer.f(735,11) ]
+      remark #15450: unmasked unaligned unit stride loads: 2 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 9 
+      remark #15477: vector cost: 5.000 
+      remark #15478: estimated potential speedup: 1.070 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at transfer.f(734,9)
+   LOOP END
+
+   LOOP BEGIN at transfer.f(734,9)
+   LOOP END
+
+   LOOP BEGIN at transfer.f(734,9)
+   LOOP END
+
+   LOOP BEGIN at transfer.f(734,9)
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: TRANSFB_NC2
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at transfer.f(764,7)
+<Peeled, Distributed chunk1>
+   remark #15388: vectorization support: reference bottom(col) has aligned access   [ transfer.f(767,9) ]
+   remark #15388: vectorization support: reference temp(col,1) has aligned access   [ transfer.f(765,9) ]
+   remark #15389: vectorization support: reference tx(col,1) has unaligned access   [ transfer.f(765,9) ]
+   remark #15388: vectorization support: reference bottom(col) has aligned access   [ transfer.f(769,11) ]
+   remark #15388: vectorization support: reference bottom(col) has aligned access   [ transfer.f(769,11) ]
+   remark #15389: vectorization support: reference tx(col,i) has unaligned access   [ transfer.f(769,54) ]
+   remark #15388: vectorization support: reference bottom(col) has aligned access   [ transfer.f(769,11) ]
+   remark #15388: vectorization support: reference bottom(col) has aligned access   [ transfer.f(769,11) ]
+   remark #15389: vectorization support: reference tx(col,i) has unaligned access   [ transfer.f(769,54) ]
+   remark #15388: vectorization support: reference bottom(col) has aligned access   [ transfer.f(769,11) ]
+   remark #15388: vectorization support: reference bottom(col) has aligned access   [ transfer.f(769,11) ]
+   remark #15389: vectorization support: reference tx(col,i) has unaligned access   [ transfer.f(769,54) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.529
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 5 
+   remark #15450: unmasked unaligned unit stride loads: 4 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 34 
+   remark #15477: vector cost: 17.000 
+   remark #15478: estimated potential speedup: 1.410 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at transfer.f(764,7)
+LOOP END
+
+LOOP BEGIN at transfer.f(764,7)
+<Distributed chunk3>
+LOOP END
+
+LOOP BEGIN at transfer.f(772,9)
+<Distributed chunk4>
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive   [ transfer.f(764,7) ]
+
+   LOOP BEGIN at transfer.f(773,11)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed OUTPUT dependence between temp(col,j) (774:13) and temp(col,j) (774:13)
+      remark #15346: vector dependence: assumed OUTPUT dependence between temp(col,j) (774:13) and temp(col,j) (774:13)
+
+      LOOP BEGIN at transfer.f(764,7)
+         remark #15389: vectorization support: reference temp(col,j) has unaligned access   [ transfer.f(774,13) ]
+         remark #15389: vectorization support: reference temp(col,j) has unaligned access   [ transfer.f(774,13) ]
+         remark #15389: vectorization support: reference tx(col,i) has unaligned access   [ transfer.f(774,56) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.458
+         remark #15450: unmasked unaligned unit stride loads: 2 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 9 
+         remark #15477: vector cost: 6.000 
+         remark #15478: estimated potential speedup: 1.020 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at transfer.f(764,7)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(764,7)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at transfer.f(773,11)
+
+      LOOP BEGIN at transfer.f(764,7)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(764,7)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(764,7)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at transfer.f(773,11)
+
+      LOOP BEGIN at transfer.f(764,7)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(764,7)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(764,7)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at transfer.f(773,11)
+
+      LOOP BEGIN at transfer.f(764,7)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(764,7)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(764,7)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at transfer.f(784,7)
+   remark #15389: vectorization support: reference tmor(j,1) has unaligned access   [ transfer.f(786,11) ]
+   remark #15389: vectorization support: reference tmor(j,1) has unaligned access   [ transfer.f(786,23) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <qbnew_(i-1,j,1)>, stride is 3   [ transfer.f(786,23) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <qbnew_(i-1,j,1)>, stride is 3   [ transfer.f(786,34) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.583
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15452: unmasked strided loads: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 17 
+   remark #15477: vector cost: 12.000 
+   remark #15478: estimated potential speedup: 1.070 
+   remark #15488: --- end vector cost summary ---
+
+   LOOP BEGIN at transfer.f(785,9)
+      remark #15389: vectorization support: reference qbnew_(i-1,j,1) has unaligned access   [ transfer.f(786,23) ]
+      remark #15389: vectorization support: reference bottom(i) has unaligned access   [ transfer.f(786,23) ]
+      remark #15389: vectorization support: reference qbnew_(i-1,j,1) has unaligned access   [ transfer.f(786,34) ]
+      remark #15389: vectorization support: reference temp(i,1) has unaligned access   [ transfer.f(786,34) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.158
+      remark #15355: vectorization support: tmor(j,1) is double type reduction   [ transfer.f(786,11) ]
+      remark #15450: unmasked unaligned unit stride loads: 3 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 17 
+      remark #15477: vector cost: 9.500 
+      remark #15478: estimated potential speedup: 1.300 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at transfer.f(785,9)
+   LOOP END
+
+   LOOP BEGIN at transfer.f(785,9)
+   LOOP END
+
+   LOOP BEGIN at transfer.f(785,9)
+   LOOP END
+
+   LOOP BEGIN at transfer.f(785,9)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at transfer.f(791,7)
+<Distributed chunk1>
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <tmor(1,col)>, stride is 5   [ transfer.f(792,9) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <tmor(1,col)>, stride is 5   [ transfer.f(792,21) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <temp(1,col)>, stride is 5   [ transfer.f(792,21) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15452: unmasked strided loads: 2 
+   remark #15453: unmasked strided stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 6.000 
+   remark #15478: estimated potential speedup: 1.000 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at transfer.f(791,7)
+<Distributed chunk2>
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <tmor(j,col)>, stride is 5   [ transfer.f(795,13) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <tmor(j,col)>, stride is 5   [ transfer.f(795,27) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <temp(i,col)>, stride is 5   [ transfer.f(795,27) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.235
+   remark #15452: unmasked strided loads: 2 
+   remark #15453: unmasked strided stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 9 
+   remark #15477: vector cost: 8.500 
+   remark #15478: estimated potential speedup: 0.940 
+   remark #15488: --- end vector cost summary ---
+
+   LOOP BEGIN at transfer.f(793,9)
+      remark #15389: vectorization support: reference tmor(j,col) has unaligned access   [ transfer.f(795,13) ]
+      remark #15389: vectorization support: reference tmor(j,col) has unaligned access   [ transfer.f(795,27) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <qbnew_(i-1,j,1)>, stride is 3   [ transfer.f(795,27) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.714
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15452: unmasked strided loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 9 
+      remark #15477: vector cost: 7.000 
+      remark #15478: estimated potential speedup: 0.950 
+      remark #15488: --- end vector cost summary ---
+
+      LOOP BEGIN at transfer.f(794,11)
+         remark #15389: vectorization support: reference qbnew_(i-1,j,1) has unaligned access   [ transfer.f(795,27) ]
+         remark #15389: vectorization support: reference temp(i,col) has unaligned access   [ transfer.f(795,27) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.600
+         remark #15355: vectorization support: tmor(j,col) is double type reduction   [ transfer.f(795,13) ]
+         remark #15450: unmasked unaligned unit stride loads: 2 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 9 
+         remark #15477: vector cost: 5.000 
+         remark #15478: estimated potential speedup: 1.070 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at transfer.f(794,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(794,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(794,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(794,11)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at transfer.f(793,9)
+
+      LOOP BEGIN at transfer.f(794,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(794,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(794,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(794,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(794,11)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at transfer.f(793,9)
+
+      LOOP BEGIN at transfer.f(794,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(794,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(794,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(794,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(794,11)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at transfer.f(793,9)
+
+      LOOP BEGIN at transfer.f(794,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(794,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(794,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(794,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(794,11)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at transfer.f(764,7)
+<Peeled, Remainder loop for vectorization, Distributed chunk1>
+LOOP END
+===========================================================================
+
+Begin optimization report for: TRANSFB_NC1
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at transfer.f(826,7)
+<Distributed chunk1>
+   remark #15388: vectorization support: reference bottom(col) has aligned access   [ transfer.f(829,9) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: PARTIAL LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.530 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at transfer.f(830,9)
+<Distributed chunk2>
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between bottom(col) (831:11) and bottom(col) (831:11)
+   remark #15346: vector dependence: assumed OUTPUT dependence between bottom(col) (831:11) and bottom(col) (831:11)
+
+   LOOP BEGIN at transfer.f(826,7)
+      remark #15388: vectorization support: reference bottom(col) has aligned access   [ transfer.f(831,11) ]
+      remark #15388: vectorization support: reference bottom(col) has aligned access   [ transfer.f(831,11) ]
+      remark #15389: vectorization support: reference tx(col,i) has unaligned access   [ transfer.f(831,52) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.278
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 9 
+      remark #15477: vector cost: 4.500 
+      remark #15478: estimated potential speedup: 1.400 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at transfer.f(826,7)
+   LOOP END
+
+   LOOP BEGIN at transfer.f(826,7)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at transfer.f(826,7)
+<Remainder loop for vectorization, Distributed chunk1>
+LOOP END
+
+LOOP BEGIN at transfer.f(826,7)
+<Distributed chunk3>
+   remark #15388: vectorization support: reference temp(col,1) has aligned access   [ transfer.f(827,9) ]
+   remark #15389: vectorization support: reference tx(col,1) has unaligned access   [ transfer.f(827,9) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.375
+   remark #15301: PARTIAL LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 2.000 
+   remark #15478: estimated potential speedup: 1.330 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at transfer.f(834,9)
+<Distributed chunk4>
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive   [ transfer.f(826,7) ]
+
+   LOOP BEGIN at transfer.f(835,11)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed OUTPUT dependence between temp(col,j) (836:13) and temp(col,j) (836:13)
+      remark #15346: vector dependence: assumed OUTPUT dependence between temp(col,j) (836:13) and temp(col,j) (836:13)
+
+      LOOP BEGIN at transfer.f(826,7)
+         remark #15389: vectorization support: reference temp(col,j) has unaligned access   [ transfer.f(836,13) ]
+         remark #15389: vectorization support: reference temp(col,j) has unaligned access   [ transfer.f(836,13) ]
+         remark #15389: vectorization support: reference tx(col,i) has unaligned access   [ transfer.f(836,56) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.458
+         remark #15450: unmasked unaligned unit stride loads: 2 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 9 
+         remark #15477: vector cost: 6.000 
+         remark #15478: estimated potential speedup: 1.020 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at transfer.f(826,7)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(826,7)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at transfer.f(835,11)
+
+      LOOP BEGIN at transfer.f(826,7)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(826,7)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(826,7)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at transfer.f(835,11)
+
+      LOOP BEGIN at transfer.f(826,7)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(826,7)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(826,7)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at transfer.f(835,11)
+
+      LOOP BEGIN at transfer.f(826,7)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(826,7)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(826,7)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at transfer.f(844,7)
+   remark #15389: vectorization support: reference tmor(j,1) has unaligned access   [ transfer.f(850,11) ]
+   remark #15389: vectorization support: reference tmor(j,1) has unaligned access   [ transfer.f(850,23) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <qbnew_(i-1,j,1)>, stride is 3   [ transfer.f(850,23) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <qbnew_(i-1,j,1)>, stride is 3   [ transfer.f(850,35) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.667
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15452: unmasked strided loads: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 14 
+   remark #15477: vector cost: 10.500 
+   remark #15478: estimated potential speedup: 1.000 
+   remark #15488: --- end vector cost summary ---
+
+   LOOP BEGIN at transfer.f(845,9)
+      remark #15389: vectorization support: reference qbnew_(i-1,j,1) has unaligned access   [ transfer.f(850,23) ]
+      remark #15389: vectorization support: reference bottom(i) has unaligned access   [ transfer.f(850,23) ]
+      remark #15389: vectorization support: reference qbnew_(i-1,j,1) has unaligned access   [ transfer.f(850,35) ]
+      remark #15389: vectorization support: reference temp(i,1) has unaligned access   [ transfer.f(850,35) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.188
+      remark #15355: vectorization support: tmor(j,1) is double type reduction   [ transfer.f(850,11) ]
+      remark #15450: unmasked unaligned unit stride loads: 3 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 14 
+      remark #15477: vector cost: 8.000 
+      remark #15478: estimated potential speedup: 1.270 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at transfer.f(845,9)
+   LOOP END
+
+   LOOP BEGIN at transfer.f(845,9)
+   LOOP END
+
+   LOOP BEGIN at transfer.f(845,9)
+   LOOP END
+
+   LOOP BEGIN at transfer.f(845,9)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at transfer.f(855,7)
+<Distributed chunk1>
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <tmor(1,col)>, stride is 5   [ transfer.f(856,9) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <tmor(1,col)>, stride is 5   [ transfer.f(856,21) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <temp(1,col)>, stride is 5   [ transfer.f(856,21) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15452: unmasked strided loads: 2 
+   remark #15453: unmasked strided stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 6.000 
+   remark #15478: estimated potential speedup: 1.000 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at transfer.f(855,7)
+<Distributed chunk2>
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <tmor(j,col)>, stride is 5   [ transfer.f(859,13) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <tmor(j,col)>, stride is 5   [ transfer.f(859,27) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <temp(i,col)>, stride is 5   [ transfer.f(859,27) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.235
+   remark #15452: unmasked strided loads: 2 
+   remark #15453: unmasked strided stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 9 
+   remark #15477: vector cost: 8.500 
+   remark #15478: estimated potential speedup: 0.940 
+   remark #15488: --- end vector cost summary ---
+
+   LOOP BEGIN at transfer.f(857,9)
+      remark #15389: vectorization support: reference tmor(j,col) has unaligned access   [ transfer.f(859,13) ]
+      remark #15389: vectorization support: reference tmor(j,col) has unaligned access   [ transfer.f(859,27) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <qbnew_(i-1,j,1)>, stride is 3   [ transfer.f(859,27) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.714
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15452: unmasked strided loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 9 
+      remark #15477: vector cost: 7.000 
+      remark #15478: estimated potential speedup: 0.950 
+      remark #15488: --- end vector cost summary ---
+
+      LOOP BEGIN at transfer.f(858,11)
+         remark #15389: vectorization support: reference qbnew_(i-1,j,1) has unaligned access   [ transfer.f(859,27) ]
+         remark #15389: vectorization support: reference temp(i,col) has unaligned access   [ transfer.f(859,27) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.600
+         remark #15355: vectorization support: tmor(j,col) is double type reduction   [ transfer.f(859,13) ]
+         remark #15450: unmasked unaligned unit stride loads: 2 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 9 
+         remark #15477: vector cost: 5.000 
+         remark #15478: estimated potential speedup: 1.070 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at transfer.f(858,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(858,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(858,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(858,11)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at transfer.f(857,9)
+
+      LOOP BEGIN at transfer.f(858,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(858,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(858,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(858,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(858,11)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at transfer.f(857,9)
+
+      LOOP BEGIN at transfer.f(858,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(858,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(858,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(858,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(858,11)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at transfer.f(857,9)
+
+      LOOP BEGIN at transfer.f(858,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(858,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(858,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(858,11)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(858,11)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at transfer.f(826,7)
+<Remainder loop for vectorization, Distributed chunk3>
+LOOP END
+===========================================================================
+
+Begin optimization report for: TRANSFB_C
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at transfer.f(886,7)
+   remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+   LOOP BEGIN at transfer.f(886,7)
+      remark #15389: vectorization support: reference tmort_(j) has unaligned access   [ transfer.f(888,9) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.300
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 2.500 
+      remark #15478: estimated potential speedup: 1.450 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at transfer.f(886,7)
+   <Remainder>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at transfer.f(893,7)
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+   LOOP BEGIN at transfer.f(894,9)
+      remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+      LOOP BEGIN at transfer.f(921,13)
+         remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(926,22) ]
+         remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(926,22) ]
+         remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(928,22) ]
+         remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(928,22) ]
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between at (926:22) and at (926:22)
+         remark #15346: vector dependence: assumed OUTPUT dependence between at (926:22) and at (926:22)
+
+         LOOP BEGIN at transfer.f(922,15)
+            remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(926,22) ]
+            remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(926,22) ]
+            remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(928,22) ]
+            remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(928,22) ]
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (926:22) and tlock(ig) (928:22)
+            remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (928:22) and tlock(ig) (926:22)
+         LOOP END
+
+         LOOP BEGIN at transfer.f(922,15)
+         LOOP END
+
+         LOOP BEGIN at transfer.f(922,15)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at transfer.f(933,15)
+         remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(937,22) ]
+         remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(937,22) ]
+         remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(939,22) ]
+         remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(939,22) ]
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (937:22) and tlock(ig) (939:22)
+         remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (939:22) and tlock(ig) (937:22)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(944,15)
+         remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(948,22) ]
+         remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(948,22) ]
+         remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(950,22) ]
+         remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(950,22) ]
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (948:22) and tlock(ig) (950:22)
+         remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (950:22) and tlock(ig) (948:22)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(955,15)
+         remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(959,22) ]
+         remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(959,22) ]
+         remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(961,22) ]
+         remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(961,22) ]
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (959:22) and tlock(ig) (961:22)
+         remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (961:22) and tlock(ig) (959:22)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(966,15)
+         remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(970,22) ]
+         remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(970,22) ]
+         remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(972,22) ]
+         remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(972,22) ]
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (970:22) and tlock(ig) (972:22)
+         remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (972:22) and tlock(ig) (970:22)
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: TRANSFB_C_2
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at transfer.f(1002,7)
+   remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+   LOOP BEGIN at transfer.f(1002,7)
+      remark #15389: vectorization support: reference tmort_(j) has unaligned access   [ transfer.f(1004,9) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.300
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 2.500 
+      remark #15478: estimated potential speedup: 1.450 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at transfer.f(1002,7)
+   <Remainder>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at transfer.f(1007,7)
+   remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+   LOOP BEGIN at transfer.f(1007,7)
+      remark #15389: vectorization support: reference mormult_(j) has unaligned access   [ transfer.f(1009,9) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.300
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 2.500 
+      remark #15478: estimated potential speedup: 1.450 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at transfer.f(1007,7)
+   <Remainder>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at transfer.f(1014,7)
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+   LOOP BEGIN at transfer.f(1015,9)
+      remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+      LOOP BEGIN at transfer.f(1047,13)
+         remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(1052,22) ]
+         remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(1052,22) ]
+         remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(1055,22) ]
+         remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(1055,22) ]
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between at (1052:22) and at (1052:22)
+         remark #15346: vector dependence: assumed OUTPUT dependence between at (1052:22) and at (1052:22)
+
+         LOOP BEGIN at transfer.f(1048,15)
+            remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(1052,22) ]
+            remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(1052,22) ]
+            remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(1055,22) ]
+            remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(1055,22) ]
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (1052:22) and tlock(ig) (1055:22)
+            remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (1055:22) and tlock(ig) (1052:22)
+         LOOP END
+
+         LOOP BEGIN at transfer.f(1048,15)
+         LOOP END
+
+         LOOP BEGIN at transfer.f(1048,15)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at transfer.f(1060,15)
+         remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(1064,22) ]
+         remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(1064,22) ]
+         remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(1067,22) ]
+         remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(1067,22) ]
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (1064:22) and tlock(ig) (1067:22)
+         remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (1067:22) and tlock(ig) (1064:22)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(1072,15)
+         remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(1076,22) ]
+         remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(1076,22) ]
+         remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(1079,22) ]
+         remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(1079,22) ]
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (1076:22) and tlock(ig) (1079:22)
+         remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (1079:22) and tlock(ig) (1076:22)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(1084,15)
+         remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(1088,22) ]
+         remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(1088,22) ]
+         remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(1091,22) ]
+         remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(1091,22) ]
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (1088:22) and tlock(ig) (1091:22)
+         remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (1091:22) and tlock(ig) (1088:22)
+      LOOP END
+
+      LOOP BEGIN at transfer.f(1096,15)
+         remark #15382: vectorization support: call to function __kmpc_set_lock cannot be vectorized   [ transfer.f(1100,22) ]
+         remark #15382: vectorization support: call to function omp_set_lock_ cannot be vectorized   [ transfer.f(1100,22) ]
+         remark #15382: vectorization support: call to function __kmpc_unset_lock cannot be vectorized   [ transfer.f(1103,22) ]
+         remark #15382: vectorization support: call to function omp_unset_lock_ cannot be vectorized   [ transfer.f(1103,22) ]
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (1100:22) and tlock(ig) (1103:22)
+         remark #15346: vector dependence: assumed OUTPUT dependence between tlock(ig) (1103:22) and tlock(ig) (1100:22)
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: INIT_LOCKS
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at transfer.f(13,7)
+   remark #15382: vectorization support: call to function __kmpc_init_lock cannot be vectorized   [ transfer.f(15,14) ]
+   remark #15382: vectorization support: call to function omp_init_lock_ cannot be vectorized   [ transfer.f(15,14) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+LOOP END
+===========================================================================

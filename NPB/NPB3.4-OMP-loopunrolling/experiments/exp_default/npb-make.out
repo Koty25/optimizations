@@ -1,0 +1,1825 @@
+rm -f core *~ */core */*~
+rm -f */*.o */*.obj */*.exe */*.mod */npbparams.h */blk_par.h
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -rf */rii_files
+   ============================================
+   =      NAS PARALLEL BENCHMARKS 3.4         =
+   =      OpenMP Versions                     =
+   =      Fortran/C                           =
+   ============================================
+
+cd BT; make CLASS=B VERSION=
+make[1]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/BT'
+make[2]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+gcc  -o setparams setparams.c
+make[2]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+../sys/setparams bt B
+make[2]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/BT'
+nfort -c  -O3 -fopenmp bt_data.f
+Obsolescent: bt_data.f, line 9: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+sed -e 's/= 0/= 0/' blk_par0.h > blk_par.h_wk
+nfort -c  -O3 -fopenmp bt.f
+Obsolescent: bt.f, line 48: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: vec( 103): bt.f, line 128: Unvectorized loop.
+nfort: vec( 103): bt.f, line 146: Unvectorized loop.
+nfort: vec( 103): bt.f, line 151: Unvectorized loop.
+nfort: vec( 103): bt.f, line 188: Unvectorized loop.
+nfort: vec( 103): bt.f, line 195: Unvectorized loop.
+nfort -c  -O3 -fopenmp initialize.f
+Obsolescent: initialize.f, line 4: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): initialize.f, line 22: Parallel routine generated.: INITIALIZE$1
+nfort: par(1803): initialize.f, line 31: Parallelized by "do".
+nfort: opt(2495): initialize.f, line 31: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): initialize.f, line 31: Vectorized loop.
+nfort: vec( 101): initialize.f, line 33: Vectorized loop.
+nfort: opt(1418): initialize.f, line 34: Constant-length loop is expanded.
+nfort: par(1803): initialize.f, line 49: Parallelized by "do".
+nfort: opt(2495): initialize.f, line 49: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): initialize.f, line 53: Unvectorized loop.
+nfort: opt(1418): initialize.f, line 56: Constant-length loop is expanded.
+nfort: opt(1418): initialize.f, line 61: Constant-length loop is expanded.
+nfort: opt(1418): initialize.f, line 66: Constant-length loop is expanded.
+nfort: opt(1418): initialize.f, line 71: Constant-length loop is expanded.
+nfort: par(1803): initialize.f, line 99: Parallelized by "do".
+nfort: opt(2495): initialize.f, line 99: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): initialize.f, line 99: Unvectorized loop.
+nfort: opt(1418): initialize.f, line 104: Constant-length loop is expanded.
+nfort: par(1803): initialize.f, line 118: Parallelized by "do".
+nfort: opt(2495): initialize.f, line 118: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): initialize.f, line 118: Unvectorized loop.
+nfort: opt(1418): initialize.f, line 123: Constant-length loop is expanded.
+nfort: par(1803): initialize.f, line 136: Parallelized by "do".
+nfort: opt(2495): initialize.f, line 136: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): initialize.f, line 136: Unvectorized loop.
+nfort: opt(1418): initialize.f, line 141: Constant-length loop is expanded.
+nfort: par(1803): initialize.f, line 155: Parallelized by "do".
+nfort: opt(2495): initialize.f, line 155: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): initialize.f, line 155: Unvectorized loop.
+nfort: opt(1418): initialize.f, line 160: Constant-length loop is expanded.
+nfort: par(1803): initialize.f, line 173: Parallelized by "do".
+nfort: opt(2495): initialize.f, line 173: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): initialize.f, line 173: Unvectorized loop.
+nfort: opt(1418): initialize.f, line 178: Constant-length loop is expanded.
+nfort: par(1803): initialize.f, line 191: Parallelized by "do".
+nfort: opt(2495): initialize.f, line 191: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): initialize.f, line 191: Unvectorized loop.
+nfort: opt(1418): initialize.f, line 196: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp exact_solution.f
+Obsolescent: exact_solution.f, line 4: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: opt(1418): exact_solution.f, line 19: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp exact_rhs.f
+Obsolescent: exact_rhs.f, line 5: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): exact_rhs.f, line 20: Parallel routine generated.: EXACT_RHS$1
+nfort: par(1803): exact_rhs.f, line 26: Parallelized by "do".
+nfort: opt(2495): exact_rhs.f, line 26: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): exact_rhs.f, line 26: Vectorized loop.
+nfort: vec( 101): exact_rhs.f, line 28: Vectorized loop.
+nfort: opt(1418): exact_rhs.f, line 29: Constant-length loop is expanded.
+nfort: par(1803): exact_rhs.f, line 40: Parallelized by "do".
+nfort: opt(2495): exact_rhs.f, line 40: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): exact_rhs.f, line 45: Unvectorized loop.
+nfort: opt(1418): exact_rhs.f, line 49: Constant-length loop is expanded.
+nfort: opt(1418): exact_rhs.f, line 55: Constant-length loop is expanded.
+nfort: vec( 101): exact_rhs.f, line 67: Vectorized loop.
+nfort: opt(1418): exact_rhs.f, line 105: Constant-length loop is expanded.
+nfort: vec( 101): exact_rhs.f, line 115: Vectorized loop.
+nfort: opt(1418): exact_rhs.f, line 116: Constant-length loop is expanded.
+nfort: opt(1418): exact_rhs.f, line 123: Constant-length loop is expanded.
+nfort: par(1803): exact_rhs.f, line 141: Parallelized by "do".
+nfort: opt(2495): exact_rhs.f, line 141: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): exact_rhs.f, line 146: Unvectorized loop.
+nfort: opt(1418): exact_rhs.f, line 150: Constant-length loop is expanded.
+nfort: opt(1418): exact_rhs.f, line 156: Constant-length loop is expanded.
+nfort: vec( 101): exact_rhs.f, line 167: Vectorized loop.
+nfort: opt(1418): exact_rhs.f, line 204: Constant-length loop is expanded.
+nfort: vec( 101): exact_rhs.f, line 214: Vectorized loop.
+nfort: opt(1418): exact_rhs.f, line 215: Constant-length loop is expanded.
+nfort: opt(1418): exact_rhs.f, line 222: Constant-length loop is expanded.
+nfort: par(1803): exact_rhs.f, line 241: Parallelized by "do".
+nfort: opt(2495): exact_rhs.f, line 241: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): exact_rhs.f, line 246: Unvectorized loop.
+nfort: opt(1418): exact_rhs.f, line 250: Constant-length loop is expanded.
+nfort: opt(1418): exact_rhs.f, line 256: Constant-length loop is expanded.
+nfort: vec( 101): exact_rhs.f, line 267: Vectorized loop.
+nfort: opt(1418): exact_rhs.f, line 304: Constant-length loop is expanded.
+nfort: vec( 101): exact_rhs.f, line 314: Vectorized loop.
+nfort: opt(1418): exact_rhs.f, line 315: Constant-length loop is expanded.
+nfort: opt(1418): exact_rhs.f, line 322: Constant-length loop is expanded.
+nfort: par(1803): exact_rhs.f, line 340: Parallelized by "do".
+nfort: opt(2495): exact_rhs.f, line 340: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): exact_rhs.f, line 340: Vectorized loop.
+nfort: vec( 101): exact_rhs.f, line 342: Vectorized loop.
+nfort: opt(1418): exact_rhs.f, line 343: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp set_constants.f
+Obsolescent: set_constants.f, line 4: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort -c  -O3 -fopenmp adi.f
+Obsolescent: adi.f, line 4: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort -c  -O3 -fopenmp rhs.f
+Obsolescent: rhs.f, line 4: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): rhs.f, line 19: Parallel routine generated.: COMPUTE_RHS$1
+nfort: par(1803): rhs.f, line 27: Parallelized by "do".
+nfort: opt(2495): rhs.f, line 27: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): rhs.f, line 27: Vectorized loop.
+nfort: vec( 101): rhs.f, line 29: Vectorized loop.
+nfort: par(1803): rhs.f, line 52: Parallelized by "do".
+nfort: opt(2495): rhs.f, line 52: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): rhs.f, line 52: Vectorized loop.
+nfort: vec( 101): rhs.f, line 54: Vectorized loop.
+nfort: opt(1418): rhs.f, line 55: Constant-length loop is expanded.
+nfort: par(1805): rhs.f, line 64: Master-construct generated.
+nfort: par(1803): rhs.f, line 71: Parallelized by "do".
+nfort: opt(2495): rhs.f, line 71: Loop nest collapsed by "collapse" clause.
+nfort: vec( 102): rhs.f, line 71: Partially vectorized loop.
+nfort: vec( 101): rhs.f, line 73: Vectorized loop.
+nfort: opt(1418): rhs.f, line 129: Constant-length loop is expanded.
+nfort: opt(1418): rhs.f, line 136: Constant-length loop is expanded.
+nfort: vec( 101): rhs.f, line 142: Vectorized loop.
+nfort: opt(1418): rhs.f, line 143: Constant-length loop is expanded.
+nfort: opt(1418): rhs.f, line 152: Constant-length loop is expanded.
+nfort: opt(1418): rhs.f, line 159: Constant-length loop is expanded.
+nfort: par(1805): rhs.f, line 167: Master-construct generated.
+nfort: par(1803): rhs.f, line 176: Parallelized by "do".
+nfort: opt(2495): rhs.f, line 176: Loop nest collapsed by "collapse" clause.
+nfort: vec( 102): rhs.f, line 176: Partially vectorized loop.
+nfort: vec( 101): rhs.f, line 178: Vectorized loop.
+nfort: vec( 101): rhs.f, line 229: Vectorized loop.
+nfort: opt(1418): rhs.f, line 230: Constant-length loop is expanded.
+nfort: vec( 101): rhs.f, line 238: Vectorized loop.
+nfort: opt(1418): rhs.f, line 239: Constant-length loop is expanded.
+nfort: vec( 101): rhs.f, line 247: Vectorized loop.
+nfort: opt(1418): rhs.f, line 248: Constant-length loop is expanded.
+nfort: vec( 101): rhs.f, line 256: Vectorized loop.
+nfort: opt(1418): rhs.f, line 257: Constant-length loop is expanded.
+nfort: vec( 101): rhs.f, line 265: Vectorized loop.
+nfort: opt(1418): rhs.f, line 266: Constant-length loop is expanded.
+nfort: par(1805): rhs.f, line 277: Master-construct generated.
+nfort: par(1803): rhs.f, line 286: Parallelized by "do".
+nfort: opt(2495): rhs.f, line 286: Loop nest collapsed by "collapse" clause.
+nfort: vec( 102): rhs.f, line 286: Partially vectorized loop.
+nfort: vec( 101): rhs.f, line 288: Vectorized loop.
+nfort: vec( 101): rhs.f, line 340: Vectorized loop.
+nfort: opt(1418): rhs.f, line 341: Constant-length loop is expanded.
+nfort: vec( 101): rhs.f, line 349: Vectorized loop.
+nfort: opt(1418): rhs.f, line 350: Constant-length loop is expanded.
+nfort: vec( 101): rhs.f, line 358: Vectorized loop.
+nfort: opt(1418): rhs.f, line 359: Constant-length loop is expanded.
+nfort: vec( 101): rhs.f, line 367: Vectorized loop.
+nfort: opt(1418): rhs.f, line 368: Constant-length loop is expanded.
+nfort: vec( 101): rhs.f, line 376: Vectorized loop.
+nfort: opt(1418): rhs.f, line 377: Constant-length loop is expanded.
+nfort: par(1805): rhs.f, line 388: Master-construct generated.
+nfort: par(1803): rhs.f, line 393: Parallelized by "do".
+nfort: opt(2495): rhs.f, line 393: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): rhs.f, line 393: Vectorized loop.
+nfort: vec( 101): rhs.f, line 395: Vectorized loop.
+nfort -c  -O3 -fopenmp work_lhs.f
+Obsolescent: work_lhs.f, line 9: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: vec( 101): work_lhs.f, line 37: Vectorized loop.
+nfort: opt(1418): work_lhs.f, line 38: Constant-length loop is expanded.
+nfort: opt(1112): work_lhs.f, line 46: Loop fused with previous loop.: M
+nfort: opt(1418): work_lhs.f, line 47: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp x_solve.f
+Obsolescent: x_solve.f, line 5: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): x_solve.f, line 47: Parallel routine generated.: X_SOLVE$1
+nfort: par(1803): x_solve.f, line 49: Parallelized by "do".
+nfort: opt(2495): x_solve.f, line 49: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): x_solve.f, line 51: Vectorized loop.
+nfort: vec( 101): x_solve.f, line 141: Vectorized loop.
+nfort: vec( 103): x_solve.f, line 338: Unvectorized loop.
+nfort: vec( 103): x_solve.f, line 392: Unvectorized loop.
+nfort: opt(1418): x_solve.f, line 393: Constant-length loop is expanded.
+nfort: opt(1418): x_solve.f, line 394: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp y_solve.f
+Obsolescent: y_solve.f, line 4: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): y_solve.f, line 45: Parallel routine generated.: Y_SOLVE$1
+nfort: par(1803): y_solve.f, line 47: Parallelized by "do".
+nfort: opt(2495): y_solve.f, line 47: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): y_solve.f, line 49: Vectorized loop.
+nfort: vec( 101): y_solve.f, line 139: Vectorized loop.
+nfort: vec( 103): y_solve.f, line 332: Unvectorized loop.
+nfort: vec( 103): y_solve.f, line 390: Unvectorized loop.
+nfort: opt(1418): y_solve.f, line 391: Constant-length loop is expanded.
+nfort: opt(1418): y_solve.f, line 392: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp solve_subs.f
+Obsolescent: solve_subs.f, line 5: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort -c  -O3 -fopenmp z_solve.f
+Obsolescent: z_solve.f, line 4: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): z_solve.f, line 45: Parallel routine generated.: Z_SOLVE$1
+nfort: par(1803): z_solve.f, line 47: Parallelized by "do".
+nfort: opt(2495): z_solve.f, line 47: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): z_solve.f, line 49: Vectorized loop.
+nfort: vec( 101): z_solve.f, line 139: Vectorized loop.
+nfort: vec( 103): z_solve.f, line 337: Unvectorized loop.
+nfort: vec( 103): z_solve.f, line 402: Unvectorized loop.
+nfort: opt(1418): z_solve.f, line 403: Constant-length loop is expanded.
+nfort: opt(1418): z_solve.f, line 404: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp add.f
+Obsolescent: add.f, line 4: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): add.f, line 19: Parallel routine generated.: ADD$1
+nfort: par(1803): add.f, line 20: Parallelized by "do".
+nfort: opt(2495): add.f, line 20: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): add.f, line 20: Vectorized loop.
+nfort: vec( 101): add.f, line 22: Vectorized loop.
+nfort: opt(1418): add.f, line 23: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp error.f
+Obsolescent: error.f, line 4: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: opt(1418): error.f, line 20: Constant-length loop is expanded.
+nfort: par(1801): error.f, line 24: Parallel routine generated.: ERROR_NORM$1
+nfort: opt(1418): error.f, line 24: Constant-length loop is expanded.
+nfort: par(1803): error.f, line 26: Parallelized by "do".
+nfort: opt(2495): error.f, line 26: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): error.f, line 30: Unvectorized loop.
+nfort: opt(1418): error.f, line 34: Constant-length loop is expanded.
+nfort: par(1807): error.f, line 41: Critical-construct generated.
+nfort: par(1809): error.f, line 41: Barrier synchronization.
+nfort: opt(1418): error.f, line 41: Constant-length loop is expanded.
+nfort: opt(1418): error.f, line 43: Constant-length loop is expanded.
+nfort: opt(1418): error.f, line 44: Constant-length loop is expanded.
+nfort: opt(1418): error.f, line 68: Constant-length loop is expanded.
+nfort: par(1801): error.f, line 72: Parallel routine generated.: RHS_NORM$1
+nfort: opt(1418): error.f, line 72: Constant-length loop is expanded.
+nfort: par(1803): error.f, line 74: Parallelized by "do".
+nfort: opt(2495): error.f, line 74: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): error.f, line 76: Vectorized loop.
+nfort: opt(1418): error.f, line 77: Constant-length loop is expanded.
+nfort: par(1807): error.f, line 84: Critical-construct generated.
+nfort: par(1809): error.f, line 84: Barrier synchronization.
+nfort: opt(1418): error.f, line 84: Constant-length loop is expanded.
+nfort: opt(1418): error.f, line 86: Constant-length loop is expanded.
+nfort: opt(1418): error.f, line 87: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp verify.f
+Obsolescent: verify.f, line 5: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: opt(1418): verify.f, line 40: Constant-length loop is expanded.
+nfort: opt(1418): verify.f, line 48: Constant-length loop is expanded.
+nfort: opt(1418): verify.f, line 304: Constant-length loop is expanded.
+nfort: vec( 103): verify.f, line 341: Unvectorized loop.
+nfort: vec( 103): verify.f, line 361: Unvectorized loop.
+cd ../common; nfort -c  -O3 -fopenmp print_results.f
+Warning: print_results.f, line 135: Unused local variable I
+Obsolescent: print_results.f, line 2: Fixed source form
+[NEC Fortran Compiler normal termination, 2 warnings]
+nfort: par(1801): print_results.f, line 25: Parallel routine generated.: PRINT_RESULTS$1
+nfort: par(1805): print_results.f, line 26: Master-construct generated.
+cd ../common; nfort -c  -O3 -fopenmp timers.f
+Obsolescent: timers.f, line 4: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+cd ../common; ncc -c  -O3 -fopenmp  -o wtime.o ../common/wtime.c
+nfort -O3 -fopenmp -o ../bin/bt.B.x bt.o bt_data.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o  rhs.o x_solve.o y_solve.o solve_subs.o z_solve.o add.o error.o verify.o work_lhs.o ../common/print_results.o ../common/timers.o ../common/wtime.o 
+make[2]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/BT'
+make[1]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/BT'
+   ============================================
+   =      NAS PARALLEL BENCHMARKS 3.4         =
+   =      OpenMP Versions                     =
+   =      Fortran/C                           =
+   ============================================
+
+cd CG; make CLASS=B
+make[1]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/CG'
+make[2]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+../sys/setparams cg B
+nfort -c  -O3 -fopenmp cg_data.f
+Obsolescent: cg_data.f, line 9: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort -c  -O3 -fopenmp cg.f
+Warning: cg.f, line 761: Unused dummy variable FIRSTCOL
+Warning: cg.f, line 761: Unused local variable I
+Warning: cg.f, line 761: Unused dummy variable LASTCOL
+Warning: cg.f, line 981: Unused local variable XI
+Warning: cg.f, line 1098: Unused dummy variable N
+Obsolescent: cg.f, line 50: Fixed source form
+[NEC Fortran Compiler normal termination, 6 warnings]
+nfort: vec( 103): cg.f, line 77: Unvectorized loop.
+nfort: par(1801): cg.f, line 167: Parallel routine generated.: MAIN_$1
+nfort: par(1809): cg.f, line 178: Barrier synchronization.
+nfort: par(1803): cg.f, line 190: Parallelized by "do".
+nfort: vec( 101): cg.f, line 190: Vectorized loop.
+nfort: vec( 101): cg.f, line 191: Vectorized loop.
+nfort: par(1803): cg.f, line 201: Parallelized by "do".
+nfort: vec( 101): cg.f, line 201: Vectorized loop.
+nfort: par(1803): cg.f, line 206: Parallelized by "do".
+nfort: vec( 101): cg.f, line 206: Vectorized loop.
+nfort: vec( 103): cg.f, line 222: Unvectorized loop.
+nfort: par(1801): cg.f, line 237: Parallel routine generated.: MAIN_$2
+nfort: par(1807): cg.f, line 239: Critical-construct generated.
+nfort: par(1809): cg.f, line 239: Barrier synchronization.
+nfort: par(1803): cg.f, line 239: Parallelized by "do".
+nfort: vec( 101): cg.f, line 239: Vectorized loop.
+nfort: par(1803): cg.f, line 252: Parallelized by "do".
+nfort: vec( 101): cg.f, line 252: Vectorized loop.
+nfort: par(1801): cg.f, line 268: Parallel routine generated.: MAIN_$3
+nfort: par(1803): cg.f, line 269: Parallelized by "do".
+nfort: vec( 101): cg.f, line 269: Vectorized loop.
+nfort: vec( 103): cg.f, line 288: Unvectorized loop.
+nfort: par(1801): cg.f, line 306: Parallel routine generated.: MAIN_$4
+nfort: par(1807): cg.f, line 308: Critical-construct generated.
+nfort: par(1809): cg.f, line 308: Barrier synchronization.
+nfort: par(1803): cg.f, line 308: Parallelized by "do".
+nfort: vec( 101): cg.f, line 308: Vectorized loop.
+nfort: par(1805): cg.f, line 318: Master-construct generated.
+nfort: par(1803): cg.f, line 331: Parallelized by "do".
+nfort: vec( 101): cg.f, line 331: Vectorized loop.
+nfort: vec( 103): cg.f, line 415: Unvectorized loop.
+nfort: par(1801): cg.f, line 462: Parallel routine generated.: CONJ_GRAD$1
+nfort: par(1803): cg.f, line 469: Parallelized by "do".
+nfort: vec( 101): cg.f, line 469: Vectorized loop.
+nfort: par(1807): cg.f, line 483: Critical-construct generated.
+nfort: par(1809): cg.f, line 483: Barrier synchronization.
+nfort: par(1803): cg.f, line 483: Parallelized by "do".
+nfort: vec( 101): cg.f, line 483: Vectorized loop.
+nfort: par(1805): cg.f, line 495: Master-construct generated.
+nfort: par(1809): cg.f, line 503: Barrier synchronization.
+nfort: par(1803): cg.f, line 518: Parallelized by "do".
+nfort: vec( 102): cg.f, line 518: Partially vectorized loop.
+nfort: vec( 101): cg.f, line 520: Vectorized loop.
+nfort: par(1807): cg.f, line 567: Critical-construct generated.
+nfort: par(1809): cg.f, line 567: Barrier synchronization.
+nfort: par(1803): cg.f, line 567: Parallelized by "do".
+nfort: vec( 101): cg.f, line 567: Vectorized loop.
+nfort: par(1807): cg.f, line 583: Critical-construct generated.
+nfort: par(1809): cg.f, line 583: Barrier synchronization.
+nfort: par(1803): cg.f, line 583: Parallelized by "do".
+nfort: vec( 101): cg.f, line 583: Vectorized loop.
+nfort: par(1803): cg.f, line 606: Parallelized by "do".
+nfort: vec( 101): cg.f, line 606: Vectorized loop.
+nfort: par(1803): cg.f, line 621: Parallelized by "do".
+nfort: vec( 102): cg.f, line 621: Partially vectorized loop.
+nfort: vec( 101): cg.f, line 623: Vectorized loop.
+nfort: par(1807): cg.f, line 635: Critical-construct generated.
+nfort: par(1809): cg.f, line 635: Barrier synchronization.
+nfort: par(1803): cg.f, line 635: Parallelized by "do".
+nfort: vec( 101): cg.f, line 635: Vectorized loop.
+nfort: vec( 103): cg.f, line 717: Unvectorized loop.
+nfort: vec( 101): cg.f, line 744: Vectorized loop.
+nfort: par(1809): cg.f, line 750: Barrier synchronization.
+nfort: vec( 101): cg.f, line 805: Vectorized loop.
+nfort: vec( 103): cg.f, line 809: Unvectorized loop.
+nfort: vec( 102): cg.f, line 810: Partially vectorized loop.
+nfort: vec( 101): cg.f, line 823: Vectorized loop.
+nfort: par(1809): cg.f, line 827: Barrier synchronization.
+nfort: vec( 101): cg.f, line 831: Vectorized loop.
+nfort: vec( 101): cg.f, line 836: Vectorized loop.
+nfort: par(1809): cg.f, line 840: Barrier synchronization.
+nfort: vec( 102): cg.f, line 860: Partially vectorized loop.
+nfort: vec( 101): cg.f, line 861: Vectorized loop.
+nfort: opt(1135): cg.f, line 894: Outer loop conditionally executes inner loop.
+nfort: vec( 103): cg.f, line 894: Unvectorized loop.
+nfort: vec( 101): cg.f, line 899: Vectorized loop.
+nfort: par(1809): cg.f, line 928: Barrier synchronization.
+nfort: vec( 101): cg.f, line 934: Vectorized loop.
+nfort: par(1809): cg.f, line 938: Barrier synchronization.
+nfort: vec( 101): cg.f, line 942: Vectorized loop.
+nfort: vec( 101): cg.f, line 947: Vectorized loop.
+nfort: par(1809): cg.f, line 951: Barrier synchronization.
+nfort: par(1803): cg.f, line 954: Parallelized by "do".
+nfort: vec( 101): cg.f, line 954: Vectorized loop.
+nfort: vec( 101): cg.f, line 962: Vectorized loop.
+nfort: par(1803): cg.f, line 970: Parallelized by "do".
+nfort: vec( 101): cg.f, line 970: Vectorized loop.
+nfort: vec( 101): cg.f, line 1032: Vectorized loop.
+nfort: vec( 101): cg.f, line 1086: Vectorized loop.
+cd ../common; nfort -c  -O3 -fopenmp randi8.f
+Extension: randi8.f, line 20: Byte count on numeric data type
+           detected at *@8
+Extension: randi8.f, line 46: Byte count on numeric data type
+           detected at *@8
+Obsolescent: randi8.f, line 1: Fixed source form
+[NEC Fortran Compiler normal termination, 3 warnings]
+nfort: vec( 102): randi8.f, line 71: Partially vectorized loop.
+nfort -O3 -fopenmp -o ../bin/cg.B.x cg.o cg_data.o ../common/print_results.o ../common/randi8.o ../common/timers.o ../common/wtime.o 
+make[1]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/CG'
+   ============================================
+   =      NAS PARALLEL BENCHMARKS 3.4         =
+   =      OpenMP Versions                     =
+   =      Fortran/C                           =
+   ============================================
+
+cd EP; make CLASS=B
+make[1]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/EP'
+make[2]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+../sys/setparams ep B
+nfort -c  -O3 -fopenmp ep_data.f
+Obsolescent: ep_data.f, line 9: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort -c  -O3 -fopenmp ep.f
+Obsolescent: ep.f, line 48: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): ep.f, line 121: Parallel routine generated.: MAIN_$1
+nfort: vec( 101): ep.f, line 122: Vectorized loop.
+nfort: vec( 103): ep.f, line 140: Unvectorized loop.
+nfort: vec( 101): ep.f, line 150: Vectorized loop.
+nfort: par(1801): ep.f, line 160: Parallel routine generated.: MAIN_$2
+nfort: vec( 101): ep.f, line 162: Vectorized loop.
+nfort: par(1803): ep.f, line 167: Parallelized by "do".
+nfort: vec( 103): ep.f, line 175: Unvectorized loop.
+nfort: vec( 103): ep.f, line 195: Unvectorized loop.
+nfort: vec( 103): ep.f, line 215: Unvectorized loop.
+nfort: par(3007): ep.f, line 216: Atomic-construct generated.
+nfort: par(1807): ep.f, line 219: Critical-construct generated.
+nfort: par(1809): ep.f, line 219: Barrier synchronization.
+nfort: vec( 101): ep.f, line 221: Vectorized loop.
+nfort: vec( 103): ep.f, line 268: Unvectorized loop.
+nfort -O3 -fopenmp -o ../bin/ep.B.x ep.o ep_data.o ../common/print_results.o ../common/randi8.o ../common/timers.o ../common/wtime.o 
+make[1]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/EP'
+   ============================================
+   =      NAS PARALLEL BENCHMARKS 3.4         =
+   =      OpenMP Versions                     =
+   =      Fortran/C                           =
+   ============================================
+
+cd FT; make CLASS=B
+make[1]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/FT'
+make[2]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+../sys/setparams ft B
+nfort -c  -O3 -fopenmp ft_data.f
+Extension: ft_data.f, line 104: DOUBLE COMPLEX keyword
+           detected at <end-of-statement>@DOUBLE COMPLEX
+Extension: ft_data.f, line 108: DOUBLE COMPLEX keyword
+           detected at <end-of-statement>@DOUBLE COMPLEX
+Extension: ft_data.f, line 138: DOUBLE COMPLEX keyword
+           detected at <end-of-statement>@DOUBLE COMPLEX
+Obsolescent: ft_data.f, line 9: Fixed source form
+[NEC Fortran Compiler normal termination, 4 warnings]
+nfort -c  -O3 -fopenmp ft.f
+Extension: ft.f, line 165: DOUBLE COMPLEX keyword
+           detected at <end-of-statement>@DOUBLE COMPLEX
+Extension: ft.f, line 166: DOUBLE COMPLEX keyword
+           detected at <end-of-statement>@DOUBLE COMPLEX
+Extension: ft.f, line 200: DOUBLE COMPLEX keyword
+           detected at <end-of-statement>@DOUBLE COMPLEX
+Extension: ft.f, line 201: DOUBLE COMPLEX keyword
+           detected at <end-of-statement>@DOUBLE COMPLEX
+Extension: ft.f, line 236: DOUBLE COMPLEX keyword
+           detected at <end-of-statement>@DOUBLE COMPLEX
+Questionable: ft.f, line 267: Variable DUMMY set but never referenced
+Questionable: ft.f, line 312: Variable DUMMY set but never referenced
+Extension: ft.f, line 476: DOUBLE COMPLEX keyword
+           detected at <end-of-statement>@DOUBLE COMPLEX
+Extension: ft.f, line 478: DOUBLE COMPLEX keyword
+           detected at <end-of-statement>@DOUBLE COMPLEX
+Extension: ft.f, line 514: DOUBLE COMPLEX keyword
+           detected at <end-of-statement>@DOUBLE COMPLEX
+Extension: ft.f, line 515: DOUBLE COMPLEX keyword
+           detected at <end-of-statement>@DOUBLE COMPLEX
+Extension: ft.f, line 516: DOUBLE COMPLEX keyword
+           detected at <end-of-statement>@DOUBLE COMPLEX
+Extension: ft.f, line 562: DOUBLE COMPLEX keyword
+           detected at <end-of-statement>@DOUBLE COMPLEX
+Extension: ft.f, line 563: DOUBLE COMPLEX keyword
+           detected at <end-of-statement>@DOUBLE COMPLEX
+Extension: ft.f, line 564: DOUBLE COMPLEX keyword
+           detected at <end-of-statement>@DOUBLE COMPLEX
+Extension: ft.f, line 609: DOUBLE COMPLEX keyword
+           detected at <end-of-statement>@DOUBLE COMPLEX
+Extension: ft.f, line 610: DOUBLE COMPLEX keyword
+           detected at <end-of-statement>@DOUBLE COMPLEX
+Extension: ft.f, line 611: DOUBLE COMPLEX keyword
+           detected at <end-of-statement>@DOUBLE COMPLEX
+Questionable: ft.f, line 686: Variable NU set but never referenced
+Extension: ft.f, line 709: DOUBLE COMPLEX keyword
+           detected at <end-of-statement>@DOUBLE COMPLEX
+Extension: ft.f, line 765: DOUBLE COMPLEX keyword
+           detected at <end-of-statement>@DOUBLE COMPLEX
+Extension: ft.f, line 846: DOUBLE COMPLEX keyword
+           detected at <end-of-statement>@DOUBLE COMPLEX
+Extension: ft.f, line 848: DOUBLE COMPLEX keyword
+           detected at <end-of-statement>@DOUBLE COMPLEX
+Extension: ft.f, line 891: DOUBLE COMPLEX keyword
+           detected at <end-of-statement>@DOUBLE COMPLEX
+Obsolescent: ft.f, line 55: Fixed source form
+Extension: ft.f, line 686: DCMPLX intrinsic procedure
+Extension: ft.f, line 804: DCONJG intrinsic procedure
+Extension: ft.f, line 1131: DCMPLX intrinsic procedure
+[NEC Fortran Compiler normal termination, 28 warnings]
+nfort: vec( 103): ft.f, line 82: Unvectorized loop.
+nfort: vec( 103): ft.f, line 99: Unvectorized loop.
+nfort: vec( 103): ft.f, line 117: Unvectorized loop.
+nfort: par(1801): ft.f, line 170: Parallel routine generated.: INIT_UI$1
+nfort: par(1803): ft.f, line 171: Parallelized by "do".
+nfort: opt(2495): ft.f, line 171: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): ft.f, line 171: Vectorized loop.
+nfort: vec( 101): ft.f, line 173: Vectorized loop.
+nfort: par(1801): ft.f, line 205: Parallel routine generated.: EVOLVE$1
+nfort: par(1803): ft.f, line 206: Parallelized by "do".
+nfort: opt(2495): ft.f, line 206: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): ft.f, line 206: Vectorized loop.
+nfort: vec( 101): ft.f, line 208: Vectorized loop.
+nfort: vec( 103): ft.f, line 250: Unvectorized loop.
+nfort: par(1801): ft.f, line 258: Parallel routine generated.: COMPUTE_INITIAL_CONDITIONS$1
+nfort: par(1803): ft.f, line 259: Parallelized by "do".
+nfort: vec( 103): ft.f, line 261: Unvectorized loop.
+nfort: vec( 103): ft.f, line 299: Unvectorized loop.
+nfort: par(1801): ft.f, line 409: Parallel routine generated.: COMPUTE_INDEXMAP$1
+nfort: par(1803): ft.f, line 411: Parallelized by "do".
+nfort: opt(2495): ft.f, line 411: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): ft.f, line 411: Vectorized loop.
+nfort: vec( 101): ft.f, line 417: Vectorized loop.
+nfort: vec( 103): ft.f, line 454: Unvectorized loop.
+nfort: par(1801): ft.f, line 522: Parallel routine generated.: CFFTS1$1
+nfort: par(1803): ft.f, line 524: Parallelized by "do".
+nfort: opt(2495): ft.f, line 524: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): ft.f, line 529: Vectorized loop.
+nfort: opt(1592): ft.f, line 537: Outer loop unrolled inside inner loop.: J
+nfort: vec( 101): ft.f, line 538: Vectorized loop.
+nfort: par(1801): ft.f, line 570: Parallel routine generated.: CFFTS2$1
+nfort: par(1803): ft.f, line 572: Parallelized by "do".
+nfort: opt(2495): ft.f, line 572: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): ft.f, line 577: Vectorized loop.
+nfort: opt(1592): ft.f, line 584: Outer loop unrolled inside inner loop.: J
+nfort: vec( 101): ft.f, line 585: Vectorized loop.
+nfort: par(1801): ft.f, line 617: Parallel routine generated.: CFFTS3$1
+nfort: par(1803): ft.f, line 619: Parallelized by "do".
+nfort: opt(2495): ft.f, line 619: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): ft.f, line 624: Vectorized loop.
+nfort: opt(1592): ft.f, line 631: Outer loop unrolled inside inner loop.: K
+nfort: vec( 101): ft.f, line 632: Vectorized loop.
+nfort: vec( 101): ft.f, line 676: Vectorized loop.
+nfort: vec( 103): ft.f, line 728: Unvectorized loop.
+nfort: opt(1592): ft.f, line 739: Outer loop unrolled inside inner loop.: J
+nfort: vec( 101): ft.f, line 740: Vectorized loop.
+nfort: vec( 102): ft.f, line 779: Partially vectorized loop.
+nfort: vec( 101): ft.f, line 794: Vectorized loop.
+nfort: vec( 103): ft.f, line 825: Unvectorized loop.
+nfort: par(1801): ft.f, line 851: Parallel routine generated.: CHECKSUM$1
+nfort: par(1803): ft.f, line 852: Parallelized by "do".
+nfort: vec( 101): ft.f, line 852: Vectorized loop.
+nfort: par(1807): ft.f, line 857: Critical-construct generated.
+nfort: par(1809): ft.f, line 857: Barrier synchronization.
+nfort: vec( 103): ft.f, line 1109: Unvectorized loop.
+nfort -O3 -fopenmp -o ../bin/ft.B.x ft.o ft_data.o ../common/randi8.o ../common/print_results.o ../common/timers.o ../common/wtime.o 
+make[1]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/FT'
+   ============================================
+   =      NAS PARALLEL BENCHMARKS 3.4         =
+   =      OpenMP Versions                     =
+   =      Fortran/C                           =
+   ============================================
+
+cd MG; make CLASS=B
+make[1]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/MG'
+make[2]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+../sys/setparams mg B
+nfort -c  -O3 -fopenmp mg_data.f
+Obsolescent: mg_data.f, line 9: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort -c  -O3 -fopenmp mg.f
+Questionable: mg.f, line 361: Variable OLD2 set but never referenced
+Questionable: mg.f, line 361: Variable OLDU set but never referenced
+Warning: mg.f, line 1046: Unused dummy variable KK
+Questionable: mg.f, line 1262: Variable E1 set but never referenced
+Questionable: mg.f, line 1262: Variable RDUMMY set but never referenced
+Questionable: mg.f, line 1330: Variable RDUMMY set but never referenced
+Obsolescent: mg.f, line 51: Fixed source form
+[NEC Fortran Compiler normal termination, 7 warnings]
+nfort: vec( 103): mg.f, line 83: Unvectorized loop.
+nfort: vec( 103): mg.f, line 115: Unvectorized loop.
+nfort: vec( 101): mg.f, line 124: Vectorized loop.
+nfort: vec( 103): mg.f, line 234: Unvectorized loop.
+nfort: vec( 103): mg.f, line 247: Unvectorized loop.
+nfort: vec( 103): mg.f, line 347: Unvectorized loop.
+nfort: opt(1418): mg.f, line 384: Constant-length loop is expanded.
+nfort: vec( 103): mg.f, line 385: Unvectorized loop.
+nfort: vec( 101): mg.f, line 390: Vectorized loop.
+nfort: vec( 101): mg.f, line 396: Vectorized loop.
+nfort: opt(1418): mg.f, line 397: Constant-length loop is expanded.
+nfort: vec( 101): mg.f, line 420: Vectorized loop.
+nfort: vec( 103): mg.f, line 465: Unvectorized loop.
+nfort: vec( 103): mg.f, line 478: Unvectorized loop.
+nfort: par(1801): mg.f, line 535: Parallel routine generated.: PSINV$1
+nfort: par(1803): mg.f, line 536: Parallelized by "do".
+nfort: opt(2495): mg.f, line 536: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): mg.f, line 536: Vectorized loop.
+nfort: vec( 101): mg.f, line 538: Vectorized loop.
+nfort: vec( 101): mg.f, line 544: Vectorized loop.
+nfort: par(1801): mg.f, line 606: Parallel routine generated.: RESID$1
+nfort: par(1803): mg.f, line 607: Parallelized by "do".
+nfort: opt(2495): mg.f, line 607: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): mg.f, line 607: Vectorized loop.
+nfort: vec( 101): mg.f, line 609: Vectorized loop.
+nfort: vec( 101): mg.f, line 615: Vectorized loop.
+nfort: par(1801): mg.f, line 693: Parallel routine generated.: RPRJ3$1
+nfort: par(1803): mg.f, line 695: Parallelized by "do".
+nfort: opt(2495): mg.f, line 695: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): mg.f, line 695: Vectorized loop.
+nfort: vec( 101): mg.f, line 700: Vectorized loop.
+nfort: vec( 101): mg.f, line 708: Vectorized loop.
+nfort: par(1801): mg.f, line 775: Parallel routine generated.: INTERP$1
+nfort: par(1803): mg.f, line 776: Parallelized by "do".
+nfort: opt(2495): mg.f, line 776: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): mg.f, line 776: Vectorized loop.
+nfort: vec( 101): mg.f, line 779: Vectorized loop.
+nfort: opt(1112): mg.f, line 785: Loop fused with previous loop.
+nfort: vec( 101): mg.f, line 785: Vectorized loop.
+nfort: opt(1112): mg.f, line 791: Loop fused with previous loop.: I1
+nfort: opt(1112): mg.f, line 797: Loop fused with previous loop.: I1
+nfort: opt(1112): mg.f, line 803: Loop fused with previous loop.: I1
+nfort: par(1801): mg.f, line 838: Parallel routine generated.: INTERP$2
+nfort: par(1803): mg.f, line 840: Parallelized by "do".
+nfort: opt(2495): mg.f, line 840: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): mg.f, line 840: Vectorized loop.
+nfort: vec( 101): mg.f, line 842: Vectorized loop.
+nfort: vec( 101): mg.f, line 846: Vectorized loop.
+nfort: par(1803): mg.f, line 853: Parallelized by "do".
+nfort: opt(2495): mg.f, line 853: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): mg.f, line 853: Vectorized loop.
+nfort: vec( 101): mg.f, line 855: Vectorized loop.
+nfort: vec( 101): mg.f, line 859: Vectorized loop.
+nfort: par(1803): mg.f, line 868: Parallelized by "do".
+nfort: opt(2495): mg.f, line 868: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): mg.f, line 868: Vectorized loop.
+nfort: vec( 101): mg.f, line 870: Vectorized loop.
+nfort: vec( 101): mg.f, line 874: Vectorized loop.
+nfort: par(1803): mg.f, line 882: Parallelized by "do".
+nfort: opt(2495): mg.f, line 882: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): mg.f, line 882: Vectorized loop.
+nfort: vec( 101): mg.f, line 884: Vectorized loop.
+nfort: vec( 101): mg.f, line 889: Vectorized loop.
+nfort: par(1801): mg.f, line 951: Parallel routine generated.: NORM2U3$1
+nfort: par(1803): mg.f, line 953: Parallelized by "do".
+nfort: opt(2495): mg.f, line 953: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): mg.f, line 953: Vectorized loop.
+nfort: vec( 101): mg.f, line 955: Vectorized loop.
+nfort: par(1807): mg.f, line 961: Critical-construct generated.
+nfort: par(1809): mg.f, line 961: Barrier synchronization.
+nfort: par(1801): mg.f, line 1018: Parallel routine generated.: COMM3$1
+nfort: par(1803): mg.f, line 1020: Parallelized by "do".
+nfort: vec( 101): mg.f, line 1021: Vectorized loop.
+nfort: vec( 101): mg.f, line 1028: Vectorized loop.
+nfort: par(1803): mg.f, line 1035: Parallelized by "do".
+nfort: vec( 101): mg.f, line 1036: Vectorized loop.
+nfort: vec( 103): mg.f, line 1101: Unvectorized loop.
+nfort: par(1801): mg.f, line 1109: Parallel routine generated.: ZRAN3$1
+nfort: par(1803): mg.f, line 1111: Parallelized by "do".
+nfort: vec( 103): mg.f, line 1113: Unvectorized loop.
+nfort: par(1801): mg.f, line 1129: Parallel routine generated.: ZRAN3$2
+nfort: vec( 101): mg.f, line 1131: Vectorized loop.
+nfort: par(1803): mg.f, line 1143: Parallelized by "do".
+nfort: opt(2495): mg.f, line 1143: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): mg.f, line 1145: Unvectorized loop.
+nfort: par(1805): mg.f, line 1180: Master-construct generated.
+nfort: par(1803): mg.f, line 1186: Parallelized by "do".
+nfort: vec( 103): mg.f, line 1186: Unvectorized loop.
+nfort: par(1801): mg.f, line 1238: Parallel routine generated.: ZRAN3$3
+nfort: par(1803): mg.f, line 1239: Parallelized by "do".
+nfort: opt(2495): mg.f, line 1239: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): mg.f, line 1239: Vectorized loop.
+nfort: vec( 101): mg.f, line 1241: Vectorized loop.
+nfort: vec( 101): mg.f, line 1248: Vectorized loop.
+nfort: vec( 101): mg.f, line 1251: Vectorized loop.
+nfort: vec( 103): mg.f, line 1287: Unvectorized loop.
+nfort: vec( 103): mg.f, line 1301: Unvectorized loop.
+nfort: vec( 103): mg.f, line 1353: Unvectorized loop.
+nfort: vec( 103): mg.f, line 1379: Unvectorized loop.
+nfort: par(1801): mg.f, line 1423: Parallel routine generated.: ZERO3$1
+nfort: par(1803): mg.f, line 1424: Parallelized by "do".
+nfort: opt(2495): mg.f, line 1424: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): mg.f, line 1424: Vectorized loop.
+nfort: vec( 101): mg.f, line 1426: Vectorized loop.
+nfort -O3 -fopenmp -o ../bin/mg.B.x mg.o mg_data.o ../common/print_results.o ../common/randi8.o ../common/timers.o ../common/wtime.o 
+make[1]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/MG'
+   ============================================
+   =      NAS PARALLEL BENCHMARKS 3.4         =
+   =      OpenMP Versions                     =
+   =      Fortran/C                           =
+   ============================================
+
+cd SP; make CLASS=B
+make[1]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/SP'
+make[2]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+../sys/setparams sp B
+make[2]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/SP'
+nfort -c  -O3 -fopenmp sp_data.f
+Obsolescent: sp_data.f, line 9: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+sed -e 's/= 0/= 0/' blk_par0.h > blk_par.h_wk
+nfort -c  -O3 -fopenmp sp.f
+Obsolescent: sp.f, line 46: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: vec( 103): sp.f, line 131: Unvectorized loop.
+nfort: vec( 103): sp.f, line 149: Unvectorized loop.
+nfort: vec( 103): sp.f, line 154: Unvectorized loop.
+nfort: vec( 103): sp.f, line 192: Unvectorized loop.
+nfort: vec( 103): sp.f, line 200: Unvectorized loop.
+nfort -c  -O3 -fopenmp initialize.f
+Obsolescent: initialize.f, line 5: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): initialize.f, line 23: Parallel routine generated.: INITIALIZE$1
+nfort: par(1803): initialize.f, line 32: Parallelized by "do".
+nfort: opt(2495): initialize.f, line 32: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): initialize.f, line 32: Vectorized loop.
+nfort: vec( 101): initialize.f, line 34: Vectorized loop.
+nfort: par(1803): initialize.f, line 49: Parallelized by "do".
+nfort: opt(2495): initialize.f, line 49: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): initialize.f, line 53: Unvectorized loop.
+nfort: opt(1418): initialize.f, line 56: Constant-length loop is expanded.
+nfort: opt(1418): initialize.f, line 62: Constant-length loop is expanded.
+nfort: opt(1418): initialize.f, line 68: Constant-length loop is expanded.
+nfort: opt(1418): initialize.f, line 74: Constant-length loop is expanded.
+nfort: par(1803): initialize.f, line 103: Parallelized by "do".
+nfort: opt(2495): initialize.f, line 103: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): initialize.f, line 103: Unvectorized loop.
+nfort: opt(1418): initialize.f, line 108: Constant-length loop is expanded.
+nfort: par(1803): initialize.f, line 122: Parallelized by "do".
+nfort: opt(2495): initialize.f, line 122: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): initialize.f, line 122: Unvectorized loop.
+nfort: opt(1418): initialize.f, line 127: Constant-length loop is expanded.
+nfort: par(1803): initialize.f, line 141: Parallelized by "do".
+nfort: opt(2495): initialize.f, line 141: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): initialize.f, line 141: Unvectorized loop.
+nfort: opt(1418): initialize.f, line 146: Constant-length loop is expanded.
+nfort: par(1803): initialize.f, line 161: Parallelized by "do".
+nfort: opt(2495): initialize.f, line 161: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): initialize.f, line 161: Unvectorized loop.
+nfort: opt(1418): initialize.f, line 166: Constant-length loop is expanded.
+nfort: par(1803): initialize.f, line 180: Parallelized by "do".
+nfort: opt(2495): initialize.f, line 180: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): initialize.f, line 180: Unvectorized loop.
+nfort: opt(1418): initialize.f, line 185: Constant-length loop is expanded.
+nfort: par(1803): initialize.f, line 199: Parallelized by "do".
+nfort: opt(2495): initialize.f, line 199: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): initialize.f, line 199: Unvectorized loop.
+nfort: opt(1418): initialize.f, line 204: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp exact_solution.f
+Obsolescent: exact_solution.f, line 5: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: opt(1418): exact_solution.f, line 21: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp exact_rhs.f
+Obsolescent: exact_rhs.f, line 5: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): exact_rhs.f, line 21: Parallel routine generated.: EXACT_RHS$1
+nfort: par(1803): exact_rhs.f, line 28: Parallelized by "do".
+nfort: opt(2495): exact_rhs.f, line 28: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): exact_rhs.f, line 28: Vectorized loop.
+nfort: vec( 101): exact_rhs.f, line 30: Vectorized loop.
+nfort: opt(1418): exact_rhs.f, line 31: Constant-length loop is expanded.
+nfort: par(1803): exact_rhs.f, line 42: Parallelized by "do".
+nfort: opt(2495): exact_rhs.f, line 42: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): exact_rhs.f, line 47: Unvectorized loop.
+nfort: opt(1418): exact_rhs.f, line 51: Constant-length loop is expanded.
+nfort: opt(1418): exact_rhs.f, line 57: Constant-length loop is expanded.
+nfort: vec( 101): exact_rhs.f, line 69: Vectorized loop.
+nfort: opt(1418): exact_rhs.f, line 106: Constant-length loop is expanded.
+nfort: opt(1592): exact_rhs.f, line 116: Outer loop unrolled inside inner loop.: M
+nfort: vec( 101): exact_rhs.f, line 117: Vectorized loop.
+nfort: opt(1418): exact_rhs.f, line 124: Constant-length loop is expanded.
+nfort: par(1803): exact_rhs.f, line 142: Parallelized by "do".
+nfort: opt(2495): exact_rhs.f, line 142: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): exact_rhs.f, line 147: Unvectorized loop.
+nfort: opt(1418): exact_rhs.f, line 151: Constant-length loop is expanded.
+nfort: opt(1418): exact_rhs.f, line 156: Constant-length loop is expanded.
+nfort: vec( 101): exact_rhs.f, line 167: Vectorized loop.
+nfort: opt(1418): exact_rhs.f, line 204: Constant-length loop is expanded.
+nfort: opt(1592): exact_rhs.f, line 214: Outer loop unrolled inside inner loop.: M
+nfort: vec( 101): exact_rhs.f, line 215: Vectorized loop.
+nfort: opt(1418): exact_rhs.f, line 222: Constant-length loop is expanded.
+nfort: par(1803): exact_rhs.f, line 240: Parallelized by "do".
+nfort: opt(2495): exact_rhs.f, line 240: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): exact_rhs.f, line 245: Unvectorized loop.
+nfort: opt(1418): exact_rhs.f, line 249: Constant-length loop is expanded.
+nfort: opt(1418): exact_rhs.f, line 255: Constant-length loop is expanded.
+nfort: vec( 101): exact_rhs.f, line 266: Vectorized loop.
+nfort: opt(1418): exact_rhs.f, line 303: Constant-length loop is expanded.
+nfort: opt(1592): exact_rhs.f, line 313: Outer loop unrolled inside inner loop.: M
+nfort: vec( 101): exact_rhs.f, line 314: Vectorized loop.
+nfort: opt(1418): exact_rhs.f, line 321: Constant-length loop is expanded.
+nfort: par(1803): exact_rhs.f, line 338: Parallelized by "do".
+nfort: opt(2495): exact_rhs.f, line 338: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): exact_rhs.f, line 338: Vectorized loop.
+nfort: vec( 101): exact_rhs.f, line 340: Vectorized loop.
+nfort: opt(1418): exact_rhs.f, line 341: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp set_constants.f
+Obsolescent: set_constants.f, line 5: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort -c  -O3 -fopenmp adi.f
+Obsolescent: adi.f, line 5: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort -c  -O3 -fopenmp rhs.f
+Obsolescent: rhs.f, line 4: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): rhs.f, line 18: Parallel routine generated.: COMPUTE_RHS$1
+nfort: par(1803): rhs.f, line 26: Parallelized by "do".
+nfort: opt(2495): rhs.f, line 26: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): rhs.f, line 26: Vectorized loop.
+nfort: vec( 101): rhs.f, line 28: Vectorized loop.
+nfort: par(1803): rhs.f, line 56: Parallelized by "do".
+nfort: opt(2495): rhs.f, line 56: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): rhs.f, line 56: Vectorized loop.
+nfort: vec( 101): rhs.f, line 58: Vectorized loop.
+nfort: opt(1418): rhs.f, line 59: Constant-length loop is expanded.
+nfort: par(1805): rhs.f, line 70: Master-construct generated.
+nfort: par(1803): rhs.f, line 74: Parallelized by "do".
+nfort: opt(2495): rhs.f, line 74: Loop nest collapsed by "collapse" clause.
+nfort: vec( 102): rhs.f, line 74: Partially vectorized loop.
+nfort: vec( 101): rhs.f, line 76: Vectorized loop.
+nfort: opt(1418): rhs.f, line 132: Constant-length loop is expanded.
+nfort: opt(1418): rhs.f, line 139: Constant-length loop is expanded.
+nfort: vec( 101): rhs.f, line 145: Vectorized loop.
+nfort: opt(1418): rhs.f, line 146: Constant-length loop is expanded.
+nfort: opt(1418): rhs.f, line 155: Constant-length loop is expanded.
+nfort: opt(1418): rhs.f, line 162: Constant-length loop is expanded.
+nfort: par(1805): rhs.f, line 170: Master-construct generated.
+nfort: par(1803): rhs.f, line 179: Parallelized by "do".
+nfort: opt(2495): rhs.f, line 179: Loop nest collapsed by "collapse" clause.
+nfort: vec( 102): rhs.f, line 179: Partially vectorized loop.
+nfort: vec( 101): rhs.f, line 181: Vectorized loop.
+nfort: vec( 101): rhs.f, line 234: Vectorized loop.
+nfort: opt(1418): rhs.f, line 235: Constant-length loop is expanded.
+nfort: vec( 101): rhs.f, line 243: Vectorized loop.
+nfort: opt(1418): rhs.f, line 244: Constant-length loop is expanded.
+nfort: vec( 101): rhs.f, line 252: Vectorized loop.
+nfort: opt(1418): rhs.f, line 253: Constant-length loop is expanded.
+nfort: vec( 101): rhs.f, line 261: Vectorized loop.
+nfort: opt(1418): rhs.f, line 262: Constant-length loop is expanded.
+nfort: vec( 101): rhs.f, line 270: Vectorized loop.
+nfort: opt(1418): rhs.f, line 271: Constant-length loop is expanded.
+nfort: par(1805): rhs.f, line 282: Master-construct generated.
+nfort: par(1803): rhs.f, line 291: Parallelized by "do".
+nfort: opt(2495): rhs.f, line 291: Loop nest collapsed by "collapse" clause.
+nfort: vec( 102): rhs.f, line 291: Partially vectorized loop.
+nfort: vec( 101): rhs.f, line 293: Vectorized loop.
+nfort: vec( 101): rhs.f, line 346: Vectorized loop.
+nfort: opt(1418): rhs.f, line 347: Constant-length loop is expanded.
+nfort: vec( 101): rhs.f, line 355: Vectorized loop.
+nfort: opt(1418): rhs.f, line 356: Constant-length loop is expanded.
+nfort: vec( 101): rhs.f, line 364: Vectorized loop.
+nfort: opt(1418): rhs.f, line 365: Constant-length loop is expanded.
+nfort: vec( 101): rhs.f, line 373: Vectorized loop.
+nfort: opt(1418): rhs.f, line 374: Constant-length loop is expanded.
+nfort: vec( 101): rhs.f, line 382: Vectorized loop.
+nfort: opt(1418): rhs.f, line 383: Constant-length loop is expanded.
+nfort: par(1805): rhs.f, line 394: Master-construct generated.
+nfort: par(1803): rhs.f, line 399: Parallelized by "do".
+nfort: opt(2495): rhs.f, line 399: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): rhs.f, line 399: Vectorized loop.
+nfort: vec( 101): rhs.f, line 401: Vectorized loop.
+nfort: opt(1418): rhs.f, line 402: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp work_lhs.f
+Obsolescent: work_lhs.f, line 9: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: opt(1418): work_lhs.f, line 45: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp x_solve.f
+Obsolescent: x_solve.f, line 5: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): x_solve.f, line 30: Parallel routine generated.: X_SOLVE$1
+nfort: par(1803): x_solve.f, line 32: Parallelized by "do".
+nfort: opt(2495): x_solve.f, line 32: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): x_solve.f, line 44: Vectorized loop.
+nfort: vec( 101): x_solve.f, line 53: Vectorized loop.
+nfort: vec( 101): x_solve.f, line 75: Vectorized loop.
+nfort: vec( 101): x_solve.f, line 97: Vectorized loop.
+nfort: vec( 103): x_solve.f, line 122: Unvectorized loop.
+nfort: opt(1418): x_solve.f, line 128: Constant-length loop is expanded.
+nfort: opt(1418): x_solve.f, line 135: Constant-length loop is expanded.
+nfort: opt(1418): x_solve.f, line 143: Constant-length loop is expanded.
+nfort: opt(1418): x_solve.f, line 160: Constant-length loop is expanded.
+nfort: opt(1418): x_solve.f, line 167: Constant-length loop is expanded.
+nfort: opt(1418): x_solve.f, line 175: Constant-length loop is expanded.
+nfort: vec( 103): x_solve.f, line 183: Unvectorized loop.
+nfort: opt(1418): x_solve.f, line 263: Constant-length loop is expanded.
+nfort: vec( 103): x_solve.f, line 276: Unvectorized loop.
+nfort: opt(1418): x_solve.f, line 279: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp ninvr.f
+Obsolescent: ninvr.f, line 5: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): ninvr.f, line 21: Parallel routine generated.: NINVR$1
+nfort: par(1803): ninvr.f, line 23: Parallelized by "do".
+nfort: opt(2495): ninvr.f, line 23: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): ninvr.f, line 23: Vectorized loop.
+nfort: vec( 101): ninvr.f, line 25: Vectorized loop.
+nfort -c  -O3 -fopenmp y_solve.f
+Obsolescent: y_solve.f, line 5: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): y_solve.f, line 30: Parallel routine generated.: Y_SOLVE$1
+nfort: par(1803): y_solve.f, line 32: Parallelized by "do".
+nfort: opt(2495): y_solve.f, line 32: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): y_solve.f, line 45: Vectorized loop.
+nfort: vec( 101): y_solve.f, line 54: Vectorized loop.
+nfort: vec( 101): y_solve.f, line 76: Vectorized loop.
+nfort: vec( 101): y_solve.f, line 97: Vectorized loop.
+nfort: vec( 103): y_solve.f, line 119: Unvectorized loop.
+nfort: opt(1418): y_solve.f, line 125: Constant-length loop is expanded.
+nfort: opt(1418): y_solve.f, line 132: Constant-length loop is expanded.
+nfort: opt(1418): y_solve.f, line 140: Constant-length loop is expanded.
+nfort: opt(1418): y_solve.f, line 157: Constant-length loop is expanded.
+nfort: opt(1418): y_solve.f, line 164: Constant-length loop is expanded.
+nfort: opt(1418): y_solve.f, line 172: Constant-length loop is expanded.
+nfort: vec( 103): y_solve.f, line 179: Unvectorized loop.
+nfort: opt(1418): y_solve.f, line 258: Constant-length loop is expanded.
+nfort: vec( 103): y_solve.f, line 271: Unvectorized loop.
+nfort: opt(1418): y_solve.f, line 274: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp pinvr.f
+Obsolescent: pinvr.f, line 5: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): pinvr.f, line 21: Parallel routine generated.: PINVR$1
+nfort: par(1803): pinvr.f, line 23: Parallelized by "do".
+nfort: opt(2495): pinvr.f, line 23: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): pinvr.f, line 23: Vectorized loop.
+nfort: vec( 101): pinvr.f, line 25: Vectorized loop.
+nfort -c  -O3 -fopenmp z_solve.f
+Obsolescent: z_solve.f, line 5: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): z_solve.f, line 34: Parallel routine generated.: Z_SOLVE$1
+nfort: par(1803): z_solve.f, line 36: Parallelized by "do".
+nfort: opt(2495): z_solve.f, line 36: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): z_solve.f, line 49: Vectorized loop.
+nfort: vec( 101): z_solve.f, line 58: Vectorized loop.
+nfort: vec( 101): z_solve.f, line 81: Vectorized loop.
+nfort: vec( 101): z_solve.f, line 104: Vectorized loop.
+nfort: vec( 103): z_solve.f, line 126: Unvectorized loop.
+nfort: opt(1418): z_solve.f, line 132: Constant-length loop is expanded.
+nfort: opt(1418): z_solve.f, line 139: Constant-length loop is expanded.
+nfort: opt(1418): z_solve.f, line 147: Constant-length loop is expanded.
+nfort: opt(1418): z_solve.f, line 163: Constant-length loop is expanded.
+nfort: opt(1418): z_solve.f, line 170: Constant-length loop is expanded.
+nfort: opt(1418): z_solve.f, line 178: Constant-length loop is expanded.
+nfort: vec( 103): z_solve.f, line 185: Unvectorized loop.
+nfort: opt(1418): z_solve.f, line 265: Constant-length loop is expanded.
+nfort: vec( 103): z_solve.f, line 283: Unvectorized loop.
+nfort: opt(1418): z_solve.f, line 286: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp tzetar.f
+Obsolescent: tzetar.f, line 5: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): tzetar.f, line 23: Parallel routine generated.: TZETAR$1
+nfort: par(1803): tzetar.f, line 27: Parallelized by "do".
+nfort: opt(2495): tzetar.f, line 27: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): tzetar.f, line 27: Vectorized loop.
+nfort: vec( 101): tzetar.f, line 29: Vectorized loop.
+nfort -c  -O3 -fopenmp add.f
+Obsolescent: add.f, line 5: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): add.f, line 20: Parallel routine generated.: ADD$1
+nfort: par(1803): add.f, line 21: Parallelized by "do".
+nfort: opt(2495): add.f, line 21: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): add.f, line 21: Vectorized loop.
+nfort: vec( 101): add.f, line 23: Vectorized loop.
+nfort: opt(1418): add.f, line 24: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp txinvr.f
+Obsolescent: txinvr.f, line 5: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): txinvr.f, line 23: Parallel routine generated.: TXINVR$1
+nfort: par(1803): txinvr.f, line 26: Parallelized by "do".
+nfort: opt(2495): txinvr.f, line 26: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): txinvr.f, line 26: Vectorized loop.
+nfort: vec( 101): txinvr.f, line 28: Vectorized loop.
+nfort -c  -O3 -fopenmp error.f
+Obsolescent: error.f, line 5: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: opt(1418): error.f, line 21: Constant-length loop is expanded.
+nfort: par(1801): error.f, line 25: Parallel routine generated.: ERROR_NORM$1
+nfort: opt(1418): error.f, line 25: Constant-length loop is expanded.
+nfort: par(1803): error.f, line 29: Parallelized by "do".
+nfort: opt(2495): error.f, line 29: Loop nest collapsed by "collapse" clause.
+nfort: vec( 103): error.f, line 33: Unvectorized loop.
+nfort: opt(1418): error.f, line 37: Constant-length loop is expanded.
+nfort: par(1807): error.f, line 44: Critical-construct generated.
+nfort: par(1809): error.f, line 44: Barrier synchronization.
+nfort: opt(1418): error.f, line 44: Constant-length loop is expanded.
+nfort: opt(1418): error.f, line 46: Constant-length loop is expanded.
+nfort: opt(1418): error.f, line 47: Constant-length loop is expanded.
+nfort: opt(1418): error.f, line 66: Constant-length loop is expanded.
+nfort: par(1801): error.f, line 70: Parallel routine generated.: RHS_NORM$1
+nfort: opt(1418): error.f, line 70: Constant-length loop is expanded.
+nfort: par(1803): error.f, line 73: Parallelized by "do".
+nfort: opt(2495): error.f, line 73: Loop nest collapsed by "collapse" clause.
+nfort: vec( 101): error.f, line 75: Vectorized loop.
+nfort: opt(1418): error.f, line 76: Constant-length loop is expanded.
+nfort: par(1807): error.f, line 83: Critical-construct generated.
+nfort: par(1809): error.f, line 83: Barrier synchronization.
+nfort: opt(1418): error.f, line 83: Constant-length loop is expanded.
+nfort: opt(1418): error.f, line 85: Constant-length loop is expanded.
+nfort: opt(1418): error.f, line 86: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp verify.f
+Obsolescent: verify.f, line 5: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: opt(1418): verify.f, line 40: Constant-length loop is expanded.
+nfort: opt(1418): verify.f, line 47: Constant-length loop is expanded.
+nfort: opt(1418): verify.f, line 303: Constant-length loop is expanded.
+nfort: vec( 103): verify.f, line 340: Unvectorized loop.
+nfort: vec( 103): verify.f, line 360: Unvectorized loop.
+nfort -O3 -fopenmp -o ../bin/sp.B.x sp.o sp_data.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o rhs.o work_lhs.o x_solve.o ninvr.o y_solve.o pinvr.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o ../common/print_results.o ../common/timers.o ../common/wtime.o 
+make[2]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/SP'
+make[1]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/SP'
+   ============================================
+   =      NAS PARALLEL BENCHMARKS 3.4         =
+   =      OpenMP Versions                     =
+   =      Fortran/C                           =
+   ============================================
+
+cd UA; make CLASS=B
+make[1]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/UA'
+make[2]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+../sys/setparams ua B
+nfort -c  -O3 -fopenmp ua_data.f
+Obsolescent: ua_data.f, line 9: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort -c  -O3 -fopenmp ua.f
+Obsolescent: ua.f, line 44: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: vec( 103): ua.f, line 122: Unvectorized loop.
+nfort: vec( 103): ua.f, line 166: Unvectorized loop.
+nfort: par(1801): ua.f, line 182: Parallel routine generated.: MAIN_$1
+nfort: par(1803): ua.f, line 184: Parallelized by "do".
+nfort: vec( 103): ua.f, line 184: Unvectorized loop.
+nfort: par(1803): ua.f, line 190: Parallelized by "do".
+nfort: vec( 103): ua.f, line 190: Unvectorized loop.
+nfort: vec( 101): ua.f, line 191: Vectorized loop.
+nfort: opt(1418): ua.f, line 192: Constant-length loop is expanded.
+nfort: opt(1418): ua.f, line 193: Constant-length loop is expanded.
+nfort: par(1801): ua.f, line 208: Parallel routine generated.: MAIN_$2
+nfort: par(1803): ua.f, line 209: Parallelized by "do".
+nfort: vec( 103): ua.f, line 210: Unvectorized loop.
+nfort: vec( 103): ua.f, line 260: Unvectorized loop.
+nfort: vec( 103): ua.f, line 267: Unvectorized loop.
+nfort -c  -O3 -fopenmp convect.f
+Obsolescent: convect.f, line 2: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: opt(1418): convect.f, line 33: Constant-length loop is expanded.
+nfort: par(1801): convect.f, line 39: Parallel routine generated.: CONVECT$1
+nfort: par(1803): convect.f, line 43: Parallelized by "do".
+nfort: opt(1418): convect.f, line 48: Constant-length loop is expanded.
+nfort: opt(1418): convect.f, line 51: Constant-length loop is expanded.
+nfort: opt(1418): convect.f, line 54: Constant-length loop is expanded.
+nfort: vec( 102): convect.f, line 58: Partially vectorized loop.
+nfort: vec( 101): convect.f, line 59: Vectorized loop.
+nfort: vec( 101): convect.f, line 60: Vectorized loop.
+nfort: opt(1418): convect.f, line 69: Constant-length loop is expanded.
+nfort: opt(1418): convect.f, line 74: Constant-length loop is expanded.
+nfort: opt(1418): convect.f, line 79: Constant-length loop is expanded.
+nfort: vec( 102): convect.f, line 91: Partially vectorized loop.
+nfort: vec( 101): convect.f, line 92: Vectorized loop.
+nfort: vec( 101): convect.f, line 93: Vectorized loop.
+nfort: opt(1418): convect.f, line 102: Constant-length loop is expanded.
+nfort: opt(1418): convect.f, line 107: Constant-length loop is expanded.
+nfort: opt(1418): convect.f, line 112: Constant-length loop is expanded.
+nfort: vec( 102): convect.f, line 123: Partially vectorized loop.
+nfort: vec( 101): convect.f, line 124: Vectorized loop.
+nfort: vec( 101): convect.f, line 125: Vectorized loop.
+nfort: opt(1418): convect.f, line 134: Constant-length loop is expanded.
+nfort: opt(1418): convect.f, line 139: Constant-length loop is expanded.
+nfort: opt(1418): convect.f, line 144: Constant-length loop is expanded.
+nfort: vec( 102): convect.f, line 155: Partially vectorized loop.
+nfort: vec( 101): convect.f, line 156: Vectorized loop.
+nfort: vec( 101): convect.f, line 157: Vectorized loop.
+nfort: opt(1418): convect.f, line 166: Constant-length loop is expanded.
+nfort: opt(1418): convect.f, line 171: Constant-length loop is expanded.
+nfort: opt(1418): convect.f, line 176: Constant-length loop is expanded.
+nfort: vec( 103): convect.f, line 189: Unvectorized loop.
+nfort: vec( 101): convect.f, line 196: Vectorized loop.
+nfort: opt(1418): convect.f, line 197: Constant-length loop is expanded.
+nfort: par(1801): convect.f, line 218: Parallel routine generated.: CONVECT$2
+nfort: par(1803): convect.f, line 219: Parallelized by "do".
+nfort: vec( 101): convect.f, line 219: Vectorized loop.
+nfort -c  -O3 -fopenmp diffuse.f
+Warning: diffuse.f, line 243: Unused local variable IX
+Obsolescent: diffuse.f, line 2: Fixed source form
+[NEC Fortran Compiler normal termination, 2 warnings]
+nfort: par(1801): diffuse.f, line 25: Parallel routine generated.: DIFFUSION$1
+nfort: par(1803): diffuse.f, line 26: Parallelized by "do".
+nfort: vec( 101): diffuse.f, line 26: Vectorized loop.
+nfort: par(1801): diffuse.f, line 38: Parallel routine generated.: DIFFUSION$2
+nfort: par(1803): diffuse.f, line 40: Parallelized by "do".
+nfort: vec( 101): diffuse.f, line 42: Vectorized loop.
+nfort: opt(1418): diffuse.f, line 43: Constant-length loop is expanded.
+nfort: par(1803): diffuse.f, line 54: Parallelized by "do".
+nfort: vec( 101): diffuse.f, line 54: Vectorized loop.
+nfort: par(1807): diffuse.f, line 59: Critical-construct generated.
+nfort: par(1809): diffuse.f, line 59: Barrier synchronization.
+nfort: vec( 103): diffuse.f, line 65: Unvectorized loop.
+nfort: par(1801): diffuse.f, line 68: Parallel routine generated.: DIFFUSION$3
+nfort: par(1803): diffuse.f, line 72: Parallelized by "do".
+nfort: vec( 101): diffuse.f, line 74: Vectorized loop.
+nfort: opt(1418): diffuse.f, line 75: Constant-length loop is expanded.
+nfort: par(1803): diffuse.f, line 85: Parallelized by "do".
+nfort: vec( 101): diffuse.f, line 85: Vectorized loop.
+nfort: par(1807): diffuse.f, line 90: Critical-construct generated.
+nfort: par(1809): diffuse.f, line 90: Barrier synchronization.
+nfort: par(1801): diffuse.f, line 108: Parallel routine generated.: DIFFUSION$4
+nfort: par(1803): diffuse.f, line 109: Parallelized by "do".
+nfort: vec( 103): diffuse.f, line 109: Unvectorized loop.
+nfort: par(1801): diffuse.f, line 121: Parallel routine generated.: DIFFUSION$5
+nfort: par(1803): diffuse.f, line 122: Parallelized by "do".
+nfort: vec( 103): diffuse.f, line 123: Unvectorized loop.
+nfort: par(1801): diffuse.f, line 133: Parallel routine generated.: DIFFUSION$6
+nfort: par(1803): diffuse.f, line 135: Parallelized by "do".
+nfort: vec( 103): diffuse.f, line 135: Unvectorized loop.
+nfort: vec( 101): diffuse.f, line 136: Vectorized loop.
+nfort: opt(1418): diffuse.f, line 137: Constant-length loop is expanded.
+nfort: opt(1418): diffuse.f, line 138: Constant-length loop is expanded.
+nfort: par(1803): diffuse.f, line 147: Parallelized by "do".
+nfort: vec( 101): diffuse.f, line 147: Vectorized loop.
+nfort: par(1807): diffuse.f, line 152: Critical-construct generated.
+nfort: par(1809): diffuse.f, line 152: Barrier synchronization.
+nfort: vec( 103): diffuse.f, line 191: Unvectorized loop.
+nfort: vec( 101): diffuse.f, line 192: Vectorized loop.
+nfort: opt(1418): diffuse.f, line 193: Constant-length loop is expanded.
+nfort: opt(1418): diffuse.f, line 194: Constant-length loop is expanded.
+nfort: vec( 103): diffuse.f, line 202: Unvectorized loop.
+nfort: vec( 101): diffuse.f, line 203: Vectorized loop.
+nfort: opt(1418): diffuse.f, line 204: Constant-length loop is expanded.
+nfort: opt(1418): diffuse.f, line 205: Constant-length loop is expanded.
+nfort: vec( 101): diffuse.f, line 214: Vectorized loop.
+nfort: opt(1418): diffuse.f, line 215: Constant-length loop is expanded.
+nfort: opt(1418): diffuse.f, line 216: Constant-length loop is expanded.
+nfort: vec( 101): diffuse.f, line 231: Vectorized loop.
+nfort: opt(1418): diffuse.f, line 232: Constant-length loop is expanded.
+nfort: opt(1418): diffuse.f, line 233: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp adapt.f
+Warning: adapt.f, line 279: Unused local variable II
+Warning: adapt.f, line 279: Unused local variable NTEMP
+Warning: adapt.f, line 279: Unused local variable NTEMP1
+Warning: adapt.f, line 279: Unused local variable NTEMPMIN
+Warning: adapt.f, line 621: Unused local variable NTEMP1
+Warning: adapt.f, line 704: Unused local variable ISIDE
+Obsolescent: adapt.f, line 2: Fixed source form
+[NEC Fortran Compiler normal termination, 7 warnings]
+nfort: vec( 103): adapt.f, line 35: Unvectorized loop.
+nfort: par(1801): adapt.f, line 56: Parallel routine generated.: ADAPTATION$1
+nfort: par(1803): adapt.f, line 57: Parallelized by "do".
+nfort: vec( 101): adapt.f, line 57: Vectorized loop.
+nfort: vec( 103): adapt.f, line 62: Unvectorized loop.
+nfort: par(1801): adapt.f, line 91: Parallel routine generated.: ADAPTATION$2
+nfort: par(1803): adapt.f, line 92: Parallelized by "do".
+nfort: vec( 101): adapt.f, line 92: Vectorized loop.
+nfort: par(1801): adapt.f, line 138: Parallel routine generated.: DO_COARSEN$1
+nfort: par(1803): adapt.f, line 140: Parallelized by "do".
+nfort: vec( 101): adapt.f, line 140: Vectorized loop.
+nfort: par(1803): adapt.f, line 146: Parallelized by "do".
+nfort: vec( 101): adapt.f, line 146: Vectorized loop.
+nfort: par(1801): adapt.f, line 155: Parallel routine generated.: DO_COARSEN$2
+nfort: par(1803): adapt.f, line 158: Parallelized by "do".
+nfort: vec( 101): adapt.f, line 186: Vectorized loop.
+nfort: vec( 101): adapt.f, line 193: Vectorized loop.
+nfort: vec( 103): adapt.f, line 200: Unvectorized loop.
+nfort: vec( 101): adapt.f, line 217: Vectorized loop.
+nfort: vec( 101): adapt.f, line 221: Vectorized loop.
+nfort: par(1801): adapt.f, line 242: Parallel routine generated.: DO_COARSEN$3
+nfort: par(1803): adapt.f, line 243: Parallelized by "do".
+nfort: vec( 101): adapt.f, line 243: Vectorized loop.
+nfort: par(1801): adapt.f, line 258: Parallel routine generated.: DO_COARSEN$4
+nfort: par(1803): adapt.f, line 259: Parallelized by "do".
+nfort: vec( 103): adapt.f, line 259: Unvectorized loop.
+nfort: par(1801): adapt.f, line 302: Parallel routine generated.: DO_REFINE$1
+nfort: par(1803): adapt.f, line 303: Parallelized by "do".
+nfort: vec( 101): adapt.f, line 303: Vectorized loop.
+nfort: par(1801): adapt.f, line 323: Parallel routine generated.: DO_REFINE$2
+nfort: par(1803): adapt.f, line 324: Parallelized by "do".
+nfort: vec( 101): adapt.f, line 324: Vectorized loop.
+nfort: par(1801): adapt.f, line 335: Parallel routine generated.: DO_REFINE$3
+nfort: par(1803): adapt.f, line 336: Parallelized by "do".
+nfort: vec( 101): adapt.f, line 336: Vectorized loop.
+nfort: par(1801): adapt.f, line 362: Parallel routine generated.: DO_REFINE$4
+nfort: par(1803): adapt.f, line 366: Parallelized by "do".
+nfort: vec( 101): adapt.f, line 374: Vectorized loop.
+nfort: vec( 101): adapt.f, line 379: Vectorized loop.
+nfort: opt(1418): adapt.f, line 381: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 382: Constant-length loop is expanded.
+nfort: vec( 103): adapt.f, line 399: Unvectorized loop.
+nfort: vec( 101): adapt.f, line 411: Vectorized loop.
+nfort: opt(1418): adapt.f, line 425: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 426: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 432: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 433: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 439: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 444: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 452: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 460: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 461: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 467: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 475: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 479: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 484: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 485: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 490: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 491: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 496: Constant-length loop is expanded.
+nfort: vec( 103): adapt.f, line 509: Unvectorized loop.
+nfort: opt(1418): adapt.f, line 516: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 527: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 544: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 570: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 581: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 603: Constant-length loop is expanded.
+nfort: par(1801): adapt.f, line 722: Parallel routine generated.: FIND_COARSEN$1
+nfort: par(1803): adapt.f, line 724: Parallelized by "do".
+nfort: vec( 101): adapt.f, line 729: Vectorized loop.
+nfort: par(1801): adapt.f, line 763: Parallel routine generated.: FIND_REFINE$1
+nfort: par(1803): adapt.f, line 765: Parallelized by "do".
+nfort: vec( 103): adapt.f, line 765: Unvectorized loop.
+nfort: par(1801): adapt.f, line 796: Parallel routine generated.: CHECK_REFINE$1
+nfort: par(1803): adapt.f, line 798: Parallelized by "do".
+nfort: vec( 103): adapt.f, line 816: Unvectorized loop.
+nfort: vec( 103): adapt.f, line 831: Unvectorized loop.
+nfort: vec( 101): adapt.f, line 923: Vectorized loop.
+nfort: opt(1418): adapt.f, line 924: Constant-length loop is expanded.
+nfort: vec( 101): adapt.f, line 932: Vectorized loop.
+nfort: opt(1418): adapt.f, line 933: Constant-length loop is expanded.
+nfort: vec( 101): adapt.f, line 950: Vectorized loop.
+nfort: opt(1800): adapt.f, line 951: Idiom detected (matrix multiply).
+nfort: opt(1800): adapt.f, line 965: Idiom detected (matrix multiply).
+nfort: opt(1418): adapt.f, line 1003: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 1006: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 1009: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 1013: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 1017: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 1020: Constant-length loop is expanded.
+nfort: vec( 102): adapt.f, line 1025: Partially vectorized loop.
+nfort: opt(1418): adapt.f, line 1028: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 1049: Constant-length loop is expanded.
+nfort: opt(1593): adapt.f, line 1135: Loop nest collapsed into one loop.: IY
+nfort: vec( 101): adapt.f, line 1135: Vectorized loop.
+nfort: opt(1418): adapt.f, line 1140: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 1147: Constant-length loop is expanded.
+nfort: vec( 101): adapt.f, line 1172: Vectorized loop.
+nfort: opt(1418): adapt.f, line 1176: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 1183: Constant-length loop is expanded.
+nfort: opt(1593): adapt.f, line 1207: Loop nest collapsed into one loop.: IZ
+nfort: vec( 101): adapt.f, line 1207: Vectorized loop.
+nfort: opt(1418): adapt.f, line 1212: Constant-length loop is expanded.
+nfort: opt(1418): adapt.f, line 1219: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp move.f
+Questionable: move.f, line 89: Variable JFACE set but never referenced
+Obsolescent: move.f, line 2: Fixed source form
+[NEC Fortran Compiler normal termination, 2 warnings]
+nfort: par(1801): move.f, line 18: Parallel routine generated.: MOVE$1
+nfort: par(1803): move.f, line 21: Parallelized by "do".
+nfort: vec( 101): move.f, line 28: Vectorized loop.
+nfort: opt(1418): move.f, line 49: Constant-length loop is expanded.
+nfort: opt(1418): move.f, line 50: Constant-length loop is expanded.
+nfort: par(1803): move.f, line 73: Parallelized by "do".
+nfort: vec( 103): move.f, line 73: Unvectorized loop.
+nfort -c  -O3 -fopenmp mason.f
+Obsolescent: mason.f, line 2: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): mason.f, line 37: Parallel routine generated.: MORTAR$1
+nfort: par(1803): mason.f, line 40: Parallelized by "do".
+nfort: vec( 101): mason.f, line 40: Vectorized loop.
+nfort: par(1801): mason.f, line 715: Parallel routine generated.: MORTAR$2
+nfort: par(1803): mason.f, line 716: Parallelized by "do".
+nfort: vec( 101): mason.f, line 716: Vectorized loop.
+nfort: par(1801): mason.f, line 728: Parallel routine generated.: MORTAR$3
+nfort: par(1803): mason.f, line 729: Parallelized by "do".
+nfort: vec( 103): mason.f, line 734: Unvectorized loop.
+nfort: par(1801): mason.f, line 777: Parallel routine generated.: MORTAR$4
+nfort: par(1803): mason.f, line 780: Parallelized by "do".
+nfort: vec( 102): mason.f, line 780: Partially vectorized loop.
+nfort: par(1801): mason.f, line 1336: Parallel routine generated.: MORTAR$5
+nfort: par(1803): mason.f, line 1337: Parallelized by "do".
+nfort: vec( 101): mason.f, line 1337: Vectorized loop.
+nfort: par(1801): mason.f, line 1351: Parallel routine generated.: MORTAR$6
+nfort: par(1803): mason.f, line 1353: Parallelized by "do".
+nfort: vec( 103): mason.f, line 1379: Unvectorized loop.
+nfort: opt(1418): mason.f, line 1442: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1443: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1455: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1456: Constant-length loop is expanded.
+nfort: par(1801): mason.f, line 1472: Parallel routine generated.: MORTAR$7
+nfort: par(1803): mason.f, line 1474: Parallelized by "do".
+nfort: vec( 103): mason.f, line 1487: Unvectorized loop.
+nfort: opt(1418): mason.f, line 1489: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1490: Constant-length loop is expanded.
+nfort: vec( 101): mason.f, line 1529: Vectorized loop.
+nfort: opt(1418): mason.f, line 1577: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1600: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1605: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1610: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1615: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1646: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1650: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1665: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1671: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1682: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1688: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1699: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1704: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1730: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1733: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1737: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1740: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1744: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1747: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1751: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1754: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1777: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1781: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1787: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1791: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1797: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1801: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1807: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1811: Constant-length loop is expanded.
+nfort: vec( 101): mason.f, line 1835: Vectorized loop.
+nfort: opt(1418): mason.f, line 1844: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 1863: Constant-length loop is expanded.
+nfort: vec( 103): mason.f, line 1932: Unvectorized loop.
+nfort: opt(1418): mason.f, line 2222: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 2228: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 2235: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 2241: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 2248: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 2254: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 2261: Constant-length loop is expanded.
+nfort: opt(1418): mason.f, line 2267: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp precond.f
+Obsolescent: precond.f, line 2: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: opt(1418): precond.f, line 16: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 17: Constant-length loop is expanded.
+nfort: par(1801): precond.f, line 24: Parallel routine generated.: SETUPPC$1
+nfort: par(1803): precond.f, line 25: Parallelized by "do".
+nfort: vec( 101): precond.f, line 29: Vectorized loop.
+nfort: opt(1418): precond.f, line 30: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 31: Constant-length loop is expanded.
+nfort: par(1801): precond.f, line 54: Parallel routine generated.: SETUPPC$2
+nfort: par(1803): precond.f, line 55: Parallelized by "do".
+nfort: vec( 101): precond.f, line 55: Vectorized loop.
+nfort: opt(1418): precond.f, line 90: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 91: Constant-length loop is expanded.
+nfort: vec( 101): precond.f, line 96: Vectorized loop.
+nfort: opt(1418): precond.f, line 99: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 100: Constant-length loop is expanded.
+nfort: par(1801): precond.f, line 107: Parallel routine generated.: SETPCMO_PRE$1
+nfort: par(1803): precond.f, line 109: Parallelized by "do".
+nfort: vec( 103): precond.f, line 119: Unvectorized loop.
+nfort: vec( 103): precond.f, line 143: Unvectorized loop.
+nfort: vec( 103): precond.f, line 173: Unvectorized loop.
+nfort: opt(1418): precond.f, line 184: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 188: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 230: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 239: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 240: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 261: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 269: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 276: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 294: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 295: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 308: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 336: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 344: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 353: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 363: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 364: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 373: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 374: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 378: Constant-length loop is expanded.
+nfort: vec( 103): precond.f, line 386: Unvectorized loop.
+nfort: opt(1418): precond.f, line 387: Constant-length loop is expanded.
+nfort: vec( 103): precond.f, line 396: Unvectorized loop.
+nfort: opt(1418): precond.f, line 397: Constant-length loop is expanded.
+nfort: par(1801): precond.f, line 425: Parallel routine generated.: SETPCMO$1
+nfort: par(1803): precond.f, line 427: Parallelized by "do".
+nfort: vec( 101): precond.f, line 427: Vectorized loop.
+nfort: par(1803): precond.f, line 433: Parallelized by "do".
+nfort: vec( 101): precond.f, line 434: Vectorized loop.
+nfort: opt(1418): precond.f, line 435: Constant-length loop is expanded.
+nfort: par(1801): precond.f, line 443: Parallel routine generated.: SETPCMO$2
+nfort: par(1803): precond.f, line 446: Parallelized by "do".
+nfort: vec( 103): precond.f, line 482: Unvectorized loop.
+nfort: vec( 103): precond.f, line 531: Unvectorized loop.
+nfort: opt(1418): precond.f, line 532: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 533: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 534: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 546: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 559: Constant-length loop is expanded.
+nfort: vec( 103): precond.f, line 591: Unvectorized loop.
+nfort: vec( 101): precond.f, line 591: Vectorized loop.
+nfort: opt(1418): precond.f, line 597: Constant-length loop is expanded.
+nfort: opt(1418): precond.f, line 607: Constant-length loop is expanded.
+nfort: vec( 101): precond.f, line 751: Vectorized loop.
+nfort -c  -O3 -fopenmp utils.f
+Obsolescent: utils.f, line 2: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: par(1801): utils.f, line 12: Parallel routine generated.: RECIPROCAL$1
+nfort: par(1803): utils.f, line 13: Parallelized by "do".
+nfort: vec( 101): utils.f, line 13: Vectorized loop.
+nfort: par(1801): utils.f, line 31: Parallel routine generated.: R_INIT_OMP$1
+nfort: par(1803): utils.f, line 32: Parallelized by "do".
+nfort: vec( 101): utils.f, line 32: Vectorized loop.
+nfort: vec( 101): utils.f, line 50: Vectorized loop.
+nfort: par(1801): utils.f, line 66: Parallel routine generated.: NR_INIT_OMP$1
+nfort: par(1803): utils.f, line 67: Parallelized by "do".
+nfort: vec( 101): utils.f, line 67: Vectorized loop.
+nfort: vec( 101): utils.f, line 85: Vectorized loop.
+nfort: par(1801): utils.f, line 101: Parallel routine generated.: L_INIT_OMP$1
+nfort: par(1803): utils.f, line 102: Parallelized by "do".
+nfort: vec( 101): utils.f, line 102: Vectorized loop.
+nfort: vec( 101): utils.f, line 121: Vectorized loop.
+nfort: vec( 101): utils.f, line 139: Vectorized loop.
+nfort: par(1801): utils.f, line 155: Parallel routine generated.: ADDS2M1$1
+nfort: par(1803): utils.f, line 156: Parallelized by "do".
+nfort: vec( 101): utils.f, line 156: Vectorized loop.
+nfort: par(1801): utils.f, line 174: Parallel routine generated.: ADDS1M1$1
+nfort: par(1803): utils.f, line 175: Parallelized by "do".
+nfort: vec( 101): utils.f, line 175: Vectorized loop.
+nfort: par(1801): utils.f, line 194: Parallel routine generated.: COL2$1
+nfort: par(1803): utils.f, line 195: Parallelized by "do".
+nfort: vec( 101): utils.f, line 195: Vectorized loop.
+nfort: vec( 101): utils.f, line 213: Vectorized loop.
+nfort: par(1801): utils.f, line 230: Parallel routine generated.: ADD2$1
+nfort: par(1803): utils.f, line 231: Parallelized by "do".
+nfort: vec( 101): utils.f, line 231: Vectorized loop.
+nfort: par(1801): utils.f, line 252: Parallel routine generated.: CALC_NORM$1
+nfort: par(1803): utils.f, line 255: Parallelized by "do".
+nfort: vec( 103): utils.f, line 255: Unvectorized loop.
+nfort: vec( 101): utils.f, line 258: Vectorized loop.
+nfort: opt(1418): utils.f, line 259: Constant-length loop is expanded.
+nfort: opt(1418): utils.f, line 260: Constant-length loop is expanded.
+nfort: par(1807): utils.f, line 268: Critical-construct generated.
+nfort: par(1809): utils.f, line 268: Barrier synchronization.
+nfort: vec( 103): utils.f, line 275: Unvectorized loop.
+nfort: vec( 103): utils.f, line 293: Unvectorized loop.
+nfort: par(1801): utils.f, line 295: Parallel routine generated.: PARALLEL_ADD$1
+nfort: par(1803): utils.f, line 296: Parallelized by "do".
+nfort: vec( 101): utils.f, line 298: Vectorized loop.
+nfort: par(1801): utils.f, line 308: Parallel routine generated.: PARALLEL_ADD$2
+nfort: par(1803): utils.f, line 309: Parallelized by "do".
+nfort: vec( 101): utils.f, line 309: Vectorized loop.
+nfort: opt(1589): utils.f, line 362: Outer loop moved inside inner loop(s).: IX
+nfort: vec( 101): utils.f, line 362: Vectorized loop.
+nfort: opt(1592): utils.f, line 364: Outer loop unrolled inside inner loop.: IZ
+nfort -c  -O3 -fopenmp verify.f
+Obsolescent: verify.f, line 1: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort -c  -O3 -fopenmp setup.f
+Obsolescent: setup.f, line 2: Fixed source form
+[NEC Fortran Compiler normal termination, 1 warning]
+nfort: opt(1418): setup.f, line 14: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 19: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 26: Constant-length loop is expanded.
+nfort: vec( 101): setup.f, line 31: Vectorized loop.
+nfort: vec( 101): setup.f, line 76: Vectorized loop.
+nfort: opt(1418): setup.f, line 77: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 78: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 101: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 102: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 106: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 107: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 130: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 131: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 163: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 164: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 169: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 170: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 175: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 176: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 189: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 221: Constant-length loop is expanded.
+nfort: par(1801): setup.f, line 225: Parallel routine generated.: GEOM1$1
+nfort: par(1803): setup.f, line 227: Parallelized by "do".
+nfort: vec( 103): setup.f, line 227: Unvectorized loop.
+nfort: vec( 103): setup.f, line 232: Unvectorized loop.
+nfort: vec( 103): setup.f, line 233: Unvectorized loop.
+nfort: vec( 101): setup.f, line 234: Vectorized loop.
+nfort: par(1801): setup.f, line 249: Parallel routine generated.: GEOM1$2
+nfort: par(1803): setup.f, line 250: Parallelized by "do".
+nfort: vec( 101): setup.f, line 252: Vectorized loop.
+nfort: opt(1418): setup.f, line 253: Constant-length loop is expanded.
+nfort: vec( 101): setup.f, line 281: Vectorized loop.
+nfort: opt(1418): setup.f, line 282: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 283: Constant-length loop is expanded.
+nfort: par(1801): setup.f, line 310: Parallel routine generated.: PREPWORK$1
+nfort: par(1803): setup.f, line 315: Parallelized by "do".
+nfort: vec( 101): setup.f, line 315: Vectorized loop.
+nfort: par(1803): setup.f, line 323: Parallelized by "do".
+nfort: vec( 103): setup.f, line 325: Unvectorized loop.
+nfort: par(1803): setup.f, line 334: Parallelized by "do".
+nfort: vec( 101): setup.f, line 334: Vectorized loop.
+nfort: par(1803): setup.f, line 340: Parallelized by "do".
+nfort: vec( 103): setup.f, line 340: Unvectorized loop.
+nfort: vec( 101): setup.f, line 341: Vectorized loop.
+nfort: opt(1418): setup.f, line 344: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 345: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 351: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 359: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 366: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 371: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 374: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 382: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 386: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 389: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 395: Constant-length loop is expanded.
+nfort: opt(1418): setup.f, line 400: Constant-length loop is expanded.
+nfort -c  -O3 -fopenmp transfer.f
+Warning: transfer.f, line 610: Unused local variable TMP
+Obsolescent: transfer.f, line 2: Fixed source form
+[NEC Fortran Compiler normal termination, 2 warnings]
+nfort: par(1801): transfer.f, line 13: Parallel routine generated.: INIT_LOCKS$1
+nfort: par(1803): transfer.f, line 14: Parallelized by "do".
+nfort: vec( 103): transfer.f, line 14: Unvectorized loop.
+nfort: par(1801): transfer.f, line 39: Parallel routine generated.: TRANSF$1
+nfort: par(1803): transfer.f, line 41: Parallelized by "do".
+nfort: vec( 102): transfer.f, line 78: Partially vectorized loop.
+nfort: vec( 102): transfer.f, line 79: Partially vectorized loop.
+nfort: opt(1418): transfer.f, line 89: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 91: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 113: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 115: Constant-length loop is expanded.
+nfort: vec( 103): transfer.f, line 122: Unvectorized loop.
+nfort: opt(1418): transfer.f, line 132: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 134: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 142: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 144: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 155: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 156: Constant-length loop is expanded.
+nfort: vec( 103): transfer.f, line 168: Unvectorized loop.
+nfort: opt(1418): transfer.f, line 170: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 171: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 180: Constant-length loop is expanded.
+nfort: vec( 103): transfer.f, line 189: Unvectorized loop.
+nfort: opt(1418): transfer.f, line 191: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 192: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 201: Constant-length loop is expanded.
+nfort: vec( 103): transfer.f, line 210: Unvectorized loop.
+nfort: opt(1418): transfer.f, line 212: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 213: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 222: Constant-length loop is expanded.
+nfort: vec( 103): transfer.f, line 231: Unvectorized loop.
+nfort: opt(1418): transfer.f, line 233: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 234: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 242: Constant-length loop is expanded.
+nfort: par(1801): transfer.f, line 277: Parallel routine generated.: TRANSFB$1
+nfort: par(1803): transfer.f, line 282: Parallelized by "do".
+nfort: vec( 101): transfer.f, line 282: Vectorized loop.
+nfort: par(1803): transfer.f, line 288: Parallelized by "do".
+nfort: vec( 102): transfer.f, line 336: Partially vectorized loop.
+nfort: vec( 102): transfer.f, line 338: Partially vectorized loop.
+nfort: opt(1418): transfer.f, line 348: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 357: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 359: Constant-length loop is expanded.
+nfort: vec( 103): transfer.f, line 391: Unvectorized loop.
+nfort: opt(1418): transfer.f, line 393: Constant-length loop is expanded.
+nfort: vec( 103): transfer.f, line 415: Unvectorized loop.
+nfort: opt(1418): transfer.f, line 418: Constant-length loop is expanded.
+nfort: vec( 103): transfer.f, line 435: Unvectorized loop.
+nfort: opt(1418): transfer.f, line 436: Constant-length loop is expanded.
+nfort: vec( 103): transfer.f, line 451: Unvectorized loop.
+nfort: opt(1418): transfer.f, line 453: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 467: Constant-length loop is expanded.
+nfort: vec( 103): transfer.f, line 480: Unvectorized loop.
+nfort: opt(1418): transfer.f, line 482: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 496: Constant-length loop is expanded.
+nfort: vec( 103): transfer.f, line 509: Unvectorized loop.
+nfort: opt(1418): transfer.f, line 511: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 525: Constant-length loop is expanded.
+nfort: vec( 103): transfer.f, line 538: Unvectorized loop.
+nfort: opt(1418): transfer.f, line 540: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 554: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 593: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 598: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 604: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 632: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 634: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 640: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 645: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 652: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 653: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 658: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 665: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 666: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 670: Constant-length loop is expanded.
+nfort: vec( 101): transfer.f, line 696: Vectorized loop.
+nfort: opt(1418): transfer.f, line 699: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 700: Constant-length loop is expanded.
+nfort: vec( 101): transfer.f, line 706: Vectorized loop.
+nfort: opt(1418): transfer.f, line 709: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 710: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 733: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 734: Constant-length loop is expanded.
+nfort: vec( 101): transfer.f, line 764: Vectorized loop.
+nfort: opt(1418): transfer.f, line 768: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 772: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 773: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 784: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 785: Constant-length loop is expanded.
+nfort: vec( 103): transfer.f, line 791: Unvectorized loop.
+nfort: opt(1418): transfer.f, line 793: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 794: Constant-length loop is expanded.
+nfort: vec( 101): transfer.f, line 826: Vectorized loop.
+nfort: opt(1418): transfer.f, line 830: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 834: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 835: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 844: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 845: Constant-length loop is expanded.
+nfort: vec( 103): transfer.f, line 855: Unvectorized loop.
+nfort: opt(1418): transfer.f, line 857: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 858: Constant-length loop is expanded.
+nfort: par(1801): transfer.f, line 883: Parallel routine generated.: TRANSFB_C$1
+nfort: par(1803): transfer.f, line 887: Parallelized by "do".
+nfort: vec( 101): transfer.f, line 887: Vectorized loop.
+nfort: par(1803): transfer.f, line 893: Parallelized by "do".
+nfort: vec( 103): transfer.f, line 921: Unvectorized loop.
+nfort: opt(1418): transfer.f, line 922: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 933: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 944: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 955: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 966: Constant-length loop is expanded.
+nfort: par(1801): transfer.f, line 999: Parallel routine generated.: TRANSFB_C_2$1
+nfort: par(1803): transfer.f, line 1003: Parallelized by "do".
+nfort: vec( 101): transfer.f, line 1003: Vectorized loop.
+nfort: par(1803): transfer.f, line 1008: Parallelized by "do".
+nfort: vec( 101): transfer.f, line 1008: Vectorized loop.
+nfort: par(1803): transfer.f, line 1014: Parallelized by "do".
+nfort: vec( 103): transfer.f, line 1047: Unvectorized loop.
+nfort: opt(1418): transfer.f, line 1048: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 1060: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 1072: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 1084: Constant-length loop is expanded.
+nfort: opt(1418): transfer.f, line 1096: Constant-length loop is expanded.
+make[2]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/UA'
+nfort -O3 -fopenmp -o ../bin/ua.B.x ua.o ua_data.o convect.o diffuse.o adapt.o move.o mason.o precond.o utils.o verify.o setup.o transfer.o ../common/print_results.o ../common/timers.o ../common/wtime.o 
+make[2]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/UA'
+make[1]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/UA'
+rm -f core *~ */core */*~
+rm -f */*.o */*.obj */*.exe */*.mod */npbparams.h */blk_par.h
+rm -f sys/setparams sys/makesuite sys/setparams.h
+rm -rf */rii_files
+   ============================================
+   =      NAS PARALLEL BENCHMARKS 3.4         =
+   =      OpenMP Versions                     =
+   =      Fortran/C                           =
+   ============================================
+
+cd BT; make CLASS=B VERSION=
+make[1]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/BT'
+make[2]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+gcc  -o setparams setparams.c
+make[2]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+../sys/setparams bt B
+make[2]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/BT'
+ifort -c  -O3 -qopenmp bt_data.f
+sed -e 's/= 0/= 0/' blk_par0.h > blk_par.h_wk
+ifort -c  -O3 -qopenmp bt.f
+ifort -c  -O3 -qopenmp initialize.f
+ifort -c  -O3 -qopenmp exact_solution.f
+ifort -c  -O3 -qopenmp exact_rhs.f
+ifort -c  -O3 -qopenmp set_constants.f
+ifort -c  -O3 -qopenmp adi.f
+ifort -c  -O3 -qopenmp rhs.f
+ifort -c  -O3 -qopenmp work_lhs.f
+ifort -c  -O3 -qopenmp x_solve.f
+ifort -c  -O3 -qopenmp y_solve.f
+ifort -c  -O3 -qopenmp solve_subs.f
+ifort -c  -O3 -qopenmp z_solve.f
+ifort -c  -O3 -qopenmp add.f
+ifort -c  -O3 -qopenmp error.f
+ifort -c  -O3 -qopenmp verify.f
+cd ../common; ifort -c  -O3 -qopenmp print_results.f
+cd ../common; ifort -c  -O3 -qopenmp timers.f
+cd ../common; icc -c  -O3 -qopenmp  -o wtime.o ../common/wtime.c
+ifort -O3 -qopenmp -o ../bin/bt.B.x bt.o bt_data.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o  rhs.o x_solve.o y_solve.o solve_subs.o z_solve.o add.o error.o verify.o work_lhs.o ../common/print_results.o ../common/timers.o ../common/wtime.o 
+make[2]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/BT'
+make[1]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/BT'
+   ============================================
+   =      NAS PARALLEL BENCHMARKS 3.4         =
+   =      OpenMP Versions                     =
+   =      Fortran/C                           =
+   ============================================
+
+cd CG; make CLASS=B
+make[1]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/CG'
+make[2]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+../sys/setparams cg B
+ifort -c  -O3 -qopenmp cg_data.f
+ifort -c  -O3 -qopenmp cg.f
+cd ../common; ifort -c  -O3 -qopenmp randi8.f
+ifort -O3 -qopenmp -o ../bin/cg.B.x cg.o cg_data.o ../common/print_results.o ../common/randi8.o ../common/timers.o ../common/wtime.o 
+make[1]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/CG'
+   ============================================
+   =      NAS PARALLEL BENCHMARKS 3.4         =
+   =      OpenMP Versions                     =
+   =      Fortran/C                           =
+   ============================================
+
+cd EP; make CLASS=B
+make[1]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/EP'
+make[2]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+../sys/setparams ep B
+ifort -c  -O3 -qopenmp ep_data.f
+ifort -c  -O3 -qopenmp ep.f
+ifort -O3 -qopenmp -o ../bin/ep.B.x ep.o ep_data.o ../common/print_results.o ../common/randi8.o ../common/timers.o ../common/wtime.o 
+make[1]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/EP'
+   ============================================
+   =      NAS PARALLEL BENCHMARKS 3.4         =
+   =      OpenMP Versions                     =
+   =      Fortran/C                           =
+   ============================================
+
+cd FT; make CLASS=B
+make[1]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/FT'
+make[2]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+../sys/setparams ft B
+ifort -c  -O3 -qopenmp ft_data.f
+ifort -c  -O3 -qopenmp ft.f
+ifort -O3 -qopenmp -o ../bin/ft.B.x ft.o ft_data.o ../common/randi8.o ../common/print_results.o ../common/timers.o ../common/wtime.o 
+make[1]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/FT'
+   ============================================
+   =      NAS PARALLEL BENCHMARKS 3.4         =
+   =      OpenMP Versions                     =
+   =      Fortran/C                           =
+   ============================================
+
+cd MG; make CLASS=B
+make[1]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/MG'
+make[2]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+../sys/setparams mg B
+ifort -c  -O3 -qopenmp mg_data.f
+ifort -c  -O3 -qopenmp mg.f
+ifort -O3 -qopenmp -o ../bin/mg.B.x mg.o mg_data.o ../common/print_results.o ../common/randi8.o ../common/timers.o ../common/wtime.o 
+make[1]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/MG'
+   ============================================
+   =      NAS PARALLEL BENCHMARKS 3.4         =
+   =      OpenMP Versions                     =
+   =      Fortran/C                           =
+   ============================================
+
+cd SP; make CLASS=B
+make[1]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/SP'
+make[2]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+../sys/setparams sp B
+make[2]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/SP'
+ifort -c  -O3 -qopenmp sp_data.f
+sed -e 's/= 0/= 0/' blk_par0.h > blk_par.h_wk
+ifort -c  -O3 -qopenmp sp.f
+ifort -c  -O3 -qopenmp initialize.f
+ifort -c  -O3 -qopenmp exact_solution.f
+ifort -c  -O3 -qopenmp exact_rhs.f
+ifort -c  -O3 -qopenmp set_constants.f
+ifort -c  -O3 -qopenmp adi.f
+ifort -c  -O3 -qopenmp rhs.f
+ifort -c  -O3 -qopenmp work_lhs.f
+ifort -c  -O3 -qopenmp x_solve.f
+ifort -c  -O3 -qopenmp ninvr.f
+ifort -c  -O3 -qopenmp y_solve.f
+ifort -c  -O3 -qopenmp pinvr.f
+ifort -c  -O3 -qopenmp z_solve.f
+ifort -c  -O3 -qopenmp tzetar.f
+ifort -c  -O3 -qopenmp add.f
+ifort -c  -O3 -qopenmp txinvr.f
+ifort -c  -O3 -qopenmp error.f
+ifort -c  -O3 -qopenmp verify.f
+ifort -O3 -qopenmp -o ../bin/sp.B.x sp.o sp_data.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o rhs.o work_lhs.o x_solve.o ninvr.o y_solve.o pinvr.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o ../common/print_results.o ../common/timers.o ../common/wtime.o 
+make[2]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/SP'
+make[1]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/SP'
+   ============================================
+   =      NAS PARALLEL BENCHMARKS 3.4         =
+   =      OpenMP Versions                     =
+   =      Fortran/C                           =
+   ============================================
+
+cd UA; make CLASS=B
+make[1]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/UA'
+make[2]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/sys'
+../sys/setparams ua B
+ifort -c  -O3 -qopenmp ua_data.f
+ifort -c  -O3 -qopenmp ua.f
+ifort -c  -O3 -qopenmp convect.f
+ifort -c  -O3 -qopenmp diffuse.f
+ifort -c  -O3 -qopenmp adapt.f
+ifort -c  -O3 -qopenmp move.f
+ifort -c  -O3 -qopenmp mason.f
+ifort -c  -O3 -qopenmp precond.f
+ifort -c  -O3 -qopenmp utils.f
+ifort -c  -O3 -qopenmp verify.f
+ifort -c  -O3 -qopenmp setup.f
+ifort -c  -O3 -qopenmp transfer.f
+make[2]: Entering directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/UA'
+ifort -O3 -qopenmp -o ../bin/ua.B.x ua.o ua_data.o convect.o diffuse.o adapt.o move.o mason.o precond.o utils.o verify.o setup.o transfer.o ../common/print_results.o ../common/timers.o ../common/wtime.o 
+make[2]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/UA'
+make[1]: Leaving directory `/home/users/fpmjunior/NPB/NPB3.4-OMP/UA'

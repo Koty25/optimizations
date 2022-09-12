@@ -1,0 +1,341 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: UA
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at ua.f(67,10)
+   remark #15389: vectorization support: reference t_names(Impl_lp+1,1) has unaligned access
+   remark #15389: vectorization support: reference a0(Impl_lp+1) has unaligned access   [ ua.f(67,29) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.375
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.720 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at ua.f(69,10)
+   remark #15389: vectorization support: reference t_names(Impl_lp+1,3) has unaligned access
+   remark #15389: vectorization support: reference at (69:31) has unaligned access   [ ua.f(69,31) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 3
+   remark #15309: vectorization support: normalized vectorization overhead 0.250
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.800 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at ua.f(70,10)
+   remark #15389: vectorization support: reference t_names(Impl_lp+1,4) has unaligned access
+   remark #15389: vectorization support: reference at (70:33) has unaligned access   [ ua.f(70,33) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.750
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.000 
+   remark #15478: estimated potential speedup: 2.280 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at ua.f(71,10)
+   remark #15389: vectorization support: reference t_names(Impl_lp+1,5) has unaligned access
+   remark #15389: vectorization support: reference at (71:33) has unaligned access   [ ua.f(71,33) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.750
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.000 
+   remark #15478: estimated potential speedup: 2.280 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at ua.f(72,10)
+   remark #15389: vectorization support: reference t_names(Impl_lp+1,6) has unaligned access
+   remark #15389: vectorization support: reference at (72:30) has unaligned access   [ ua.f(72,30) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.375
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.760 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at ua.f(73,10)
+   remark #15389: vectorization support: reference t_names(Impl_lp+1,7) has unaligned access
+   remark #15389: vectorization support: reference at (73:31) has unaligned access   [ ua.f(73,31) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 3
+   remark #15309: vectorization support: normalized vectorization overhead 0.250
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.800 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at ua.f(75,10)
+   remark #15389: vectorization support: reference t_names(Impl_lp+1,9) has unaligned access
+   remark #15389: vectorization support: reference at (75:31) has unaligned access   [ ua.f(75,31) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 3
+   remark #15309: vectorization support: normalized vectorization overhead 0.250
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.820 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at ua.f(122,7)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at ua.f(159,18)
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+   LOOP BEGIN at ua.f(166,11)
+      remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+   LOOP END
+LOOP END
+
+LOOP BEGIN at ua.f(260,7)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at ua.f(270,13)
+   remark #15382: vectorization support: call to function for_write_seq_fmt cannot be vectorized   [ ua.f(268,10) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ ua.f(268,10) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ ua.f(268,10) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt cannot be vectorized   [ ua.f(274,13) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ ua.f(274,13) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ ua.f(274,13) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (268:10) and at (274:13)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (274:13) and at (268:10)
+LOOP END
+
+LOOP BEGIN at ua.f(270,13)
+   remark #15382: vectorization support: call to function for_write_seq_fmt cannot be vectorized   [ ua.f(268,10) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ ua.f(268,10) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ ua.f(268,10) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt cannot be vectorized   [ ua.f(274,13) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ ua.f(274,13) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ ua.f(274,13) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (268:10) and at (274:13)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (274:13) and at (268:10)
+LOOP END
+
+LOOP BEGIN at ua.f(183,7)
+   remark #15382: vectorization support: call to function laplacian_ cannot be vectorized   [ ua.f(185,16) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+LOOP END
+
+LOOP BEGIN at ua.f(190,9)
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <trhs_(i,j,k,ie)>, stride is unknown to compiler   [ ua.f(194,17) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <trhs_(i,j,k,ie)>, stride is unknown to compiler   [ ua.f(194,34) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <ta2_(i,j,k,ie)>, stride is unknown to compiler   [ ua.f(194,51) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.267
+   remark #15452: unmasked strided loads: 2 
+   remark #15453: unmasked strided stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 7.500 
+   remark #15478: estimated potential speedup: 0.790 
+   remark #15488: --- end vector cost summary ---
+
+   LOOP BEGIN at ua.f(191,11)
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <trhs_(i,j,k,ie)>, stride is unknown to compiler   [ ua.f(194,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <trhs_(i,j,k,ie)>, stride is unknown to compiler   [ ua.f(194,34) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ta2_(i,j,k,ie)>, stride is unknown to compiler   [ ua.f(194,51) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.286
+      remark #15452: unmasked strided loads: 2 
+      remark #15453: unmasked strided stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 6 
+      remark #15477: vector cost: 7.000 
+      remark #15478: estimated potential speedup: 0.780 
+      remark #15488: --- end vector cost summary ---
+
+      LOOP BEGIN at ua.f(192,13)
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15329: vectorization support: non-unit strided store was emulated for the variable <trhs_(i,j,k,ie)>, stride is unknown to compiler   [ ua.f(194,17) ]
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <trhs_(i,j,k,ie)>, stride is unknown to compiler   [ ua.f(194,34) ]
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <ta2_(i,j,k,ie)>, stride is unknown to compiler   [ ua.f(194,51) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.308
+         remark #15452: unmasked strided loads: 2 
+         remark #15453: unmasked strided stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 6 
+         remark #15477: vector cost: 6.500 
+         remark #15478: estimated potential speedup: 0.830 
+         remark #15488: --- end vector cost summary ---
+
+         LOOP BEGIN at ua.f(193,15)
+            remark #15389: vectorization support: reference trhs_(i,j,k,ie) has unaligned access   [ ua.f(194,17) ]
+            remark #15389: vectorization support: reference trhs_(i,j,k,ie) has unaligned access   [ ua.f(194,34) ]
+            remark #15389: vectorization support: reference ta2_(i,j,k,ie) has unaligned access   [ ua.f(194,51) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15305: vectorization support: vector length 2
+            remark #15399: vectorization support: unroll factor set to 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.500
+            remark #15450: unmasked unaligned unit stride loads: 2 
+            remark #15451: unmasked unaligned unit stride stores: 1 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 6 
+            remark #15477: vector cost: 4.500 
+            remark #15478: estimated potential speedup: 0.900 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at ua.f(193,15)
+         LOOP END
+
+         LOOP BEGIN at ua.f(193,15)
+         LOOP END
+
+         LOOP BEGIN at ua.f(193,15)
+         LOOP END
+
+         LOOP BEGIN at ua.f(193,15)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at ua.f(192,13)
+
+         LOOP BEGIN at ua.f(193,15)
+         LOOP END
+
+         LOOP BEGIN at ua.f(193,15)
+         LOOP END
+
+         LOOP BEGIN at ua.f(193,15)
+         LOOP END
+
+         LOOP BEGIN at ua.f(193,15)
+         LOOP END
+
+         LOOP BEGIN at ua.f(193,15)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at ua.f(192,13)
+
+         LOOP BEGIN at ua.f(193,15)
+         LOOP END
+
+         LOOP BEGIN at ua.f(193,15)
+         LOOP END
+
+         LOOP BEGIN at ua.f(193,15)
+         LOOP END
+
+         LOOP BEGIN at ua.f(193,15)
+         LOOP END
+
+         LOOP BEGIN at ua.f(193,15)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at ua.f(192,13)
+
+         LOOP BEGIN at ua.f(193,15)
+         LOOP END
+
+         LOOP BEGIN at ua.f(193,15)
+         LOOP END
+
+         LOOP BEGIN at ua.f(193,15)
+         LOOP END
+
+         LOOP BEGIN at ua.f(193,15)
+         LOOP END
+
+         LOOP BEGIN at ua.f(193,15)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at ua.f(192,13)
+
+         LOOP BEGIN at ua.f(193,15)
+         LOOP END
+
+         LOOP BEGIN at ua.f(193,15)
+         LOOP END
+
+         LOOP BEGIN at ua.f(193,15)
+         LOOP END
+
+         LOOP BEGIN at ua.f(193,15)
+         LOOP END
+
+         LOOP BEGIN at ua.f(193,15)
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at ua.f(209,9)
+   remark #15382: vectorization support: call to function facev_ cannot be vectorized   [ ua.f(212,20) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between iside (210:11) and iside (212:20)
+   remark #15346: vector dependence: assumed OUTPUT dependence between iside (212:20) and iside (210:11)
+
+   LOOP BEGIN at ua.f(210,11)
+      remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+   LOOP END
+LOOP END
+===========================================================================

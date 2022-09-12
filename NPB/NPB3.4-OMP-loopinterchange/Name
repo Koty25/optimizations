@@ -1,0 +1,8 @@
+#!/bin/bash
+cd bin/
+
+for app in *.x; do
+	 mv $app ${app:0:4}.`hostname`.x;
+done
+
+cd ..

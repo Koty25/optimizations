@@ -1,0 +1,415 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: CONVECT
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at convect.f(33,7)
+   remark #15388: vectorization support: reference xx0(substep) has aligned access   [ convect.f(34,9) ]
+   remark #15388: vectorization support: reference subtime(substep) has aligned access   [ convect.f(34,9) ]
+   remark #15388: vectorization support: reference yy0(substep) has aligned access   [ convect.f(35,9) ]
+   remark #15388: vectorization support: reference subtime(substep) has aligned access   [ convect.f(35,9) ]
+   remark #15388: vectorization support: reference zz0(substep) has aligned access   [ convect.f(36,9) ]
+   remark #15388: vectorization support: reference subtime(substep) has aligned access   [ convect.f(36,9) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 3 
+   remark #15449: unmasked aligned unit stride stores: 3 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 26 
+   remark #15477: vector cost: 12.000 
+   remark #15478: estimated potential speedup: 1.560 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at convect.f(33,7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at convect.f(43,7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at convect.f(49,31)
+      remark #15388: vectorization support: reference xloc(i) has aligned access   [ convect.f(49,11) ]
+      remark #15389: vectorization support: reference xfrac(i) has unaligned access   [ convect.f(49,11) ]
+      remark #15388: vectorization support: reference yloc(j) has aligned access   [ convect.f(52,11) ]
+      remark #15389: vectorization support: reference xfrac(j) has unaligned access   [ convect.f(52,11) ]
+      remark #15388: vectorization support: reference zloc(k) has aligned access   [ convect.f(55,11) ]
+      remark #15389: vectorization support: reference xfrac(k) has unaligned access   [ convect.f(55,11) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.300
+      remark #15301: FUSED LOOP WAS VECTORIZED
+      remark #15449: unmasked aligned unit stride stores: 3 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 34 
+      remark #15477: vector cost: 12.500 
+      remark #15478: estimated potential speedup: 1.710 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at convect.f(52,31)
+   LOOP END
+
+   LOOP BEGIN at convect.f(55,31)
+   LOOP END
+
+   LOOP BEGIN at convect.f(61,39)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at convect.f(59,11)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at convect.f(60,13)
+            remark #15388: vectorization support: reference xloc(i) has aligned access   [ convect.f(61,15) ]
+            remark #15389: vectorization support: reference dxm1(i,ip) has unaligned access   [ convect.f(70,17) ]
+            remark #15389: vectorization support: reference ta1_(i,ip,k,iel) has unaligned access   [ convect.f(75,42) ]
+            remark #15389: vectorization support: reference ta1_(i,j,ip,iel) has unaligned access   [ convect.f(80,42) ]
+            remark #15389: vectorization support: reference xrm1_s(i,j,k,isize) has unaligned access   [ convect.f(72,27) ]
+            remark #15389: vectorization support: reference xrm1_s(i,j,k,isize) has unaligned access   [ convect.f(77,25) ]
+            remark #15389: vectorization support: reference rk1(i,j,k) has unaligned access   [ convect.f(84,15) ]
+            remark #15389: vectorization support: reference xrm1_s(i,j,k,isize) has unaligned access   [ convect.f(82,25) ]
+            remark #15389: vectorization support: reference temp(i,j,k) has unaligned access   [ convect.f(85,15) ]
+            remark #15389: vectorization support: reference ta1_(i,j,k,iel) has unaligned access   [ convect.f(85,27) ]
+            remark #15389: vectorization support: reference rk1(i,j,k) has unaligned access   [ convect.f(85,27) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15305: vectorization support: vector length 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.282
+            remark #15301: OUTER LOOP WAS VECTORIZED
+            remark #15448: unmasked aligned unit stride loads: 1 
+            remark #15450: unmasked unaligned unit stride loads: 8 
+            remark #15451: unmasked unaligned unit stride stores: 2 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 238 
+            remark #15477: vector cost: 131.000 
+            remark #15478: estimated potential speedup: 1.420 
+            remark #15482: vectorized math library calls: 1 
+            remark #15488: --- end vector cost summary ---
+
+            LOOP BEGIN at convect.f(69,15)
+               remark #15389: vectorization support: reference ta1_(ip,j,k,iel) has unaligned access   [ convect.f(70,42) ]
+               remark #15381: vectorization support: unaligned access used inside loop body
+               remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <dxm1(i,ip)>, stride is 5   [ convect.f(70,17) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <dxm1(j,ip)>, stride is 5   [ convect.f(75,17) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <ta1_(i,ip,k,iel)>, stride is unknown to compiler   [ convect.f(75,42) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <dxm1(k,ip)>, stride is 5   [ convect.f(80,17) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <ta1_(i,j,ip,iel)>, stride is unknown to compiler   [ convect.f(80,42) ]
+               remark #15305: vectorization support: vector length 2
+               remark #15399: vectorization support: unroll factor set to 2
+               remark #15309: vectorization support: normalized vectorization overhead 0.857
+               remark #15355: vectorization support: sum is double type reduction   [ convect.f(70,17) ]
+               remark #15355: vectorization support: sum is double type reduction   [ convect.f(75,17) ]
+               remark #15355: vectorization support: sum is double type reduction   [ convect.f(80,17) ]
+               remark #15450: unmasked unaligned unit stride loads: 1 
+               remark #15452: unmasked strided loads: 5 
+               remark #15475: --- begin vector cost summary ---
+               remark #15476: scalar cost: 25 
+               remark #15477: vector cost: 17.500 
+               remark #15478: estimated potential speedup: 0.800 
+               remark #15488: --- end vector cost summary ---
+            LOOP END
+
+            LOOP BEGIN at convect.f(74,15)
+            LOOP END
+
+            LOOP BEGIN at convect.f(79,15)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at convect.f(60,13)
+         <Remainder loop for vectorization>
+
+            LOOP BEGIN at convect.f(69,15)
+            LOOP END
+         LOOP END
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at convect.f(94,40)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at convect.f(92,11)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at convect.f(93,13)
+            remark #15388: vectorization support: reference xloc(i) has aligned access   [ convect.f(94,15) ]
+            remark #15389: vectorization support: reference dxm1(i,ip) has unaligned access   [ convect.f(103,17) ]
+            remark #15389: vectorization support: reference temp(i,ip,k) has unaligned access   [ convect.f(108,17) ]
+            remark #15389: vectorization support: reference temp(i,j,ip) has unaligned access   [ convect.f(113,17) ]
+            remark #15389: vectorization support: reference xrm1_s(i,j,k,isize) has unaligned access   [ convect.f(105,26) ]
+            remark #15389: vectorization support: reference xrm1_s(i,j,k,isize) has unaligned access   [ convect.f(110,26) ]
+            remark #15389: vectorization support: reference rk2(i,j,k) has unaligned access   [ convect.f(117,15) ]
+            remark #15389: vectorization support: reference xrm1_s(i,j,k,isize) has unaligned access   [ convect.f(115,26) ]
+            remark #15389: vectorization support: reference tempa(i,j,k) has unaligned access   [ convect.f(118,15) ]
+            remark #15389: vectorization support: reference ta1_(i,j,k,iel) has unaligned access   [ convect.f(118,28) ]
+            remark #15389: vectorization support: reference rk2(i,j,k) has unaligned access   [ convect.f(118,28) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15305: vectorization support: vector length 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.282
+            remark #15301: OUTER LOOP WAS VECTORIZED
+            remark #15448: unmasked aligned unit stride loads: 1 
+            remark #15450: unmasked unaligned unit stride loads: 8 
+            remark #15451: unmasked unaligned unit stride stores: 2 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 238 
+            remark #15477: vector cost: 131.000 
+            remark #15478: estimated potential speedup: 1.420 
+            remark #15482: vectorized math library calls: 1 
+            remark #15488: --- end vector cost summary ---
+
+            LOOP BEGIN at convect.f(102,15)
+               remark #15389: vectorization support: reference temp(ip,j,k) has unaligned access   [ convect.f(103,17) ]
+               remark #15381: vectorization support: unaligned access used inside loop body
+               remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <dxm1(i,ip)>, stride is 5   [ convect.f(103,17) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <dxm1(j,ip)>, stride is 5   [ convect.f(108,17) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <temp(i,ip,k)>, stride is 5   [ convect.f(108,17) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <dxm1(k,ip)>, stride is 5   [ convect.f(113,17) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <temp(i,j,ip)>, stride is 25   [ convect.f(113,17) ]
+               remark #15305: vectorization support: vector length 2
+               remark #15399: vectorization support: unroll factor set to 2
+               remark #15309: vectorization support: normalized vectorization overhead 0.857
+               remark #15355: vectorization support: sum is double type reduction   [ convect.f(103,17) ]
+               remark #15355: vectorization support: sum is double type reduction   [ convect.f(108,17) ]
+               remark #15355: vectorization support: sum is double type reduction   [ convect.f(113,17) ]
+               remark #15450: unmasked unaligned unit stride loads: 1 
+               remark #15452: unmasked strided loads: 5 
+               remark #15475: --- begin vector cost summary ---
+               remark #15476: scalar cost: 25 
+               remark #15477: vector cost: 17.500 
+               remark #15478: estimated potential speedup: 0.800 
+               remark #15488: --- end vector cost summary ---
+            LOOP END
+
+            LOOP BEGIN at convect.f(107,15)
+            LOOP END
+
+            LOOP BEGIN at convect.f(112,15)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at convect.f(93,13)
+         <Remainder loop for vectorization>
+
+            LOOP BEGIN at convect.f(102,15)
+            LOOP END
+         LOOP END
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at convect.f(123,9)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at convect.f(124,11)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at convect.f(125,13)
+            remark #15388: vectorization support: reference xloc(i) has aligned access   [ convect.f(126,15) ]
+            remark #15389: vectorization support: reference dxm1(i,ip) has unaligned access   [ convect.f(135,17) ]
+            remark #15389: vectorization support: reference tempa(i,ip,k) has unaligned access   [ convect.f(140,17) ]
+            remark #15389: vectorization support: reference tempa(i,j,ip) has unaligned access   [ convect.f(145,17) ]
+            remark #15389: vectorization support: reference xrm1_s(i,j,k,isize) has unaligned access   [ convect.f(137,26) ]
+            remark #15389: vectorization support: reference xrm1_s(i,j,k,isize) has unaligned access   [ convect.f(142,26) ]
+            remark #15389: vectorization support: reference rk3(i,j,k) has unaligned access   [ convect.f(149,15) ]
+            remark #15389: vectorization support: reference xrm1_s(i,j,k,isize) has unaligned access   [ convect.f(147,26) ]
+            remark #15389: vectorization support: reference temp(i,j,k) has unaligned access   [ convect.f(150,15) ]
+            remark #15389: vectorization support: reference ta1_(i,j,k,iel) has unaligned access   [ convect.f(150,27) ]
+            remark #15389: vectorization support: reference rk3(i,j,k) has unaligned access   [ convect.f(150,27) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15305: vectorization support: vector length 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.282
+            remark #15301: OUTER LOOP WAS VECTORIZED
+            remark #15448: unmasked aligned unit stride loads: 1 
+            remark #15450: unmasked unaligned unit stride loads: 8 
+            remark #15451: unmasked unaligned unit stride stores: 2 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 238 
+            remark #15477: vector cost: 131.000 
+            remark #15478: estimated potential speedup: 1.420 
+            remark #15482: vectorized math library calls: 1 
+            remark #15488: --- end vector cost summary ---
+
+            LOOP BEGIN at convect.f(134,15)
+               remark #15389: vectorization support: reference tempa(ip,j,k) has unaligned access   [ convect.f(135,17) ]
+               remark #15381: vectorization support: unaligned access used inside loop body
+               remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <dxm1(i,ip)>, stride is 5   [ convect.f(135,17) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <dxm1(j,ip)>, stride is 5   [ convect.f(140,17) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <tempa(i,ip,k)>, stride is 5   [ convect.f(140,17) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <dxm1(k,ip)>, stride is 5   [ convect.f(145,17) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <tempa(i,j,ip)>, stride is 25   [ convect.f(145,17) ]
+               remark #15305: vectorization support: vector length 2
+               remark #15399: vectorization support: unroll factor set to 2
+               remark #15309: vectorization support: normalized vectorization overhead 0.857
+               remark #15355: vectorization support: sum is double type reduction   [ convect.f(135,17) ]
+               remark #15355: vectorization support: sum is double type reduction   [ convect.f(140,17) ]
+               remark #15355: vectorization support: sum is double type reduction   [ convect.f(145,17) ]
+               remark #15450: unmasked unaligned unit stride loads: 1 
+               remark #15452: unmasked strided loads: 5 
+               remark #15475: --- begin vector cost summary ---
+               remark #15476: scalar cost: 25 
+               remark #15477: vector cost: 17.500 
+               remark #15478: estimated potential speedup: 0.800 
+               remark #15488: --- end vector cost summary ---
+            LOOP END
+
+            LOOP BEGIN at convect.f(139,15)
+            LOOP END
+
+            LOOP BEGIN at convect.f(144,15)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at convect.f(125,13)
+         <Remainder loop for vectorization>
+
+            LOOP BEGIN at convect.f(134,15)
+            LOOP END
+         LOOP END
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at convect.f(158,40)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at convect.f(156,11)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at convect.f(157,13)
+            remark #15388: vectorization support: reference xloc(i) has aligned access   [ convect.f(158,15) ]
+            remark #15389: vectorization support: reference dxm1(i,ip) has unaligned access   [ convect.f(167,17) ]
+            remark #15389: vectorization support: reference temp(i,ip,k) has unaligned access   [ convect.f(172,17) ]
+            remark #15389: vectorization support: reference temp(i,j,ip) has unaligned access   [ convect.f(177,17) ]
+            remark #15389: vectorization support: reference xrm1_s(i,j,k,isize) has unaligned access   [ convect.f(169,26) ]
+            remark #15389: vectorization support: reference xrm1_s(i,j,k,isize) has unaligned access   [ convect.f(174,26) ]
+            remark #15389: vectorization support: reference rk4(i,j,k) has unaligned access   [ convect.f(181,15) ]
+            remark #15389: vectorization support: reference xrm1_s(i,j,k,isize) has unaligned access   [ convect.f(179,26) ]
+            remark #15389: vectorization support: reference tempa(i,j,k) has unaligned access   [ convect.f(182,15) ]
+            remark #15389: vectorization support: reference rk1(i,j,k) has unaligned access   [ convect.f(182,15) ]
+            remark #15389: vectorization support: reference rk2(i,j,k) has unaligned access   [ convect.f(182,15) ]
+            remark #15389: vectorization support: reference rk3(i,j,k) has unaligned access   [ convect.f(182,45) ]
+            remark #15389: vectorization support: reference rk4(i,j,k) has unaligned access   [ convect.f(183,36) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15305: vectorization support: vector length 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.285
+            remark #15301: OUTER LOOP WAS VECTORIZED
+            remark #15448: unmasked aligned unit stride loads: 1 
+            remark #15450: unmasked unaligned unit stride loads: 10 
+            remark #15451: unmasked unaligned unit stride stores: 2 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 248 
+            remark #15477: vector cost: 137.000 
+            remark #15478: estimated potential speedup: 1.410 
+            remark #15482: vectorized math library calls: 1 
+            remark #15488: --- end vector cost summary ---
+
+            LOOP BEGIN at convect.f(166,15)
+               remark #15389: vectorization support: reference temp(ip,j,k) has unaligned access   [ convect.f(167,17) ]
+               remark #15381: vectorization support: unaligned access used inside loop body
+               remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <dxm1(i,ip)>, stride is 5   [ convect.f(167,17) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <dxm1(j,ip)>, stride is 5   [ convect.f(172,17) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <temp(i,ip,k)>, stride is 5   [ convect.f(172,17) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <dxm1(k,ip)>, stride is 5   [ convect.f(177,17) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <temp(i,j,ip)>, stride is 25   [ convect.f(177,17) ]
+               remark #15305: vectorization support: vector length 2
+               remark #15399: vectorization support: unroll factor set to 2
+               remark #15309: vectorization support: normalized vectorization overhead 0.857
+               remark #15355: vectorization support: sum is double type reduction   [ convect.f(167,17) ]
+               remark #15355: vectorization support: sum is double type reduction   [ convect.f(172,17) ]
+               remark #15355: vectorization support: sum is double type reduction   [ convect.f(68,15) ]
+               remark #15450: unmasked unaligned unit stride loads: 1 
+               remark #15452: unmasked strided loads: 5 
+               remark #15475: --- begin vector cost summary ---
+               remark #15476: scalar cost: 25 
+               remark #15477: vector cost: 17.500 
+               remark #15478: estimated potential speedup: 0.800 
+               remark #15488: --- end vector cost summary ---
+            LOOP END
+
+            LOOP BEGIN at convect.f(171,15)
+            LOOP END
+
+            LOOP BEGIN at convect.f(176,15)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at convect.f(157,13)
+         <Remainder loop for vectorization>
+
+            LOOP BEGIN at convect.f(166,15)
+            LOOP END
+         LOOP END
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at convect.f(189,9)
+      remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+   LOOP END
+
+   LOOP BEGIN at convect.f(198,15)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at convect.f(196,11)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at convect.f(197,13)
+         <Peeled loop for vectorization>
+         LOOP END
+
+         LOOP BEGIN at convect.f(197,13)
+            remark #15389: vectorization support: reference trhs_(i,j,k,iel) has unaligned access   [ convect.f(198,15) ]
+            remark #15389: vectorization support: reference bm1_s(i,j,k,isize) has unaligned access   [ convect.f(198,15) ]
+            remark #15388: vectorization support: reference ta1_(i,j,k,iel) has aligned access   [ convect.f(198,51) ]
+            remark #15389: vectorization support: reference tempa(i,j,k) has unaligned access   [ convect.f(198,65) ]
+            remark #15388: vectorization support: reference ta1_(i,j,k,iel) has aligned access   [ convect.f(200,15) ]
+            remark #15388: vectorization support: reference ta1_(i,j,k,iel) has aligned access   [ convect.f(200,30) ]
+            remark #15389: vectorization support: reference tempa(i,j,k) has unaligned access   [ convect.f(200,30) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15305: vectorization support: vector length 2
+            remark #15399: vectorization support: unroll factor set to 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.455
+            remark #15300: LOOP WAS VECTORIZED
+            remark #15442: entire loop may be executed in remainder
+            remark #15448: unmasked aligned unit stride loads: 1 
+            remark #15449: unmasked aligned unit stride stores: 1 
+            remark #15450: unmasked unaligned unit stride loads: 2 
+            remark #15451: unmasked unaligned unit stride stores: 1 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 20 
+            remark #15477: vector cost: 11.000 
+            remark #15478: estimated potential speedup: 1.130 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at convect.f(197,13)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at convect.f(49,31)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at convect.f(218,7)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between tmort_(i) (220:8) and tmort_(i) (220:8)
+   remark #15346: vector dependence: assumed ANTI dependence between tmort_(i) (220:8) and tmort_(i) (220:8)
+LOOP END
+
+LOOP BEGIN at convect.f(218,7)
+<Remainder>
+LOOP END
+===========================================================================

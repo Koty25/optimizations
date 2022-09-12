@@ -1,0 +1,23 @@
+# started on Fri May 21 02:27:10 2021
+
+
+ Performance counter stats for 'bin/bin_intel/ua.C.x !':
+
+ 1,842,894,275,021      L1-dcache-loads                                               (36.36%)
+    56,264,240,122      L1-dcache-load-misses     #    3.05% of all L1-dcache hits    (36.36%)
+     1,358,930,992      L1-icache-load-misses                                         (36.36%)
+     6,231,798,841      LLC-loads                                                     (36.36%)
+     5,407,688,319      LLC-load-misses           #   86.78% of all LL-cache hits     (36.36%)
+                 0      fp_arith_inst_retired.scalar_single #      6.4 GFLOPs                   (36.36%)
+   383,761,414,608      fp_arith_inst_retired.scalar_double                                     (36.36%)
+   175,215,943,555      fp_arith_inst_retired.128b_packed_double                                     (36.36%)
+           524,753      fp_arith_inst_retired.128b_packed_single                                     (36.36%)
+                 0      fp_arith_inst_retired.256b_packed_double                                     (36.36%)
+                 0      fp_arith_inst_retired.256b_packed_single                                     (36.36%)
+
+     114.674470315 seconds time elapsed
+
+     913.615195000 seconds user
+       2.846960000 seconds sys
+
+

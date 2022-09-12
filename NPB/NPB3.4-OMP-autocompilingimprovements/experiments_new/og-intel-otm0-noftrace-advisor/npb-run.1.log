@@ -1,0 +1,17 @@
+Date: Thu May 20 22:38:00 -03 2021
+Host: tsubasa
+
+>>> run intel/bt.C.x nt=8 - successful
+>>> run intel/cg.C.x nt=8 - successful
+>>> run intel/ep.C.x nt=8 - successful
+>>> run intel/ft.C.x nt=8 - successful
+>>> run intel/is.C.x nt=8 - successful
+>>> run intel/mg.C.x nt=8 - successful
+>>> run intel/sp.C.x nt=8 - successful
+>>> run intel/ua.C.x nt=8 - successful
+
+Date: Thu May 20 23:20:06 -03 2021
+Total number of cases: 8
+Total number of FAILED cases: 0
+Total number of not present cases: 0
+

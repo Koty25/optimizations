@@ -1,0 +1,116 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: VERIFY
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at verify.f(41,12)
+   remark #15388: vectorization support: reference xcr(m) has aligned access
+   remark #15388: vectorization support: reference xcr(m) has aligned access
+   remark #15388: vectorization support: reference xcrref(m) has aligned access   [ verify.f(49,12) ]
+   remark #15388: vectorization support: reference xceref(m) has aligned access   [ verify.f(50,12) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.024
+   remark #15301: FUSED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 3 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 37 
+   remark #15477: vector cost: 20.500 
+   remark #15478: estimated potential speedup: 1.520 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at verify.f(48,9)
+LOOP END
+
+LOOP BEGIN at verify.f(41,12)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at verify.f(304,9)
+   remark #15388: vectorization support: reference xcrdif(m) has aligned access   [ verify.f(306,12) ]
+   remark #15388: vectorization support: reference xcr(m) has aligned access   [ verify.f(306,12) ]
+   remark #15388: vectorization support: reference xcrref(m) has aligned access   [ verify.f(306,12) ]
+   remark #15388: vectorization support: reference xcrref(m) has aligned access   [ verify.f(306,36) ]
+   remark #15388: vectorization support: reference xcedif(m) has aligned access   [ verify.f(307,12) ]
+   remark #15388: vectorization support: reference xce(m) has aligned access   [ verify.f(307,12) ]
+   remark #15388: vectorization support: reference xceref(m) has aligned access   [ verify.f(307,12) ]
+   remark #15388: vectorization support: reference xceref(m) has aligned access   [ verify.f(307,36) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 6 
+   remark #15449: unmasked aligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 74 
+   remark #15477: vector cost: 50.000 
+   remark #15478: estimated potential speedup: 1.350 
+   remark #15486: divides: 2 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at verify.f(304,9)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at verify.f(341,9)
+   remark #15382: vectorization support: call to function for_write_seq_fmt cannot be vectorized   [ verify.f(343,15) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ verify.f(343,15) ]
+   remark #15382: vectorization support: call to function IEEE_ARITHMETIC^FOR_IEEE_IS_NAN_K8 cannot be vectorized   [ verify.f(344,27) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt cannot be vectorized   [ verify.f(346,15) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ verify.f(346,15) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ verify.f(346,15) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ verify.f(346,15) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt cannot be vectorized   [ verify.f(349,15) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ verify.f(349,15) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ verify.f(349,15) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ verify.f(349,15) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (343:15) and at (349:15)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (349:15) and at (343:15)
+LOOP END
+
+LOOP BEGIN at verify.f(341,9)
+   remark #15382: vectorization support: call to function for_write_seq_fmt cannot be vectorized   [ verify.f(343,15) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ verify.f(343,15) ]
+   remark #15382: vectorization support: call to function IEEE_ARITHMETIC^FOR_IEEE_IS_NAN_K8 cannot be vectorized   [ verify.f(344,27) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt cannot be vectorized   [ verify.f(346,15) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ verify.f(346,15) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ verify.f(346,15) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ verify.f(346,15) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt cannot be vectorized   [ verify.f(349,15) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ verify.f(349,15) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ verify.f(349,15) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ verify.f(349,15) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (343:15) and at (349:15)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (349:15) and at (343:15)
+LOOP END
+
+LOOP BEGIN at verify.f(361,9)
+   remark #15382: vectorization support: call to function for_write_seq_fmt cannot be vectorized   [ verify.f(363,15) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ verify.f(363,15) ]
+   remark #15382: vectorization support: call to function IEEE_ARITHMETIC^FOR_IEEE_IS_NAN_K8 cannot be vectorized   [ verify.f(364,27) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt cannot be vectorized   [ verify.f(366,15) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ verify.f(366,15) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ verify.f(366,15) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ verify.f(366,15) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt cannot be vectorized   [ verify.f(369,15) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ verify.f(369,15) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ verify.f(369,15) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ verify.f(369,15) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (363:15) and at (369:15)
+   remark #15346: vector dependence: assumed OUTPUT dependence between at (369:15) and at (363:15)
+LOOP END
+===========================================================================

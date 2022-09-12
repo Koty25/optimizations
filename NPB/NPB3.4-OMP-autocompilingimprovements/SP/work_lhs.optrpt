@@ -1,0 +1,43 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: LHSINIT
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at work_lhs.f(49,11)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at work_lhs.f(49,11)
+   remark #15389: vectorization support: reference lhsm(m,0) has unaligned access   [ work_lhs.f(48,11) ]
+   remark #15389: vectorization support: reference lhsp(m,0) has unaligned access   [ work_lhs.f(47,11) ]
+   remark #15389: vectorization support: reference lhs(m,0) has unaligned access   [ work_lhs.f(46,11) ]
+   remark #15389: vectorization support: reference lhsm(m,ni) has unaligned access   [ work_lhs.f(51,11) ]
+   remark #15389: vectorization support: reference lhsp(m,ni) has unaligned access   [ work_lhs.f(50,11) ]
+   remark #15388: vectorization support: reference lhs(m,ni) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.423
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15451: unmasked unaligned unit stride stores: 5 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 22 
+   remark #15477: vector cost: 13.000 
+   remark #15478: estimated potential speedup: 1.100 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at work_lhs.f(49,11)
+<Remainder loop for vectorization>
+LOOP END
+===========================================================================

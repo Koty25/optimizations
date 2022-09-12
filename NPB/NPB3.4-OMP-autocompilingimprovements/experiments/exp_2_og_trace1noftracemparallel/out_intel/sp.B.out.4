@@ -1,0 +1,97 @@
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - SP Benchmark
+
+ No input file inputsp.data. Using compiled defaults
+ Size:  102x 102x 102
+ Iterations:  400    dt:    0.0010000
+ Number of available threads:     4
+ 
+ Time step    1
+ Time step   20
+ Time step   40
+ Time step   60
+ Time step   80
+ Time step  100
+ Time step  120
+ Time step  140
+ Time step  160
+ Time step  180
+ Time step  200
+ Time step  220
+ Time step  240
+ Time step  260
+ Time step  280
+ Time step  300
+ Time step  320
+ Time step  340
+ Time step  360
+ Time step  380
+ Time step  400
+ Verification being performed for class B
+ accuracy setting for epsilon =  0.1000000000000E-07
+ Comparison of RMS-norms of residual
+           1 0.6903293579998E+02 0.6903293579998E+02 0.5064061406962E-13
+           2 0.3095134488084E+02 0.3095134488084E+02 0.8000432432443E-13
+           3 0.4103336647017E+02 0.4103336647017E+02 0.1103043112508E-12
+           4 0.3864769009604E+02 0.3864769009604E+02 0.3768951274160E-13
+           5 0.5643482272596E+02 0.5643482272596E+02 0.6433746407542E-13
+ Comparison of RMS-norms of solution error
+           1 0.9810006190188E-02 0.9810006190188E-02 0.4279335538099E-13
+           2 0.1022827905670E-02 0.1022827905670E-02 0.3979256855379E-12
+           3 0.1720597911692E-02 0.1720597911692E-02 0.1541300553650E-12
+           4 0.1694479428231E-02 0.1694479428231E-02 0.1039106346635E-12
+           5 0.1847456263981E-01 0.1847456263981E-01 0.8788847699244E-13
+ Verification Successful
+
+
+ SP Benchmark Completed.
+ Class           =                        B
+ Size            =            102x 102x 102
+ Iterations      =                      400
+ Time in seconds =                    25.69
+ Total threads   =                        4
+ Avail threads   =                        4
+ Mop/s total     =                 13816.78
+ Mop/s/thread    =                  3454.19
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                      3.4
+ Compile date    =              23 Jul 2020
+
+ Compile options:
+    F77          = ifort
+    FLINK        = $(FC)
+    F_LIB        = (none)
+    F_INC        = (none)
+    FFLAGS       = -O3 -qopenmp
+    FLINKFLAGS   = $(FFLAGS)
+    RAND         = (none)
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+  SECTION   Time (secs)
+      total   :   25.694  ( 100.00 %)
+      rhsx    :    1.731  (   6.74 %)
+      rhsy    :    1.839  (   7.16 %)
+      rhsz    :    2.393  (   9.31 %)
+      rhs     :    8.188  (  31.87 %)
+      sub-rhs :    5.963  (  23.21 %)
+     rest-rhs :    2.225  (   8.66 %)
+      xsolve  :    2.999  (  11.67 %)
+      ysolve  :    5.048  (  19.65 %)
+      zsolve  :    6.061  (  23.59 %)
+     sub-zsol :    6.061  (  23.59 %)
+      redist1 :    0.000  (   0.00 %)
+      redist2 :    0.000  (   0.00 %)
+       redist :    0.000  (   0.00 %)
+      txinvr  :    0.818  (   3.18 %)
+      pinvr   :    0.390  (   1.52 %)
+      ninvr   :    0.426  (   1.66 %)
+      tzetar  :    1.120  (   4.36 %)
+      add     :    0.664  (   2.58 %)

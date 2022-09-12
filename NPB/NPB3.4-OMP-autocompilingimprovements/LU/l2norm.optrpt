@@ -1,0 +1,119 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: L2NORM
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at l2norm.f(38,10)
+   remark #15389: vectorization support: reference sum(m) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.300
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 2.500 
+   remark #15478: estimated potential speedup: 1.170 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at l2norm.f(38,10)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at l2norm.f(55,48)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at l2norm.f(55,48)
+   remark #15388: vectorization support: reference sum(m) has aligned access   [ l2norm.f(55,10) ]
+   remark #15388: vectorization support: reference sum(m) has aligned access   [ l2norm.f(55,26) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.091
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 80 
+   remark #15477: vector cost: 33.000 
+   remark #15478: estimated potential speedup: 1.780 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at l2norm.f(55,48)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at l2norm.f(41,7)
+   remark #15388: vectorization support: reference %.2.4_2fast_red_auto.57(:) has aligned access
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 2.000 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at l2norm.f(41,7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at l2norm.f(43,7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at l2norm.f(45,13)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at l2norm.f(46,16)
+         remark #15388: vectorization support: reference %.2.4_2fast_red_auto.57(m) has aligned access   [ l2norm.f(47,19) ]
+         remark #15388: vectorization support: reference %.2.4_2fast_red_auto.57(m) has aligned access   [ l2norm.f(47,28) ]
+         remark #15389: vectorization support: reference v(m,i,j,k) has unaligned access   [ l2norm.f(47,37) ]
+         remark #15389: vectorization support: reference v(m,i,j,k) has unaligned access   [ l2norm.f(47,48) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.167
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 9 
+         remark #15477: vector cost: 4.500 
+         remark #15478: estimated potential speedup: 1.500 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at l2norm.f(46,16)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at l2norm.f(41,7)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between sum (41:7) and sum (41:7)
+   remark #15346: vector dependence: assumed ANTI dependence between sum (41:7) and sum (41:7)
+LOOP END
+
+LOOP BEGIN at l2norm.f(41,7)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between (unknown,:)%%.2.4_2fast_red_tmpl.59(:) (41:7) and (unknown,:)%%.2.4_2fast_red_tmpl.59 (41:7)
+   remark #15346: vector dependence: assumed ANTI dependence between (unknown,:)%%.2.4_2fast_red_tmpl.59 (41:7) and (unknown,:)%%.2.4_2fast_red_tmpl.59(:) (41:7)
+LOOP END
+===========================================================================

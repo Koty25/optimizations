@@ -1,0 +1,903 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: EXACT_RHS
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at exact_rhs.f(28,8)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at exact_rhs.f(30,14)
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <forcing_(m,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(32,20) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <forcing_(m,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(32,20) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <forcing_(m,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(32,20) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <forcing_(m,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(32,20) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <forcing_(m,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(32,20) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15453: unmasked strided stores: 5 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 18 
+      remark #15477: vector cost: 15.000 
+      remark #15478: estimated potential speedup: 1.190 
+      remark #15488: --- end vector cost summary ---
+
+      LOOP BEGIN at exact_rhs.f(32,20)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(30,14)
+   <Remainder loop for vectorization>
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.333
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15453: unmasked strided stores: 5 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 18 
+      remark #15477: vector cost: 15.000 
+      remark #15478: estimated potential speedup: 1.190 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(30,14)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at exact_rhs.f(42,8)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at exact_rhs.f(47,14)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at exact_rhs.f(51,17)
+         remark #15388: vectorization support: reference dtemp(m) has aligned access   [ exact_rhs.f(52,20) ]
+         remark #15329: vectorization support: non-unit strided store was emulated for the variable <ue(i,m)>, stride is 162   [ exact_rhs.f(52,20) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15453: unmasked strided stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 3.000 
+         remark #15478: estimated potential speedup: 1.250 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at exact_rhs.f(57,17)
+         remark #15389: vectorization support: reference dtemp(m) has unaligned access   [ exact_rhs.f(58,20) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15329: vectorization support: non-unit strided store was emulated for the variable <buf(i,m)>, stride is 162   [ exact_rhs.f(58,20) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15427: loop was completely unrolled
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.100
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15453: unmasked strided stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 6 
+         remark #15477: vector cost: 5.000 
+         remark #15478: estimated potential speedup: 1.090 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at exact_rhs.f(51,17)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(98,63)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(98,63)
+      remark #15388: vectorization support: reference ue(i+1,2) has aligned access   [ exact_rhs.f(73,36) ]
+      remark #15388: vectorization support: reference ue(i-1,2) has aligned access   [ exact_rhs.f(73,36) ]
+      remark #15388: vectorization support: reference ue(i+1,1) has aligned access   [ exact_rhs.f(73,53) ]
+      remark #15389: vectorization support: reference ue(i,1) has unaligned access   [ exact_rhs.f(73,53) ]
+      remark #15388: vectorization support: reference ue(i-1,1) has aligned access   [ exact_rhs.f(75,41) ]
+      remark #15388: vectorization support: reference ue(i+1,2) has aligned access   [ exact_rhs.f(77,36) ]
+      remark #15389: vectorization support: reference buf(i+1,2) has unaligned access   [ exact_rhs.f(77,36) ]
+      remark #15388: vectorization support: reference ue(i+1,5) has aligned access   [ exact_rhs.f(78,33) ]
+      remark #15389: vectorization support: reference q(i+1) has unaligned access   [ exact_rhs.f(78,33) ]
+      remark #15388: vectorization support: reference ue(i-1,2) has aligned access   [ exact_rhs.f(78,44) ]
+      remark #15389: vectorization support: reference buf(i-1,2) has unaligned access   [ exact_rhs.f(78,44) ]
+      remark #15388: vectorization support: reference ue(i-1,5) has aligned access   [ exact_rhs.f(79,33) ]
+      remark #15389: vectorization support: reference q(i-1) has unaligned access   [ exact_rhs.f(79,33) ]
+      remark #15389: vectorization support: reference buf(i+1,2) has unaligned access   [ exact_rhs.f(77,53) ]
+      remark #15389: vectorization support: reference buf(i,2) has unaligned access   [ exact_rhs.f(77,53) ]
+      remark #15389: vectorization support: reference buf(i-1,2) has unaligned access   [ exact_rhs.f(80,42) ]
+      remark #15388: vectorization support: reference ue(i+1,2) has aligned access   [ exact_rhs.f(79,68) ]
+      remark #15389: vectorization support: reference ue(i,2) has unaligned access   [ exact_rhs.f(79,68) ]
+      remark #15388: vectorization support: reference ue(i-1,2) has aligned access   [ exact_rhs.f(81,42) ]
+      remark #15388: vectorization support: reference ue(i+1,3) has aligned access   [ exact_rhs.f(83,36) ]
+      remark #15389: vectorization support: reference buf(i+1,2) has unaligned access   [ exact_rhs.f(83,36) ]
+      remark #15388: vectorization support: reference ue(i-1,3) has aligned access   [ exact_rhs.f(84,33) ]
+      remark #15389: vectorization support: reference buf(i-1,2) has unaligned access   [ exact_rhs.f(84,33) ]
+      remark #15389: vectorization support: reference buf(i+1,3) has unaligned access   [ exact_rhs.f(83,53) ]
+      remark #15389: vectorization support: reference buf(i,3) has unaligned access   [ exact_rhs.f(83,53) ]
+      remark #15389: vectorization support: reference buf(i-1,3) has unaligned access   [ exact_rhs.f(85,42) ]
+      remark #15388: vectorization support: reference ue(i+1,3) has aligned access   [ exact_rhs.f(84,66) ]
+      remark #15389: vectorization support: reference ue(i,3) has unaligned access   [ exact_rhs.f(84,66) ]
+      remark #15388: vectorization support: reference ue(i-1,3) has aligned access   [ exact_rhs.f(86,42) ]
+      remark #15388: vectorization support: reference ue(i+1,4) has aligned access   [ exact_rhs.f(88,36) ]
+      remark #15389: vectorization support: reference buf(i+1,2) has unaligned access   [ exact_rhs.f(88,36) ]
+      remark #15388: vectorization support: reference ue(i-1,4) has aligned access   [ exact_rhs.f(89,33) ]
+      remark #15389: vectorization support: reference buf(i-1,2) has unaligned access   [ exact_rhs.f(89,33) ]
+      remark #15389: vectorization support: reference buf(i+1,4) has unaligned access   [ exact_rhs.f(88,53) ]
+      remark #15389: vectorization support: reference buf(i,4) has unaligned access   [ exact_rhs.f(88,53) ]
+      remark #15389: vectorization support: reference buf(i-1,4) has unaligned access   [ exact_rhs.f(90,42) ]
+      remark #15388: vectorization support: reference ue(i+1,4) has aligned access   [ exact_rhs.f(89,66) ]
+      remark #15389: vectorization support: reference ue(i,4) has unaligned access   [ exact_rhs.f(89,66) ]
+      remark #15388: vectorization support: reference ue(i-1,4) has aligned access   [ exact_rhs.f(91,42) ]
+      remark #15389: vectorization support: reference buf(i+1,2) has unaligned access   [ exact_rhs.f(93,36) ]
+      remark #15388: vectorization support: reference ue(i+1,5) has aligned access   [ exact_rhs.f(93,36) ]
+      remark #15389: vectorization support: reference q(i+1) has unaligned access   [ exact_rhs.f(94,38) ]
+      remark #15389: vectorization support: reference buf(i-1,2) has unaligned access   [ exact_rhs.f(94,34) ]
+      remark #15388: vectorization support: reference ue(i-1,5) has aligned access   [ exact_rhs.f(94,34) ]
+      remark #15389: vectorization support: reference q(i-1) has unaligned access   [ exact_rhs.f(95,38) ]
+      remark #15389: vectorization support: reference buf(i+1,1) has unaligned access   [ exact_rhs.f(96,29) ]
+      remark #15389: vectorization support: reference buf(i,1) has unaligned access   [ exact_rhs.f(96,29) ]
+      remark #15389: vectorization support: reference buf(i-1,1) has unaligned access   [ exact_rhs.f(96,48) ]
+      remark #15389: vectorization support: reference cuf(i+1) has unaligned access   [ exact_rhs.f(95,60) ]
+      remark #15389: vectorization support: reference cuf(i) has unaligned access   [ exact_rhs.f(95,60) ]
+      remark #15389: vectorization support: reference cuf(i-1) has unaligned access   [ exact_rhs.f(98,40) ]
+      remark #15389: vectorization support: reference buf(i+1,5) has unaligned access   [ exact_rhs.f(97,49) ]
+      remark #15389: vectorization support: reference buf(i,5) has unaligned access   [ exact_rhs.f(97,49) ]
+      remark #15389: vectorization support: reference buf(i-1,5) has unaligned access   [ exact_rhs.f(99,42) ]
+      remark #15388: vectorization support: reference ue(i+1,5) has aligned access
+      remark #15389: vectorization support: reference ue(i,5) has unaligned access
+      remark #15388: vectorization support: reference ue(i-1,5) has aligned access   [ exact_rhs.f(100,42) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <forcing_(1,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(73,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <forcing_(1,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(73,36) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <forcing_(2,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(77,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <forcing_(2,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(77,36) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <forcing_(3,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(83,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <forcing_(3,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(83,36) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <forcing_(4,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(88,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <forcing_(4,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(88,36) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <forcing_(5,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(93,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <forcing_(5,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(93,36) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.413
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 10 
+      remark #15450: unmasked unaligned unit stride loads: 25 
+      remark #15452: unmasked strided loads: 5 
+      remark #15453: unmasked strided stores: 5 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 252 
+      remark #15477: vector cost: 143.000 
+      remark #15478: estimated potential speedup: 1.740 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(98,63)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(108,36)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(108,36)
+      remark #15389: vectorization support: reference forcing_(m,1,j,k) has unaligned access   [ exact_rhs.f(108,17) ]
+      remark #15389: vectorization support: reference forcing_(m,1,j,k) has unaligned access
+      remark #15388: vectorization support: reference forcing_(m,2,j,k) has aligned access   [ exact_rhs.f(111,17) ]
+      remark #15388: vectorization support: reference forcing_(m,2,j,k) has aligned access   [ exact_rhs.f(111,36) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(1,m)>, stride is 162
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(2,m)>, stride is 162   [ exact_rhs.f(109,33) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(3,m)>, stride is 162   [ exact_rhs.f(109,42) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(2,m)>, stride is 162   [ exact_rhs.f(112,27) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(1,m)>, stride is 162   [ exact_rhs.f(111,36) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(3,m)>, stride is 162   [ exact_rhs.f(112,44) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(4,m)>, stride is 162   [ exact_rhs.f(112,60) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.345
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15452: unmasked strided loads: 7 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 44 
+      remark #15477: vector cost: 29.000 
+      remark #15478: estimated potential speedup: 1.220 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(108,36)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(117,17)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at exact_rhs.f(117,17)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at exact_rhs.f(117,17)
+         remark #15388: vectorization support: reference ue(i-2,m) has aligned access   [ exact_rhs.f(118,39) ]
+         remark #15389: vectorization support: reference ue(i-1,m) has unaligned access   [ exact_rhs.f(118,39) ]
+         remark #15388: vectorization support: reference ue(i,m) has aligned access   [ exact_rhs.f(119,37) ]
+         remark #15389: vectorization support: reference ue(i+1,m) has unaligned access   [ exact_rhs.f(119,55) ]
+         remark #15388: vectorization support: reference ue(i+2,m) has aligned access   [ exact_rhs.f(120,41) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15329: vectorization support: non-unit strided store was emulated for the variable <forcing_(m,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(118,20) ]
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <forcing_(m,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(118,39) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.125
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15442: entire loop may be executed in remainder
+         remark #15448: unmasked aligned unit stride loads: 3 
+         remark #15450: unmasked unaligned unit stride loads: 2 
+         remark #15452: unmasked strided loads: 1 
+         remark #15453: unmasked strided stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 27 
+         remark #15477: vector cost: 16.000 
+         remark #15478: estimated potential speedup: 1.660 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at exact_rhs.f(117,17)
+      <Remainder loop for vectorization>
+         remark #15388: vectorization support: reference ue(i-2,m) has aligned access   [ exact_rhs.f(118,39) ]
+         remark #15389: vectorization support: reference ue(i-1,m) has unaligned access   [ exact_rhs.f(118,39) ]
+         remark #15388: vectorization support: reference ue(i,m) has aligned access   [ exact_rhs.f(119,37) ]
+         remark #15389: vectorization support: reference ue(i+1,m) has unaligned access   [ exact_rhs.f(119,55) ]
+         remark #15388: vectorization support: reference ue(i+2,m) has aligned access   [ exact_rhs.f(120,41) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.381
+         remark #15301: REMAINDER LOOP WAS VECTORIZED
+         remark #15442: entire loop may be executed in remainder
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15452: unmasked strided loads: 7 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 43 
+         remark #15477: vector cost: 29.000 
+         remark #15478: estimated potential speedup: 1.200 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at exact_rhs.f(117,17)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(129,17)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(129,17)
+      remark #15389: vectorization support: reference forcing_(m,:,j,k) has unaligned access   [ exact_rhs.f(126,17) ]
+      remark #15389: vectorization support: reference forcing_(m,:,j,k) has unaligned access   [ exact_rhs.f(126,36) ]
+      remark #15388: vectorization support: reference forcing_(m,i,j,k) has aligned access   [ exact_rhs.f(130,17) ]
+      remark #15388: vectorization support: reference forcing_(m,i,j,k) has aligned access   [ exact_rhs.f(130,36) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(?-2,m)>, stride is 162   [ exact_rhs.f(126,36) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(?-1,m)>, stride is 162   [ exact_rhs.f(126,36) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(:,m)>, stride is 162   [ exact_rhs.f(127,37) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(?+1,m)>, stride is 162   [ exact_rhs.f(127,55) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(i-2,m)>, stride is 162   [ exact_rhs.f(130,36) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(i-1,m)>, stride is 162   [ exact_rhs.f(130,36) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(i,m)>, stride is 162   [ exact_rhs.f(131,37) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.345
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15452: unmasked strided loads: 7 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 43 
+      remark #15477: vector cost: 29.000 
+      remark #15478: estimated potential speedup: 1.200 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(129,17)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at exact_rhs.f(142,8)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at exact_rhs.f(147,14)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at exact_rhs.f(151,17)
+         remark #15388: vectorization support: reference dtemp(m) has aligned access   [ exact_rhs.f(152,20) ]
+         remark #15329: vectorization support: non-unit strided store was emulated for the variable <ue(j,m)>, stride is 162   [ exact_rhs.f(152,20) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15453: unmasked strided stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 3.000 
+         remark #15478: estimated potential speedup: 1.250 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at exact_rhs.f(156,17)
+         remark #15389: vectorization support: reference dtemp(m) has unaligned access   [ exact_rhs.f(157,20) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15329: vectorization support: non-unit strided store was emulated for the variable <buf(j,m)>, stride is 162   [ exact_rhs.f(157,20) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15427: loop was completely unrolled
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.100
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15453: unmasked strided stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 6 
+         remark #15477: vector cost: 5.000 
+         remark #15478: estimated potential speedup: 1.090 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at exact_rhs.f(151,17)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(196,62)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(196,62)
+      remark #15388: vectorization support: reference ue(j+1,3) has aligned access   [ exact_rhs.f(171,36) ]
+      remark #15388: vectorization support: reference ue(j-1,3) has aligned access   [ exact_rhs.f(171,36) ]
+      remark #15388: vectorization support: reference ue(j+1,1) has aligned access   [ exact_rhs.f(171,53) ]
+      remark #15389: vectorization support: reference ue(j,1) has unaligned access   [ exact_rhs.f(171,53) ]
+      remark #15388: vectorization support: reference ue(j-1,1) has aligned access   [ exact_rhs.f(173,40) ]
+      remark #15388: vectorization support: reference ue(j+1,2) has aligned access   [ exact_rhs.f(175,36) ]
+      remark #15389: vectorization support: reference buf(j+1,3) has unaligned access   [ exact_rhs.f(175,36) ]
+      remark #15388: vectorization support: reference ue(j-1,2) has aligned access   [ exact_rhs.f(176,32) ]
+      remark #15389: vectorization support: reference buf(j-1,3) has unaligned access   [ exact_rhs.f(176,32) ]
+      remark #15389: vectorization support: reference buf(j+1,2) has unaligned access   [ exact_rhs.f(175,53) ]
+      remark #15389: vectorization support: reference buf(j,2) has unaligned access   [ exact_rhs.f(175,53) ]
+      remark #15389: vectorization support: reference buf(j-1,2) has unaligned access   [ exact_rhs.f(177,41) ]
+      remark #15388: vectorization support: reference ue(j+1,2) has aligned access   [ exact_rhs.f(176,65) ]
+      remark #15389: vectorization support: reference ue(j,2) has unaligned access   [ exact_rhs.f(176,65) ]
+      remark #15388: vectorization support: reference ue(j-1,2) has aligned access   [ exact_rhs.f(178,41) ]
+      remark #15388: vectorization support: reference ue(j+1,3) has aligned access   [ exact_rhs.f(180,36) ]
+      remark #15389: vectorization support: reference buf(j+1,3) has unaligned access   [ exact_rhs.f(180,36) ]
+      remark #15388: vectorization support: reference ue(j+1,5) has aligned access   [ exact_rhs.f(181,33) ]
+      remark #15389: vectorization support: reference q(j+1) has unaligned access   [ exact_rhs.f(181,33) ]
+      remark #15388: vectorization support: reference ue(j-1,3) has aligned access   [ exact_rhs.f(181,44) ]
+      remark #15389: vectorization support: reference buf(j-1,3) has unaligned access   [ exact_rhs.f(181,44) ]
+      remark #15388: vectorization support: reference ue(j-1,5) has aligned access   [ exact_rhs.f(182,33) ]
+      remark #15389: vectorization support: reference q(j-1) has unaligned access   [ exact_rhs.f(182,33) ]
+      remark #15389: vectorization support: reference buf(j+1,3) has unaligned access   [ exact_rhs.f(180,53) ]
+      remark #15389: vectorization support: reference buf(j,3) has unaligned access   [ exact_rhs.f(180,53) ]
+      remark #15389: vectorization support: reference buf(j-1,3) has unaligned access   [ exact_rhs.f(183,41) ]
+      remark #15388: vectorization support: reference ue(j+1,3) has aligned access   [ exact_rhs.f(182,68) ]
+      remark #15389: vectorization support: reference ue(j,3) has unaligned access   [ exact_rhs.f(182,68) ]
+      remark #15388: vectorization support: reference ue(j-1,3) has aligned access   [ exact_rhs.f(184,41) ]
+      remark #15388: vectorization support: reference ue(j+1,4) has aligned access   [ exact_rhs.f(186,36) ]
+      remark #15389: vectorization support: reference buf(j+1,3) has unaligned access   [ exact_rhs.f(186,36) ]
+      remark #15388: vectorization support: reference ue(j-1,4) has aligned access   [ exact_rhs.f(187,32) ]
+      remark #15389: vectorization support: reference buf(j-1,3) has unaligned access   [ exact_rhs.f(187,32) ]
+      remark #15389: vectorization support: reference buf(j+1,4) has unaligned access   [ exact_rhs.f(186,53) ]
+      remark #15389: vectorization support: reference buf(j,4) has unaligned access   [ exact_rhs.f(186,53) ]
+      remark #15389: vectorization support: reference buf(j-1,4) has unaligned access   [ exact_rhs.f(188,41) ]
+      remark #15388: vectorization support: reference ue(j+1,4) has aligned access   [ exact_rhs.f(187,65) ]
+      remark #15389: vectorization support: reference ue(j,4) has unaligned access   [ exact_rhs.f(187,65) ]
+      remark #15388: vectorization support: reference ue(j-1,4) has aligned access   [ exact_rhs.f(189,41) ]
+      remark #15389: vectorization support: reference buf(j+1,3) has unaligned access   [ exact_rhs.f(191,36) ]
+      remark #15388: vectorization support: reference ue(j+1,5) has aligned access   [ exact_rhs.f(191,36) ]
+      remark #15389: vectorization support: reference q(j+1) has unaligned access   [ exact_rhs.f(192,37) ]
+      remark #15389: vectorization support: reference buf(j-1,3) has unaligned access   [ exact_rhs.f(192,33) ]
+      remark #15388: vectorization support: reference ue(j-1,5) has aligned access   [ exact_rhs.f(192,33) ]
+      remark #15389: vectorization support: reference q(j-1) has unaligned access   [ exact_rhs.f(193,37) ]
+      remark #15389: vectorization support: reference buf(j+1,1) has unaligned access   [ exact_rhs.f(194,28) ]
+      remark #15389: vectorization support: reference buf(j,1) has unaligned access   [ exact_rhs.f(194,28) ]
+      remark #15389: vectorization support: reference buf(j-1,1) has unaligned access   [ exact_rhs.f(194,47) ]
+      remark #15389: vectorization support: reference cuf(j+1) has unaligned access   [ exact_rhs.f(193,59) ]
+      remark #15389: vectorization support: reference cuf(j) has unaligned access   [ exact_rhs.f(193,59) ]
+      remark #15389: vectorization support: reference cuf(j-1) has unaligned access   [ exact_rhs.f(196,39) ]
+      remark #15389: vectorization support: reference buf(j+1,5) has unaligned access   [ exact_rhs.f(195,48) ]
+      remark #15389: vectorization support: reference buf(j,5) has unaligned access   [ exact_rhs.f(195,48) ]
+      remark #15389: vectorization support: reference buf(j-1,5) has unaligned access   [ exact_rhs.f(197,41) ]
+      remark #15388: vectorization support: reference ue(j+1,5) has aligned access
+      remark #15389: vectorization support: reference ue(j,5) has unaligned access
+      remark #15388: vectorization support: reference ue(j-1,5) has aligned access   [ exact_rhs.f(198,40) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <forcing_(1,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(171,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <forcing_(1,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(171,36) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <forcing_(2,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(175,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <forcing_(2,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(175,36) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <forcing_(3,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(180,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <forcing_(3,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(180,36) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <forcing_(4,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(186,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <forcing_(4,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(186,36) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <forcing_(5,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(191,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <forcing_(5,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(191,36) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.413
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 10 
+      remark #15450: unmasked unaligned unit stride loads: 25 
+      remark #15452: unmasked strided loads: 5 
+      remark #15453: unmasked strided stores: 5 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 252 
+      remark #15477: vector cost: 143.000 
+      remark #15478: estimated potential speedup: 1.740 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(196,62)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(206,36)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(206,36)
+      remark #15389: vectorization support: reference forcing_(m,i,1,k) has unaligned access   [ exact_rhs.f(206,17) ]
+      remark #15389: vectorization support: reference forcing_(m,i,1,k) has unaligned access
+      remark #15388: vectorization support: reference forcing_(m,i,2,k) has aligned access   [ exact_rhs.f(209,17) ]
+      remark #15388: vectorization support: reference forcing_(m,i,2,k) has aligned access   [ exact_rhs.f(209,36) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(1,m)>, stride is 162
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(2,m)>, stride is 162   [ exact_rhs.f(207,33) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(3,m)>, stride is 162   [ exact_rhs.f(207,42) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(2,m)>, stride is 162   [ exact_rhs.f(210,27) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(1,m)>, stride is 162   [ exact_rhs.f(209,36) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(3,m)>, stride is 162   [ exact_rhs.f(210,44) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(4,m)>, stride is 162   [ exact_rhs.f(210,60) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.345
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15452: unmasked strided loads: 7 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 44 
+      remark #15477: vector cost: 29.000 
+      remark #15478: estimated potential speedup: 1.220 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(206,36)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(215,17)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at exact_rhs.f(215,17)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at exact_rhs.f(215,17)
+         remark #15388: vectorization support: reference ue(j-2,m) has aligned access   [ exact_rhs.f(216,39) ]
+         remark #15389: vectorization support: reference ue(j-1,m) has unaligned access   [ exact_rhs.f(216,39) ]
+         remark #15388: vectorization support: reference ue(j,m) has aligned access   [ exact_rhs.f(217,37) ]
+         remark #15389: vectorization support: reference ue(j+1,m) has unaligned access   [ exact_rhs.f(217,55) ]
+         remark #15388: vectorization support: reference ue(j+2,m) has aligned access   [ exact_rhs.f(218,41) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15329: vectorization support: non-unit strided store was emulated for the variable <forcing_(m,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(216,20) ]
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <forcing_(m,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(216,39) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.125
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15442: entire loop may be executed in remainder
+         remark #15448: unmasked aligned unit stride loads: 3 
+         remark #15450: unmasked unaligned unit stride loads: 2 
+         remark #15452: unmasked strided loads: 1 
+         remark #15453: unmasked strided stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 27 
+         remark #15477: vector cost: 16.000 
+         remark #15478: estimated potential speedup: 1.660 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at exact_rhs.f(215,17)
+      <Remainder loop for vectorization>
+         remark #15388: vectorization support: reference ue(j-2,m) has aligned access   [ exact_rhs.f(216,39) ]
+         remark #15389: vectorization support: reference ue(j-1,m) has unaligned access   [ exact_rhs.f(216,39) ]
+         remark #15388: vectorization support: reference ue(j,m) has aligned access   [ exact_rhs.f(217,37) ]
+         remark #15389: vectorization support: reference ue(j+1,m) has unaligned access   [ exact_rhs.f(217,55) ]
+         remark #15388: vectorization support: reference ue(j+2,m) has aligned access   [ exact_rhs.f(218,41) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.381
+         remark #15301: REMAINDER LOOP WAS VECTORIZED
+         remark #15442: entire loop may be executed in remainder
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15452: unmasked strided loads: 7 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 43 
+         remark #15477: vector cost: 29.000 
+         remark #15478: estimated potential speedup: 1.200 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at exact_rhs.f(215,17)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(227,17)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(227,17)
+      remark #15389: vectorization support: reference forcing_(m,i,:,k) has unaligned access   [ exact_rhs.f(224,17) ]
+      remark #15389: vectorization support: reference forcing_(m,i,:,k) has unaligned access   [ exact_rhs.f(224,36) ]
+      remark #15388: vectorization support: reference forcing_(m,i,j,k) has aligned access   [ exact_rhs.f(228,17) ]
+      remark #15388: vectorization support: reference forcing_(m,i,j,k) has aligned access   [ exact_rhs.f(228,36) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(?-2,m)>, stride is 162   [ exact_rhs.f(224,36) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(?-1,m)>, stride is 162   [ exact_rhs.f(224,36) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(:,m)>, stride is 162   [ exact_rhs.f(225,37) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(?+1,m)>, stride is 162   [ exact_rhs.f(225,55) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(j-2,m)>, stride is 162   [ exact_rhs.f(228,36) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(j-1,m)>, stride is 162   [ exact_rhs.f(228,36) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(j,m)>, stride is 162   [ exact_rhs.f(229,37) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.345
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15452: unmasked strided loads: 7 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 43 
+      remark #15477: vector cost: 29.000 
+      remark #15478: estimated potential speedup: 1.200 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(227,17)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at exact_rhs.f(240,8)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at exact_rhs.f(245,14)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at exact_rhs.f(249,17)
+         remark #15388: vectorization support: reference dtemp(m) has aligned access   [ exact_rhs.f(250,20) ]
+         remark #15329: vectorization support: non-unit strided store was emulated for the variable <ue(k,m)>, stride is 162   [ exact_rhs.f(250,20) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15453: unmasked strided stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 3.000 
+         remark #15478: estimated potential speedup: 1.250 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at exact_rhs.f(255,17)
+         remark #15389: vectorization support: reference dtemp(m) has unaligned access   [ exact_rhs.f(256,20) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15329: vectorization support: non-unit strided store was emulated for the variable <buf(k,m)>, stride is 162   [ exact_rhs.f(256,20) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15427: loop was completely unrolled
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.100
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15453: unmasked strided stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 6 
+         remark #15477: vector cost: 5.000 
+         remark #15478: estimated potential speedup: 1.090 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at exact_rhs.f(249,17)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(295,63)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(295,63)
+      remark #15388: vectorization support: reference ue(k+1,4) has aligned access   [ exact_rhs.f(270,36) ]
+      remark #15388: vectorization support: reference ue(k-1,4) has aligned access   [ exact_rhs.f(270,36) ]
+      remark #15388: vectorization support: reference ue(k+1,1) has aligned access   [ exact_rhs.f(270,53) ]
+      remark #15389: vectorization support: reference ue(k,1) has unaligned access   [ exact_rhs.f(270,53) ]
+      remark #15388: vectorization support: reference ue(k-1,1) has aligned access   [ exact_rhs.f(272,41) ]
+      remark #15388: vectorization support: reference ue(k+1,2) has aligned access   [ exact_rhs.f(274,36) ]
+      remark #15389: vectorization support: reference buf(k+1,4) has unaligned access   [ exact_rhs.f(274,36) ]
+      remark #15388: vectorization support: reference ue(k-1,2) has aligned access   [ exact_rhs.f(275,33) ]
+      remark #15389: vectorization support: reference buf(k-1,4) has unaligned access   [ exact_rhs.f(275,33) ]
+      remark #15389: vectorization support: reference buf(k+1,2) has unaligned access   [ exact_rhs.f(274,53) ]
+      remark #15389: vectorization support: reference buf(k,2) has unaligned access   [ exact_rhs.f(274,53) ]
+      remark #15389: vectorization support: reference buf(k-1,2) has unaligned access   [ exact_rhs.f(276,42) ]
+      remark #15388: vectorization support: reference ue(k+1,2) has aligned access   [ exact_rhs.f(275,66) ]
+      remark #15389: vectorization support: reference ue(k,2) has unaligned access   [ exact_rhs.f(275,66) ]
+      remark #15388: vectorization support: reference ue(k-1,2) has aligned access   [ exact_rhs.f(277,42) ]
+      remark #15388: vectorization support: reference ue(k+1,3) has aligned access   [ exact_rhs.f(279,36) ]
+      remark #15389: vectorization support: reference buf(k+1,4) has unaligned access   [ exact_rhs.f(279,36) ]
+      remark #15388: vectorization support: reference ue(k-1,3) has aligned access   [ exact_rhs.f(280,33) ]
+      remark #15389: vectorization support: reference buf(k-1,4) has unaligned access   [ exact_rhs.f(280,33) ]
+      remark #15389: vectorization support: reference buf(k+1,3) has unaligned access   [ exact_rhs.f(279,53) ]
+      remark #15389: vectorization support: reference buf(k,3) has unaligned access   [ exact_rhs.f(279,53) ]
+      remark #15389: vectorization support: reference buf(k-1,3) has unaligned access   [ exact_rhs.f(281,42) ]
+      remark #15388: vectorization support: reference ue(k+1,3) has aligned access   [ exact_rhs.f(280,66) ]
+      remark #15389: vectorization support: reference ue(k,3) has unaligned access   [ exact_rhs.f(280,66) ]
+      remark #15388: vectorization support: reference ue(k-1,3) has aligned access   [ exact_rhs.f(282,41) ]
+      remark #15388: vectorization support: reference ue(k+1,4) has aligned access   [ exact_rhs.f(284,36) ]
+      remark #15389: vectorization support: reference buf(k+1,4) has unaligned access   [ exact_rhs.f(284,36) ]
+      remark #15388: vectorization support: reference ue(k+1,5) has aligned access   [ exact_rhs.f(285,33) ]
+      remark #15389: vectorization support: reference q(k+1) has unaligned access   [ exact_rhs.f(285,33) ]
+      remark #15388: vectorization support: reference ue(k-1,4) has aligned access   [ exact_rhs.f(285,44) ]
+      remark #15389: vectorization support: reference buf(k-1,4) has unaligned access   [ exact_rhs.f(285,44) ]
+      remark #15388: vectorization support: reference ue(k-1,5) has aligned access   [ exact_rhs.f(286,33) ]
+      remark #15389: vectorization support: reference q(k-1) has unaligned access   [ exact_rhs.f(286,33) ]
+      remark #15389: vectorization support: reference buf(k+1,4) has unaligned access   [ exact_rhs.f(284,53) ]
+      remark #15389: vectorization support: reference buf(k,4) has unaligned access   [ exact_rhs.f(284,53) ]
+      remark #15389: vectorization support: reference buf(k-1,4) has unaligned access   [ exact_rhs.f(287,41) ]
+      remark #15388: vectorization support: reference ue(k+1,4) has aligned access   [ exact_rhs.f(286,68) ]
+      remark #15389: vectorization support: reference ue(k,4) has unaligned access   [ exact_rhs.f(286,68) ]
+      remark #15388: vectorization support: reference ue(k-1,4) has aligned access   [ exact_rhs.f(288,41) ]
+      remark #15389: vectorization support: reference buf(k+1,4) has unaligned access   [ exact_rhs.f(290,36) ]
+      remark #15388: vectorization support: reference ue(k+1,5) has aligned access   [ exact_rhs.f(290,36) ]
+      remark #15389: vectorization support: reference q(k+1) has unaligned access   [ exact_rhs.f(291,38) ]
+      remark #15389: vectorization support: reference buf(k-1,4) has unaligned access   [ exact_rhs.f(291,34) ]
+      remark #15388: vectorization support: reference ue(k-1,5) has aligned access   [ exact_rhs.f(291,34) ]
+      remark #15389: vectorization support: reference q(k-1) has unaligned access   [ exact_rhs.f(292,38) ]
+      remark #15389: vectorization support: reference buf(k+1,1) has unaligned access   [ exact_rhs.f(293,29) ]
+      remark #15389: vectorization support: reference buf(k,1) has unaligned access   [ exact_rhs.f(293,29) ]
+      remark #15389: vectorization support: reference buf(k-1,1) has unaligned access   [ exact_rhs.f(293,48) ]
+      remark #15389: vectorization support: reference cuf(k+1) has unaligned access   [ exact_rhs.f(292,60) ]
+      remark #15389: vectorization support: reference cuf(k) has unaligned access   [ exact_rhs.f(292,60) ]
+      remark #15389: vectorization support: reference cuf(k-1) has unaligned access   [ exact_rhs.f(295,40) ]
+      remark #15389: vectorization support: reference buf(k+1,5) has unaligned access   [ exact_rhs.f(294,49) ]
+      remark #15389: vectorization support: reference buf(k,5) has unaligned access   [ exact_rhs.f(294,49) ]
+      remark #15389: vectorization support: reference buf(k-1,5) has unaligned access   [ exact_rhs.f(296,42) ]
+      remark #15388: vectorization support: reference ue(k+1,5) has aligned access
+      remark #15389: vectorization support: reference ue(k,5) has unaligned access
+      remark #15388: vectorization support: reference ue(k-1,5) has aligned access   [ exact_rhs.f(297,42) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <forcing_(1,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(270,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <forcing_(1,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(270,36) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <forcing_(2,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(274,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <forcing_(2,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(274,36) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <forcing_(3,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(279,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <forcing_(3,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(279,36) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <forcing_(4,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(284,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <forcing_(4,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(284,36) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <forcing_(5,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(290,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <forcing_(5,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(290,36) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.413
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 10 
+      remark #15450: unmasked unaligned unit stride loads: 25 
+      remark #15452: unmasked strided loads: 5 
+      remark #15453: unmasked strided stores: 5 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 252 
+      remark #15477: vector cost: 143.000 
+      remark #15478: estimated potential speedup: 1.740 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(295,63)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(305,36)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(305,36)
+      remark #15389: vectorization support: reference forcing_(m,i,j,1) has unaligned access   [ exact_rhs.f(305,17) ]
+      remark #15389: vectorization support: reference forcing_(m,i,j,1) has unaligned access
+      remark #15388: vectorization support: reference forcing_(m,i,j,2) has aligned access   [ exact_rhs.f(308,17) ]
+      remark #15388: vectorization support: reference forcing_(m,i,j,2) has aligned access   [ exact_rhs.f(308,36) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(1,m)>, stride is 162
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(2,m)>, stride is 162   [ exact_rhs.f(306,33) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(3,m)>, stride is 162   [ exact_rhs.f(306,42) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(2,m)>, stride is 162   [ exact_rhs.f(309,27) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(1,m)>, stride is 162   [ exact_rhs.f(308,36) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(3,m)>, stride is 162   [ exact_rhs.f(309,44) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(4,m)>, stride is 162   [ exact_rhs.f(309,60) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.345
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15452: unmasked strided loads: 7 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 44 
+      remark #15477: vector cost: 29.000 
+      remark #15478: estimated potential speedup: 1.220 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(305,36)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(314,17)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at exact_rhs.f(314,17)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at exact_rhs.f(314,17)
+         remark #15388: vectorization support: reference ue(k-2,m) has aligned access   [ exact_rhs.f(315,39) ]
+         remark #15389: vectorization support: reference ue(k-1,m) has unaligned access   [ exact_rhs.f(315,39) ]
+         remark #15388: vectorization support: reference ue(k,m) has aligned access   [ exact_rhs.f(316,37) ]
+         remark #15389: vectorization support: reference ue(k+1,m) has unaligned access   [ exact_rhs.f(316,55) ]
+         remark #15388: vectorization support: reference ue(k+2,m) has aligned access   [ exact_rhs.f(317,41) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15329: vectorization support: non-unit strided store was emulated for the variable <forcing_(m,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(315,20) ]
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <forcing_(m,i,j,k)>, stride is unknown to compiler   [ exact_rhs.f(315,39) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.125
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15442: entire loop may be executed in remainder
+         remark #15448: unmasked aligned unit stride loads: 3 
+         remark #15450: unmasked unaligned unit stride loads: 2 
+         remark #15452: unmasked strided loads: 1 
+         remark #15453: unmasked strided stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 27 
+         remark #15477: vector cost: 16.000 
+         remark #15478: estimated potential speedup: 1.660 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at exact_rhs.f(314,17)
+      <Remainder loop for vectorization>
+         remark #15388: vectorization support: reference ue(k-2,m) has aligned access   [ exact_rhs.f(315,39) ]
+         remark #15389: vectorization support: reference ue(k-1,m) has unaligned access   [ exact_rhs.f(315,39) ]
+         remark #15388: vectorization support: reference ue(k,m) has aligned access   [ exact_rhs.f(316,37) ]
+         remark #15389: vectorization support: reference ue(k+1,m) has unaligned access   [ exact_rhs.f(316,55) ]
+         remark #15388: vectorization support: reference ue(k+2,m) has aligned access   [ exact_rhs.f(317,41) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.381
+         remark #15301: REMAINDER LOOP WAS VECTORIZED
+         remark #15442: entire loop may be executed in remainder
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15452: unmasked strided loads: 7 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 43 
+         remark #15477: vector cost: 29.000 
+         remark #15478: estimated potential speedup: 1.200 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at exact_rhs.f(314,17)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(326,20)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(326,20)
+      remark #15389: vectorization support: reference forcing_(m,i,j,:) has unaligned access   [ exact_rhs.f(323,17) ]
+      remark #15389: vectorization support: reference forcing_(m,i,j,:) has unaligned access   [ exact_rhs.f(323,36) ]
+      remark #15388: vectorization support: reference forcing_(m,i,j,k) has aligned access   [ exact_rhs.f(327,20) ]
+      remark #15388: vectorization support: reference forcing_(m,i,j,k) has aligned access   [ exact_rhs.f(327,39) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(?-2,m)>, stride is 162   [ exact_rhs.f(323,36) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(?-1,m)>, stride is 162   [ exact_rhs.f(323,36) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(:,m)>, stride is 162   [ exact_rhs.f(324,37) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(?+1,m)>, stride is 162   [ exact_rhs.f(324,55) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(k-2,m)>, stride is 162   [ exact_rhs.f(327,39) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(k-1,m)>, stride is 162   [ exact_rhs.f(327,39) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <ue(k,m)>, stride is 162   [ exact_rhs.f(328,37) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.345
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15452: unmasked strided loads: 7 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 43 
+      remark #15477: vector cost: 29.000 
+      remark #15478: estimated potential speedup: 1.200 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at exact_rhs.f(326,20)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at exact_rhs.f(338,8)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at exact_rhs.f(340,14)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at exact_rhs.f(341,17)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at exact_rhs.f(341,17)
+         remark #15388: vectorization support: reference forcing_(m,i,j,k) has aligned access   [ exact_rhs.f(342,20) ]
+         remark #15388: vectorization support: reference forcing_(m,i,j,k) has aligned access   [ exact_rhs.f(342,47) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 1.250
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15442: entire loop may be executed in remainder
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 5 
+         remark #15477: vector cost: 2.000 
+         remark #15478: estimated potential speedup: 1.080 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at exact_rhs.f(341,17)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================

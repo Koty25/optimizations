@@ -1,0 +1,774 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: FT
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at ft.f(82,7)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at ft.f(827,7) inlined into ft.f(92,12)
+   remark #15523: loop was not vectorized: loop control variable lg was found, but loop iteration count cannot be computed before executing the loop
+LOOP END
+
+LOOP BEGIN at ft.f(675,7) inlined into ft.f(92,12)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at ft.f(678,10) inlined into ft.f(92,12)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at ft.f(678,10) inlined into ft.f(92,12)
+      remark #15388: vectorization support: reference u(i+ku) has aligned access   [ ft.f(680,13) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.167
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 223 
+      remark #15477: vector cost: 45.000 
+      remark #15478: estimated potential speedup: 4.910 
+      remark #15482: vectorized math library calls: 1 
+      remark #15487: type converts: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at ft.f(678,10) inlined into ft.f(92,12)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at ft.f(99,7)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at ft.f(827,7) inlined into ft.f(110,12)
+   remark #15523: loop was not vectorized: loop control variable lg was found, but loop iteration count cannot be computed before executing the loop
+LOOP END
+
+LOOP BEGIN at ft.f(675,7) inlined into ft.f(110,12)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at ft.f(678,10) inlined into ft.f(110,12)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at ft.f(678,10) inlined into ft.f(110,12)
+      remark #15388: vectorization support: reference u(i+ku) has aligned access   [ ft.f(680,13) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.167
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 223 
+      remark #15477: vector cost: 45.000 
+      remark #15478: estimated potential speedup: 4.910 
+      remark #15482: vectorized math library calls: 1 
+      remark #15487: type converts: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at ft.f(678,10) inlined into ft.f(110,12)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at ft.f(117,7)
+   remark #15382: vectorization support: call to function timer_start_ cannot be vectorized   [ ft.f(118,30) ]
+   remark #15382: vectorization support: call to function EVOLVE cannot be vectorized   [ ft.f(119,15) ]
+   remark #15382: vectorization support: call to function timer_stop_ cannot be vectorized   [ ft.f(120,30) ]
+   remark #15382: vectorization support: call to function timer_start_ cannot be vectorized   [ ft.f(121,30) ]
+   remark #15382: vectorization support: call to function CFFTS3 cannot be vectorized   [ ft.f(495,15) ]
+   remark #15382: vectorization support: call to function CFFTS2 cannot be vectorized   [ ft.f(496,15) ]
+   remark #15382: vectorization support: call to function CFFTS1 cannot be vectorized   [ ft.f(497,15) ]
+   remark #15382: vectorization support: call to function timer_stop_ cannot be vectorized   [ ft.f(124,30) ]
+   remark #15382: vectorization support: call to function timer_start_ cannot be vectorized   [ ft.f(125,30) ]
+   remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ ft.f(853,7) ]
+   remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ ft.f(853,7) ]
+   remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ ft.f(853,7) ]
+   remark #15382: vectorization support: call to function .3 cannot be vectorized   [ ft.f(853,7) ]
+   remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ ft.f(853,7) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt cannot be vectorized   [ ft.f(863,7) ]
+   remark #15382: vectorization support: call to function for_write_seq_fmt_xmit cannot be vectorized   [ ft.f(863,7) ]
+   remark #15382: vectorization support: call to function timer_stop_ cannot be vectorized   [ ft.f(128,30) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+LOOP END
+
+LOOP BEGIN at ft.f(456,7) inlined into ft.f(147,27)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at ft.f(171,7) inlined into ft.f(89,12)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at ft.f(173,13) inlined into ft.f(89,12)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at ft.f(173,13) inlined into ft.f(89,12)
+      remark #15389: vectorization support: reference u0 has unaligned access   [ ft.f(174,16) ]
+      remark #15388: vectorization support: reference u1 has aligned access   [ ft.f(175,16) ]
+      remark #15388: vectorization support: reference twiddle has aligned access   [ ft.f(176,16) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.447
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 2 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 16 
+      remark #15477: vector cost: 9.500 
+      remark #15478: estimated potential speedup: 1.650 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at ft.f(173,13) inlined into ft.f(89,12)
+   <Alternate Alignment Vectorized Loop>
+   LOOP END
+
+   LOOP BEGIN at ft.f(173,13) inlined into ft.f(89,12)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at ft.f(411,7) inlined into ft.f(90,12)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at ft.f(417,13) inlined into ft.f(90,12)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at ft.f(417,13) inlined into ft.f(90,12)
+      remark #15388: vectorization support: reference twiddle has aligned access   [ ft.f(419,16) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.073
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 114 
+      remark #15477: vector cost: 61.250 
+      remark #15478: estimated potential speedup: 1.830 
+      remark #15482: vectorized math library calls: 2 
+      remark #15487: type converts: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at ft.f(417,13) inlined into ft.f(90,12)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at ft.f(411,7) inlined into ft.f(106,12)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at ft.f(417,13) inlined into ft.f(106,12)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at ft.f(417,13) inlined into ft.f(106,12)
+      remark #15388: vectorization support: reference twiddle has aligned access   [ ft.f(419,16) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.073
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 114 
+      remark #15477: vector cost: 61.250 
+      remark #15478: estimated potential speedup: 1.830 
+      remark #15482: vectorized math library calls: 2 
+      remark #15487: type converts: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at ft.f(417,13) inlined into ft.f(106,12)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at ft.f(853,7) inlined into ft.f(127,15)
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u1>, 64-bit indexed, part of index is nonlinearly computed   [ ft.f(858,18) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.087
+   remark #15355: vectorization support: %chk is double complex type reduction   [ ft.f(858,10) ]
+   remark #15462: unmasked indexed (or gather) loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 24 
+   remark #15477: vector cost: 138.500 
+   remark #15478: estimated potential speedup: 0.170 
+   remark #15482: vectorized math library calls: 3 
+   remark #15487: type converts: 3 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+===========================================================================
+
+Begin optimization report for: CFFTS2
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at ft.f(827,7) inlined into ft.f(569,15)
+   remark #15523: loop was not vectorized: loop control variable lg was found, but loop iteration count cannot be computed before executing the loop
+LOOP END
+
+LOOP BEGIN at ft.f(574,7)
+   remark #15382: vectorization support: call to function ?1memcpy cannot be vectorized   [ ft.f(579,15) ]
+   remark #15382: vectorization support: call to function CFFTZ cannot be vectorized   [ ft.f(584,17) ]
+   remark #15382: vectorization support: call to function ?1memcpy cannot be vectorized   [ ft.f(587,15) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between y1(i,j) (579:15) and y1(i,j) (588:18)
+   remark #15346: vector dependence: assumed ANTI dependence between y1(i,j) (588:18) and y1(i,j) (579:15)
+
+   LOOP BEGIN at ft.f(578,12)
+      remark #15382: vectorization support: call to function ?1memcpy cannot be vectorized   [ ft.f(579,15) ]
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed OUTPUT dependence between y1(i,j) (579:15) and y1(i,j) (580:18)
+      remark #15346: vector dependence: assumed OUTPUT dependence between y1(i,j) (580:18) and y1(i,j) (579:15)
+
+      LOOP BEGIN at ft.f(579,15)
+         remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+         LOOP BEGIN at ft.f(579,15)
+            remark #15516: loop was not vectorized: cost model has chosen vectorlength of 1 -- maybe possible to override via pragma/directive with vectorlength clause
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 7 
+            remark #15477: vector cost: 3.000 
+            remark #15478: estimated potential speedup: 1.310 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at ft.f(579,15)
+         <Remainder>
+         LOOP END
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at ft.f(586,12)
+      remark #15382: vectorization support: call to function ?1memcpy cannot be vectorized   [ ft.f(587,15) ]
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed OUTPUT dependence between xout (587:15) and xout (588:18)
+      remark #15346: vector dependence: assumed OUTPUT dependence between xout (588:18) and xout (587:15)
+
+      LOOP BEGIN at ft.f(587,15)
+         remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+         LOOP BEGIN at ft.f(587,15)
+            remark #15516: loop was not vectorized: cost model has chosen vectorlength of 1 -- maybe possible to override via pragma/directive with vectorlength clause
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 7 
+            remark #15477: vector cost: 3.000 
+            remark #15478: estimated potential speedup: 1.310 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at ft.f(587,15)
+         <Remainder>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: CFFTZ
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at ft.f(781,7) inlined into ft.f(731,14)
+   remark #15516: loop was not vectorized: cost model has chosen vectorlength of 1 -- maybe possible to override via pragma/directive with vectorlength clause
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 59 
+   remark #15477: vector cost: 41.000 
+   remark #15478: estimated potential speedup: 1.430 
+   remark #15488: --- end vector cost summary ---
+
+   LOOP BEGIN at ft.f(795,9) inlined into ft.f(731,14)
+      remark #15516: loop was not vectorized: cost model has chosen vectorlength of 1 -- maybe possible to override via pragma/directive with vectorlength clause
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 35 
+      remark #15477: vector cost: 30.000 
+      remark #15478: estimated potential speedup: 1.160 
+      remark #15488: --- end vector cost summary ---
+
+      LOOP BEGIN at ft.f(796,11) inlined into ft.f(731,14)
+         remark #15516: loop was not vectorized: cost model has chosen vectorlength of 1 -- maybe possible to override via pragma/directive with vectorlength clause
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 35 
+         remark #15477: vector cost: 23.000 
+         remark #15478: estimated potential speedup: 1.510 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at ft.f(781,7) inlined into ft.f(733,14)
+   remark #15516: loop was not vectorized: cost model has chosen vectorlength of 1 -- maybe possible to override via pragma/directive with vectorlength clause
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 59 
+   remark #15477: vector cost: 41.000 
+   remark #15478: estimated potential speedup: 1.430 
+   remark #15488: --- end vector cost summary ---
+
+   LOOP BEGIN at ft.f(795,9) inlined into ft.f(733,14)
+      remark #15516: loop was not vectorized: cost model has chosen vectorlength of 1 -- maybe possible to override via pragma/directive with vectorlength clause
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 35 
+      remark #15477: vector cost: 30.000 
+      remark #15478: estimated potential speedup: 1.160 
+      remark #15488: --- end vector cost summary ---
+
+      LOOP BEGIN at ft.f(796,11) inlined into ft.f(733,14)
+         remark #15516: loop was not vectorized: cost model has chosen vectorlength of 1 -- maybe possible to override via pragma/directive with vectorlength clause
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 35 
+         remark #15477: vector cost: 23.000 
+         remark #15478: estimated potential speedup: 1.510 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at ft.f(741,2)
+   remark #15382: vectorization support: call to function ?1memcpy cannot be vectorized   [ ft.f(742,9) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between x(i,j) (742:9) and x(i,j) (743:11)
+   remark #15346: vector dependence: assumed OUTPUT dependence between x(i,j) (743:11) and x(i,j) (742:9)
+
+   LOOP BEGIN at ft.f(742,9)
+      remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+      LOOP BEGIN at ft.f(742,9)
+         remark #15516: loop was not vectorized: cost model has chosen vectorlength of 1 -- maybe possible to override via pragma/directive with vectorlength clause
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 7 
+         remark #15477: vector cost: 3.000 
+         remark #15478: estimated potential speedup: 1.310 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at ft.f(742,9)
+      <Remainder>
+      LOOP END
+   LOOP END
+LOOP END
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at ft.f(734,7)
+   remark #15522: loop was not vectorized: loop control flow is too complex. Try using canonical loop form from OpenMP specification
+LOOP END
+===========================================================================
+
+Begin optimization report for: CFFTS3
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at ft.f(827,7) inlined into ft.f(616,15)
+   remark #15523: loop was not vectorized: loop control variable lg was found, but loop iteration count cannot be computed before executing the loop
+LOOP END
+
+LOOP BEGIN at ft.f(621,7)
+   remark #15382: vectorization support: call to function ?1memcpy cannot be vectorized   [ ft.f(626,15) ]
+   remark #15382: vectorization support: call to function CFFTZ cannot be vectorized   [ ft.f(631,17) ]
+   remark #15382: vectorization support: call to function ?1memcpy cannot be vectorized   [ ft.f(634,15) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between y1(i,k) (626:15) and y1(i,k) (635:18)
+   remark #15346: vector dependence: assumed ANTI dependence between y1(i,k) (635:18) and y1(i,k) (626:15)
+
+   LOOP BEGIN at ft.f(625,12)
+      remark #15382: vectorization support: call to function ?1memcpy cannot be vectorized   [ ft.f(626,15) ]
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed OUTPUT dependence between y1(i,k) (626:15) and y1(i,k) (627:18)
+      remark #15346: vector dependence: assumed OUTPUT dependence between y1(i,k) (627:18) and y1(i,k) (626:15)
+
+      LOOP BEGIN at ft.f(626,15)
+         remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+         LOOP BEGIN at ft.f(626,15)
+            remark #15516: loop was not vectorized: cost model has chosen vectorlength of 1 -- maybe possible to override via pragma/directive with vectorlength clause
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 7 
+            remark #15477: vector cost: 3.000 
+            remark #15478: estimated potential speedup: 1.310 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at ft.f(626,15)
+         <Remainder>
+         LOOP END
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at ft.f(633,12)
+      remark #15382: vectorization support: call to function ?1memcpy cannot be vectorized   [ ft.f(634,15) ]
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed OUTPUT dependence between xout (634:15) and xout (635:18)
+      remark #15346: vector dependence: assumed OUTPUT dependence between xout (635:18) and xout (634:15)
+
+      LOOP BEGIN at ft.f(634,15)
+         remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+         LOOP BEGIN at ft.f(634,15)
+            remark #15516: loop was not vectorized: cost model has chosen vectorlength of 1 -- maybe possible to override via pragma/directive with vectorlength clause
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 7 
+            remark #15477: vector cost: 3.000 
+            remark #15478: estimated potential speedup: 1.310 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at ft.f(634,15)
+         <Remainder>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: CFFTS1
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at ft.f(827,7) inlined into ft.f(521,15)
+   remark #15523: loop was not vectorized: loop control variable lg was found, but loop iteration count cannot be computed before executing the loop
+LOOP END
+
+LOOP BEGIN at ft.f(526,7)
+   remark #15382: vectorization support: call to function CFFTZ cannot be vectorized   [ ft.f(536,18) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between y1(j,i) (532:19) and y1(j,i) (541:19)
+   remark #15346: vector dependence: assumed ANTI dependence between y1(j,i) (541:19) and y1(j,i) (532:19)
+
+   LOOP BEGIN at ft.f(531,16)
+      remark #15389: vectorization support: reference x has unaligned access   [ ft.f(532,19) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <y1(j,i)>, stride is unknown to compiler   [ ft.f(532,19) ]
+      remark #15305: vectorization support: vector length 1
+      remark #15309: vectorization support: normalized vectorization overhead 0.429
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15453: unmasked strided stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 7.000 
+      remark #15478: estimated potential speedup: 0.990 
+      remark #15488: --- end vector cost summary ---
+
+      LOOP BEGIN at ft.f(530,13)
+         remark #15516: loop was not vectorized: cost model has chosen vectorlength of 1 -- maybe possible to override via pragma/directive with vectorlength clause
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 7 
+         remark #15477: vector cost: 4.000 
+         remark #15478: estimated potential speedup: 1.730 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at ft.f(530,13)
+      <Remainder>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at ft.f(539,13)
+      remark #15389: vectorization support: reference y1(j,i) has unaligned access   [ ft.f(541,19) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <xout>, stride is unknown to compiler   [ ft.f(541,19) ]
+      remark #15305: vectorization support: vector length 1
+      remark #15309: vectorization support: normalized vectorization overhead 0.429
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15453: unmasked strided stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 7.000 
+      remark #15478: estimated potential speedup: 0.990 
+      remark #15488: --- end vector cost summary ---
+
+      LOOP BEGIN at ft.f(540,16)
+         remark #15516: loop was not vectorized: cost model has chosen vectorlength of 1 -- maybe possible to override via pragma/directive with vectorlength clause
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 7 
+         remark #15477: vector cost: 4.000 
+         remark #15478: estimated potential speedup: 1.730 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at ft.f(540,16)
+      <Remainder>
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: EVOLVE
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at ft.f(206,7)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between u0 (209:16) and u0 (210:16)
+   remark #15346: vector dependence: assumed ANTI dependence between u0 (210:16) and u0 (209:16)
+
+   LOOP BEGIN at ft.f(208,13)
+      remark #15516: loop was not vectorized: cost model has chosen vectorlength of 1 -- maybe possible to override via pragma/directive with vectorlength clause
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 25 
+      remark #15477: vector cost: 9.000 
+      remark #15478: estimated potential speedup: 2.760 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: VERIFY
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at ft.f(1113,34)
+   remark #15523: loop was not vectorized: loop control variable i was found, but loop iteration count cannot be computed before executing the loop
+LOOP END
+===========================================================================
+
+Begin optimization report for: PRINT_TIMERS
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at ft.f(456,7)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+===========================================================================
+
+Begin optimization report for: CHECKSUM
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at ft.f(853,7)
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <u1>, 64-bit indexed, part of index is nonlinearly computed   [ ft.f(858,18) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.087
+   remark #15355: vectorization support: %chk is double complex type reduction   [ ft.f(858,10) ]
+   remark #15462: unmasked indexed (or gather) loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 24 
+   remark #15477: vector cost: 138.500 
+   remark #15478: estimated potential speedup: 0.170 
+   remark #15482: vectorized math library calls: 3 
+   remark #15487: type converts: 3 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+===========================================================================
+
+Begin optimization report for: COMPUTE_INDEXMAP
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at ft.f(411,7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at ft.f(417,13)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at ft.f(417,13)
+      remark #15388: vectorization support: reference twiddle has aligned access   [ ft.f(419,16) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.073
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 114 
+      remark #15477: vector cost: 61.250 
+      remark #15478: estimated potential speedup: 1.830 
+      remark #15482: vectorized math library calls: 2 
+      remark #15487: type converts: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at ft.f(417,13)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: IPOW46
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at ft.f(299,7)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+===========================================================================
+
+Begin optimization report for: ILOG2
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at ft.f(827,7)
+   remark #15523: loop was not vectorized: loop control variable lg was found, but loop iteration count cannot be computed before executing the loop
+LOOP END
+===========================================================================
+
+Begin optimization report for: FFTZ2
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at ft.f(781,7)
+   remark #15516: loop was not vectorized: cost model has chosen vectorlength of 1 -- maybe possible to override via pragma/directive with vectorlength clause
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 59 
+   remark #15477: vector cost: 41.000 
+   remark #15478: estimated potential speedup: 1.430 
+   remark #15488: --- end vector cost summary ---
+
+   LOOP BEGIN at ft.f(795,9)
+      remark #15516: loop was not vectorized: cost model has chosen vectorlength of 1 -- maybe possible to override via pragma/directive with vectorlength clause
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 35 
+      remark #15477: vector cost: 30.000 
+      remark #15478: estimated potential speedup: 1.160 
+      remark #15488: --- end vector cost summary ---
+
+      LOOP BEGIN at ft.f(796,11)
+         remark #15516: loop was not vectorized: cost model has chosen vectorlength of 1 -- maybe possible to override via pragma/directive with vectorlength clause
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 35 
+         remark #15477: vector cost: 23.000 
+         remark #15478: estimated potential speedup: 1.510 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: INIT_UI
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at ft.f(171,7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at ft.f(173,13)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at ft.f(173,13)
+      remark #15389: vectorization support: reference u0 has unaligned access   [ ft.f(174,16) ]
+      remark #15388: vectorization support: reference u1 has aligned access   [ ft.f(175,16) ]
+      remark #15388: vectorization support: reference twiddle has aligned access   [ ft.f(176,16) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.447
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 2 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 16 
+      remark #15477: vector cost: 9.500 
+      remark #15478: estimated potential speedup: 1.650 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at ft.f(173,13)
+   <Alternate Alignment Vectorized Loop>
+   LOOP END
+
+   LOOP BEGIN at ft.f(173,13)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: COMPUTE_INITIAL_CONDITIONS
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at ft.f(299,7) inlined into ft.f(247,12)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at ft.f(250,7)
+   remark #15382: vectorization support: call to function randlc_ cannot be vectorized   [ ft.f(251,18) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+LOOP END
+
+LOOP BEGIN at ft.f(259,7)
+   remark #15382: vectorization support: call to function vranlc_ cannot be vectorized   [ ft.f(262,18) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between x0 (260:10) and x0 (262:18)
+   remark #15346: vector dependence: assumed OUTPUT dependence between x0 (262:18) and x0 (260:10)
+
+   LOOP BEGIN at ft.f(261,10)
+      remark #15382: vectorization support: call to function vranlc_ cannot be vectorized   [ ft.f(262,18) ]
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: FFT_INIT
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at ft.f(827,7) inlined into ft.f(670,11)
+   remark #15523: loop was not vectorized: loop control variable lg was found, but loop iteration count cannot be computed before executing the loop
+LOOP END
+
+LOOP BEGIN at ft.f(675,7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at ft.f(678,10)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at ft.f(678,10)
+      remark #15388: vectorization support: reference u(i+ku) has aligned access   [ ft.f(680,13) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.167
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 223 
+      remark #15477: vector cost: 45.000 
+      remark #15478: estimated potential speedup: 4.910 
+      remark #15482: vectorized math library calls: 1 
+      remark #15487: type converts: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at ft.f(678,10)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+===========================================================================

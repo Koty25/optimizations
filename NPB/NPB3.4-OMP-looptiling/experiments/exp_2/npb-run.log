@@ -1,0 +1,91 @@
+Date: Tue Jul  7 11:03:13 -03 2020
+Host: tsubasa
+
+>>> run ncc/bt.B.x nt=4 - successful
+>>> run ncc/cg.B.x nt=4 - successful
+>>> run ncc/ep.B.x nt=4 - successful
+>>> run ncc/ft.B.x nt=4 - successful
+>>> run ncc/is.B.x nt=4 - successful
+>>> run ncc/mg.B.x nt=4 - successful
+>>> run ncc/sp.B.x nt=4 - successful
+>>> run ncc/ua.B.x nt=4 - successful
+>>> run ncc/bt.B.x nt=4 - successful
+>>> run ncc/cg.B.x nt=4 - successful
+>>> run ncc/ep.B.x nt=4 - successful
+>>> run ncc/ft.B.x nt=4 - successful
+>>> run ncc/is.B.x nt=4 - successful
+>>> run ncc/mg.B.x nt=4 - successful
+>>> run ncc/sp.B.x nt=4 - successful
+>>> run ncc/ua.B.x nt=4 - successful
+>>> run ncc/bt.B.x nt=4 - successful
+>>> run ncc/cg.B.x nt=4 - successful
+>>> run ncc/ep.B.x nt=4 - successful
+>>> run ncc/ft.B.x nt=4 - successful
+>>> run ncc/is.B.x nt=4 - successful
+>>> run ncc/mg.B.x nt=4 - successful
+>>> run ncc/sp.B.x nt=4 - successful
+>>> run ncc/ua.B.x nt=4 - successful
+>>> run ncc/bt.B.x nt=4 - successful
+>>> run ncc/cg.B.x nt=4 - successful
+>>> run ncc/ep.B.x nt=4 - successful
+>>> run ncc/ft.B.x nt=4 - successful
+>>> run ncc/is.B.x nt=4 - successful
+>>> run ncc/mg.B.x nt=4 - successful
+>>> run ncc/sp.B.x nt=4 - successful
+>>> run ncc/ua.B.x nt=4 - successful
+>>> run ncc/bt.B.x nt=4 - successful
+>>> run ncc/cg.B.x nt=4 - successful
+>>> run ncc/ep.B.x nt=4 - successful
+>>> run ncc/ft.B.x nt=4 - successful
+>>> run ncc/is.B.x nt=4 - successful
+>>> run ncc/mg.B.x nt=4 - successful
+>>> run ncc/sp.B.x nt=4 - successful
+>>> run ncc/ua.B.x nt=4 - successful
+/var/spool/slurmd/job348403/slurm_script: line 87: Rscript: command not found
+>>> run intel/bt.B.x nt=4 - successful
+>>> run intel/cg.B.x nt=4 - successful
+>>> run intel/ep.B.x nt=4 - successful
+>>> run intel/ft.B.x nt=4 - successful
+>>> run intel/is.B.x nt=4 - successful
+>>> run intel/mg.B.x nt=4 - successful
+>>> run intel/sp.B.x nt=4 - successful
+>>> run intel/ua.B.x nt=4 - successful
+>>> run intel/bt.B.x nt=4 - successful
+>>> run intel/cg.B.x nt=4 - successful
+>>> run intel/ep.B.x nt=4 - successful
+>>> run intel/ft.B.x nt=4 - successful
+>>> run intel/is.B.x nt=4 - successful
+>>> run intel/mg.B.x nt=4 - successful
+>>> run intel/sp.B.x nt=4 - successful
+>>> run intel/ua.B.x nt=4 - successful
+>>> run intel/bt.B.x nt=4 - successful
+>>> run intel/cg.B.x nt=4 - successful
+>>> run intel/ep.B.x nt=4 - successful
+>>> run intel/ft.B.x nt=4 - successful
+>>> run intel/is.B.x nt=4 - successful
+>>> run intel/mg.B.x nt=4 - successful
+>>> run intel/sp.B.x nt=4 - successful
+>>> run intel/ua.B.x nt=4 - successful
+>>> run intel/bt.B.x nt=4 - successful
+>>> run intel/cg.B.x nt=4 - successful
+>>> run intel/ep.B.x nt=4 - successful
+>>> run intel/ft.B.x nt=4 - successful
+>>> run intel/is.B.x nt=4 - successful
+>>> run intel/mg.B.x nt=4 - successful
+>>> run intel/sp.B.x nt=4 - successful
+>>> run intel/ua.B.x nt=4 - successful
+>>> run intel/bt.B.x nt=4 - successful
+>>> run intel/cg.B.x nt=4 - successful
+>>> run intel/ep.B.x nt=4 - successful
+>>> run intel/ft.B.x nt=4 - successful
+>>> run intel/is.B.x nt=4 - successful
+>>> run intel/mg.B.x nt=4 - successful
+>>> run intel/sp.B.x nt=4 - successful
+>>> run intel/ua.B.x nt=4 - successful
+/var/spool/slurmd/job348403/slurm_script: line 87: Rscript: command not found
+
+Date: Tue Jul  7 12:13:22 -03 2020
+Total number of cases: 80
+Total number of FAILED cases: 0
+Total number of not present cases: 0
+

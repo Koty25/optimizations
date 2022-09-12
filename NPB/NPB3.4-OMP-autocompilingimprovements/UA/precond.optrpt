@@ -1,0 +1,1418 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: SETUPPC
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at precond.f(16,7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at precond.f(17,9)
+      remark #15389: vectorization support: reference dxtm1(i,j) has unaligned access   [ precond.f(18,34) ]
+      remark #15389: vectorization support: reference dxtm1_2(i,j) has unaligned access   [ precond.f(18,11) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.333
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 9 
+      remark #15477: vector cost: 6.000 
+      remark #15478: estimated potential speedup: 1.090 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at precond.f(17,9)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at precond.f(25,7)
+   remark #15382: vectorization support: call to function r_init_ cannot be vectorized   [ precond.f(26,14) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+
+   LOOP BEGIN at precond.f(32,36)
+      remark #15389: vectorization support: reference dxtm1_2(k,q) has unaligned access   [ precond.f(33,66) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <dpcelm_(i,j,k,ie)>, stride is unknown to compiler   [ precond.f(32,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <dpcelm_(i,j,k,ie)>, stride is unknown to compiler
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <g1m1_s(q,j,k,isize)>, stride is 25
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <g1m1_s(i,q,k,isize)>, stride is 25   [ precond.f(32,53) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <dpcelm_(i,j,k,ie)>, stride is unknown to compiler   [ precond.f(37,15) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <dpcelm_(i,j,k,ie)>, stride is unknown to compiler   [ precond.f(37,37) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <bm1_s(i,j,k,isize)>, stride is 25   [ precond.f(37,36) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.368
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15452: unmasked strided loads: 5 
+      remark #15453: unmasked strided stores: 2 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 33 
+      remark #15477: vector cost: 28.500 
+      remark #15478: estimated potential speedup: 0.980 
+      remark #15488: --- end vector cost summary ---
+
+      LOOP BEGIN at precond.f(29,11)
+         remark #15389: vectorization support: reference dxtm1_2(j,q) has unaligned access   [ precond.f(32,53) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15329: vectorization support: non-unit strided store was emulated for the variable <dpcelm_(i,j,k,ie)>, stride is unknown to compiler   [ precond.f(32,17) ]
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <dpcelm_(i,j,k,ie)>, stride is unknown to compiler   [ precond.f(32,36) ]
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <g1m1_s(q,j,k,isize)>, stride is 5   [ precond.f(32,36) ]
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <g1m1_s(i,j,q,isize)>, stride is 5   [ precond.f(33,66) ]
+         remark #15329: vectorization support: non-unit strided store was emulated for the variable <dpcelm_(i,j,k,ie)>, stride is unknown to compiler   [ precond.f(37,15) ]
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <dpcelm_(i,j,k,ie)>, stride is unknown to compiler   [ precond.f(37,37) ]
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <bm1_s(i,j,k,isize)>, stride is 5   [ precond.f(37,36) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.375
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15452: unmasked strided loads: 5 
+         remark #15453: unmasked strided stores: 2 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 33 
+         remark #15477: vector cost: 28.000 
+         remark #15478: estimated potential speedup: 0.990 
+         remark #15488: --- end vector cost summary ---
+
+         LOOP BEGIN at precond.f(30,13)
+            remark #15389: vectorization support: reference dpcelm_(i,j,k,ie) has unaligned access   [ precond.f(32,17) ]
+            remark #15389: vectorization support: reference dpcelm_(i,j,k,ie) has unaligned access   [ precond.f(32,36) ]
+            remark #15389: vectorization support: reference dxtm1_2(i,q) has unaligned access   [ precond.f(32,36) ]
+            remark #15389: vectorization support: reference g1m1_s(i,q,k,isize) has unaligned access   [ precond.f(32,53) ]
+            remark #15389: vectorization support: reference g1m1_s(i,j,q,isize) has unaligned access   [ precond.f(33,66) ]
+            remark #15389: vectorization support: reference dpcelm_(i,j,k,ie) has unaligned access   [ precond.f(37,15) ]
+            remark #15389: vectorization support: reference dpcelm_(i,j,k,ie) has unaligned access   [ precond.f(37,37) ]
+            remark #15389: vectorization support: reference bm1_s(i,j,k,isize) has unaligned access   [ precond.f(37,36) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15305: vectorization support: vector length 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.897
+            remark #15450: unmasked unaligned unit stride loads: 5 
+            remark #15451: unmasked unaligned unit stride stores: 2 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 33 
+            remark #15477: vector cost: 19.500 
+            remark #15478: estimated potential speedup: 1.130 
+            remark #15488: --- end vector cost summary ---
+
+            LOOP BEGIN at precond.f(31,15)
+               remark #15389: vectorization support: reference g1m1_s(q,j,k,isize) has unaligned access   [ precond.f(32,36) ]
+               remark #15381: vectorization support: unaligned access used inside loop body
+               remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <dxtm1_2(i,q)>, stride is 5   [ precond.f(32,36) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <g1m1_s(i,q,k,isize)>, stride is 5   [ precond.f(32,53) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <dxtm1_2(j,q)>, stride is 5   [ precond.f(32,53) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <g1m1_s(i,j,q,isize)>, stride is 25   [ precond.f(33,66) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <dxtm1_2(k,q)>, stride is 5   [ precond.f(33,66) ]
+               remark #15305: vectorization support: vector length 2
+               remark #15399: vectorization support: unroll factor set to 2
+               remark #15309: vectorization support: normalized vectorization overhead 0.379
+               remark #15355: vectorization support: dpcelm_(i,j,k,ie) is double type reduction   [ precond.f(32,17) ]
+               remark #15450: unmasked unaligned unit stride loads: 1 
+               remark #15452: unmasked strided loads: 5 
+               remark #15475: --- begin vector cost summary ---
+               remark #15476: scalar cost: 19 
+               remark #15477: vector cost: 14.500 
+               remark #15478: estimated potential speedup: 0.950 
+               remark #15488: --- end vector cost summary ---
+            LOOP END
+
+            LOOP BEGIN at precond.f(31,15)
+            LOOP END
+
+            LOOP BEGIN at precond.f(31,15)
+            LOOP END
+
+            LOOP BEGIN at precond.f(31,15)
+            LOOP END
+
+            LOOP BEGIN at precond.f(31,15)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at precond.f(30,13)
+
+            LOOP BEGIN at precond.f(31,15)
+            LOOP END
+
+            LOOP BEGIN at precond.f(31,15)
+            LOOP END
+
+            LOOP BEGIN at precond.f(31,15)
+            LOOP END
+
+            LOOP BEGIN at precond.f(31,15)
+            LOOP END
+
+            LOOP BEGIN at precond.f(31,15)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at precond.f(30,13)
+
+            LOOP BEGIN at precond.f(31,15)
+            LOOP END
+
+            LOOP BEGIN at precond.f(31,15)
+            LOOP END
+
+            LOOP BEGIN at precond.f(31,15)
+            LOOP END
+
+            LOOP BEGIN at precond.f(31,15)
+            LOOP END
+
+            LOOP BEGIN at precond.f(31,15)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at precond.f(30,13)
+
+            LOOP BEGIN at precond.f(31,15)
+            LOOP END
+
+            LOOP BEGIN at precond.f(31,15)
+            LOOP END
+
+            LOOP BEGIN at precond.f(31,15)
+            LOOP END
+
+            LOOP BEGIN at precond.f(31,15)
+            LOOP END
+
+            LOOP BEGIN at precond.f(31,15)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at precond.f(30,13)
+
+            LOOP BEGIN at precond.f(31,15)
+            LOOP END
+
+            LOOP BEGIN at precond.f(31,15)
+            LOOP END
+
+            LOOP BEGIN at precond.f(31,15)
+            LOOP END
+
+            LOOP BEGIN at precond.f(31,15)
+            LOOP END
+
+            LOOP BEGIN at precond.f(31,15)
+            LOOP END
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at precond.f(54,7)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at precond.f(54,7)
+   remark #15388: vectorization support: reference dpcmor_(i) has aligned access   [ precond.f(56,9) ]
+   remark #15388: vectorization support: reference dpcmor_(i) has aligned access   [ precond.f(56,24) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.071
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 30 
+   remark #15477: vector cost: 17.500 
+   remark #15478: estimated potential speedup: 1.690 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at precond.f(54,7)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference dpcmor_(i) has aligned access   [ precond.f(56,9) ]
+   remark #15388: vectorization support: reference dpcmor_(i) has aligned access   [ precond.f(56,24) ]
+   remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.256
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 30 
+   remark #15477: vector cost: 17.500 
+   remark #15478: estimated potential speedup: 1.690 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+===========================================================================
+
+Begin optimization report for: SETPCMO_PRE
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at precond.f(91,9)
+   remark #15388: vectorization support: reference tig(j) has aligned access   [ precond.f(92,11) ]
+   remark #15388: vectorization support: reference tig(j) has aligned access   [ precond.f(92,11) ]
+   remark #15388: vectorization support: reference tig(j) has aligned access   [ precond.f(92,11) ]
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <qbnew(i-1,j,1)>, stride is 3   [ precond.f(92,11) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <qbnew(i-1,j,1)>, stride is 3   [ precond.f(92,11) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <qbnew(i-1,j,1)>, stride is 3   [ precond.f(92,11) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.950
+   remark #15355: vectorization support: tmp(i,1) is double type reduction   [ precond.f(92,11) ]
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15452: unmasked strided loads: 3 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 27 
+   remark #15477: vector cost: 15.000 
+   remark #15478: estimated potential speedup: 0.930 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at precond.f(96,7)
+<Distributed chunk1>
+   remark #15389: vectorization support: reference tcpre(col,1) has unaligned access   [ precond.f(97,9) ]
+   remark #15388: vectorization support: reference tmp(col,1) has aligned access   [ precond.f(97,9) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.300
+   remark #15301: PARTIAL LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 2.500 
+   remark #15478: estimated potential speedup: 1.170 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at precond.f(100,11)
+<Distributed chunk2>
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between tcpre(col,j) (101:13) and tcpre(col,j) (101:13)
+   remark #15346: vector dependence: assumed OUTPUT dependence between tcpre(col,j) (101:13) and tcpre(col,j) (101:13)
+
+   LOOP BEGIN at precond.f(99,9)
+      remark #15541: outer loop was not auto-vectorized: consider using SIMD directive   [ precond.f(96,7) ]
+
+      LOOP BEGIN at precond.f(96,7)
+         remark #15389: vectorization support: reference tcpre(col,j) has unaligned access   [ precond.f(101,13) ]
+         remark #15389: vectorization support: reference tcpre(col,j) has unaligned access   [ precond.f(101,13) ]
+         remark #15389: vectorization support: reference tmp(col,i) has unaligned access   [ precond.f(101,13) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.458
+         remark #15450: unmasked unaligned unit stride loads: 2 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 9 
+         remark #15477: vector cost: 6.000 
+         remark #15478: estimated potential speedup: 1.020 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at precond.f(96,7)
+      LOOP END
+
+      LOOP BEGIN at precond.f(96,7)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at precond.f(99,9)
+
+      LOOP BEGIN at precond.f(96,7)
+      LOOP END
+
+      LOOP BEGIN at precond.f(96,7)
+      LOOP END
+
+      LOOP BEGIN at precond.f(96,7)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at precond.f(99,9)
+
+      LOOP BEGIN at precond.f(96,7)
+      LOOP END
+
+      LOOP BEGIN at precond.f(96,7)
+      LOOP END
+
+      LOOP BEGIN at precond.f(96,7)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at precond.f(99,9)
+
+      LOOP BEGIN at precond.f(96,7)
+      LOOP END
+
+      LOOP BEGIN at precond.f(96,7)
+      LOOP END
+
+      LOOP BEGIN at precond.f(96,7)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at precond.f(99,9)
+
+      LOOP BEGIN at precond.f(96,7)
+      LOOP END
+
+      LOOP BEGIN at precond.f(96,7)
+      LOOP END
+
+      LOOP BEGIN at precond.f(96,7)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at precond.f(96,7)
+<Remainder loop for vectorization, Distributed chunk1>
+LOOP END
+
+LOOP BEGIN at precond.f(109,7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at precond.f(118,9)
+      remark #15382: vectorization support: call to function r_init_ cannot be vectorized   [ precond.f(120,18) ]
+      remark #15382: vectorization support: call to function laplacian_ cannot be vectorized   [ precond.f(122,18) ]
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed OUTPUT dependence between p (120:18) and p (122:18)
+      remark #15346: vector dependence: assumed OUTPUT dependence between p (122:18) and p (120:18)
+
+      LOOP BEGIN at precond.f(119,11)
+         remark #15382: vectorization support: call to function r_init_ cannot be vectorized   [ precond.f(120,18) ]
+         remark #15382: vectorization support: call to function laplacian_ cannot be vectorized   [ precond.f(122,18) ]
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at precond.f(142,9)
+      remark #15382: vectorization support: call to function r_init_ cannot be vectorized   [ precond.f(144,18) ]
+      remark #15382: vectorization support: call to function r_init_ cannot be vectorized   [ precond.f(145,18) ]
+      remark #15382: vectorization support: call to function transf_nc_ cannot be vectorized   [ precond.f(151,18) ]
+      remark #15382: vectorization support: call to function laplacian_ cannot be vectorized   [ precond.f(152,18) ]
+      remark #15382: vectorization support: call to function transfb_nc1_ cannot be vectorized   [ precond.f(153,18) ]
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed OUTPUT dependence between mtemp (144:18) and mtemp (151:18)
+      remark #15346: vector dependence: assumed OUTPUT dependence between mtemp (151:18) and mtemp (144:18)
+
+      LOOP BEGIN at precond.f(143,11)
+         remark #15382: vectorization support: call to function r_init_ cannot be vectorized   [ precond.f(144,18) ]
+         remark #15382: vectorization support: call to function r_init_ cannot be vectorized   [ precond.f(145,18) ]
+         remark #15382: vectorization support: call to function transf_nc_ cannot be vectorized   [ precond.f(151,18) ]
+         remark #15382: vectorization support: call to function laplacian_ cannot be vectorized   [ precond.f(152,18) ]
+         remark #15382: vectorization support: call to function transfb_nc1_ cannot be vectorized   [ precond.f(153,18) ]
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at precond.f(173,9)
+      remark #15382: vectorization support: call to function r_init_ cannot be vectorized   [ precond.f(174,16) ]
+      remark #15382: vectorization support: call to function r_init_ cannot be vectorized   [ precond.f(175,16) ]
+      remark #15382: vectorization support: call to function r_init_ cannot be vectorized   [ precond.f(176,16) ]
+      remark #15382: vectorization support: call to function transf_nc_ cannot be vectorized   [ precond.f(179,16) ]
+      remark #15382: vectorization support: call to function laplacian_ cannot be vectorized   [ precond.f(180,16) ]
+      remark #15382: vectorization support: call to function transfb_nc1_ cannot be vectorized   [ precond.f(181,16) ]
+      remark #15382: vectorization support: call to function laplacian_ cannot be vectorized   [ precond.f(195,16) ]
+      remark #15382: vectorization support: call to function transfb_nc2_ cannot be vectorized   [ precond.f(196,16) ]
+      remark #15382: vectorization support: call to function laplacian_ cannot be vectorized   [ precond.f(206,16) ]
+      remark #15382: vectorization support: call to function transfb_nc0_ cannot be vectorized   [ precond.f(207,16) ]
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+
+      LOOP BEGIN at precond.f(184,11)
+         remark #15388: vectorization support: reference p0(ii,1,1) has aligned access   [ precond.f(187,13) ]
+         remark #15388: vectorization support: reference p(ii,1,1) has aligned access   [ precond.f(187,13) ]
+         remark #15389: vectorization support: reference p(ii,1,jj) has unaligned access   [ precond.f(191,15) ]
+         remark #15389: vectorization support: reference p(ii,jj,1) has unaligned access   [ precond.f(191,15) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.600
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 7 
+         remark #15477: vector cost: 5.000 
+         remark #15478: estimated potential speedup: 1.060 
+         remark #15488: --- end vector cost summary ---
+
+         LOOP BEGIN at precond.f(188,13)
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15329: vectorization support: non-unit strided store was emulated for the variable <p(ii,1,jj)>, stride is 25   [ precond.f(191,15) ]
+            remark #15328: vectorization support: non-unit strided load was emulated for the variable <p(ii,jj,1)>, stride is 5   [ precond.f(191,15) ]
+            remark #15305: vectorization support: vector length 2
+            remark #15399: vectorization support: unroll factor set to 2
+            remark #15452: unmasked strided loads: 1 
+            remark #15453: unmasked strided stores: 1 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 4 
+            remark #15477: vector cost: 4.000 
+            remark #15478: estimated potential speedup: 1.000 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at precond.f(188,13)
+         LOOP END
+
+         LOOP BEGIN at precond.f(188,13)
+         LOOP END
+
+         LOOP BEGIN at precond.f(188,13)
+         LOOP END
+
+         LOOP BEGIN at precond.f(188,13)
+         LOOP END
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at precond.f(230,9)
+      remark #15389: vectorization support: reference pcmor_nc1(i,1,1,2,element_size) has unaligned access   [ precond.f(231,11) ]
+      remark #15389: vectorization support: reference pcmor_nc0(i,1,1,2,element_size) has unaligned access   [ precond.f(233,11) ]
+      remark #15389: vectorization support: reference pcmor_nc2(i,1,1,2,element_size) has unaligned access   [ precond.f(235,11) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <pcmor_nc1(i+6,1,1,1,element_size)>, stride is -1   [ precond.f(231,11) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <pcmor_nc0(i+6,1,1,1,element_size)>, stride is -1   [ precond.f(233,11) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <pcmor_nc2(i+6,1,1,1,element_size)>, stride is -1   [ precond.f(235,11) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15427: loop was completely unrolled
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.643
+      remark #15451: unmasked unaligned unit stride stores: 3 
+      remark #15452: unmasked strided loads: 3 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 11 
+      remark #15477: vector cost: 10.500 
+      remark #15478: estimated potential speedup: 0.630 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at precond.f(239,9)
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <pcmor_nc1(i,j,1,2,element_size)>, stride is 5   [ precond.f(241,13) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <pcmor_nc1(i+6,j,1,1,element_size)>, stride is 5   [ precond.f(241,13) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <pcmor_nc1(5,j,1,2,element_size)>, stride is 5   [ precond.f(245,11) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <pcmor_nc1(1,j,1,1,element_size)>, stride is 5   [ precond.f(245,11) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <pcmor_nc0(5,j,1,2,element_size)>, stride is 5   [ precond.f(247,11) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <pcmor_nc0(1,j,1,1,element_size)>, stride is 5   [ precond.f(247,11) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <pcmor_nc2(5,j,1,2,element_size)>, stride is 5   [ precond.f(249,11) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <pcmor_nc2(1,j,1,1,element_size)>, stride is 5   [ precond.f(249,11) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15452: unmasked strided loads: 4 
+      remark #15453: unmasked strided stores: 4 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 25 
+      remark #15477: vector cost: 28.500 
+      remark #15478: estimated potential speedup: 0.870 
+      remark #15488: --- end vector cost summary ---
+
+      LOOP BEGIN at precond.f(240,11)
+         remark #15389: vectorization support: reference pcmor_nc1(i,j,1,2,element_size) has unaligned access   [ precond.f(241,13) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <pcmor_nc1(i+6,j,1,1,element_size)>, stride is -1   [ precond.f(241,13) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15427: loop was completely unrolled
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.429
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15452: unmasked strided loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 3.500 
+         remark #15478: estimated potential speedup: 0.800 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at precond.f(240,11)
+      LOOP END
+
+      LOOP BEGIN at precond.f(240,11)
+      LOOP END
+
+      LOOP BEGIN at precond.f(240,11)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at precond.f(261,9)
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <pcmor_nc1(1,j,2,1,element_size)>, stride is 5   [ precond.f(263,11) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <pcmor_nc1(1,6-j,1,1,element_size)>, stride is -5   [ precond.f(263,11) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <pcmor_nc0(1,j,2,1,element_size)>, stride is 5   [ precond.f(265,11) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <pcmor_nc0(1,6-j,1,1,element_size)>, stride is -5   [ precond.f(265,11) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <pcmor_nc2(1,j,2,1,element_size)>, stride is 5   [ precond.f(267,11) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <pcmor_nc2(1,6-j,1,1,element_size)>, stride is -5   [ precond.f(267,11) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <pcmor_nc1(i,j,2,1,element_size)>, stride is 5   [ precond.f(270,13) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <pcmor_nc1(i,j+6,1,1,element_size)>, stride is -5   [ precond.f(270,13) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15452: unmasked strided loads: 4 
+      remark #15453: unmasked strided stores: 4 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 28 
+      remark #15477: vector cost: 31.500 
+      remark #15478: estimated potential speedup: 0.920 
+      remark #15488: --- end vector cost summary ---
+
+      LOOP BEGIN at precond.f(269,11)
+         remark #15389: vectorization support: reference pcmor_nc1(i,j,2,1,element_size) has unaligned access   [ precond.f(270,13) ]
+         remark #15389: vectorization support: reference pcmor_nc1(i,j+6,1,1,element_size) has unaligned access   [ precond.f(270,13) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15305: vectorization support: vector length 2
+         remark #15427: loop was completely unrolled
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.500
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 3.000 
+         remark #15478: estimated potential speedup: 0.880 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at precond.f(269,11)
+      LOOP END
+
+      LOOP BEGIN at precond.f(269,11)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at precond.f(276,9)
+      remark #15389: vectorization support: reference pcmor_nc1(i,5,2,1,element_size) has unaligned access   [ precond.f(277,11) ]
+      remark #15389: vectorization support: reference pcmor_nc1(i,1,1,1,element_size) has unaligned access   [ precond.f(277,11) ]
+      remark #15389: vectorization support: reference pcmor_nc0(i,5,2,1,element_size) has unaligned access   [ precond.f(279,11) ]
+      remark #15389: vectorization support: reference pcmor_nc0(i,1,1,1,element_size) has unaligned access   [ precond.f(279,11) ]
+      remark #15389: vectorization support: reference pcmor_nc2(i,5,2,1,element_size) has unaligned access   [ precond.f(281,11) ]
+      remark #15389: vectorization support: reference pcmor_nc2(i,1,1,1,element_size) has unaligned access   [ precond.f(281,11) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15427: loop was completely unrolled
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.562
+      remark #15450: unmasked unaligned unit stride loads: 3 
+      remark #15451: unmasked unaligned unit stride stores: 3 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 11 
+      remark #15477: vector cost: 12.000 
+      remark #15478: estimated potential speedup: 0.580 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at precond.f(294,9)
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <pcmor_nc1(i,j,2,2,element_size)>, stride is 5   [ precond.f(296,13) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <pcmor_nc1(i+6,j+6,1,1,element_size)>, stride is -5   [ precond.f(296,13) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <pcmor_nc1(5,j,2,2,element_size)>, stride is 5   [ precond.f(300,11) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <pcmor_nc1(1,j+6,1,1,element_size)>, stride is -5   [ precond.f(300,11) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <pcmor_nc0(5,j,2,2,element_size)>, stride is 5   [ precond.f(302,11) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <pcmor_nc0(1,j+6,1,1,element_size)>, stride is -5   [ precond.f(302,11) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <pcmor_nc2(5,j,2,2,element_size)>, stride is 5   [ precond.f(304,11) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <pcmor_nc2(1,j+6,1,1,element_size)>, stride is -5   [ precond.f(304,11) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15452: unmasked strided loads: 4 
+      remark #15453: unmasked strided stores: 4 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 31 
+      remark #15477: vector cost: 34.500 
+      remark #15478: estimated potential speedup: 0.930 
+      remark #15488: --- end vector cost summary ---
+
+      LOOP BEGIN at precond.f(295,11)
+         remark #15389: vectorization support: reference pcmor_nc1(i,j,2,2,element_size) has unaligned access   [ precond.f(296,13) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <pcmor_nc1(i+6,j+6,1,1,element_size)>, stride is -1   [ precond.f(296,13) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.857
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15452: unmasked strided loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 3.500 
+         remark #15478: estimated potential speedup: 0.700 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at precond.f(295,11)
+      LOOP END
+
+      LOOP BEGIN at precond.f(295,11)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at precond.f(308,9)
+      remark #15389: vectorization support: reference pcmor_nc1(i,5,2,2,element_size) has unaligned access   [ precond.f(309,11) ]
+      remark #15389: vectorization support: reference pcmor_nc0(i,5,2,2,element_size) has unaligned access   [ precond.f(311,11) ]
+      remark #15389: vectorization support: reference pcmor_nc2(i,5,2,2,element_size) has unaligned access   [ precond.f(313,11) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <pcmor_nc1(i+6,1,1,1,element_size)>, stride is -1   [ precond.f(309,11) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <pcmor_nc0(i+6,1,1,1,element_size)>, stride is -1   [ precond.f(311,11) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <pcmor_nc2(i+6,1,1,1,element_size)>, stride is -1   [ precond.f(313,11) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.429
+      remark #15451: unmasked unaligned unit stride stores: 3 
+      remark #15452: unmasked strided loads: 3 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 11 
+      remark #15477: vector cost: 10.500 
+      remark #15478: estimated potential speedup: 0.800 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at precond.f(336,9)
+      remark #15388: vectorization support: reference p0(i,1,1) has aligned access   [ precond.f(337,12) ]
+      remark #15389: vectorization support: reference tcpre(i,1) has unaligned access   [ precond.f(337,12) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.375
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 2.000 
+      remark #15478: estimated potential speedup: 1.330 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at precond.f(344,9)
+   <Distributed chunk1>
+      remark #15388: vectorization support: reference p0(i,1,1) has aligned access   [ precond.f(345,12) ]
+      remark #15389: vectorization support: reference tcpre(i,1) has unaligned access   [ precond.f(345,12) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.375
+      remark #15301: PARTIAL LOOP WAS VECTORIZED
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 2.000 
+      remark #15478: estimated potential speedup: 1.330 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at precond.f(344,9)
+   <Distributed chunk2>
+      remark #15389: vectorization support: reference tcpre(i,1) has unaligned access   [ precond.f(346,12) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <p0(1,i,1)>, stride is 5   [ precond.f(346,12) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.214
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15453: unmasked strided stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 3.500 
+      remark #15478: estimated potential speedup: 0.950 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at precond.f(353,9)
+   <Distributed chunk1>
+      remark #15388: vectorization support: reference p0(i,1,1) has aligned access   [ precond.f(354,12) ]
+      remark #15389: vectorization support: reference tcpre(i,1) has unaligned access   [ precond.f(354,12) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.375
+      remark #15301: PARTIAL LOOP WAS VECTORIZED
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 2.000 
+      remark #15478: estimated potential speedup: 1.330 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at precond.f(353,9)
+   <Distributed chunk2>
+      remark #15389: vectorization support: reference tcpre(i,1) has unaligned access   [ precond.f(355,12) ]
+      remark #15389: vectorization support: reference tcpre(i,1) has unaligned access   [ precond.f(356,12) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <p0(1,i,1)>, stride is 5   [ precond.f(355,12) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <p0(1,1,i)>, stride is 25   [ precond.f(356,12) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.115
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15453: unmasked strided stores: 2 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 6.500 
+      remark #15478: estimated potential speedup: 0.970 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at precond.f(363,9)
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <p0(i,j,1)>, stride is 5   [ precond.f(365,13) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <tcpre(i,j)>, stride is 5   [ precond.f(365,13) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15452: unmasked strided loads: 1 
+      remark #15453: unmasked strided stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 4.500 
+      remark #15478: estimated potential speedup: 0.900 
+      remark #15488: --- end vector cost summary ---
+
+      LOOP BEGIN at precond.f(364,11)
+         remark #15389: vectorization support: reference p0(i,j,1) has unaligned access   [ precond.f(365,13) ]
+         remark #15389: vectorization support: reference tcpre(i,j) has unaligned access   [ precond.f(365,13) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.500
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 3.000 
+         remark #15478: estimated potential speedup: 0.900 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at precond.f(364,11)
+      LOOP END
+
+      LOOP BEGIN at precond.f(364,11)
+      LOOP END
+
+      LOOP BEGIN at precond.f(364,11)
+      LOOP END
+
+      LOOP BEGIN at precond.f(364,11)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at precond.f(374,11)
+      remark #15388: vectorization support: reference p0(i,j,1) has aligned access   [ precond.f(375,13) ]
+      remark #15389: vectorization support: reference tcpre(i,j) has unaligned access   [ precond.f(375,13) ]
+      remark #15389: vectorization support: reference p0(i,j,1) has unaligned access   [ precond.f(375,13) ]
+      remark #15389: vectorization support: reference tcpre(i,j) has unaligned access   [ precond.f(375,13) ]
+      remark #15388: vectorization support: reference p0(i,j,1) has aligned access   [ precond.f(375,13) ]
+      remark #15389: vectorization support: reference tcpre(i,j) has unaligned access   [ precond.f(375,13) ]
+      remark #15389: vectorization support: reference p0(i,j,1) has unaligned access   [ precond.f(375,13) ]
+      remark #15389: vectorization support: reference tcpre(i,j) has unaligned access   [ precond.f(375,13) ]
+      remark #15388: vectorization support: reference p0(i,j,1) has aligned access   [ precond.f(375,13) ]
+      remark #15389: vectorization support: reference tcpre(i,j) has unaligned access   [ precond.f(375,13) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.221
+      remark #15449: unmasked aligned unit stride stores: 3 
+      remark #15450: unmasked unaligned unit stride loads: 5 
+      remark #15451: unmasked unaligned unit stride stores: 2 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 19 
+      remark #15477: vector cost: 17.000 
+      remark #15478: estimated potential speedup: 0.930 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at precond.f(378,9)
+   LOOP END
+
+   LOOP BEGIN at precond.f(374,11)
+   <Distributed chunk2>
+      remark #15389: vectorization support: reference tcpre(i,1) has unaligned access   [ precond.f(379,12) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <p0(1,1,i)>, stride is 25   [ precond.f(379,12) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.214
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15453: unmasked strided stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 3.500 
+      remark #15478: estimated potential speedup: 0.950 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at precond.f(386,9)
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <p0(i,j,1)>, stride is 5   [ precond.f(388,13) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <tcpre(i,j)>, stride is 5   [ precond.f(388,13) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <p0(i,1,j)>, stride is 25   [ precond.f(389,13) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <tcpre(i,j)>, stride is 5   [ precond.f(389,13) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15452: unmasked strided loads: 2 
+      remark #15453: unmasked strided stores: 2 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 8.500 
+      remark #15478: estimated potential speedup: 0.850 
+      remark #15488: --- end vector cost summary ---
+
+      LOOP BEGIN at precond.f(387,11)
+         remark #15389: vectorization support: reference p0(i,j,1) has unaligned access   [ precond.f(388,13) ]
+         remark #15389: vectorization support: reference tcpre(i,j) has unaligned access   [ precond.f(388,13) ]
+         remark #15389: vectorization support: reference p0(i,1,j) has unaligned access   [ precond.f(389,13) ]
+         remark #15389: vectorization support: reference tcpre(i,j) has unaligned access   [ precond.f(389,13) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.409
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 2 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 7 
+         remark #15477: vector cost: 5.500 
+         remark #15478: estimated potential speedup: 0.920 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at precond.f(387,11)
+      LOOP END
+
+      LOOP BEGIN at precond.f(387,11)
+      LOOP END
+
+      LOOP BEGIN at precond.f(387,11)
+      LOOP END
+
+      LOOP BEGIN at precond.f(387,11)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at precond.f(396,9)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at precond.f(397,11)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at precond.f(397,11)
+         remark #15389: vectorization support: reference p0(i,j,1) has unaligned access   [ precond.f(398,13) ]
+         remark #15388: vectorization support: reference tcpre(i,j) has aligned access   [ precond.f(398,13) ]
+         remark #15389: vectorization support: reference p0(i,1,j) has unaligned access   [ precond.f(399,13) ]
+         remark #15388: vectorization support: reference tcpre(i,j) has aligned access   [ precond.f(399,13) ]
+         remark #15388: vectorization support: reference tcpre(i,j) has aligned access   [ precond.f(400,13) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15329: vectorization support: non-unit strided store was emulated for the variable <p0(1,i,j)>, stride is 5   [ precond.f(400,13) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.929
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 2 
+         remark #15453: unmasked strided stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 11 
+         remark #15477: vector cost: 7.000 
+         remark #15478: estimated potential speedup: 1.010 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at precond.f(397,11)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at precond.f(336,9)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at precond.f(344,9)
+   <Remainder loop for vectorization, Distributed chunk1>
+   LOOP END
+
+   LOOP BEGIN at precond.f(353,9)
+   <Remainder loop for vectorization, Distributed chunk1>
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: SETPCMO
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at precond.f(426,7)
+   remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+   LOOP BEGIN at precond.f(426,7)
+      remark #15389: vectorization support: reference ifpcmor_(imor) has unaligned access   [ precond.f(428,8) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.500
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 1.500 
+      remark #15478: estimated potential speedup: 1.230 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at precond.f(426,7)
+   <Remainder>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at precond.f(433,7)
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <edgevis_(i,iside,iel)>, stride is unknown to compiler   [ precond.f(436,13) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15453: unmasked strided stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 2 
+   remark #15477: vector cost: 9.250 
+   remark #15478: estimated potential speedup: 0.210 
+   remark #15488: --- end vector cost summary ---
+
+   LOOP BEGIN at precond.f(434,9)
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <edgevis_(i,iside,iel)>, stride is unknown to compiler   [ precond.f(436,13) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15453: unmasked strided stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 3.500 
+      remark #15478: estimated potential speedup: 0.570 
+      remark #15488: --- end vector cost summary ---
+
+      LOOP BEGIN at precond.f(435,11)
+         remark #15389: vectorization support: reference edgevis_(i,iside,iel) has unaligned access   [ precond.f(436,13) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15305: vectorization support: vector length 2
+         remark #15427: loop was completely unrolled
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.250
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 2 
+         remark #15477: vector cost: 3.000 
+         remark #15478: estimated potential speedup: 0.530 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at precond.f(435,11)
+      LOOP END
+
+      LOOP BEGIN at precond.f(435,11)
+      LOOP END
+
+      LOOP BEGIN at precond.f(435,11)
+      LOOP END
+
+      LOOP BEGIN at precond.f(435,11)
+      LOOP END
+
+      LOOP BEGIN at precond.f(435,11)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at precond.f(446,7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at precond.f(447,9)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at precond.f(591,7) inlined into precond.f(459,20)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed FLOW dependence between n (617:14) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (617:14)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (617:14)
+         remark #15346: vector dependence: assumed FLOW dependence between n (617:14) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (619:14) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (619:14)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (619:14)
+         remark #15346: vector dependence: assumed FLOW dependence between n (619:14) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (621:14) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (621:14)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (621:14)
+         remark #15346: vector dependence: assumed FLOW dependence between n (621:14) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (623:14) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (623:14)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (623:14)
+         remark #15346: vector dependence: assumed FLOW dependence between n (623:14) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (627:12) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (627:12)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (627:12)
+         remark #15346: vector dependence: assumed FLOW dependence between n (627:12) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (629:12) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (629:12)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (629:12)
+         remark #15346: vector dependence: assumed FLOW dependence between n (629:12) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (632:12) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (632:12)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (632:12)
+         remark #15346: vector dependence: assumed FLOW dependence between n (632:12) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (634:12) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (634:12)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (634:12)
+         remark #15346: vector dependence: assumed FLOW dependence between n (634:12) and n (639:9)
+
+         LOOP BEGIN at precond.f(597,9) inlined into precond.f(459,20)
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15328: vectorization support: irregularly indexed load was emulated for the variable <cbc_(f_c(iiface,cornernumber),ie)>, part of index is read from memory   [ precond.f(601,14) ]
+            remark #15328: vectorization support: irregularly indexed load was emulated for the variable <ncon_edge_(e_c(iiedge,cornernumber),ie)>, part of index is read from memory   [ precond.f(609,14) ]
+            remark #15305: vectorization support: vector length 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.677
+            remark #15355: vectorization support: sface is int type reduction   [ precond.f(595,9) ]
+            remark #15355: vectorization support: sedge is int type reduction   [ precond.f(596,9) ]
+            remark #15450: unmasked unaligned unit stride loads: 2 
+            remark #15462: unmasked indexed (or gather) loads: 2 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 42 
+            remark #15477: vector cost: 32.500 
+            remark #15478: estimated potential speedup: 0.830 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at precond.f(607,9) inlined into precond.f(459,20)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at precond.f(591,7) inlined into precond.f(465,20)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed FLOW dependence between n (617:14) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (617:14)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (617:14)
+         remark #15346: vector dependence: assumed FLOW dependence between n (617:14) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (619:14) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (619:14)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (619:14)
+         remark #15346: vector dependence: assumed FLOW dependence between n (619:14) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (621:14) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (621:14)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (621:14)
+         remark #15346: vector dependence: assumed FLOW dependence between n (621:14) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (623:14) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (623:14)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (623:14)
+         remark #15346: vector dependence: assumed FLOW dependence between n (623:14) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (627:12) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (627:12)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (627:12)
+         remark #15346: vector dependence: assumed FLOW dependence between n (627:12) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (629:12) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (629:12)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (629:12)
+         remark #15346: vector dependence: assumed FLOW dependence between n (629:12) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (632:12) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (632:12)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (632:12)
+         remark #15346: vector dependence: assumed FLOW dependence between n (632:12) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (634:12) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (634:12)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (634:12)
+         remark #15346: vector dependence: assumed FLOW dependence between n (634:12) and n (639:9)
+
+         LOOP BEGIN at precond.f(597,9) inlined into precond.f(465,20)
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15328: vectorization support: irregularly indexed load was emulated for the variable <cbc_(f_c(iiface,cornernumber),ie)>, part of index is read from memory   [ precond.f(601,14) ]
+            remark #15328: vectorization support: irregularly indexed load was emulated for the variable <ncon_edge_(e_c(iiedge,cornernumber),ie)>, part of index is read from memory   [ precond.f(609,14) ]
+            remark #15305: vectorization support: vector length 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.677
+            remark #15355: vectorization support: sface is int type reduction   [ precond.f(595,9) ]
+            remark #15355: vectorization support: sedge is int type reduction   [ precond.f(596,9) ]
+            remark #15450: unmasked unaligned unit stride loads: 2 
+            remark #15462: unmasked indexed (or gather) loads: 2 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 42 
+            remark #15477: vector cost: 32.500 
+            remark #15478: estimated potential speedup: 0.830 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at precond.f(607,9) inlined into precond.f(465,20)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at precond.f(591,7) inlined into precond.f(471,20)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed FLOW dependence between n (617:14) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (617:14)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (617:14)
+         remark #15346: vector dependence: assumed FLOW dependence between n (617:14) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (619:14) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (619:14)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (619:14)
+         remark #15346: vector dependence: assumed FLOW dependence between n (619:14) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (621:14) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (621:14)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (621:14)
+         remark #15346: vector dependence: assumed FLOW dependence between n (621:14) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (623:14) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (623:14)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (623:14)
+         remark #15346: vector dependence: assumed FLOW dependence between n (623:14) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (627:12) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (627:12)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (627:12)
+         remark #15346: vector dependence: assumed FLOW dependence between n (627:12) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (629:12) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (629:12)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (629:12)
+         remark #15346: vector dependence: assumed FLOW dependence between n (629:12) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (632:12) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (632:12)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (632:12)
+         remark #15346: vector dependence: assumed FLOW dependence between n (632:12) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (634:12) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (634:12)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (634:12)
+         remark #15346: vector dependence: assumed FLOW dependence between n (634:12) and n (639:9)
+
+         LOOP BEGIN at precond.f(597,9) inlined into precond.f(471,20)
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15328: vectorization support: irregularly indexed load was emulated for the variable <cbc_(f_c(iiface,cornernumber),ie)>, part of index is read from memory   [ precond.f(601,14) ]
+            remark #15328: vectorization support: irregularly indexed load was emulated for the variable <ncon_edge_(e_c(iiedge,cornernumber),ie)>, part of index is read from memory   [ precond.f(609,14) ]
+            remark #15305: vectorization support: vector length 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.677
+            remark #15355: vectorization support: sface is int type reduction   [ precond.f(595,9) ]
+            remark #15355: vectorization support: sedge is int type reduction   [ precond.f(596,9) ]
+            remark #15450: unmasked unaligned unit stride loads: 2 
+            remark #15462: unmasked indexed (or gather) loads: 2 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 42 
+            remark #15477: vector cost: 32.500 
+            remark #15478: estimated potential speedup: 0.830 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at precond.f(607,9) inlined into precond.f(471,20)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at precond.f(591,7) inlined into precond.f(477,20)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed FLOW dependence between n (617:14) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (617:14)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (617:14)
+         remark #15346: vector dependence: assumed FLOW dependence between n (617:14) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (619:14) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (619:14)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (619:14)
+         remark #15346: vector dependence: assumed FLOW dependence between n (619:14) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (621:14) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (621:14)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (621:14)
+         remark #15346: vector dependence: assumed FLOW dependence between n (621:14) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (623:14) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (623:14)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (623:14)
+         remark #15346: vector dependence: assumed FLOW dependence between n (623:14) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (627:12) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (627:12)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (627:12)
+         remark #15346: vector dependence: assumed FLOW dependence between n (627:12) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (629:12) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (629:12)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (629:12)
+         remark #15346: vector dependence: assumed FLOW dependence between n (629:12) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (632:12) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (632:12)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (632:12)
+         remark #15346: vector dependence: assumed FLOW dependence between n (632:12) and n (639:9)
+         remark #15346: vector dependence: assumed FLOW dependence between n (634:12) and n (639:9)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (634:12)
+         remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (634:12)
+         remark #15346: vector dependence: assumed FLOW dependence between n (634:12) and n (639:9)
+
+         LOOP BEGIN at precond.f(597,9) inlined into precond.f(477,20)
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15328: vectorization support: irregularly indexed load was emulated for the variable <cbc_(f_c(iiface,cornernumber),ie)>, part of index is read from memory   [ precond.f(601,14) ]
+            remark #15328: vectorization support: irregularly indexed load was emulated for the variable <ncon_edge_(e_c(iiedge,cornernumber),ie)>, part of index is read from memory   [ precond.f(609,14) ]
+            remark #15305: vectorization support: vector length 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.677
+            remark #15355: vectorization support: sface is int type reduction   [ precond.f(595,9) ]
+            remark #15355: vectorization support: sedge is int type reduction   [ precond.f(596,9) ]
+            remark #15450: unmasked unaligned unit stride loads: 2 
+            remark #15462: unmasked indexed (or gather) loads: 2 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 42 
+            remark #15477: vector cost: 32.500 
+            remark #15478: estimated potential speedup: 0.830 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at precond.f(607,9) inlined into precond.f(477,20)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at precond.f(482,13)
+         remark #15382: vectorization support: call to function COM_DPC cannot be vectorized   [ precond.f(501,26) ]
+         remark #15382: vectorization support: call to function COM_DPC cannot be vectorized   [ precond.f(507,26) ]
+         remark #15382: vectorization support: call to function COM_DPC cannot be vectorized   [ precond.f(515,26) ]
+         remark #15382: vectorization support: call to function COM_DPC cannot be vectorized   [ precond.f(521,26) ]
+         remark #15382: vectorization support: call to function COM_DPC cannot be vectorized   [ precond.f(524,24) ]
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between edgevis_(enum,iside,iel) (487:17) and edgevis_(op(e_face2(enum,iside)),jjface(face2),nb2) (518:21)
+         remark #15346: vector dependence: assumed OUTPUT dependence between edgevis_(op(e_face2(enum,iside)),jjface(face2),nb2) (518:21) and edgevis_(enum,iside,iel) (487:17)
+      LOOP END
+
+      LOOP BEGIN at precond.f(536,21)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at precond.f(532,15)
+            remark #15542: loop was not vectorized: inner loop was already vectorized
+
+            LOOP BEGIN at precond.f(533,17)
+               remark #15542: loop was not vectorized: inner loop was already vectorized
+
+               LOOP BEGIN at precond.f(534,19)
+                  remark #15389: vectorization support: reference idmo_(i,j,nn1,nn2,iside,iel) has unaligned access   [ precond.f(535,21) ]
+                  remark #15389: vectorization support: reference pcmor_nc1(i,j,nn1,nn2,sizei) has unaligned access   [ precond.f(536,21) ]
+                  remark #15389: vectorization support: reference pcmor_c(i,j,sizei+1) has unaligned access   [ precond.f(536,21) ]
+                  remark #15381: vectorization support: unaligned access used inside loop body
+                  remark #15329: vectorization support: irregularly indexed store was emulated for the variable <dpcmor_(idmo_(i,j,nn1,nn2,iside,iel))>, part of index is read from memory   [ precond.f(536,21) ]
+                  remark #15305: vectorization support: vector length 2
+                  remark #15309: vectorization support: normalized vectorization overhead 0.196
+                  remark #15300: LOOP WAS VECTORIZED
+                  remark #15450: unmasked unaligned unit stride loads: 3 
+                  remark #15463: unmasked indexed (or scatter) stores: 1 
+                  remark #15475: --- begin vector cost summary ---
+                  remark #15476: scalar cost: 35 
+                  remark #15477: vector cost: 23.000 
+                  remark #15478: estimated potential speedup: 1.160 
+                  remark #15486: divides: 1 
+                  remark #15488: --- end vector cost summary ---
+               LOOP END
+
+               LOOP BEGIN at precond.f(534,19)
+               <Remainder loop for vectorization>
+               LOOP END
+            LOOP END
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at precond.f(546,13)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between dpcmor_(idmo_(5,j,1,1,iside,iel)) (548:15) and dpcmor_(idmo_(5,j,2,1,iside,iel)) (551:15)
+         remark #15346: vector dependence: assumed OUTPUT dependence between dpcmor_(idmo_(5,j,2,1,iside,iel)) (551:15) and dpcmor_(idmo_(5,j,1,1,iside,iel)) (548:15)
+      LOOP END
+
+      LOOP BEGIN at precond.f(559,13)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between dpcmor_(idmo_(i,5,1,1,iside,iel)) (561:15) and dpcmor_(idmo_(i,5,1,2,iside,iel)) (564:15)
+         remark #15346: vector dependence: assumed OUTPUT dependence between dpcmor_(idmo_(i,5,1,2,iside,iel)) (564:15) and dpcmor_(idmo_(i,5,1,1,iside,iel)) (561:15)
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: COM_DPC
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at precond.f(793,9)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at precond.f(749,9)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at precond.f(750,11)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at precond.f(751,13)
+            remark #15389: vectorization support: reference idmo_(i,j,nn1,nn2,iside,iel) has unaligned access   [ precond.f(752,15) ]
+            remark #15389: vectorization support: reference pcmor_nc1(i,j,nn1,nn2,isize) has unaligned access   [ precond.f(753,15) ]
+            remark #15389: vectorization support: reference pcmor_c(i,j,isize+1) has unaligned access   [ precond.f(753,24) ]
+            remark #15389: vectorization support: reference pcmor_nc0(i,j,nn1,nn2,isize) has unaligned access   [ precond.f(753,55) ]
+            remark #15389: vectorization support: reference pcmor_nc2(i,j,nn1,nn2,isize) has unaligned access   [ precond.f(754,45) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15329: vectorization support: irregularly indexed store was emulated for the variable <dpcmor_(imor)>, part of index is read from memory   [ precond.f(757,17) ]
+            remark #15305: vectorization support: vector length 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.400
+            remark #15300: LOOP WAS VECTORIZED
+            remark #15450: unmasked unaligned unit stride loads: 5 
+            remark #15463: unmasked indexed (or scatter) stores: 1 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 53 
+            remark #15477: vector cost: 35.000 
+            remark #15478: estimated potential speedup: 1.190 
+            remark #15486: divides: 1 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at precond.f(751,13)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: PC_CORNER
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at precond.f(591,7)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between n (617:14) and n (639:9)
+   remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (617:14)
+   remark #15346: vector dependence: assumed FLOW dependence between n (619:14) and n (639:9)
+   remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (619:14)
+   remark #15346: vector dependence: assumed FLOW dependence between n (621:14) and n (639:9)
+   remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (621:14)
+   remark #15346: vector dependence: assumed FLOW dependence between n (623:14) and n (639:9)
+   remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (623:14)
+   remark #15346: vector dependence: assumed FLOW dependence between n (627:12) and n (639:9)
+   remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (627:12)
+   remark #15346: vector dependence: assumed FLOW dependence between n (629:12) and n (639:9)
+   remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (629:12)
+   remark #15346: vector dependence: assumed FLOW dependence between n (632:12) and n (639:9)
+   remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (632:12)
+   remark #15346: vector dependence: assumed FLOW dependence between n (634:12) and n (639:9)
+   remark #15346: vector dependence: assumed ANTI dependence between n (639:9) and n (634:12)
+
+   LOOP BEGIN at precond.f(597,9)
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15328: vectorization support: irregularly indexed load was emulated for the variable <cbc_(f_c(iiface,cornernumber),ie)>, part of index is read from memory   [ precond.f(601,14) ]
+      remark #15328: vectorization support: irregularly indexed load was emulated for the variable <ncon_edge_(e_c(iiedge,cornernumber),ie)>, part of index is read from memory   [ precond.f(609,14) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.677
+      remark #15355: vectorization support: sface is int type reduction   [ precond.f(595,9) ]
+      remark #15355: vectorization support: sedge is int type reduction   [ precond.f(596,9) ]
+      remark #15450: unmasked unaligned unit stride loads: 2 
+      remark #15462: unmasked indexed (or gather) loads: 2 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 42 
+      remark #15477: vector cost: 32.500 
+      remark #15478: estimated potential speedup: 0.830 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at precond.f(607,9)
+   LOOP END
+LOOP END
+===========================================================================

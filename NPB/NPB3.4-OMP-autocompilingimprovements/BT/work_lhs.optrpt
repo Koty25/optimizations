@@ -1,0 +1,139 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: LHSINIT
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at work_lhs.f(37,7)
+<Peeled, Peeled loop for vectorization, Distributed chunk1>
+LOOP END
+
+LOOP BEGIN at work_lhs.f(37,7)
+<Peeled, Distributed chunk1>
+   remark #15388: vectorization support: reference lhs(m,n,3,0) has aligned access   [ work_lhs.f(41,13) ]
+   remark #15389: vectorization support: reference lhs(m,n,2,0) has unaligned access   [ work_lhs.f(40,13) ]
+   remark #15388: vectorization support: reference lhs(m,n,1,0) has aligned access   [ work_lhs.f(39,13) ]
+   remark #15389: vectorization support: reference lhs(m,n,3,0) has unaligned access   [ work_lhs.f(41,13) ]
+   remark #15388: vectorization support: reference lhs(m,n,2,0) has aligned access   [ work_lhs.f(40,13) ]
+   remark #15389: vectorization support: reference lhs(m,n,1,0) has unaligned access   [ work_lhs.f(39,13) ]
+   remark #15388: vectorization support: reference lhs(m,n,3,0) has aligned access   [ work_lhs.f(41,13) ]
+   remark #15389: vectorization support: reference lhs(m,n,2,0) has unaligned access   [ work_lhs.f(40,13) ]
+   remark #15388: vectorization support: reference lhs(m,n,1,0) has aligned access   [ work_lhs.f(39,13) ]
+   remark #15389: vectorization support: reference lhs(m,n,3,0) has unaligned access   [ work_lhs.f(41,13) ]
+   remark #15388: vectorization support: reference lhs(m,n,2,0) has aligned access   [ work_lhs.f(40,13) ]
+   remark #15389: vectorization support: reference lhs(m,n,1,0) has unaligned access   [ work_lhs.f(39,13) ]
+   remark #15388: vectorization support: reference lhs(m,n,3,0) has aligned access   [ work_lhs.f(41,13) ]
+   remark #15389: vectorization support: reference lhs(m,n,2,0) has unaligned access   [ work_lhs.f(40,13) ]
+   remark #15388: vectorization support: reference lhs(m,n,1,0) has aligned access   [ work_lhs.f(39,13) ]
+   remark #15389: vectorization support: reference lhs(m,n,3,i) has unaligned access   [ work_lhs.f(50,13) ]
+   remark #15389: vectorization support: reference lhs(m,n,1,i) has unaligned access   [ work_lhs.f(48,13) ]
+   remark #15389: vectorization support: reference lhs(m,n,3,i) has unaligned access   [ work_lhs.f(50,13) ]
+   remark #15389: vectorization support: reference lhs(m,n,1,i) has unaligned access   [ work_lhs.f(48,13) ]
+   remark #15389: vectorization support: reference lhs(m,n,3,i) has unaligned access   [ work_lhs.f(50,13) ]
+   remark #15389: vectorization support: reference lhs(m,n,1,i) has unaligned access   [ work_lhs.f(48,13) ]
+   remark #15389: vectorization support: reference lhs(m,n,3,i) has unaligned access   [ work_lhs.f(50,13) ]
+   remark #15389: vectorization support: reference lhs(m,n,1,i) has unaligned access   [ work_lhs.f(48,13) ]
+   remark #15389: vectorization support: reference lhs(m,n,3,i) has unaligned access   [ work_lhs.f(50,13) ]
+   remark #15389: vectorization support: reference lhs(m,n,1,i) has unaligned access   [ work_lhs.f(48,13) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.367
+   remark #15301: PERMUTED LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15449: unmasked aligned unit stride stores: 8 
+   remark #15451: unmasked unaligned unit stride stores: 17 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 90 
+   remark #15477: vector cost: 54.500 
+   remark #15478: estimated potential speedup: 1.290 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at work_lhs.f(37,7)
+<Peeled, Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at work_lhs.f(46,7)
+LOOP END
+
+LOOP BEGIN at work_lhs.f(46,7)
+<Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at work_lhs.f(37,7)
+<Peeled, Remainder loop for vectorization, Distributed chunk1>
+LOOP END
+
+LOOP BEGIN at work_lhs.f(37,7)
+<Peeled, Distributed chunk2>
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(m,m,2,0)>, stride is 6   [ work_lhs.f(43,10) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15301: PERMUTED LOOP WAS VECTORIZED
+   remark #15453: unmasked strided stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 3.000 
+   remark #15478: estimated potential speedup: 1.250 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at work_lhs.f(37,7)
+<Peeled, Remainder loop for vectorization, Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at work_lhs.f(37,7)
+<Peeled, Peeled loop for vectorization, Distributed chunk3>
+LOOP END
+
+LOOP BEGIN at work_lhs.f(37,7)
+<Peeled, Distributed chunk3>
+   remark #15389: vectorization support: reference lhs(m,n,2,i) has unaligned access   [ work_lhs.f(49,13) ]
+   remark #15388: vectorization support: reference lhs(m,n,2,i) has aligned access   [ work_lhs.f(49,13) ]
+   remark #15389: vectorization support: reference lhs(m,n,2,i) has unaligned access   [ work_lhs.f(49,13) ]
+   remark #15388: vectorization support: reference lhs(m,n,2,i) has aligned access   [ work_lhs.f(49,13) ]
+   remark #15388: vectorization support: reference lhs(m,n,2,i) has aligned access   [ work_lhs.f(49,13) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.263
+   remark #15301: PERMUTED LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15449: unmasked aligned unit stride stores: 3 
+   remark #15451: unmasked unaligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 18 
+   remark #15477: vector cost: 9.500 
+   remark #15478: estimated potential speedup: 1.360 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at work_lhs.f(37,7)
+<Peeled, Remainder loop for vectorization, Distributed chunk3>
+LOOP END
+
+LOOP BEGIN at work_lhs.f(37,7)
+<Peeled, Distributed chunk4>
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(m,m,2,i)>, stride is 6   [ work_lhs.f(52,10) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15301: PERMUTED LOOP WAS VECTORIZED
+   remark #15453: unmasked strided stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 3.000 
+   remark #15478: estimated potential speedup: 1.250 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at work_lhs.f(37,7)
+<Peeled, Remainder loop for vectorization, Distributed chunk4>
+LOOP END
+===========================================================================

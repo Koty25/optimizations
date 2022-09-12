@@ -1,0 +1,26 @@
+Date: Dom Ago  9 18:01:11 -03 2020
+Host: tsubasa
+
+>>> make ncc/bt.B.x - successful
+>>> make ncc/cg.B.x - successful
+>>> make ncc/ep.B.x - successful
+>>> make ncc/ft.B.x - successful
+>>> make ncc/is.B.x - successful
+>>> make ncc/lu.B.x - successful
+>>> make ncc/mg.B.x - successful
+>>> make ncc/sp.B.x - successful
+>>> make ncc/ua.B.x - successful
+>>> make intel/bt.B.x - successful
+>>> make intel/cg.B.x - successful
+>>> make intel/ep.B.x - successful
+>>> make intel/ft.B.x - successful
+>>> make intel/is.B.x - successful
+>>> make intel/lu.B.x - successful
+>>> make intel/mg.B.x - successful
+>>> make intel/sp.B.x - successful
+>>> make intel/ua.B.x - successful
+
+Date: Dom Ago  9 18:02:10 -03 2020
+Total number of cases: 18
+Total number of FAILED cases: 0
+

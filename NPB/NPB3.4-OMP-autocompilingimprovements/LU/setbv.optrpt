@@ -1,0 +1,64 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: SETBV
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at setbv.f(29,7)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between j (29:7) and j (29:7)
+   remark #15346: vector dependence: assumed OUTPUT dependence between j (29:7) and j (29:7)
+
+   LOOP BEGIN at setbv.f(35,16)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at setbv.f(29,7)
+   remark #15382: vectorization support: call to function exact_ cannot be vectorized   [ setbv.f(31,18) ]
+   remark #15382: vectorization support: call to function exact_ cannot be vectorized   [ setbv.f(32,18) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between j (29:7) and j (29:7)
+   remark #15346: vector dependence: assumed OUTPUT dependence between j (29:7) and j (29:7)
+LOOP END
+
+LOOP BEGIN at setbv.f(45,7)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between k (45:7) and k (45:7)
+   remark #15346: vector dependence: assumed OUTPUT dependence between k (45:7) and k (45:7)
+
+   LOOP BEGIN at setbv.f(50,16)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at setbv.f(45,7)
+   remark #15382: vectorization support: call to function exact_ cannot be vectorized   [ setbv.f(47,18) ]
+   remark #15382: vectorization support: call to function exact_ cannot be vectorized   [ setbv.f(48,18) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between k (45:7) and k (45:7)
+   remark #15346: vector dependence: assumed OUTPUT dependence between k (45:7) and k (45:7)
+LOOP END
+
+LOOP BEGIN at setbv.f(61,7)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between k (61:7) and k (61:7)
+   remark #15346: vector dependence: assumed OUTPUT dependence between k (61:7) and k (61:7)
+
+   LOOP BEGIN at setbv.f(66,16)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at setbv.f(61,7)
+   remark #15382: vectorization support: call to function exact_ cannot be vectorized   [ setbv.f(63,18) ]
+   remark #15382: vectorization support: call to function exact_ cannot be vectorized   [ setbv.f(64,18) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between k (61:7) and k (61:7)
+   remark #15346: vector dependence: assumed OUTPUT dependence between k (61:7) and k (61:7)
+LOOP END
+===========================================================================

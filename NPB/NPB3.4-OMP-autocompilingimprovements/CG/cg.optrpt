@@ -1,0 +1,1119 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: CG
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at cg.f(77,7)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at cg.f(84,10)
+   remark #15389: vectorization support: reference t_names(Impl_lp+1,2) has unaligned access
+   remark #15389: vectorization support: reference at (84:29) has unaligned access   [ cg.f(84,29) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.375
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.720 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at cg.f(85,10)
+   remark #15389: vectorization support: reference t_names(Impl_lp+1,3) has unaligned access
+   remark #15389: vectorization support: reference at (85:33) has unaligned access   [ cg.f(85,33) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.375
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.760 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at cg.f(222,7)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at cg.f(288,7)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at cg.f(415,7)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at cg.f(190,7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at cg.f(191,10)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at cg.f(191,10)
+      remark #15388: vectorization support: reference colidx_(k) has aligned access   [ cg.f(192,13) ]
+      remark #15388: vectorization support: reference colidx_(k) has aligned access   [ cg.f(192,25) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 1.857
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 6 
+      remark #15477: vector cost: 1.750 
+      remark #15478: estimated potential speedup: 3.240 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at cg.f(191,10)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at cg.f(200,7)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at cg.f(200,7)
+   remark #15388: vectorization support: reference x_(i) has aligned access   [ cg.f(202,10) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.833
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 2.660 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at cg.f(200,7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at cg.f(205,7)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at cg.f(205,7)
+   remark #15389: vectorization support: reference q_(j) has unaligned access   [ cg.f(207,10) ]
+   remark #15389: vectorization support: reference z_(j) has unaligned access   [ cg.f(208,10) ]
+   remark #15388: vectorization support: reference r_(j) has aligned access   [ cg.f(209,10) ]
+   remark #15388: vectorization support: reference p_(j) has aligned access   [ cg.f(210,10) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.312
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 2 
+   remark #15451: unmasked unaligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 14 
+   remark #15477: vector cost: 8.000 
+   remark #15478: estimated potential speedup: 1.710 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at cg.f(205,7)
+<Alternate Alignment Vectorized Loop>
+LOOP END
+
+LOOP BEGIN at cg.f(205,7)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference q_(j) has unaligned access   [ cg.f(207,10) ]
+   remark #15389: vectorization support: reference z_(j) has unaligned access   [ cg.f(208,10) ]
+   remark #15389: vectorization support: reference r_(j) has unaligned access   [ cg.f(209,10) ]
+   remark #15388: vectorization support: reference p_(j) has aligned access   [ cg.f(210,10) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.731
+   remark #15449: unmasked aligned unit stride stores: 2 
+   remark #15451: unmasked unaligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 14 
+   remark #15477: vector cost: 8.000 
+   remark #15478: estimated potential speedup: 1.710 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at cg.f(238,7)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at cg.f(238,7)
+   remark #15388: vectorization support: reference x_(j) has aligned access   [ cg.f(240,39) ]
+   remark #15388: vectorization support: reference z_(j) has aligned access   [ cg.f(240,44) ]
+   remark #15388: vectorization support: reference z_(j) has aligned access   [ cg.f(241,39) ]
+   remark #15388: vectorization support: reference z_(j) has aligned access   [ cg.f(241,44) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.812
+   remark #15355: vectorization support: %norm_temp1 is double type reduction   [ cg.f(240,13) ]
+   remark #15355: vectorization support: %norm_temp2 is double type reduction   [ cg.f(241,13) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 17 
+   remark #15477: vector cost: 8.000 
+   remark #15478: estimated potential speedup: 2.040 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at cg.f(238,7)
+<Alternate Alignment Vectorized Loop>
+LOOP END
+
+LOOP BEGIN at cg.f(238,7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at cg.f(251,7)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at cg.f(251,7)
+   remark #15388: vectorization support: reference x_(j) has aligned access   [ cg.f(253,13) ]
+   remark #15388: vectorization support: reference z_(j) has aligned access   [ cg.f(253,31) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.667
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 3.000 
+   remark #15478: estimated potential speedup: 1.930 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at cg.f(251,7)
+<Alternate Alignment Vectorized Loop>
+LOOP END
+
+LOOP BEGIN at cg.f(251,7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at cg.f(268,7)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at cg.f(268,7)
+   remark #15388: vectorization support: reference x_(i) has aligned access   [ cg.f(270,10) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.833
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 2.660 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at cg.f(268,7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at cg.f(307,7)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at cg.f(307,7)
+   remark #15388: vectorization support: reference x_(j) has aligned access   [ cg.f(309,39) ]
+   remark #15388: vectorization support: reference z_(j) has aligned access   [ cg.f(309,44) ]
+   remark #15388: vectorization support: reference z_(j) has aligned access   [ cg.f(310,39) ]
+   remark #15388: vectorization support: reference z_(j) has aligned access   [ cg.f(310,44) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.812
+   remark #15355: vectorization support: %norm_temp1 is double type reduction   [ cg.f(309,13) ]
+   remark #15355: vectorization support: %norm_temp2 is double type reduction   [ cg.f(310,13) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 17 
+   remark #15477: vector cost: 8.000 
+   remark #15478: estimated potential speedup: 2.040 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at cg.f(307,7)
+<Alternate Alignment Vectorized Loop>
+LOOP END
+
+LOOP BEGIN at cg.f(307,7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at cg.f(330,7)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at cg.f(330,7)
+   remark #15388: vectorization support: reference x_(j) has aligned access   [ cg.f(332,13) ]
+   remark #15388: vectorization support: reference z_(j) has aligned access   [ cg.f(332,31) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.667
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 3.000 
+   remark #15478: estimated potential speedup: 1.930 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at cg.f(330,7)
+<Alternate Alignment Vectorized Loop>
+LOOP END
+
+LOOP BEGIN at cg.f(330,7)
+<Remainder loop for vectorization>
+LOOP END
+===========================================================================
+
+Begin optimization report for: CONJ_GRAD
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at cg.f(468,7)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at cg.f(468,7)
+   remark #15388: vectorization support: reference r_(j) has aligned access   [ cg.f(472,10) ]
+   remark #15389: vectorization support: reference x_(j) has unaligned access   [ cg.f(472,10) ]
+   remark #15389: vectorization support: reference q_(j) has unaligned access   [ cg.f(470,10) ]
+   remark #15389: vectorization support: reference z_(j) has unaligned access   [ cg.f(471,10) ]
+   remark #15388: vectorization support: reference p_(j) has aligned access   [ cg.f(473,10) ]
+   remark #15388: vectorization support: reference r_(j) has aligned access   [ cg.f(473,10) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.338
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 2 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 15 
+   remark #15477: vector cost: 8.500 
+   remark #15478: estimated potential speedup: 1.730 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at cg.f(468,7)
+<Alternate Alignment Vectorized Loop>
+LOOP END
+
+LOOP BEGIN at cg.f(468,7)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference r_(j) has aligned access   [ cg.f(472,10) ]
+   remark #15389: vectorization support: reference x_(j) has unaligned access   [ cg.f(472,10) ]
+   remark #15389: vectorization support: reference q_(j) has unaligned access   [ cg.f(470,10) ]
+   remark #15389: vectorization support: reference z_(j) has unaligned access   [ cg.f(471,10) ]
+   remark #15389: vectorization support: reference p_(j) has unaligned access   [ cg.f(473,10) ]
+   remark #15388: vectorization support: reference r_(j) has aligned access   [ cg.f(473,10) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.710
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 2 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 15 
+   remark #15477: vector cost: 8.500 
+   remark #15478: estimated potential speedup: 1.730 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at cg.f(482,7)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at cg.f(482,7)
+   remark #15388: vectorization support: reference r_(j) has aligned access   [ cg.f(484,22) ]
+   remark #15388: vectorization support: reference r_(j) has aligned access   [ cg.f(484,27) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.906
+   remark #15355: vectorization support: %rho is double type reduction   [ cg.f(484,10) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 8 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 1.920 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at cg.f(482,7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at cg.f(493,7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at cg.f(518,10)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at cg.f(520,13)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at cg.f(520,13)
+         remark #15388: vectorization support: reference a_(k) has aligned access   [ cg.f(521,30) ]
+         remark #15389: vectorization support: reference colidx_(k) has unaligned access   [ cg.f(521,30) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15328: vectorization support: irregularly indexed load was emulated for the variable <p_(colidx_(k))>, part of index is read from memory   [ cg.f(521,35) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.615
+         remark #15355: vectorization support: suml is double type reduction   [ cg.f(521,16) ]
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15462: unmasked indexed (or gather) loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 10 
+         remark #15477: vector cost: 6.500 
+         remark #15478: estimated potential speedup: 1.500 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at cg.f(520,13)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at cg.f(566,7)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at cg.f(566,7)
+      remark #15388: vectorization support: reference p_(j) has aligned access   [ cg.f(568,21) ]
+      remark #15388: vectorization support: reference q_(j) has aligned access   [ cg.f(568,26) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 1.031
+      remark #15355: vectorization support: %d is double type reduction   [ cg.f(568,13) ]
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 2 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 8 
+      remark #15477: vector cost: 4.000 
+      remark #15478: estimated potential speedup: 1.920 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at cg.f(566,7)
+   <Alternate Alignment Vectorized Loop>
+   LOOP END
+
+   LOOP BEGIN at cg.f(566,7)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at cg.f(582,7)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at cg.f(582,7)
+      remark #15388: vectorization support: reference z_(j) has aligned access   [ cg.f(584,13) ]
+      remark #15388: vectorization support: reference z_(j) has aligned access   [ cg.f(584,20) ]
+      remark #15389: vectorization support: reference p_(j) has unaligned access   [ cg.f(584,33) ]
+      remark #15388: vectorization support: reference r_(j) has aligned access   [ cg.f(585,13) ]
+      remark #15388: vectorization support: reference r_(j) has aligned access   [ cg.f(585,20) ]
+      remark #15389: vectorization support: reference q_(j) has unaligned access   [ cg.f(585,33) ]
+      remark #15388: vectorization support: reference r_(j) has aligned access   [ cg.f(593,25) ]
+      remark #15388: vectorization support: reference r_(j) has aligned access   [ cg.f(593,30) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.413
+      remark #15355: vectorization support: %rho is double type reduction   [ cg.f(593,13) ]
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 2 
+      remark #15449: unmasked aligned unit stride stores: 2 
+      remark #15450: unmasked unaligned unit stride loads: 2 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 26 
+      remark #15477: vector cost: 13.000 
+      remark #15478: estimated potential speedup: 1.950 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at cg.f(582,7)
+   <Alternate Alignment Vectorized Loop>
+   LOOP END
+
+   LOOP BEGIN at cg.f(582,7)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference z_(j) has unaligned access   [ cg.f(584,13) ]
+      remark #15389: vectorization support: reference z_(j) has unaligned access   [ cg.f(584,20) ]
+      remark #15389: vectorization support: reference p_(j) has unaligned access   [ cg.f(584,33) ]
+      remark #15388: vectorization support: reference r_(j) has aligned access   [ cg.f(585,13) ]
+      remark #15388: vectorization support: reference r_(j) has aligned access   [ cg.f(585,20) ]
+      remark #15389: vectorization support: reference q_(j) has unaligned access   [ cg.f(585,33) ]
+      remark #15388: vectorization support: reference r_(j) has aligned access   [ cg.f(593,25) ]
+      remark #15388: vectorization support: reference r_(j) has aligned access   [ cg.f(593,30) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 1.000
+      remark #15355: vectorization support: %rho is double type reduction   [ cg.f(593,13) ]
+      remark #15448: unmasked aligned unit stride loads: 2 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 9 
+      remark #15477: vector cost: 4.000 
+      remark #15478: estimated potential speedup: 2.180 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at cg.f(605,7)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at cg.f(605,7)
+      remark #15388: vectorization support: reference p_(j) has aligned access   [ cg.f(607,13) ]
+      remark #15388: vectorization support: reference r_(j) has aligned access   [ cg.f(607,20) ]
+      remark #15388: vectorization support: reference p_(j) has aligned access   [ cg.f(607,32) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.500
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 2 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 9 
+      remark #15477: vector cost: 4.000 
+      remark #15478: estimated potential speedup: 2.180 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at cg.f(605,7)
+   <Alternate Alignment Vectorized Loop>
+   LOOP END
+
+   LOOP BEGIN at cg.f(605,7)
+   <Remainder loop for vectorization>
+      remark #15388: vectorization support: reference p_(j) has aligned access   [ cg.f(607,13) ]
+      remark #15389: vectorization support: reference r_(j) has unaligned access   [ cg.f(607,20) ]
+      remark #15388: vectorization support: reference p_(j) has aligned access   [ cg.f(607,32) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 1.000
+      remark #15448: unmasked aligned unit stride loads: 2 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 9 
+      remark #15477: vector cost: 4.000 
+      remark #15478: estimated potential speedup: 2.180 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+LOOP END
+
+LOOP BEGIN at cg.f(621,7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at cg.f(623,10)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at cg.f(623,10)
+      remark #15388: vectorization support: reference a_(k) has aligned access   [ cg.f(624,27) ]
+      remark #15389: vectorization support: reference colidx_(k) has unaligned access   [ cg.f(624,27) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15328: vectorization support: irregularly indexed load was emulated for the variable <z_(colidx_(k))>, part of index is read from memory   [ cg.f(624,32) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.615
+      remark #15355: vectorization support: suml is double type reduction   [ cg.f(624,13) ]
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15462: unmasked indexed (or gather) loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 10 
+      remark #15477: vector cost: 6.500 
+      remark #15478: estimated potential speedup: 1.500 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at cg.f(623,10)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at cg.f(634,7)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at cg.f(634,7)
+   remark #15388: vectorization support: reference x_(j) has aligned access   [ cg.f(636,17) ]
+   remark #15388: vectorization support: reference r_(j) has aligned access   [ cg.f(636,24) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.673
+   remark #15355: vectorization support: %sum is double type reduction   [ cg.f(637,10) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 14 
+   remark #15477: vector cost: 6.500 
+   remark #15478: estimated potential speedup: 2.080 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at cg.f(634,7)
+<Alternate Alignment Vectorized Loop>
+LOOP END
+
+LOOP BEGIN at cg.f(634,7)
+<Remainder loop for vectorization>
+LOOP END
+===========================================================================
+
+Begin optimization report for: MAKEA
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at cg.f(715,7)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at cg.f(738,7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at cg.f(1015,9) inlined into cg.f(740,15)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at cg.f(1032,10) inlined into cg.f(740,15)
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.062
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 18 
+         remark #15477: vector cost: 12.000 
+         remark #15478: estimated potential speedup: 1.470 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at cg.f(1032,10) inlined into cg.f(740,15)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at cg.f(1086,7) inlined into cg.f(742,18)
+      remark #15388: vectorization support: reference vc(k) has aligned access   [ cg.f(1088,13) ]
+      remark #15388: vectorization support: reference vc(k) has aligned access   [ cg.f(1088,13) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.189
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 2 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 21 
+      remark #15477: vector cost: 9.250 
+      remark #15478: estimated potential speedup: 1.740 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at cg.f(744,13)
+      remark #15389: vectorization support: reference acol(ivelt,iouter) has unaligned access   [ cg.f(745,16) ]
+      remark #15388: vectorization support: reference ivc(ivelt) has aligned access   [ cg.f(745,16) ]
+      remark #15389: vectorization support: reference aelt(ivelt,iouter) has unaligned access   [ cg.f(746,16) ]
+      remark #15388: vectorization support: reference vc(ivelt) has aligned access   [ cg.f(746,16) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.545
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 2 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 5.500 
+      remark #15478: estimated potential speedup: 1.190 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at cg.f(744,13)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at cg.f(1086,7) inlined into cg.f(742,18)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: SPARSE
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at cg.f(805,7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at cg.f(805,7)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at cg.f(805,7)
+      remark #15388: vectorization support: reference rowstr(j) has aligned access   [ cg.f(806,10) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 3.333
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.750 
+      remark #15478: estimated potential speedup: 1.450 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at cg.f(805,7)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at cg.f(809,7)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between rowstr(j) (814:16) and rowstr(j) (814:16)
+   remark #15346: vector dependence: assumed OUTPUT dependence between rowstr(j) (814:16) and rowstr(j) (814:16)
+
+   LOOP BEGIN at cg.f(810,10)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between rowstr(j) (814:16) and rowstr(j) (814:16)
+      remark #15346: vector dependence: assumed ANTI dependence between rowstr(j) (814:16) and rowstr(j) (814:16)
+   LOOP END
+
+   LOOP BEGIN at cg.f(810,10)
+   <Remainder>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at cg.f(823,7)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between rowstr(j) (824:10) and rowstr(j-1) (824:10)
+LOOP END
+
+LOOP BEGIN at cg.f(823,7)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at cg.f(831,10)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at cg.f(831,10)
+   remark #15388: vectorization support: reference last_n(i) has aligned access   [ cg.f(832,13) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 2.050
+   remark #15355: vectorization support: nzrow is int type reduction   [ cg.f(832,13) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 1.250 
+   remark #15478: estimated potential speedup: 2.270 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at cg.f(831,10)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at cg.f(836,10)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at cg.f(836,10)
+   remark #15388: vectorization support: reference rowstr(j) has aligned access   [ cg.f(837,13) ]
+   remark #15388: vectorization support: reference rowstr(j) has aligned access   [ cg.f(837,25) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 2.600
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 1.250 
+   remark #15478: estimated potential speedup: 3.720 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at cg.f(836,10)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at cg.f(860,7)
+<Distributed chunk1>
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at cg.f(861,10)
+   <Peeled loop for vectorization, Distributed chunk1>
+   LOOP END
+
+   LOOP BEGIN at cg.f(861,10)
+   <Distributed chunk1>
+      remark #15388: vectorization support: reference v(k) has aligned access   [ cg.f(862,14) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.833
+      remark #15301: PARTIAL LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 1.500 
+      remark #15478: estimated potential speedup: 2.550 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at cg.f(861,10)
+   <Remainder loop for vectorization, Distributed chunk1>
+   LOOP END
+
+   LOOP BEGIN at cg.f(861,10)
+   <Peeled loop for vectorization, Distributed chunk2>
+   LOOP END
+
+   LOOP BEGIN at cg.f(861,10)
+   <Distributed chunk2>
+      remark #15388: vectorization support: reference iv(k) has aligned access   [ cg.f(863,14) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 3.333
+      remark #15301: PARTIAL LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.750 
+      remark #15478: estimated potential speedup: 2.500 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at cg.f(861,10)
+   <Remainder loop for vectorization, Distributed chunk2>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at cg.f(860,7)
+<Distributed chunk2>
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at cg.f(860,7)
+   <Peeled loop for vectorization, Distributed chunk2>
+   LOOP END
+
+   LOOP BEGIN at cg.f(860,7)
+   <Distributed chunk2>
+      remark #15388: vectorization support: reference nzloc(j) has aligned access   [ cg.f(865,10) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 3.333
+      remark #15301: PARTIAL LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 0.750 
+      remark #15478: estimated potential speedup: 1.450 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at cg.f(860,7)
+   <Remainder loop for vectorization, Distributed chunk2>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at cg.f(875,7)
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+   LOOP BEGIN at cg.f(876,10)
+      remark #15382: vectorization support: call to function for_write_seq_lis cannot be vectorized   [ cg.f(919,16) ]
+      remark #15382: vectorization support: call to function for_write_seq_lis_xmit cannot be vectorized   [ cg.f(919,16) ]
+      remark #15382: vectorization support: call to function for_stop_core_quiet cannot be vectorized   [ cg.f(920,16) ]
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed OUTPUT dependence between iv(k) (909:22) and iv(k) (905:22)
+      remark #15346: vector dependence: assumed OUTPUT dependence between iv(k) (905:22) and iv(k) (909:22)
+
+      LOOP BEGIN at cg.f(882,13)
+         remark #15382: vectorization support: call to function for_write_seq_lis cannot be vectorized   [ cg.f(919,16) ]
+         remark #15382: vectorization support: call to function for_write_seq_lis_xmit cannot be vectorized   [ cg.f(919,16) ]
+         remark #15382: vectorization support: call to function for_stop_core_quiet cannot be vectorized   [ cg.f(920,16) ]
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between iv(k) (909:22) and iv(k) (905:22)
+         remark #15346: vector dependence: assumed OUTPUT dependence between iv(k) (905:22) and iv(k) (909:22)
+
+         LOOP BEGIN at cg.f(895,29)
+            remark #15523: loop was not vectorized: loop control variable k was found, but loop iteration count cannot be computed before executing the loop
+         LOOP END
+
+         LOOP BEGIN at cg.f(899,22)
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15328: vectorization support: non-unit strided load was emulated for the variable <iv(kk)>, stride is -1   [ cg.f(900,29) ]
+            remark #15329: vectorization support: non-unit strided store was emulated for the variable <v(kk+1)>, masked, stride is -1   [ cg.f(901,28) ]
+            remark #15328: vectorization support: non-unit strided load was emulated for the variable <v(kk)>, masked, stride is -1   [ cg.f(901,28) ]
+            remark #15329: vectorization support: non-unit strided store was emulated for the variable <iv(kk+1)>, masked, stride is -1   [ cg.f(902,28) ]
+            remark #15328: vectorization support: non-unit strided load was emulated for the variable <iv(kk)>, stride is -1   [ cg.f(902,28) ]
+            remark #15305: vectorization support: vector length 4
+            remark #15452: unmasked strided loads: 2 
+            remark #15460: masked strided loads: 1 
+            remark #15462: unmasked indexed (or gather) loads: 2 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 26 
+            remark #15477: vector cost: 132.250 
+            remark #15478: estimated potential speedup: 0.190 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at cg.f(899,22)
+         <Remainder>
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at cg.f(934,7)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between nzloc(j) (935:10) and nzloc(j-1) (935:10)
+LOOP END
+
+LOOP BEGIN at cg.f(934,7)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at cg.f(942,10)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at cg.f(942,10)
+   remark #15388: vectorization support: reference last_n(i) has aligned access   [ cg.f(943,13) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 2.050
+   remark #15355: vectorization support: nzrow is int type reduction   [ cg.f(829,7) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 1.250 
+   remark #15478: estimated potential speedup: 2.270 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at cg.f(942,10)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at cg.f(947,10)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at cg.f(947,10)
+   remark #15388: vectorization support: reference nzloc(j) has aligned access   [ cg.f(948,13) ]
+   remark #15388: vectorization support: reference nzloc(j) has aligned access   [ cg.f(948,24) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 2.600
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 1.250 
+   remark #15478: estimated potential speedup: 3.720 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at cg.f(947,10)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at cg.f(954,7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at cg.f(962,10)
+   <Peeled loop for vectorization, Distributed chunk1>
+   LOOP END
+
+   LOOP BEGIN at cg.f(962,10)
+   <Distributed chunk1>
+      remark #15388: vectorization support: reference a(k) has aligned access   [ cg.f(963,13) ]
+      remark #15388: vectorization support: reference v(nza) has aligned access   [ cg.f(963,13) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 4.667
+      remark #15301: PARTIAL LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 1.500 
+      remark #15478: estimated potential speedup: 2.550 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at cg.f(962,10)
+   <Alternate Alignment Vectorized Loop, Distributed chunk1>
+   LOOP END
+
+   LOOP BEGIN at cg.f(962,10)
+   <Remainder loop for vectorization, Distributed chunk1>
+   LOOP END
+
+   LOOP BEGIN at cg.f(962,10)
+   <Peeled loop for vectorization, Distributed chunk2>
+   LOOP END
+
+   LOOP BEGIN at cg.f(962,10)
+   <Distributed chunk2>
+      remark #15388: vectorization support: reference colidx(k) has aligned access   [ cg.f(964,13) ]
+      remark #15388: vectorization support: reference iv(nza) has aligned access   [ cg.f(964,13) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 4.667
+      remark #15301: PARTIAL LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 0.750 
+      remark #15478: estimated potential speedup: 4.760 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at cg.f(962,10)
+   <Alternate Alignment Vectorized Loop, Distributed chunk2>
+   LOOP END
+
+   LOOP BEGIN at cg.f(962,10)
+   <Remainder loop for vectorization, Distributed chunk2>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at cg.f(969,7)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at cg.f(969,7)
+   remark #15388: vectorization support: reference rowstr(j) has aligned access   [ cg.f(971,10) ]
+   remark #15388: vectorization support: reference rowstr(j) has aligned access   [ cg.f(971,22) ]
+   remark #15388: vectorization support: reference nzloc(j-1) has aligned access   [ cg.f(971,34) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 2.800
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15448: unmasked aligned unit stride loads: 2 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 1.250 
+   remark #15478: estimated potential speedup: 4.410 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at cg.f(969,7)
+<Alternate Alignment Vectorized Loop>
+LOOP END
+
+LOOP BEGIN at cg.f(969,7)
+<Remainder loop for vectorization>
+LOOP END
+===========================================================================
+
+Begin optimization report for: VECSET
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at cg.f(1086,7)
+   remark #15389: vectorization support: reference v(k) has unaligned access   [ cg.f(1088,13) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.120
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15457: masked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 21 
+   remark #15477: vector cost: 23.000 
+   remark #15478: estimated potential speedup: 0.910 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at cg.f(1086,7)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: SPRNVC
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at cg.f(1015,9)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at cg.f(1032,10)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at cg.f(1032,10)
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.464
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 18 
+      remark #15477: vector cost: 7.000 
+      remark #15478: estimated potential speedup: 2.500 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at cg.f(1032,10)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+===========================================================================

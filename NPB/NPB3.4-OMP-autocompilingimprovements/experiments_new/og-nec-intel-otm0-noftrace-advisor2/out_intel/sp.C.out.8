@@ -1,0 +1,336 @@
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - SP Benchmark
+
+ No input file inputsp.data. Using compiled defaults
+ Size:  162x 162x 162
+ Iterations:  400    dt:    0.0006700
+ Number of available threads:     8
+ 
+ Time step    1
+ Time step   20
+ Time step   40
+ Time step   60
+ Time step   80
+ Time step  100
+ Time step  120
+ Time step  140
+ Time step  160
+ Time step  180
+ Time step  200
+ Time step  220
+ Time step  240
+ Time step  260
+ Time step  280
+ Time step  300
+ Time step  320
+ Time step  340
+ Time step  360
+ Time step  380
+ Time step  400
+ Verification being performed for class C
+ accuracy setting for epsilon =  0.1000000000000E-07
+ Comparison of RMS-norms of residual
+           1 0.5881691581829E+03 0.5881691581829E+03 0.7209692973561E-13
+           2 0.2454417603569E+03 0.2454417603569E+03 0.4655086882692E-13
+           3 0.3293829191851E+03 0.3293829191851E+03 0.4107296675354E-13
+           4 0.3081924971891E+03 0.3081924971891E+03 0.1475530245006E-12
+           5 0.4597223799176E+03 0.4597223799176E+03 0.3857794934358E-13
+ Comparison of RMS-norms of solution error
+           1 0.2598120500183E+00 0.2598120500183E+00 0.1794734579515E-13
+           2 0.2590888922315E-01 0.2590888922315E-01 0.1648426206570E-12
+           3 0.5132886416320E-01 0.5132886416320E-01 0.4042032316694E-13
+           4 0.4806073419454E-01 0.4806073419454E-01 0.1660342506877E-13
+           5 0.5483377491301E+00 0.5483377491301E+00 0.6762519830398E-13
+ Verification Successful
+
+
+ SP Benchmark Completed.
+ Class           =                        C
+ Size            =            162x 162x 162
+ Iterations      =                      400
+ Time in seconds =                    61.26
+ Total threads   =                        8
+ Avail threads   =                        8
+ Mop/s total     =                 23672.59
+ Mop/s/thread    =                  2959.07
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                      3.4
+ Compile date    =              21 May 2021
+
+ Compile options:
+    F77          = ifort
+    FLINK        = $(FC)
+    F_LIB        = (none)
+    F_INC        = (none)
+    FFLAGS       = -O2 -fopenmp -qopt-report=5 -qopt-report-ph...
+    FLINKFLAGS   = $(FFLAGS)
+    RAND         = (none)
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+  SECTION   Time (secs)
+      total   :   61.257  ( 100.00 %)
+      rhsx    :    3.705  (   6.05 %)
+      rhsy    :    3.949  (   6.45 %)
+      rhsz    :    6.782  (  11.07 %)
+      rhs     :   19.056  (  31.11 %)
+      sub-rhs :   14.436  (  23.57 %)
+     rest-rhs :    4.621  (   7.54 %)
+      xsolve  :    6.428  (  10.49 %)
+      ysolve  :   12.087  (  19.73 %)
+      zsolve  :   16.209  (  26.46 %)
+     sub-zsol :   16.209  (  26.46 %)
+      redist1 :    0.000  (   0.00 %)
+      redist2 :    0.000  (   0.00 %)
+       redist :    0.000  (   0.00 %)
+      txinvr  :    1.722  (   2.81 %)
+      pinvr   :    0.962  (   1.57 %)
+      ninvr   :    0.981  (   1.60 %)
+      tzetar  :    2.353  (   3.84 %)
+      add     :    1.505  (   2.46 %)
+advisor: Warning: The Roofline is a special batch mode of data collection. It runs two analyses one by one. There are Survey Analysis and Trip Counts Analysis with FLOP respectively.
+advisor: Starting command line: advisor --collect survey --project-dir experiments_new/og-nec-intel-otm0-noftrace-advisor2/out_intel/ -- bin/bin_intel/sp.C.x !
+Intel(R) Advisor Command Line Tool
+Copyright (C) 2009-2020 Intel Corporation. All rights reserved.
+advisor: Opening result  0 %                                                   advisor: Opening result  0 % Preparing data for display of survey call tree    advisor: Opening result  2 % Preparing data for display of survey call tree    advisor: Opening result 25 % Preparing data for display of survey call tree    advisor: Opening result 25 % done                                              
+advisor: Preparing frequently used data  0 % done                              advisor: Preparing frequently used data  1 % done                              advisor: Preparing frequently used data  1 % done                              
+advisor: Preparing frequently used data 100 % done                             
+advisor: Collection started. To stop the collection, either press CTRL-C or enter from another console window: advisor -r /home/users/fpmjunior/ccpe/NPB/NPB3.4-OMP-autocompilingimprovements/experiments_new/og-nec-intel-otm0-noftrace-advisor2/out_intel/e000/hs006 -command stop.
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - SP Benchmark
+
+ No input file inputsp.data. Using compiled defaults
+ Size:  162x 162x 162
+ Iterations:  400    dt:    0.0006700
+ Number of available threads:     8
+ 
+ Time step    1
+ Time step   20
+ Time step   40
+ Time step   60
+ Time step   80
+ Time step  100
+ Time step  120
+ Time step  140
+ Time step  160
+ Time step  180
+ Time step  200
+ Time step  220
+ Time step  240
+ Time step  260
+ Time step  280
+ Time step  300
+ Time step  320
+ Time step  340
+ Time step  360
+ Time step  380
+ Time step  400
+ Verification being performed for class C
+ accuracy setting for epsilon =  0.1000000000000E-07
+ Comparison of RMS-norms of residual
+           1 0.5881691581829E+03 0.5881691581829E+03 0.7209692973561E-13
+           2 0.2454417603569E+03 0.2454417603569E+03 0.4655086882692E-13
+           3 0.3293829191851E+03 0.3293829191851E+03 0.4107296675354E-13
+           4 0.3081924971891E+03 0.3081924971891E+03 0.1475530245006E-12
+           5 0.4597223799176E+03 0.4597223799176E+03 0.3857794934358E-13
+ Comparison of RMS-norms of solution error
+           1 0.2598120500183E+00 0.2598120500183E+00 0.1794734579515E-13
+           2 0.2590888922315E-01 0.2590888922315E-01 0.1648426206570E-12
+           3 0.5132886416320E-01 0.5132886416320E-01 0.4042032316694E-13
+           4 0.4806073419454E-01 0.4806073419454E-01 0.1660342506877E-13
+           5 0.5483377491301E+00 0.5483377491301E+00 0.6762519830398E-13
+ Verification Successful
+
+
+ SP Benchmark Completed.
+ Class           =                        C
+ Size            =            162x 162x 162
+ Iterations      =                      400
+ Time in seconds =                    62.82
+ Total threads   =                        8
+ Avail threads   =                        8
+ Mop/s total     =                 23084.56
+ Mop/s/thread    =                  2885.57
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                      3.4
+ Compile date    =              21 May 2021
+
+ Compile options:
+    F77          = ifort
+    FLINK        = $(FC)
+    F_LIB        = (none)
+    F_INC        = (none)
+    FFLAGS       = -O2 -fopenmp -qopt-report=5 -qopt-report-ph...
+    FLINKFLAGS   = $(FFLAGS)
+    RAND         = (none)
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+  SECTION   Time (secs)
+      total   :   62.817  ( 100.00 %)
+      rhsx    :    3.732  (   5.94 %)
+      rhsy    :    3.963  (   6.31 %)
+      rhsz    :    6.701  (  10.67 %)
+      rhs     :   19.523  (  31.08 %)
+      sub-rhs :   14.396  (  22.92 %)
+     rest-rhs :    5.127  (   8.16 %)
+      xsolve  :    6.468  (  10.30 %)
+      ysolve  :   12.468  (  19.85 %)
+      zsolve  :   16.530  (  26.31 %)
+     sub-zsol :   16.530  (  26.31 %)
+      redist1 :    0.000  (   0.00 %)
+      redist2 :    0.000  (   0.00 %)
+       redist :    0.000  (   0.00 %)
+      txinvr  :    1.805  (   2.87 %)
+      pinvr   :    1.011  (   1.61 %)
+      ninvr   :    1.036  (   1.65 %)
+      tzetar  :    2.457  (   3.91 %)
+      add     :    1.564  (   2.49 %)
+advisor: Collection stopped.
+advisor: Opening result  0 % done                                              advisor: Opening result  0 % Finalizing results                                advisor: Opening result  0 % Finalizing the result                             advisor: Opening result  0 % Clearing the database                             advisor: Opening result 10 % Clearing the database                             advisor: Opening result 10 % Loading raw data to the database                  advisor: Opening result 10 % Loading 'bandwidth_1621569190.hpc' file           advisor: Opening result 19 % Loading 'bandwidth_1621569190.hpc' file           advisor: Opening result 19 % Loading 'systemcollector-39010-tsubasa.sc' file   advisor: Opening result 19 % Loading '39010-39019.0.trace' file                advisor: Opening result 19 % Loading 'userapicollector-39019-8d988890.trace' fiadvisor: Opening result 19 % Loading 'tripcounts_28341_0.tcs' file             advisor: Opening result 27 % Loading 'tripcounts_28341_0.tcs' file             
+advisor: Error: Cannot load data file `/home/users/fpmjunior/ccpe/NPB/NPB3.4-OMP-autocompilingimprovements/experiments_new/og-nec-intel-otm0-noftrace-advisor2/out_intel/e000/hs006/data.1/advixe-runtrc.txt' ().
+advisor: Opening result 27 % Updating precomputed scalar metrics               advisor: Opening result 29 % Updating precomputed scalar metrics               advisor: Opening result 29 % Processing profile metrics and debug information  advisor: Opening result 29 % Setting data model parameters                     advisor: Opening result 29 % Resolving module symbols                          advisor: Opening result 29 % Resolving information for dangling locations      advisor: Opening result 29 % Resolving information for `libpthread.so.0'       advisor: Opening result 29 % Resolving information for `libittnotify_collector.advisor: Opening result 29 % Resolving information for `sp.C.x'                
+advisor: Warning: Cannot locate debugging information for file `/lib64/libpthread.so.0'.
+advisor: Opening result 29 % Resolving information for `mg.C.x'                advisor: Opening result 29 % Resolving information for `libc.so.6'             advisor: Opening result 29 % Resolving information for `libiomp5.so'           
+advisor: Warning: Cannot locate debugging information for file `/home/intel/oneapi/advisor/2021.1.1/lib64/runtime/libittnotify_collector.so'.
+advisor: Opening result 30 % Resolving information for `libiomp5.so'           
+advisor: Warning: Cannot locate debugging information for file `/lib64/libc.so.6'.
+advisor: Opening result 30 % Resolving information for `libtpsstool.so'        advisor: Opening result 31 % Resolving information for `libtpsstool.so'        
+advisor: Warning: Cannot locate debugging information for file `/home/users/fpmjunior/ccpe/NPB/NPB3.4-OMP-autocompilingimprovements/bin/bin_intel/sp.C.x'.
+advisor: Warning: Cannot locate debugging information for file `/home/users/fpmjunior/ccpe/NPB/NPB3.4-OMP-autocompilingimprovements/bin/bin_intel/mg.C.x'.
+advisor: Warning: Cannot locate debugging information for file `/home/intel/oneapi/advisor/2021.1.1/lib64/libtpsstool.so'.
+advisor: Opening result 32 % Resolving information for `libtpsstool.so'        advisor: Opening result 33 % Resolving information for `libtpsstool.so'        advisor: Opening result 34 % Resolving information for `libtpsstool.so'        advisor: Opening result 34 % Resolving bottom user stack information           advisor: Opening result 35 % Resolving bottom user stack information           advisor: Opening result 36 % Resolving bottom user stack information           advisor: Opening result 36 % Resolving thread name information                 advisor: Opening result 37 % Resolving thread name information                 advisor: Opening result 37 % Resolving call target names for dynamic code      advisor: Opening result 39 % Resolving call target names for dynamic code      advisor: Opening result 40 % Resolving call target names for dynamic code      advisor: Opening result 40 % Processing profile metrics and debug information  advisor: Opening result 40 % Resolving FLOP information                        advisor: Opening result 43 % Resolving FLOP information                        advisor: Opening result 43 % Processing information for self instruction mix readvisor: Opening result 45 % Processing information for self instruction mix readvisor: Opening result 45 % Calculating function call count                   advisor: Opening result 48 % Calculating function call count                   advisor: Opening result 48 % Processing information for light dynamic instructiadvisor: Opening result 51 % Processing information for light dynamic instructiadvisor: Opening result 51 % Setting data model parameters                     advisor: Opening result 51 % Precomputing frequently used data                 advisor: Opening result 51 % Precomputing frequently used data                 advisor: Opening result 53 % Precomputing frequently used data                 advisor: Opening result 56 % Precomputing frequently used data                 advisor: Opening result 58 % Precomputing frequently used data                 advisor: Opening result 60 % Precomputing frequently used data                 advisor: Opening result 60 % Updating precomputed scalar metrics               advisor: Opening result 62 % Updating precomputed scalar metrics               advisor: Opening result 62 % Discarding redundant overtime data                advisor: Opening result 64 % Discarding redundant overtime data                advisor: Opening result 64 % Saving the result                                 advisor: Opening result 67 % Saving the result                                 advisor: Opening result 70 % Saving the result                                 advisor: Opening result 75 % Saving the result                                 advisor: Opening result 75 % Preparing data for display of survey call tree    advisor: Opening result 75 % Resolving module symbols                          advisor: Opening result 75 % Resolving bottom user stack information           advisor: Opening result 75 % Resolving thread name information                 advisor: Opening result 75 % Resolving call target names for dynamic code      advisor: Opening result 75 % Precomputing frequently used data                 advisor: Opening result 76 % Precomputing frequently used data                 advisor: Opening result 77 % Precomputing frequently used data                 advisor: Opening result 88 % Precomputing frequently used data                 advisor: Opening result 99 % Precomputing frequently used data                 advisor: Opening result 99 % done                                              
+advisor: Preparing frequently used data  0 % done                              advisor: Preparing frequently used data  1 % done                              advisor: Preparing frequently used data  2 % done                              advisor: Preparing frequently used data  3 % done                              advisor: Preparing frequently used data  3 % done                              
+advisor: Preparing frequently used data 100 % done                             
+
+Elapsed Time: 63.35s
+Total CPU time: 506.448
+Time in 45 vectorized loops: 208.726
+
+advisor: Starting command line: advisor --collect tripcounts --project-dir experiments_new/og-nec-intel-otm0-noftrace-advisor2/out_intel/ --flop --no-trip-counts -- bin/bin_intel/sp.C.x !
+Intel(R) Advisor Command Line Tool
+Copyright (C) 2009-2020 Intel Corporation. All rights reserved.
+advisor: Opening result  0 %                                                   advisor: Opening result  0 % Preparing data for display of survey call tree    advisor: Opening result  2 % Preparing data for display of survey call tree    advisor: Opening result 25 % Preparing data for display of survey call tree    advisor: Opening result 25 % done                                              
+advisor: Preparing frequently used data  0 % done                              advisor: Preparing frequently used data  1 % done                              advisor: Preparing frequently used data  2 % done                              advisor: Preparing frequently used data  3 % done                              advisor: Preparing frequently used data  3 % done                              
+advisor: Preparing frequently used data 100 % done                             
+advisor: Collection started. To stop the collection, either press CTRL-C or enter from another console window: advisor -r /home/users/fpmjunior/ccpe/NPB/NPB3.4-OMP-autocompilingimprovements/experiments_new/og-nec-intel-otm0-noftrace-advisor2/out_intel/e000/trc006 -command stop.
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - SP Benchmark
+
+ No input file inputsp.data. Using compiled defaults
+ Size:  162x 162x 162
+ Iterations:  400    dt:    0.0006700
+ Number of available threads:     8
+ 
+ Time step    1
+ Time step   20
+ Time step   40
+ Time step   60
+ Time step   80
+ Time step  100
+ Time step  120
+ Time step  140
+ Time step  160
+ Time step  180
+ Time step  200
+ Time step  220
+ Time step  240
+ Time step  260
+ Time step  280
+ Time step  300
+ Time step  320
+ Time step  340
+ Time step  360
+ Time step  380
+ Time step  400
+ Verification being performed for class C
+ accuracy setting for epsilon =  0.1000000000000E-07
+ Comparison of RMS-norms of residual
+           1 0.5881691581829E+03 0.5881691581829E+03 0.7209692973561E-13
+           2 0.2454417603569E+03 0.2454417603569E+03 0.4655086882692E-13
+           3 0.3293829191851E+03 0.3293829191851E+03 0.4107296675354E-13
+           4 0.3081924971891E+03 0.3081924971891E+03 0.1475530245006E-12
+           5 0.4597223799176E+03 0.4597223799176E+03 0.3857794934358E-13
+ Comparison of RMS-norms of solution error
+           1 0.2598120500183E+00 0.2598120500183E+00 0.1794734579515E-13
+           2 0.2590888922315E-01 0.2590888922315E-01 0.1648426206570E-12
+           3 0.5132886416320E-01 0.5132886416320E-01 0.4042032316694E-13
+           4 0.4806073419454E-01 0.4806073419454E-01 0.1660342506877E-13
+           5 0.5483377491301E+00 0.5483377491301E+00 0.6762519830398E-13
+ Verification Successful
+
+
+ SP Benchmark Completed.
+ Class           =                        C
+ Size            =            162x 162x 162
+ Iterations      =                      400
+ Time in seconds =                   116.21
+ Total threads   =                        8
+ Avail threads   =                        8
+ Mop/s total     =                 12478.41
+ Mop/s/thread    =                  1559.80
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                      3.4
+ Compile date    =              21 May 2021
+
+ Compile options:
+    F77          = ifort
+    FLINK        = $(FC)
+    F_LIB        = (none)
+    F_INC        = (none)
+    FFLAGS       = -O2 -fopenmp -qopt-report=5 -qopt-report-ph...
+    FLINKFLAGS   = $(FFLAGS)
+    RAND         = (none)
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+  SECTION   Time (secs)
+      total   :  116.209  ( 100.00 %)
+      rhsx    :   10.539  (   9.07 %)
+      rhsy    :   10.776  (   9.27 %)
+      rhsz    :   12.303  (  10.59 %)
+      rhs     :   41.596  (  35.79 %)
+      sub-rhs :   33.618  (  28.93 %)
+     rest-rhs :    7.978  (   6.87 %)
+      xsolve  :   14.165  (  12.19 %)
+      ysolve  :   23.795  (  20.48 %)
+      zsolve  :   27.478  (  23.65 %)
+     sub-zsol :   27.478  (  23.65 %)
+      redist1 :    0.000  (   0.00 %)
+      redist2 :    0.000  (   0.00 %)
+       redist :    0.000  (   0.00 %)
+      txinvr  :    2.084  (   1.79 %)
+      pinvr   :    1.193  (   1.03 %)
+      ninvr   :    1.173  (   1.01 %)
+      tzetar  :    2.609  (   2.25 %)
+      add     :    2.200  (   1.89 %)
+advisor: Opening result  0 % done                                              advisor: Opening result  0 % Finalizing results                                advisor: Opening result  0 % Finalizing the result                             advisor: Opening result  0 % Loading raw data to the database                  advisor: Opening result  0 % Loading 'bandwidth_1621569450.hpc' file           advisor: Opening result 11 % Loading 'bandwidth_1621569450.hpc' file           advisor: Opening result 11 % Loading 'tripcounts_51051_0.tcs' file             advisor: Opening result 23 % Loading 'tripcounts_51051_0.tcs' file             advisor: Opening result 23 % Updating precomputed scalar metrics               advisor: Opening result 26 % Updating precomputed scalar metrics               advisor: Opening result 26 % Processing profile metrics and debug information  advisor: Opening result 26 % Setting data model parameters                     advisor: Opening result 26 % Resolving module symbols                          advisor: Opening result 41 % Resolving module symbols                          advisor: Opening result 41 % Processing profile metrics and debug information  advisor: Opening result 41 % Resolving FLOP information                        advisor: Opening result 45 % Resolving FLOP information                        advisor: Opening result 45 % Processing information for self instruction mix readvisor: Opening result 49 % Processing information for self instruction mix readvisor: Opening result 49 % Calculating function call count                   advisor: Opening result 52 % Calculating function call count                   advisor: Opening result 52 % Processing information for light dynamic instructiadvisor: Opening result 56 % Processing information for light dynamic instructiadvisor: Opening result 56 % Setting data model parameters                     advisor: Opening result 57 % Setting data model parameters                     advisor: Opening result 57 % Precomputing frequently used data                 advisor: Opening result 57 % Precomputing frequently used data                 advisor: Opening result 69 % Precomputing frequently used data                 advisor: Opening result 69 % Updating precomputed scalar metrics               advisor: Opening result 72 % Updating precomputed scalar metrics               advisor: Opening result 72 % Discarding redundant overtime data                advisor: Opening result 74 % Discarding redundant overtime data                advisor: Opening result 74 % Saving the result                                 advisor: Opening result 74 % Preparing data for display of survey call tree    advisor: Opening result 77 % Preparing data for display of survey call tree    advisor: Opening result 88 % Preparing data for display of survey call tree    advisor: Opening result 99 % Preparing data for display of survey call tree    advisor: Opening result 99 % done                                              
+advisor: Preparing frequently used data  0 % done                              advisor: Preparing frequently used data  1 % done                              advisor: Preparing frequently used data  2 % done                              advisor: Preparing frequently used data  3 % done                              advisor: Preparing frequently used data  3 % done                              
+advisor: Preparing frequently used data 100 % done                             
+
+Elapsed Time: 63.35s
+Total CPU time: 506.448
+Time in 45 vectorized loops: 208.726
+GFLOPS: 21.54
+

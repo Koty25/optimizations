@@ -1,0 +1,115 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: SSOR
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at ssor.f(36,7)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at ssor.f(53,7)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at ssor.f(61,7)
+   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria   [ ssor.f(233,16) ]
+LOOP END
+
+LOOP BEGIN at ssor.f(81,10)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between rsd_(m,i,j,k) (85:22) and rsd_(m,i,j,k) (85:22)
+   remark #15346: vector dependence: assumed OUTPUT dependence between rsd_(m,i,j,k) (85:22) and rsd_(m,i,j,k) (85:22)
+
+   LOOP BEGIN at ssor.f(83,16)
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <rsd_(m,i,j,k)>, stride is unknown to compiler   [ ssor.f(85,22) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <rsd_(m,i,j,k)>, stride is unknown to compiler   [ ssor.f(85,44) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.500
+      remark #15452: unmasked strided loads: 1 
+      remark #15453: unmasked strided stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 6 
+      remark #15477: vector cost: 6.000 
+      remark #15478: estimated potential speedup: 0.990 
+      remark #15488: --- end vector cost summary ---
+
+      LOOP BEGIN at ssor.f(84,19)
+         remark #15389: vectorization support: reference rsd_(m,i,j,k) has unaligned access   [ ssor.f(85,22) ]
+         remark #15389: vectorization support: reference rsd_(m,i,j,k) has unaligned access   [ ssor.f(85,44) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.444
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 6 
+         remark #15477: vector cost: 4.500 
+         remark #15478: estimated potential speedup: 0.930 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at ssor.f(100,10)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+
+   LOOP BEGIN at ssor.f(104,13)
+      remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+   LOOP END
+LOOP END
+
+LOOP BEGIN at ssor.f(132,10)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+
+   LOOP BEGIN at ssor.f(136,13)
+      remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+   LOOP END
+LOOP END
+
+LOOP BEGIN at ssor.f(172,10)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at ssor.f(174,16)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at ssor.f(175,19)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at ssor.f(175,19)
+         remark #15388: vectorization support: reference u_(m,i,j,k) has aligned access   [ ssor.f(176,22) ]
+         remark #15388: vectorization support: reference u_(m,i,j,k) has aligned access   [ ssor.f(176,40) ]
+         remark #15389: vectorization support: reference rsd_(m,i,j,k) has unaligned access   [ ssor.f(177,36) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.750
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15442: entire loop may be executed in remainder
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 9 
+         remark #15477: vector cost: 4.000 
+         remark #15478: estimated potential speedup: 1.090 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at ssor.f(175,19)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================

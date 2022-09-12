@@ -1,0 +1,129 @@
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - UA Benchmark
+
+ No input file inputua.data. Using compiled defaults
+ Levels of refinement:               7
+ Adaptation frequency:               5
+ Time steps:                       200    dt:    0.312500E-03
+ CG iterations:                     10
+ Heat source radius:            0.0760
+
+Step    0: elements refined, merged, total:    1156       0    8093
+Step    5: elements refined, merged, total:      67     504    8121
+Step   10: elements refined, merged, total:      50     880    7701
+Step   15: elements refined, merged, total:     102     280    8170
+Step   20: elements refined, merged, total:      62     536    8135
+Step   25: elements refined, merged, total:      58     680    7946
+Step   30: elements refined, merged, total:      37     704    7589
+Step   35: elements refined, merged, total:     128     416    8121
+Step   40: elements refined, merged, total:      68     544    8121
+Step   45: elements refined, merged, total:      39     616    7855
+Step   50: elements refined, merged, total:      97     408    8177
+Step   55: elements refined, merged, total:      69     448    8268
+Step   60: elements refined, merged, total:      45     880    7813
+Step   65: elements refined, merged, total:      76     200    8170
+Step   70: elements refined, merged, total:      67     568    8142
+Step   75: elements refined, merged, total:      62     624    8030
+Step   80: elements refined, merged, total:      59     472    8030
+Step   85: elements refined, merged, total:      83     448    8219
+Step   90: elements refined, merged, total:      58     624    8079
+Step   95: elements refined, merged, total:      30     776    7610
+Step  100: elements refined, merged, total:     115     344    8114
+Step  105: elements refined, merged, total:      77     480    8233
+Step  110: elements refined, merged, total:      48     752    7911
+Step  115: elements refined, merged, total:      84     264    8268
+Step  120: elements refined, merged, total:      57     536    8198
+Step  125: elements refined, merged, total:      62     624    8086
+Step  130: elements refined, merged, total:      37     512    7897
+Step  135: elements refined, merged, total:      97     416    8212
+Step  140: elements refined, merged, total:      59     616    8086
+Step  145: elements refined, merged, total:      39     776    7680
+Step  150: elements refined, merged, total:     107     408    8072
+Step  155: elements refined, merged, total:      67     480    8121
+Step  160: elements refined, merged, total:      43    1144    7421
+Step  165: elements refined, merged, total:     116     200    8058
+Step  170: elements refined, merged, total:      76     552    8107
+Step  175: elements refined, merged, total:      66     560    8079
+Step  180: elements refined, merged, total:      55     424    8093
+Step  185: elements refined, merged, total:      81     464    8254
+Step  190: elements refined, merged, total:      67     576    8219
+Step  195: elements refined, merged, total:      30     672    7841
+
+ Verification being performed for class B
+ accuracy setting for epsilon =  0.1000000000000E-07
+ Comparison of temperature integrals
+           0.4507561922901E-04 0.4507561922901E-04 0.6359001922848E-13
+ Verification Successful
+
+
+ UA Benchmark Completed.
+ Class           =                        B
+ Size            =                        7
+ Iterations      =                      200
+ Time in seconds =                   176.97
+ Mop/s total     =                    12.48
+ Operation type  =     coll. point advanced
+ Verification    =               SUCCESSFUL
+ Version         =                      3.4
+ Compile date    =              23 Jul 2020
+
+ Compile options:
+    F77          = nfort
+    FLINK        = $(FC)
+    F_LIB        = (none)
+    F_INC        = (none)
+    FFLAGS       = -O3 -mparallel -report-all -fdiag-inline=2 ...
+    FLINKFLAGS   = $(FFLAGS)
+    RAND         = (none)
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+  SECTION     Time (secs)
+       total      :  176.973  ( 100.00 %)
+       init       :    0.183  (   0.10 %)
+       convect    :   37.808  (  21.36 %)
+       transfb_c  :    1.811  (   1.02 %)
+     sub-convect :   35.997  (  20.34 %)
+       diffusion  :  121.538  (  68.68 %)
+       transf     :   27.301  (  15.43 %)
+       transfb    :   35.552  (  20.09 %)
+     sub-diffuse :   58.685  (  33.16 %)
+       adaptation :    6.068  (   3.43 %)
+       transf+b   :   11.356  (   6.42 %)
+       add2       :    0.014  (   0.01 %)
+            ********  Program  Information  ********
+  Real Time (sec)                         :           178.068778
+  User Time (sec)                         :           712.078956
+  Vector Time (sec)                       :           107.672698
+  Inst. Count                             :         537459140851
+  V. Inst. Count                          :          57996337575
+  V. Element Count                        :         598219826410
+  V. Load Element Count                   :         182450786937
+  FLOP Count                              :         214090170904
+  MOPS                                    :          1590.719961
+  MOPS (Real)                             :          6362.421057
+  MFLOPS                                  :           300.593979
+  MFLOPS (Real)                           :          1202.289221
+  A. V. Length                            :            10.314786
+  V. Op. Ratio (%)                        :            57.680090
+  L1 Cache Miss (sec)                     :            28.487221
+  CPU Port Conf. (sec)                    :             3.783401
+  V. Arith. Exec. (sec)                   :            54.199799
+  V. Load Exec. (sec)                     :            38.118458
+  VLD LLC Hit Element Ratio (%)           :            82.262472
+  FMA Element Count                       :          55265905485
+  Power Throttling (sec)                  :             0.000000
+  Thermal Throttling (sec)                :             0.000000
+  Max Active Threads                      :                    4
+  Available CPU Cores                     :                    8
+  Average CPU Cores Used                  :             3.998898
+  Memory Size Used (MB)                   :          1028.000000
+
+  Start Time (date)        :        Thu Jul 23 11:28:36 2020 -03
+  End   Time (date)        :        Thu Jul 23 11:31:34 2020 -03

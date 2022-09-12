@@ -1,0 +1,23 @@
+# started on Fri May 21 02:00:59 2021
+
+
+ Performance counter stats for 'bin/bin_intel/bt.C.x !':
+
+ 1,695,104,680,081      L1-dcache-loads                                               (36.36%)
+   124,878,227,490      L1-dcache-load-misses     #    7.37% of all L1-dcache hits    (36.36%)
+       873,788,065      L1-icache-load-misses                                         (36.36%)
+     1,992,452,850      LLC-loads                                                     (36.36%)
+     1,918,196,369      LLC-load-misses           #   96.27% of all LL-cache hits     (36.36%)
+                 0      fp_arith_inst_retired.scalar_single #     30.5 GFLOPs                   (36.36%)
+ 1,223,917,819,649      fp_arith_inst_retired.scalar_double                                     (36.36%)
+   781,201,227,493      fp_arith_inst_retired.128b_packed_double                                     (36.36%)
+                 0      fp_arith_inst_retired.128b_packed_single                                     (36.36%)
+                 0      fp_arith_inst_retired.256b_packed_double                                     (36.36%)
+                 0      fp_arith_inst_retired.256b_packed_single                                     (36.36%)
+
+      91.273310633 seconds time elapsed
+
+     729.245414000 seconds user
+       0.555981000 seconds sys
+
+

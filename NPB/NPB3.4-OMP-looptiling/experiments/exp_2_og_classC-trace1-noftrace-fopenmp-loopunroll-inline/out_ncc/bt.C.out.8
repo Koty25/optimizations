@@ -1,0 +1,112 @@
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - BT Benchmark
+
+ No input file inputbt.data. Using compiled defaults
+ Size:  162x 162x 162
+ Iterations:  200       dt:   0.0001000
+ Number of available threads:     8
+
+ Time step    1
+ Time step   20
+ Time step   40
+ Time step   60
+ Time step   80
+ Time step  100
+ Time step  120
+ Time step  140
+ Time step  160
+ Time step  180
+ Time step  200
+ Verification being performed for class C
+ accuracy setting for epsilon =  0.1000000000000E-07
+ Comparison of RMS-norms of residual
+           1 0.6239811655176E+04 0.6239811655176E+04 0.7287837774866E-15
+           2 0.5079323919042E+03 0.5079323919042E+03 0.1007202489743E-14
+           3 0.1542353009301E+04 0.1542353009301E+04 0.2948399932726E-15
+           4 0.1330238792929E+04 0.1330238792929E+04 0.1709269618747E-15
+           5 0.1160408742844E+05 0.1160408742844E+05 0.1410787770505E-14
+ Comparison of RMS-norms of solution error
+           1 0.1646200836909E+03 0.1646200836909E+03 0.2244454104938E-14
+           2 0.1149710790382E+02 0.1149710790382E+02 0.8497756738850E-14
+           3 0.4120744620746E+02 0.4120744620746E+02 0.1207014655866E-14
+           4 0.3708765105969E+02 0.3708765105969E+02 0.1532677784563E-14
+           5 0.3621105305184E+03 0.3621105305184E+03 0.2982583679102E-14
+ Verification Successful
+
+
+ BT Benchmark Completed.
+ Class           =                        C
+ Size            =            162x 162x 162
+ Iterations      =                      200
+ Time in seconds =                   218.91
+ Total threads   =                        8
+ Avail threads   =                        8
+ Mop/s total     =                 13093.56
+ Mop/s/thread    =                  1636.69
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                      3.4
+ Compile date    =              23 Jul 2020
+
+ Compile options:
+    F77          = nfort
+    FLINK        = $(FC)
+    F_LIB        = (none)
+    F_INC        = (none)
+    FFLAGS       = -O3 -fopenmp -finline-functions -fouterloop...
+    FLINKFLAGS   = $(FFLAGS)
+    RAND         = (none)
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+  SECTION   Time (secs)
+         total   :  218.908  ( 100.00 %)
+         rhsx    :    0.978  (   0.45 %)
+         rhsy    :    0.471  (   0.22 %)
+         rhsz    :    0.547  (   0.25 %)
+         rhs     :    2.408  (   1.10 %)
+         sub-rhs :    1.997  (   0.91 %)
+        rest-rhs :    0.412  (   0.19 %)
+         xsolve  :   66.489  (  30.37 %)
+         ysolve  :   68.602  (  31.34 %)
+         zsolve  :   81.237  (  37.11 %)
+         redist1 :    0.000  (   0.00 %)
+         solsubs :  175.425  (  80.14 %)
+        rest-sol :   40.902  (  18.68 %)
+         add     :    0.183  (   0.08 %)
+            ********  Program  Information  ********
+  Real Time (sec)                         :           221.093378
+  User Time (sec)                         :          1768.057619
+  Vector Time (sec)                       :           113.794873
+  Inst. Count                             :        3262181192032
+  V. Inst. Count                          :          15301404979
+  V. Element Count                        :        2548470627824
+  V. Load Element Count                   :         880960466379
+  FLOP Count                              :        2881219067823
+  MOPS                                    :          3451.142210
+  MOPS (Real)                             :         27600.189841
+  MFLOPS                                  :          1629.488632
+  MFLOPS (Real)                           :         13031.684250
+  A. V. Length                            :           166.551414
+  V. Op. Ratio (%)                        :            46.791819
+  L1 Cache Miss (sec)                     :           238.981658
+  CPU Port Conf. (sec)                    :            27.420591
+  V. Arith. Exec. (sec)                   :            26.679768
+  V. Load Exec. (sec)                     :            75.633060
+  VLD LLC Hit Element Ratio (%)           :            89.150666
+  FMA Element Count                       :         306868739360
+  Power Throttling (sec)                  :             0.000000
+  Thermal Throttling (sec)                :             0.000000
+  Max Active Threads                      :                    8
+  Available CPU Cores                     :                    8
+  Average CPU Cores Used                  :             7.996882
+  Memory Size Used (MB)                   :          2116.000000
+
+  Start Time (date)        :        Thu Jul 23 21:17:11 2020 -03
+  End   Time (date)        :        Thu Jul 23 21:20:52 2020 -03

@@ -1,0 +1,10 @@
+
+=== Start: [2021/05/20 21:16:59] === 
+Peak bandwidth measurement started...
+Peak bandwidth measurement finished.
+Analysis started...
+Result file: /home/users/fpmjunior/ccpe/NPB/NPB3.4-OMP-autocompilingimprovements/experiments_new/og-nec-intel-otm0-noftrace-advisor/out_intel/e000/trc007/trc007.advixe 
+Application exit code: 0 
+Result file: /home/users/fpmjunior/ccpe/NPB/NPB3.4-OMP-autocompilingimprovements/experiments_new/og-nec-intel-otm0-noftrace-advisor/out_intel/e000/trc007/trc007.advixe 
+Analysis completed
+=== End: [2021/05/20 21:24:50] === 

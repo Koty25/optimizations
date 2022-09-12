@@ -1,0 +1,23 @@
+# started on Fri May 21 00:43:57 2021
+
+
+ Performance counter stats for 'bin/bin_intel/cg.C.x !':
+
+   202,218,180,259      L1-dcache-loads                                               (36.36%)
+    83,588,021,858      L1-dcache-load-misses     #   41.34% of all L1-dcache hits    (36.36%)
+        78,238,533      L1-icache-load-misses                                         (36.36%)
+    27,372,877,219      LLC-loads                                                     (36.36%)
+     3,692,708,750      LLC-load-misses           #   13.49% of all LL-cache hits     (36.36%)
+                 0      fp_arith_inst_retired.scalar_single #      4.8 GFLOPs                   (36.37%)
+     2,795,010,658      fp_arith_inst_retired.scalar_double                                     (36.37%)
+    72,566,578,849      fp_arith_inst_retired.128b_packed_double                                     (36.37%)
+                 0      fp_arith_inst_retired.128b_packed_single                                     (36.37%)
+                 0      fp_arith_inst_retired.256b_packed_double                                     (36.36%)
+                 0      fp_arith_inst_retired.256b_packed_single                                     (36.36%)
+
+      30.513742670 seconds time elapsed
+
+     243.537600000 seconds user
+       0.367000000 seconds sys
+
+

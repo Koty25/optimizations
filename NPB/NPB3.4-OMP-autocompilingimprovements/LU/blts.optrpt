@@ -1,0 +1,24 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: BLTS
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at blts.f(49,10)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between v(5,i,j,k) (199:13) and v(5,i-1,j,k) (59:19)
+
+   LOOP BEGIN at blts.f(50,13)
+   LOOP END
+
+   LOOP BEGIN at blts.f(78,13)
+   LOOP END
+LOOP END
+===========================================================================

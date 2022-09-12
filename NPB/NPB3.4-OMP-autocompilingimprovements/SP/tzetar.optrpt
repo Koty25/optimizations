@@ -1,0 +1,59 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: TZETAR
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at tzetar.f(27,8)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at tzetar.f(29,14)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at tzetar.f(29,14)
+      remark #15389: vectorization support: reference us_(i,j,k) has unaligned access   [ tzetar.f(31,17) ]
+      remark #15389: vectorization support: reference vs_(i,j,k) has unaligned access   [ tzetar.f(32,17) ]
+      remark #15389: vectorization support: reference ws_(i,j,k) has unaligned access   [ tzetar.f(33,17) ]
+      remark #15389: vectorization support: reference speed_(i,j,k) has unaligned access   [ tzetar.f(34,17) ]
+      remark #15388: vectorization support: reference qs_(i,j,k) has aligned access   [ tzetar.f(56,27) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <rhs_(1,i,j,k)>, stride is unknown to compiler   [ tzetar.f(38,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <rhs_(2,i,j,k)>, stride is unknown to compiler   [ tzetar.f(39,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <rhs_(3,i,j,k)>, stride is unknown to compiler   [ tzetar.f(40,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <rhs_(4,i,j,k)>, stride is unknown to compiler   [ tzetar.f(41,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <rhs_(5,i,j,k)>, stride is unknown to compiler   [ tzetar.f(42,17) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(1,i,j,k)>, stride is unknown to compiler   [ tzetar.f(44,17) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <rhs_(1,i,j,k)>, stride is unknown to compiler   [ tzetar.f(51,17) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <rhs_(2,i,j,k)>, stride is unknown to compiler   [ tzetar.f(52,17) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <rhs_(3,i,j,k)>, stride is unknown to compiler   [ tzetar.f(53,17) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <rhs_(4,i,j,k)>, stride is unknown to compiler   [ tzetar.f(54,17) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <rhs_(5,i,j,k)>, stride is unknown to compiler   [ tzetar.f(55,17) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.304
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15450: unmasked unaligned unit stride loads: 4 
+      remark #15452: unmasked strided loads: 6 
+      remark #15453: unmasked strided stores: 5 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 156 
+      remark #15477: vector cost: 103.500 
+      remark #15478: estimated potential speedup: 1.490 
+      remark #15486: divides: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at tzetar.f(29,14)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+===========================================================================

@@ -1,0 +1,1373 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: DIFFUSION
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at diffuse.f(65,7)
+   remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ diffuse.f(68,7) ]
+   remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ diffuse.f(68,7) ]
+   remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ diffuse.f(68,7) ]
+   remark #15382: vectorization support: call to function .3 cannot be vectorized   [ diffuse.f(68,7) ]
+   remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ diffuse.f(68,7) ]
+   remark #15382: vectorization support: call to function adds1m1_ cannot be vectorized   [ diffuse.f(97,16) ]
+   remark #15382: vectorization support: call to function adds1m1_ cannot be vectorized   [ diffuse.f(98,16) ]
+   remark #15382: vectorization support: call to function timer_start_ cannot be vectorized   [ diffuse.f(103,22) ]
+   remark #15382: vectorization support: call to function transf_ cannot be vectorized   [ diffuse.f(104,14) ]
+   remark #15382: vectorization support: call to function timer_stop_ cannot be vectorized   [ diffuse.f(105,22) ]
+   remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ diffuse.f(108,7) ]
+   remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ diffuse.f(108,7) ]
+   remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ diffuse.f(108,7) ]
+   remark #15382: vectorization support: call to function .5 cannot be vectorized   [ diffuse.f(108,7) ]
+   remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ diffuse.f(108,7) ]
+   remark #15382: vectorization support: call to function timer_start_ cannot be vectorized   [ diffuse.f(116,22) ]
+   remark #15382: vectorization support: call to function transfb_ cannot be vectorized   [ diffuse.f(117,14) ]
+   remark #15382: vectorization support: call to function timer_stop_ cannot be vectorized   [ diffuse.f(118,22) ]
+   remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ diffuse.f(121,7) ]
+   remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ diffuse.f(121,7) ]
+   remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ diffuse.f(121,7) ]
+   remark #15382: vectorization support: call to function .6 cannot be vectorized   [ diffuse.f(121,7) ]
+   remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ diffuse.f(121,7) ]
+   remark #15382: vectorization support: call to function __kmpc_ok_to_fork cannot be vectorized   [ diffuse.f(133,7) ]
+   remark #15382: vectorization support: call to function __kmpc_fork_call cannot be vectorized   [ diffuse.f(133,7) ]
+   remark #15382: vectorization support: call to function __kmpc_serialized_parallel cannot be vectorized   [ diffuse.f(133,7) ]
+   remark #15382: vectorization support: call to function .7 cannot be vectorized   [ diffuse.f(133,7) ]
+   remark #15382: vectorization support: call to function __kmpc_end_serialized_parallel cannot be vectorized   [ diffuse.f(133,7) ]
+   remark #15382: vectorization support: call to function adds2m1_ cannot be vectorized   [ diffuse.f(157,14) ]
+   remark #15382: vectorization support: call to function adds2m1_ cannot be vectorized   [ diffuse.f(158,14) ]
+   remark #15382: vectorization support: call to function adds2m1_ cannot be vectorized   [ diffuse.f(160,14) ]
+   remark #15382: vectorization support: call to function adds2m1_ cannot be vectorized   [ diffuse.f(161,14) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between rho_aux (67:11) and rho_aux (68:7)
+   remark #15346: vector dependence: assumed OUTPUT dependence between rho_aux (68:7) and rho_aux (67:11)
+LOOP END
+
+LOOP BEGIN at diffuse.f(25,7)
+   remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+   LOOP BEGIN at diffuse.f(25,7)
+      remark #15389: vectorization support: reference umor_(i) has unaligned access   [ diffuse.f(27,9) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.300
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 2.500 
+      remark #15478: estimated potential speedup: 1.450 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at diffuse.f(25,7)
+   <Remainder>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at diffuse.f(40,8)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between %rho1 (45:16) and %rho1 (45:16)
+   remark #15346: vector dependence: assumed OUTPUT dependence between %rho1 (45:16) and %rho1 (45:16)
+
+   LOOP BEGIN at diffuse.f(41,10)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed OUTPUT dependence between %rho1 (45:16) and %rho1 (45:16)
+      remark #15346: vector dependence: assumed OUTPUT dependence between %rho1 (45:16) and %rho1 (45:16)
+
+      LOOP BEGIN at diffuse.f(42,12)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between %rho1 (45:16) and %rho1 (45:16)
+         remark #15346: vector dependence: assumed OUTPUT dependence between %rho1 (45:16) and %rho1 (45:16)
+
+         LOOP BEGIN at diffuse.f(43,14)
+            remark #15389: vectorization support: reference pdiff_(i,j,k,ie) has unaligned access   [ diffuse.f(44,16) ]
+            remark #15389: vectorization support: reference dpcelm_(i,j,k,ie) has unaligned access   [ diffuse.f(44,34) ]
+            remark #15389: vectorization support: reference trhs_(i,j,k,ie) has unaligned access   [ diffuse.f(44,51) ]
+            remark #15389: vectorization support: reference trhs_(i,j,k,ie) has unaligned access   [ diffuse.f(45,41) ]
+            remark #15389: vectorization support: reference pdiff_(i,j,k,ie) has unaligned access   [ diffuse.f(45,56) ]
+            remark #15389: vectorization support: reference tmult_(i,j,k,ie) has unaligned access   [ diffuse.f(46,49) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15305: vectorization support: vector length 2
+            remark #15399: vectorization support: unroll factor set to 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.739
+            remark #15355: vectorization support: %rho1 is double type reduction   [ diffuse.f(45,16) ]
+            remark #15450: unmasked unaligned unit stride loads: 4 
+            remark #15451: unmasked unaligned unit stride stores: 1 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 17 
+            remark #15477: vector cost: 11.500 
+            remark #15478: estimated potential speedup: 0.870 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(43,14)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(43,14)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(43,14)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(43,14)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(42,12)
+
+         LOOP BEGIN at diffuse.f(43,14)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(43,14)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(43,14)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(43,14)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(43,14)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(42,12)
+
+         LOOP BEGIN at diffuse.f(43,14)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(43,14)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(43,14)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(43,14)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(43,14)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(42,12)
+
+         LOOP BEGIN at diffuse.f(43,14)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(43,14)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(43,14)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(43,14)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(43,14)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(42,12)
+
+         LOOP BEGIN at diffuse.f(43,14)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(43,14)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(43,14)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(43,14)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(43,14)
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at diffuse.f(53,7)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at diffuse.f(53,7)
+   remark #15388: vectorization support: reference pmorx_(im) has aligned access   [ diffuse.f(55,9) ]
+   remark #15389: vectorization support: reference dpcmor_(im) has unaligned access   [ diffuse.f(55,21) ]
+   remark #15388: vectorization support: reference rmor_(im) has aligned access   [ diffuse.f(55,32) ]
+   remark #15388: vectorization support: reference rmor_(im) has aligned access   [ diffuse.f(56,28) ]
+   remark #15388: vectorization support: reference pmorx_(im) has aligned access   [ diffuse.f(56,37) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.600
+   remark #15355: vectorization support: %rho1 is double type reduction   [ diffuse.f(38,7) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 2 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 15 
+   remark #15477: vector cost: 7.500 
+   remark #15478: estimated potential speedup: 1.940 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at diffuse.f(53,7)
+<Alternate Alignment Vectorized Loop>
+LOOP END
+
+LOOP BEGIN at diffuse.f(53,7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at diffuse.f(72,11)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between %rho_aux (77:19) and %rho_aux (77:19)
+   remark #15346: vector dependence: assumed OUTPUT dependence between %rho_aux (77:19) and %rho_aux (77:19)
+
+   LOOP BEGIN at diffuse.f(73,13)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed OUTPUT dependence between %rho_aux (77:19) and %rho_aux (77:19)
+      remark #15346: vector dependence: assumed OUTPUT dependence between %rho_aux (77:19) and %rho_aux (77:19)
+
+      LOOP BEGIN at diffuse.f(74,15)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between %rho_aux (77:19) and %rho_aux (77:19)
+         remark #15346: vector dependence: assumed OUTPUT dependence between %rho_aux (77:19) and %rho_aux (77:19)
+
+         LOOP BEGIN at diffuse.f(75,17)
+            remark #15389: vectorization support: reference pdiffp_(i,j,k,ie) has unaligned access   [ diffuse.f(76,19) ]
+            remark #15389: vectorization support: reference dpcelm_(i,j,k,ie) has unaligned access   [ diffuse.f(76,38) ]
+            remark #15389: vectorization support: reference trhs_(i,j,k,ie) has unaligned access   [ diffuse.f(76,55) ]
+            remark #15389: vectorization support: reference trhs_(i,j,k,ie) has unaligned access   [ diffuse.f(77,36) ]
+            remark #15389: vectorization support: reference pdiffp_(i,j,k,ie) has unaligned access   [ diffuse.f(77,51) ]
+            remark #15389: vectorization support: reference tmult_(i,j,k,ie) has unaligned access   [ diffuse.f(78,51) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15305: vectorization support: vector length 2
+            remark #15399: vectorization support: unroll factor set to 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.739
+            remark #15355: vectorization support: %rho_aux is double type reduction   [ diffuse.f(77,19) ]
+            remark #15450: unmasked unaligned unit stride loads: 4 
+            remark #15451: unmasked unaligned unit stride stores: 1 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 17 
+            remark #15477: vector cost: 11.500 
+            remark #15478: estimated potential speedup: 0.870 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(75,17)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(75,17)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(75,17)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(75,17)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(74,15)
+
+         LOOP BEGIN at diffuse.f(75,17)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(75,17)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(75,17)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(75,17)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(75,17)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(74,15)
+
+         LOOP BEGIN at diffuse.f(75,17)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(75,17)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(75,17)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(75,17)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(75,17)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(74,15)
+
+         LOOP BEGIN at diffuse.f(75,17)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(75,17)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(75,17)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(75,17)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(75,17)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(74,15)
+
+         LOOP BEGIN at diffuse.f(75,17)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(75,17)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(75,17)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(75,17)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(75,17)
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at diffuse.f(84,7)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at diffuse.f(84,7)
+   remark #15388: vectorization support: reference ppmor_(im) has aligned access   [ diffuse.f(86,13) ]
+   remark #15389: vectorization support: reference dpcmor_(im) has unaligned access   [ diffuse.f(86,25) ]
+   remark #15388: vectorization support: reference rmor_(im) has aligned access   [ diffuse.f(86,36) ]
+   remark #15388: vectorization support: reference rmor_(im) has aligned access   [ diffuse.f(87,33) ]
+   remark #15388: vectorization support: reference ppmor_(im) has aligned access   [ diffuse.f(87,42) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.600
+   remark #15355: vectorization support: %rho_aux is double type reduction   [ diffuse.f(68,7) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 2 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 15 
+   remark #15477: vector cost: 7.500 
+   remark #15478: estimated potential speedup: 1.940 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at diffuse.f(84,7)
+<Alternate Alignment Vectorized Loop>
+LOOP END
+
+LOOP BEGIN at diffuse.f(84,7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at diffuse.f(109,9)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at diffuse.f(191,7) inlined into diffuse.f(110,16)
+      remark #15541: outer loop was not auto-vectorized: consider using SIMD directive   [ diffuse.f(194,13) ]
+
+      LOOP BEGIN at diffuse.f(193,11) inlined into diffuse.f(110,16)
+         remark #15541: outer loop was not auto-vectorized: consider using SIMD directive   [ diffuse.f(194,13) ]
+
+         LOOP BEGIN at diffuse.f(192,9) inlined into diffuse.f(110,16)
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed OUTPUT dependence between tm1(i,j,iz) (195:15) and tm1(i,j,iz) (195:15)
+            remark #15346: vector dependence: assumed OUTPUT dependence between tm1(i,j,iz) (195:15) and tm1(i,j,iz) (195:15)
+
+            LOOP BEGIN at diffuse.f(194,13) inlined into diffuse.f(110,16)
+               remark #15389: vectorization support: reference tm1(i,j,iz) has unaligned access   [ diffuse.f(195,15) ]
+               remark #15389: vectorization support: reference tm1(i,j,iz) has unaligned access   [ diffuse.f(195,15) ]
+               remark #15389: vectorization support: reference wdtdr(i,k) has unaligned access   [ diffuse.f(195,15) ]
+               remark #15381: vectorization support: unaligned access used inside loop body
+               remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+               remark #15305: vectorization support: vector length 2
+               remark #15399: vectorization support: unroll factor set to 2
+               remark #15309: vectorization support: normalized vectorization overhead 0.458
+               remark #15450: unmasked unaligned unit stride loads: 2 
+               remark #15451: unmasked unaligned unit stride stores: 1 
+               remark #15475: --- begin vector cost summary ---
+               remark #15476: scalar cost: 9 
+               remark #15477: vector cost: 6.000 
+               remark #15478: estimated potential speedup: 1.020 
+               remark #15488: --- end vector cost summary ---
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(194,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(194,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(194,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(194,13) inlined into diffuse.f(110,16)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(192,9) inlined into diffuse.f(110,16)
+
+            LOOP BEGIN at diffuse.f(194,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(194,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(194,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(194,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(194,13) inlined into diffuse.f(110,16)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(192,9) inlined into diffuse.f(110,16)
+
+            LOOP BEGIN at diffuse.f(194,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(194,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(194,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(194,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(194,13) inlined into diffuse.f(110,16)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(192,9) inlined into diffuse.f(110,16)
+
+            LOOP BEGIN at diffuse.f(194,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(194,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(194,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(194,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(194,13) inlined into diffuse.f(110,16)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(192,9) inlined into diffuse.f(110,16)
+
+            LOOP BEGIN at diffuse.f(194,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(194,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(194,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(194,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(194,13) inlined into diffuse.f(110,16)
+            LOOP END
+         LOOP END
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at diffuse.f(202,7) inlined into diffuse.f(110,16)
+      remark #15541: outer loop was not auto-vectorized: consider using SIMD directive   [ diffuse.f(205,13) ]
+
+      LOOP BEGIN at diffuse.f(204,11) inlined into diffuse.f(110,16)
+         remark #15541: outer loop was not auto-vectorized: consider using SIMD directive   [ diffuse.f(205,13) ]
+
+         LOOP BEGIN at diffuse.f(203,9) inlined into diffuse.f(110,16)
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed OUTPUT dependence between tm2(i,j,iz) (206:15) and tm2(i,j,iz) (206:15)
+            remark #15346: vector dependence: assumed OUTPUT dependence between tm2(i,j,iz) (206:15) and tm2(i,j,iz) (206:15)
+
+            LOOP BEGIN at diffuse.f(205,13) inlined into diffuse.f(110,16)
+               remark #15389: vectorization support: reference tm2(i,j,iz) has unaligned access   [ diffuse.f(206,15) ]
+               remark #15389: vectorization support: reference tm2(i,j,iz) has unaligned access   [ diffuse.f(206,15) ]
+               remark #15389: vectorization support: reference u(i,k,iz) has unaligned access   [ diffuse.f(206,41) ]
+               remark #15381: vectorization support: unaligned access used inside loop body
+               remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+               remark #15305: vectorization support: vector length 2
+               remark #15399: vectorization support: unroll factor set to 2
+               remark #15309: vectorization support: normalized vectorization overhead 0.458
+               remark #15450: unmasked unaligned unit stride loads: 2 
+               remark #15451: unmasked unaligned unit stride stores: 1 
+               remark #15475: --- begin vector cost summary ---
+               remark #15476: scalar cost: 9 
+               remark #15477: vector cost: 6.000 
+               remark #15478: estimated potential speedup: 1.020 
+               remark #15488: --- end vector cost summary ---
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(205,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(205,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(205,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(205,13) inlined into diffuse.f(110,16)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(203,9) inlined into diffuse.f(110,16)
+
+            LOOP BEGIN at diffuse.f(205,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(205,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(205,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(205,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(205,13) inlined into diffuse.f(110,16)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(203,9) inlined into diffuse.f(110,16)
+
+            LOOP BEGIN at diffuse.f(205,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(205,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(205,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(205,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(205,13) inlined into diffuse.f(110,16)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(203,9) inlined into diffuse.f(110,16)
+
+            LOOP BEGIN at diffuse.f(205,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(205,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(205,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(205,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(205,13) inlined into diffuse.f(110,16)
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(203,9) inlined into diffuse.f(110,16)
+
+            LOOP BEGIN at diffuse.f(205,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(205,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(205,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(205,13) inlined into diffuse.f(110,16)
+            LOOP END
+
+            LOOP BEGIN at diffuse.f(205,13) inlined into diffuse.f(110,16)
+            LOOP END
+         LOOP END
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at diffuse.f(215,11) inlined into diffuse.f(110,16)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at diffuse.f(213,7) inlined into diffuse.f(110,16)
+      <Peeled>
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at diffuse.f(216,13) inlined into diffuse.f(110,16)
+         <Peeled loop for vectorization>
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(216,13) inlined into diffuse.f(110,16)
+            remark #15388: vectorization support: reference r(i,j,iz) has aligned access   [ diffuse.f(217,15) ]
+            remark #15388: vectorization support: reference r(i,j,iz) has aligned access   [ diffuse.f(217,27) ]
+            remark #15389: vectorization support: reference u(i,j,k) has unaligned access   [ diffuse.f(217,37) ]
+            remark #15389: vectorization support: reference r(i,j,iz) has unaligned access   [ diffuse.f(217,15) ]
+            remark #15389: vectorization support: reference r(i,j,iz) has unaligned access   [ diffuse.f(217,27) ]
+            remark #15389: vectorization support: reference u(i,j,k) has unaligned access   [ diffuse.f(217,37) ]
+            remark #15388: vectorization support: reference r(i,j,iz) has aligned access   [ diffuse.f(217,15) ]
+            remark #15388: vectorization support: reference r(i,j,iz) has aligned access   [ diffuse.f(217,27) ]
+            remark #15389: vectorization support: reference u(i,j,k) has unaligned access   [ diffuse.f(217,37) ]
+            remark #15389: vectorization support: reference r(i,j,iz) has unaligned access   [ diffuse.f(217,15) ]
+            remark #15389: vectorization support: reference r(i,j,iz) has unaligned access   [ diffuse.f(217,27) ]
+            remark #15389: vectorization support: reference u(i,j,k) has unaligned access   [ diffuse.f(217,37) ]
+            remark #15388: vectorization support: reference r(i,j,iz) has aligned access   [ diffuse.f(217,15) ]
+            remark #15388: vectorization support: reference r(i,j,iz) has aligned access   [ diffuse.f(217,27) ]
+            remark #15389: vectorization support: reference u(i,j,k) has unaligned access   [ diffuse.f(217,37) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15305: vectorization support: vector length 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.489
+            remark #15301: FUSED LOOP WAS VECTORIZED
+            remark #15442: entire loop may be executed in remainder
+            remark #15448: unmasked aligned unit stride loads: 3 
+            remark #15449: unmasked aligned unit stride stores: 3 
+            remark #15450: unmasked unaligned unit stride loads: 3 
+            remark #15451: unmasked unaligned unit stride stores: 2 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 44 
+            remark #15477: vector cost: 23.500 
+            remark #15478: estimated potential speedup: 1.360 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(216,13) inlined into diffuse.f(110,16)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(216,13) inlined into diffuse.f(110,16)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(216,13) inlined into diffuse.f(110,16)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(216,13) inlined into diffuse.f(110,16)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(216,13) inlined into diffuse.f(110,16)
+         <Remainder loop for vectorization>
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(213,7) inlined into diffuse.f(110,16)
+      <Peeled>
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(213,7) inlined into diffuse.f(110,16)
+      <Peeled>
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(213,7) inlined into diffuse.f(110,16)
+      <Peeled>
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(213,7) inlined into diffuse.f(110,16)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at diffuse.f(234,13) inlined into diffuse.f(110,16)
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <r(i,j,k)>, stride is 25
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <tm1(i,j,k)>, stride is 25
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <g4m1_s(i,j,k,sizei)>, stride is 25
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <tm2(i,j,k)>, stride is 25   [ diffuse.f(234,38) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <g5m1_s(i,j,k,sizei)>, stride is 25   [ diffuse.f(234,38) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <r(i,j,k)>, stride is 25   [ diffuse.f(236,27) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <g6m1_s(i,j,k,sizei)>, stride is 25   [ diffuse.f(236,27) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <bm1_s(i,j,k,sizei)>, stride is 25   [ diffuse.f(234,26) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u(i,j,k)>, stride is 25   [ diffuse.f(237,48) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.042
+      remark #15452: unmasked strided loads: 8 
+      remark #15453: unmasked strided stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 27 
+      remark #15477: vector cost: 24.000 
+      remark #15478: estimated potential speedup: 1.080 
+      remark #15488: --- end vector cost summary ---
+
+      LOOP BEGIN at diffuse.f(232,9) inlined into diffuse.f(110,16)
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15329: vectorization support: non-unit strided store was emulated for the variable <r(i,j,k)>, stride is 5   [ diffuse.f(234,13) ]
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <tm1(i,j,k)>, stride is 5   [ diffuse.f(234,13) ]
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <g4m1_s(i,j,k,sizei)>, stride is 5   [ diffuse.f(234,13) ]
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <tm2(i,j,k)>, stride is 5   [ diffuse.f(234,38) ]
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <g5m1_s(i,j,k,sizei)>, stride is 5   [ diffuse.f(234,38) ]
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <r(i,j,k)>, stride is 5   [ diffuse.f(236,27) ]
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <g6m1_s(i,j,k,sizei)>, stride is 5   [ diffuse.f(236,27) ]
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <bm1_s(i,j,k,sizei)>, stride is 5   [ diffuse.f(234,26) ]
+         remark #15328: vectorization support: non-unit strided load was emulated for the variable <u(i,j,k)>, stride is 5   [ diffuse.f(237,48) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.043
+         remark #15452: unmasked strided loads: 8 
+         remark #15453: unmasked strided stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 27 
+         remark #15477: vector cost: 23.500 
+         remark #15478: estimated potential speedup: 1.090 
+         remark #15488: --- end vector cost summary ---
+
+         LOOP BEGIN at diffuse.f(233,11) inlined into diffuse.f(110,16)
+            remark #15389: vectorization support: reference r(i,j,k) has unaligned access   [ diffuse.f(234,13) ]
+            remark #15389: vectorization support: reference tm1(i,j,k) has unaligned access   [ diffuse.f(234,13) ]
+            remark #15389: vectorization support: reference g4m1_s(i,j,k,sizei) has unaligned access   [ diffuse.f(234,13) ]
+            remark #15389: vectorization support: reference tm2(i,j,k) has unaligned access   [ diffuse.f(234,38) ]
+            remark #15389: vectorization support: reference g5m1_s(i,j,k,sizei) has unaligned access   [ diffuse.f(234,38) ]
+            remark #15389: vectorization support: reference r(i,j,k) has unaligned access   [ diffuse.f(236,27) ]
+            remark #15389: vectorization support: reference g6m1_s(i,j,k,sizei) has unaligned access   [ diffuse.f(236,27) ]
+            remark #15389: vectorization support: reference bm1_s(i,j,k,sizei) has unaligned access   [ diffuse.f(234,26) ]
+            remark #15389: vectorization support: reference u(i,j,k) has unaligned access   [ diffuse.f(237,48) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15305: vectorization support: vector length 2
+            remark #15399: vectorization support: unroll factor set to 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.392
+            remark #15450: unmasked unaligned unit stride loads: 8 
+            remark #15451: unmasked unaligned unit stride stores: 1 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 27 
+            remark #15477: vector cost: 18.500 
+            remark #15478: estimated potential speedup: 1.030 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(233,11) inlined into diffuse.f(110,16)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(233,11) inlined into diffuse.f(110,16)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(233,11) inlined into diffuse.f(110,16)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(233,11) inlined into diffuse.f(110,16)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(232,9) inlined into diffuse.f(110,16)
+
+         LOOP BEGIN at diffuse.f(233,11) inlined into diffuse.f(110,16)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(233,11) inlined into diffuse.f(110,16)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(233,11) inlined into diffuse.f(110,16)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(233,11) inlined into diffuse.f(110,16)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(233,11) inlined into diffuse.f(110,16)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(232,9) inlined into diffuse.f(110,16)
+
+         LOOP BEGIN at diffuse.f(233,11) inlined into diffuse.f(110,16)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(233,11) inlined into diffuse.f(110,16)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(233,11) inlined into diffuse.f(110,16)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(233,11) inlined into diffuse.f(110,16)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(233,11) inlined into diffuse.f(110,16)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(232,9) inlined into diffuse.f(110,16)
+
+         LOOP BEGIN at diffuse.f(233,11) inlined into diffuse.f(110,16)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(233,11) inlined into diffuse.f(110,16)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(233,11) inlined into diffuse.f(110,16)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(233,11) inlined into diffuse.f(110,16)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(233,11) inlined into diffuse.f(110,16)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(232,9) inlined into diffuse.f(110,16)
+
+         LOOP BEGIN at diffuse.f(233,11) inlined into diffuse.f(110,16)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(233,11) inlined into diffuse.f(110,16)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(233,11) inlined into diffuse.f(110,16)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(233,11) inlined into diffuse.f(110,16)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(233,11) inlined into diffuse.f(110,16)
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at diffuse.f(122,9)
+   remark #15382: vectorization support: call to function facev_ cannot be vectorized   [ diffuse.f(125,20) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between iside (123:11) and iside (125:20)
+   remark #15346: vector dependence: assumed OUTPUT dependence between iside (125:20) and iside (123:11)
+
+   LOOP BEGIN at diffuse.f(123,11)
+      remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+   LOOP END
+LOOP END
+
+LOOP BEGIN at diffuse.f(135,9)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between %cona (139:17) and %cona (139:17)
+   remark #15346: vector dependence: assumed OUTPUT dependence between %cona (139:17) and %cona (139:17)
+
+   LOOP BEGIN at diffuse.f(136,11)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed OUTPUT dependence between %cona (139:17) and %cona (139:17)
+      remark #15346: vector dependence: assumed OUTPUT dependence between %cona (139:17) and %cona (139:17)
+
+      LOOP BEGIN at diffuse.f(137,13)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between %cona (139:17) and %cona (139:17)
+         remark #15346: vector dependence: assumed OUTPUT dependence between %cona (139:17) and %cona (139:17)
+
+         LOOP BEGIN at diffuse.f(138,15)
+            remark #15389: vectorization support: reference pdiff_(i,j,k,ie) has unaligned access   [ diffuse.f(140,17) ]
+            remark #15389: vectorization support: reference pdiffp_(i,j,k,ie) has unaligned access   [ diffuse.f(140,33) ]
+            remark #15389: vectorization support: reference tmult_(i,j,k,ie) has unaligned access   [ diffuse.f(140,50) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15305: vectorization support: vector length 2
+            remark #15399: vectorization support: unroll factor set to 2
+            remark #15309: vectorization support: normalized vectorization overhead 1.000
+            remark #15355: vectorization support: %cona is double type reduction   [ diffuse.f(139,17) ]
+            remark #15450: unmasked unaligned unit stride loads: 3 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 11 
+            remark #15477: vector cost: 7.000 
+            remark #15478: estimated potential speedup: 0.820 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(138,15)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(138,15)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(138,15)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(138,15)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(137,13)
+
+         LOOP BEGIN at diffuse.f(138,15)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(138,15)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(138,15)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(138,15)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(138,15)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(137,13)
+
+         LOOP BEGIN at diffuse.f(138,15)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(138,15)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(138,15)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(138,15)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(138,15)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(137,13)
+
+         LOOP BEGIN at diffuse.f(138,15)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(138,15)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(138,15)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(138,15)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(138,15)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(137,13)
+
+         LOOP BEGIN at diffuse.f(138,15)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(138,15)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(138,15)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(138,15)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(138,15)
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at diffuse.f(146,7)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at diffuse.f(146,7)
+   remark #15388: vectorization support: reference ppmor_(im) has aligned access   [ diffuse.f(148,11) ]
+   remark #15388: vectorization support: reference ppmor_(im) has aligned access   [ diffuse.f(148,23) ]
+   remark #15389: vectorization support: reference tmmor_(im) has unaligned access   [ diffuse.f(148,33) ]
+   remark #15388: vectorization support: reference pmorx_(im) has aligned access   [ diffuse.f(149,25) ]
+   remark #15388: vectorization support: reference ppmor_(im) has aligned access   [ diffuse.f(149,35) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.600
+   remark #15355: vectorization support: %cona is double type reduction   [ diffuse.f(133,7) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 2 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 15 
+   remark #15477: vector cost: 7.500 
+   remark #15478: estimated potential speedup: 1.940 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at diffuse.f(146,7)
+<Alternate Alignment Vectorized Loop>
+LOOP END
+
+LOOP BEGIN at diffuse.f(146,7)
+<Remainder loop for vectorization>
+LOOP END
+===========================================================================
+
+Begin optimization report for: LAPLACIAN
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at diffuse.f(191,7)
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive   [ diffuse.f(194,13) ]
+
+   LOOP BEGIN at diffuse.f(193,11)
+      remark #15541: outer loop was not auto-vectorized: consider using SIMD directive   [ diffuse.f(194,13) ]
+
+      LOOP BEGIN at diffuse.f(192,9)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between tm1(i,j,iz) (195:15) and tm1(i,j,iz) (195:15)
+         remark #15346: vector dependence: assumed OUTPUT dependence between tm1(i,j,iz) (195:15) and tm1(i,j,iz) (195:15)
+
+         LOOP BEGIN at diffuse.f(194,13)
+            remark #15389: vectorization support: reference tm1(i,j,iz) has unaligned access   [ diffuse.f(195,15) ]
+            remark #15389: vectorization support: reference tm1(i,j,iz) has unaligned access   [ diffuse.f(195,15) ]
+            remark #15389: vectorization support: reference wdtdr(i,k) has unaligned access   [ diffuse.f(195,15) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15305: vectorization support: vector length 2
+            remark #15399: vectorization support: unroll factor set to 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.458
+            remark #15450: unmasked unaligned unit stride loads: 2 
+            remark #15451: unmasked unaligned unit stride stores: 1 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 9 
+            remark #15477: vector cost: 6.000 
+            remark #15478: estimated potential speedup: 1.020 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(194,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(194,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(194,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(194,13)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(192,9)
+
+         LOOP BEGIN at diffuse.f(194,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(194,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(194,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(194,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(194,13)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(192,9)
+
+         LOOP BEGIN at diffuse.f(194,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(194,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(194,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(194,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(194,13)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(192,9)
+
+         LOOP BEGIN at diffuse.f(194,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(194,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(194,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(194,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(194,13)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(192,9)
+
+         LOOP BEGIN at diffuse.f(194,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(194,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(194,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(194,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(194,13)
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at diffuse.f(202,7)
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive   [ diffuse.f(205,13) ]
+
+   LOOP BEGIN at diffuse.f(204,11)
+      remark #15541: outer loop was not auto-vectorized: consider using SIMD directive   [ diffuse.f(205,13) ]
+
+      LOOP BEGIN at diffuse.f(203,9)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between tm2(i,j,iz) (206:15) and tm2(i,j,iz) (206:15)
+         remark #15346: vector dependence: assumed OUTPUT dependence between tm2(i,j,iz) (206:15) and tm2(i,j,iz) (206:15)
+
+         LOOP BEGIN at diffuse.f(205,13)
+            remark #15389: vectorization support: reference tm2(i,j,iz) has unaligned access   [ diffuse.f(206,15) ]
+            remark #15389: vectorization support: reference tm2(i,j,iz) has unaligned access   [ diffuse.f(206,15) ]
+            remark #15389: vectorization support: reference u(i,k,iz) has unaligned access   [ diffuse.f(206,41) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15305: vectorization support: vector length 2
+            remark #15399: vectorization support: unroll factor set to 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.458
+            remark #15450: unmasked unaligned unit stride loads: 2 
+            remark #15451: unmasked unaligned unit stride stores: 1 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 9 
+            remark #15477: vector cost: 6.000 
+            remark #15478: estimated potential speedup: 1.020 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(205,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(205,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(205,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(205,13)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(203,9)
+
+         LOOP BEGIN at diffuse.f(205,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(205,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(205,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(205,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(205,13)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(203,9)
+
+         LOOP BEGIN at diffuse.f(205,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(205,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(205,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(205,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(205,13)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(203,9)
+
+         LOOP BEGIN at diffuse.f(205,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(205,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(205,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(205,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(205,13)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(203,9)
+
+         LOOP BEGIN at diffuse.f(205,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(205,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(205,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(205,13)
+         LOOP END
+
+         LOOP BEGIN at diffuse.f(205,13)
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at diffuse.f(214,9)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at diffuse.f(215,11)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at diffuse.f(216,13)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(216,13)
+         remark #15388: vectorization support: reference r(i,j,iz) has aligned access   [ diffuse.f(217,15) ]
+         remark #15388: vectorization support: reference r(i,j,iz) has aligned access   [ diffuse.f(217,27) ]
+         remark #15388: vectorization support: reference u(i,j,k) has aligned access   [ diffuse.f(217,37) ]
+         remark #15388: vectorization support: reference r(i,j,iz) has aligned access   [ diffuse.f(217,15) ]
+         remark #15388: vectorization support: reference r(i,j,iz) has aligned access   [ diffuse.f(217,27) ]
+         remark #15389: vectorization support: reference u(i,j,k) has unaligned access   [ diffuse.f(217,37) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.529
+         remark #15301: FUSED LOOP WAS VECTORIZED
+         remark #15442: entire loop may be executed in remainder
+         remark #15448: unmasked aligned unit stride loads: 2 
+         remark #15449: unmasked aligned unit stride stores: 2 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 18 
+         remark #15477: vector cost: 8.500 
+         remark #15478: estimated potential speedup: 1.280 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(216,13)
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(216,13)
+      <Alternate Alignment Vectorized Loop>
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(216,13)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at diffuse.f(215,11)
+   LOOP END
+
+   LOOP BEGIN at diffuse.f(215,11)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at diffuse.f(216,13)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(216,13)
+         remark #15388: vectorization support: reference r(i,j,iz) has aligned access   [ diffuse.f(217,15) ]
+         remark #15388: vectorization support: reference r(i,j,iz) has aligned access   [ diffuse.f(217,27) ]
+         remark #15389: vectorization support: reference u(i,j,k) has unaligned access   [ diffuse.f(217,37) ]
+         remark #15388: vectorization support: reference r(i,j,iz) has aligned access   [ diffuse.f(217,15) ]
+         remark #15388: vectorization support: reference r(i,j,iz) has aligned access   [ diffuse.f(217,27) ]
+         remark #15389: vectorization support: reference u(i,j,k) has unaligned access   [ diffuse.f(217,37) ]
+         remark #15388: vectorization support: reference r(i,j,iz) has aligned access   [ diffuse.f(217,15) ]
+         remark #15388: vectorization support: reference r(i,j,iz) has aligned access   [ diffuse.f(217,27) ]
+         remark #15389: vectorization support: reference u(i,j,k) has unaligned access   [ diffuse.f(217,37) ]
+         remark #15388: vectorization support: reference r(i,j,k) has aligned access   [ diffuse.f(234,13) ]
+         remark #15389: vectorization support: reference tm1(i,j,k) has unaligned access   [ diffuse.f(234,13) ]
+         remark #15389: vectorization support: reference g4m1_s(i,j,k,sizei) has unaligned access   [ diffuse.f(234,13) ]
+         remark #15389: vectorization support: reference tm2(i,j,k) has unaligned access   [ diffuse.f(234,38) ]
+         remark #15389: vectorization support: reference g5m1_s(i,j,k,sizei) has unaligned access   [ diffuse.f(234,38) ]
+         remark #15388: vectorization support: reference r(i,j,k) has aligned access   [ diffuse.f(236,27) ]
+         remark #15389: vectorization support: reference g6m1_s(i,j,k,sizei) has unaligned access   [ diffuse.f(236,27) ]
+         remark #15389: vectorization support: reference bm1_s(i,j,k,sizei) has unaligned access   [ diffuse.f(234,26) ]
+         remark #15389: vectorization support: reference u(i,j,k) has unaligned access   [ diffuse.f(237,48) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.787
+         remark #15301: FUSED LOOP WAS VECTORIZED
+         remark #15442: entire loop may be executed in remainder
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15449: unmasked aligned unit stride stores: 4 
+         remark #15450: unmasked unaligned unit stride loads: 10 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 53 
+         remark #15477: vector cost: 30.500 
+         remark #15478: estimated potential speedup: 1.180 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(216,13)
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(216,13)
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(233,11)
+      LOOP END
+
+      LOOP BEGIN at diffuse.f(216,13)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at diffuse.f(215,11)
+   LOOP END
+
+   LOOP BEGIN at diffuse.f(215,11)
+   LOOP END
+
+   LOOP BEGIN at diffuse.f(232,9)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at diffuse.f(234,13)
+LOOP END
+===========================================================================

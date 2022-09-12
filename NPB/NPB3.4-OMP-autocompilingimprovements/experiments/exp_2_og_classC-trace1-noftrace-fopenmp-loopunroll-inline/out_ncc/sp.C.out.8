@@ -1,0 +1,127 @@
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - SP Benchmark
+
+ No input file inputsp.data. Using compiled defaults
+ Size:  162x 162x 162
+ Iterations:  400    dt:    0.0006700
+ Number of available threads:     8
+
+ Time step    1
+ Time step   20
+ Time step   40
+ Time step   60
+ Time step   80
+ Time step  100
+ Time step  120
+ Time step  140
+ Time step  160
+ Time step  180
+ Time step  200
+ Time step  220
+ Time step  240
+ Time step  260
+ Time step  280
+ Time step  300
+ Time step  320
+ Time step  340
+ Time step  360
+ Time step  380
+ Time step  400
+ Verification being performed for class C
+ accuracy setting for epsilon =  0.1000000000000E-07
+ Comparison of RMS-norms of residual
+           1 0.5881691581829E+03 0.5881691581829E+03 0.7113048295631E-13
+           2 0.2454417603569E+03 0.2454417603569E+03 0.4423490520369E-13
+           3 0.3293829191851E+03 0.3293829191851E+03 0.3468767360278E-13
+           4 0.3081924971891E+03 0.3081924971891E+03 0.1377776366274E-12
+           5 0.4597223799176E+03 0.4597223799176E+03 0.3956712753188E-13
+ Comparison of RMS-norms of solution error
+           1 0.2598120500183E+00 0.2598120500183E+00 0.1773368691664E-13
+           2 0.2590888922315E-01 0.2590888922315E-01 0.1651104396995E-12
+           3 0.5132886416320E-01 0.5132886416320E-01 0.4096106327619E-13
+           4 0.4806073419454E-01 0.4806073419454E-01 0.1588153702231E-13
+           5 0.5483377491301E+00 0.5483377491301E+00 0.6782766895758E-13
+ Verification Successful
+
+
+ SP Benchmark Completed.
+ Class           =                        C
+ Size            =            162x 162x 162
+ Iterations      =                      400
+ Time in seconds =                   130.08
+ Total threads   =                        8
+ Avail threads   =                        8
+ Mop/s total     =                 11147.53
+ Mop/s/thread    =                  1393.44
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                      3.4
+ Compile date    =              23 Jul 2020
+
+ Compile options:
+    F77          = nfort
+    FLINK        = $(FC)
+    F_LIB        = (none)
+    F_INC        = (none)
+    FFLAGS       = -O3 -fopenmp -finline-functions -fouterloop...
+    FLINKFLAGS   = $(FFLAGS)
+    RAND         = (none)
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+  SECTION   Time (secs)
+      total   :  130.083  ( 100.00 %)
+      rhsx    :    2.059  (   1.58 %)
+      rhsy    :    0.952  (   0.73 %)
+      rhsz    :    1.123  (   0.86 %)
+      rhs     :    5.027  (   3.86 %)
+      sub-rhs :    4.135  (   3.18 %)
+     rest-rhs :    0.892  (   0.69 %)
+      xsolve  :   29.294  (  22.52 %)
+      ysolve  :   30.704  (  23.60 %)
+      zsolve  :   63.633  (  48.92 %)
+     sub-zsol :   63.633  (  48.92 %)
+      redist1 :    0.000  (   0.00 %)
+      redist2 :    0.000  (   0.00 %)
+       redist :    0.000  (   0.00 %)
+      txinvr  :    0.277  (   0.21 %)
+      pinvr   :    0.247  (   0.19 %)
+      ninvr   :    0.246  (   0.19 %)
+      tzetar  :    0.306  (   0.24 %)
+      add     :    0.356  (   0.27 %)
+            ********  Program  Information  ********
+  Real Time (sec)                         :           131.542156
+  User Time (sec)                         :          1051.356124
+  Vector Time (sec)                       :            80.592206
+  Inst. Count                             :        1127213446552
+  V. Inst. Count                          :           9458534495
+  V. Element Count                        :        1511890470614
+  V. Load Element Count                   :         517443075089
+  FLOP Count                              :        1499888863506
+  MOPS                                    :          2868.938445
+  MOPS (Real)                             :         22934.049587
+  MFLOPS                                  :          1426.377944
+  MFLOPS (Real)                           :         11402.343800
+  A. V. Length                            :           159.844051
+  V. Op. Ratio (%)                        :            62.948918
+  L1 Cache Miss (sec)                     :           423.762416
+  CPU Port Conf. (sec)                    :             0.619368
+  V. Arith. Exec. (sec)                   :            16.022420
+  V. Load Exec. (sec)                     :            54.395185
+  VLD LLC Hit Element Ratio (%)           :            55.284615
+  FMA Element Count                       :         387148898784
+  Power Throttling (sec)                  :             0.000000
+  Thermal Throttling (sec)                :             0.000000
+  Max Active Threads                      :                    8
+  Available CPU Cores                     :                    8
+  Average CPU Cores Used                  :             7.992541
+  Memory Size Used (MB)                   :          2180.000000
+
+  Start Time (date)        :        Thu Jul 23 21:22:27 2020 -03
+  End   Time (date)        :        Thu Jul 23 21:24:39 2020 -03

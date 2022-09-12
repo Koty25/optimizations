@@ -1,0 +1,105 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: MOVE
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at move.f(21,7)
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+   LOOP BEGIN at move.f(44,35)
+      remark #15541: outer loop was not auto-vectorized: consider using SIMD directive   [ move.f(50,15) ]
+
+      LOOP BEGIN at move.f(49,13)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between ijel_new_(1,iside,iel) (52:17) and ijel_new_(1,iside,iel) (52:17)
+         remark #15346: vector dependence: assumed OUTPUT dependence between ijel_new_(1,iside,iel) (52:17) and ijel_new_(1,iside,iel) (52:17)
+
+         LOOP BEGIN at move.f(50,15)
+            remark #15389: vectorization support: reference sje_(ii1,ii2,iside,i) has unaligned access   [ move.f(51,17) ]
+            remark #15389: vectorization support: reference sje_new_(ii1,ii2,iside,iel) has unaligned access   [ move.f(54,17) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15328: vectorization support: irregularly indexed load was emulated for the variable <id_to_mt_(ntemp)>, part of index is read from memory   [ move.f(54,17) ]
+            remark #15305: vectorization support: vector length 2
+            remark #15427: loop was completely unrolled
+            remark #15309: vectorization support: normalized vectorization overhead 0.188
+            remark #15450: unmasked unaligned unit stride loads: 1 
+            remark #15451: unmasked unaligned unit stride stores: 1 
+            remark #15462: unmasked indexed (or gather) loads: 1 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 6 
+            remark #15477: vector cost: 16.000 
+            remark #15478: estimated potential speedup: 0.310 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at move.f(50,15)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at move.f(49,13)
+
+         LOOP BEGIN at move.f(50,15)
+         LOOP END
+
+         LOOP BEGIN at move.f(50,15)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at move.f(49,13)
+
+         LOOP BEGIN at move.f(50,15)
+         LOOP END
+
+         LOOP BEGIN at move.f(50,15)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at move.f(49,13)
+
+         LOOP BEGIN at move.f(50,15)
+         LOOP END
+
+         LOOP BEGIN at move.f(50,15)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at move.f(49,13)
+
+         LOOP BEGIN at move.f(50,15)
+         LOOP END
+
+         LOOP BEGIN at move.f(50,15)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at move.f(49,13)
+
+         LOOP BEGIN at move.f(50,15)
+         LOOP END
+
+         LOOP BEGIN at move.f(50,15)
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at move.f(72,7)
+   remark #15382: vectorization support: call to function copy_ cannot be vectorized   [ move.f(74,14) ]
+   remark #15382: vectorization support: call to function copy_ cannot be vectorized   [ move.f(75,14) ]
+   remark #15382: vectorization support: call to function copy_ cannot be vectorized   [ move.f(76,14) ]
+   remark #15382: vectorization support: call to function copy_ cannot be vectorized   [ move.f(77,14) ]
+   remark #15382: vectorization support: call to function ncopy_ cannot be vectorized   [ move.f(78,14) ]
+   remark #15382: vectorization support: call to function ncopy_ cannot be vectorized   [ move.f(79,14) ]
+   remark #15382: vectorization support: call to function ncopy_ cannot be vectorized   [ move.f(80,14) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+LOOP END
+===========================================================================

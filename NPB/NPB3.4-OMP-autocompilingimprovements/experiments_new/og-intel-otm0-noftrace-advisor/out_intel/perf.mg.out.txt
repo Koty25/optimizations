@@ -1,0 +1,23 @@
+# started on Thu May 20 22:55:55 2021
+
+
+ Performance counter stats for 'bin/bin_intel/mg.C.x !':
+
+    89,918,418,755      L1-dcache-loads                                               (36.36%)
+    15,946,639,784      L1-dcache-load-misses     #   17.73% of all L1-dcache hits    (36.35%)
+        19,988,208      L1-icache-load-misses                                         (36.34%)
+       357,405,211      LLC-loads                                                     (36.34%)
+       341,682,017      LLC-load-misses           #   95.60% of all LL-cache hits     (36.35%)
+                 0      fp_arith_inst_retired.scalar_single #     27.9 GFLOPs                   (36.37%)
+       600,253,832      fp_arith_inst_retired.scalar_double                                     (36.38%)
+    83,358,367,074      fp_arith_inst_retired.128b_packed_double                                     (36.39%)
+                 0      fp_arith_inst_retired.128b_packed_single                                     (36.38%)
+                 0      fp_arith_inst_retired.256b_packed_double                                     (36.37%)
+                 0      fp_arith_inst_retired.256b_packed_single                                     (36.37%)
+
+       5.992970634 seconds time elapsed
+
+      46.237269000 seconds user
+       0.823951000 seconds sys
+
+

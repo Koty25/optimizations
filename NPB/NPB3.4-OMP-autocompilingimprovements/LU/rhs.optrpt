@@ -1,0 +1,671 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: RHS
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at rhs.f(39,7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at rhs.f(41,13)
+   <Peeled loop for vectorization, Distributed chunk1>
+   LOOP END
+
+   LOOP BEGIN at rhs.f(41,13)
+   <Distributed chunk1>
+      remark #15388: vectorization support: reference rho_i_(i,j,k) has aligned access   [ rhs.f(46,16) ]
+      remark #15388: vectorization support: reference qs_(i,j,k) has aligned access   [ rhs.f(47,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(1,i,j,k)>, stride is unknown to compiler   [ rhs.f(45,32) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(2,i,j,k)>, stride is unknown to compiler   [ rhs.f(47,42) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(2,i,j,k)>, stride is unknown to compiler   [ rhs.f(47,55) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(3,i,j,k)>, stride is unknown to compiler   [ rhs.f(48,34) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(3,i,j,k)>, stride is unknown to compiler   [ rhs.f(48,47) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(4,i,j,k)>, stride is unknown to compiler   [ rhs.f(49,34) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(4,i,j,k)>, stride is unknown to compiler   [ rhs.f(49,47) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.157
+      remark #15301: PARTIAL LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 2 
+      remark #15452: unmasked strided loads: 7 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 70 
+      remark #15477: vector cost: 51.000 
+      remark #15478: estimated potential speedup: 1.360 
+      remark #15486: divides: 1 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at rhs.f(41,13)
+   <Alternate Alignment Vectorized Loop, Distributed chunk1>
+   LOOP END
+
+   LOOP BEGIN at rhs.f(41,13)
+   <Remainder loop for vectorization, Distributed chunk1>
+   LOOP END
+
+   LOOP BEGIN at rhs.f(41,13)
+   <Distributed chunk2>
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <rsd_(m,i,j,k)>, stride is unknown to compiler   [ rhs.f(43,19) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <frct_(m,i,j,k)>, stride is unknown to compiler   [ rhs.f(43,36) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15452: unmasked strided loads: 1 
+      remark #15453: unmasked strided stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 5 
+      remark #15477: vector cost: 5.000 
+      remark #15478: estimated potential speedup: 1.000 
+      remark #15488: --- end vector cost summary ---
+
+      LOOP BEGIN at rhs.f(42,16)
+         remark #15389: vectorization support: reference rsd_(m,i,j,k) has unaligned access   [ rhs.f(43,19) ]
+         remark #15389: vectorization support: reference frct_(m,i,j,k) has unaligned access   [ rhs.f(43,36) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.429
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 5 
+         remark #15477: vector cost: 3.500 
+         remark #15478: estimated potential speedup: 1.000 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at rhs.f(64,7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at rhs.f(66,13)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between flux(1,i) (67:16) and flux (76:16)
+      remark #15346: vector dependence: assumed ANTI dependence between flux (76:16) and flux(1,i) (67:16)
+   LOOP END
+
+   LOOP BEGIN at rhs.f(79,13)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at rhs.f(80,16)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at rhs.f(80,16)
+         remark #15388: vectorization support: reference rsd_(m,i,j,k) has aligned access   [ rhs.f(81,19) ]
+         remark #15388: vectorization support: reference rsd_(m,i,j,k) has aligned access   [ rhs.f(81,35) ]
+         remark #15388: vectorization support: reference flux(m,i+1) has aligned access   [ rhs.f(81,35) ]
+         remark #15388: vectorization support: reference flux(m,i-1) has aligned access   [ rhs.f(81,35) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.800
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15442: entire loop may be executed in remainder
+         remark #15448: unmasked aligned unit stride loads: 3 
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 11 
+         remark #15477: vector cost: 5.000 
+         remark #15478: estimated potential speedup: 1.170 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at rhs.f(80,16)
+      <Alternate Alignment Vectorized Loop>
+      LOOP END
+
+      LOOP BEGIN at rhs.f(80,16)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at rhs.f(86,13)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between flux(2,i) (101:16) and flux (104:16)
+      remark #15346: vector dependence: assumed ANTI dependence between flux (104:16) and flux(2,i) (101:16)
+   LOOP END
+
+   LOOP BEGIN at rhs.f(112,13)
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <rsd_(1,i,j,k)>, stride is unknown to compiler   [ rhs.f(113,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <rsd_(1,i,j,k)>, stride is unknown to compiler   [ rhs.f(113,31) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(1,i-1,j,k)>, stride is unknown to compiler   [ rhs.f(114,48) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(1,i,j,k)>, stride is unknown to compiler   [ rhs.f(115,48) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(1,i+1,j,k)>, stride is unknown to compiler   [ rhs.f(116,48) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <rsd_(2,i,j,k)>, stride is unknown to compiler   [ rhs.f(117,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <rsd_(2,i,j,k)>, stride is unknown to compiler   [ rhs.f(117,31) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <flux(2,i+1)>, stride is 5   [ rhs.f(118,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <flux(2,i)>, stride is 5   [ rhs.f(118,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(2,i-1,j,k)>, stride is unknown to compiler   [ rhs.f(119,48) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(2,i,j,k)>, stride is unknown to compiler   [ rhs.f(120,48) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(2,i+1,j,k)>, stride is unknown to compiler   [ rhs.f(121,48) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <rsd_(3,i,j,k)>, stride is unknown to compiler   [ rhs.f(122,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <rsd_(3,i,j,k)>, stride is unknown to compiler   [ rhs.f(122,31) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <flux(3,i+1)>, stride is 5   [ rhs.f(123,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <flux(3,i)>, stride is 5   [ rhs.f(123,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(3,i-1,j,k)>, stride is unknown to compiler   [ rhs.f(124,48) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(3,i,j,k)>, stride is unknown to compiler   [ rhs.f(125,48) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(3,i+1,j,k)>, stride is unknown to compiler   [ rhs.f(126,48) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <rsd_(4,i,j,k)>, stride is unknown to compiler   [ rhs.f(127,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <rsd_(4,i,j,k)>, stride is unknown to compiler   [ rhs.f(127,31) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <flux(4,i+1)>, stride is 5   [ rhs.f(128,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <flux(4,i)>, stride is 5   [ rhs.f(128,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(4,i-1,j,k)>, stride is unknown to compiler   [ rhs.f(129,48) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(4,i,j,k)>, stride is unknown to compiler   [ rhs.f(130,48) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(4,i+1,j,k)>, stride is unknown to compiler   [ rhs.f(131,48) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <rsd_(5,i,j,k)>, stride is unknown to compiler   [ rhs.f(132,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <rsd_(5,i,j,k)>, stride is unknown to compiler   [ rhs.f(132,31) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <flux(5,i+1)>, stride is 5   [ rhs.f(133,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <flux(5,i)>, stride is 5   [ rhs.f(133,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(5,i-1,j,k)>, stride is unknown to compiler   [ rhs.f(134,48) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(5,i,j,k)>, stride is unknown to compiler   [ rhs.f(135,48) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(5,i+1,j,k)>, stride is unknown to compiler   [ rhs.f(136,48) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.092
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15452: unmasked strided loads: 28 
+      remark #15453: unmasked strided stores: 5 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 136 
+      remark #15477: vector cost: 120.000 
+      remark #15478: estimated potential speedup: 1.130 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at rhs.f(142,13)
+   LOOP END
+
+   LOOP BEGIN at rhs.f(112,13)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at rhs.f(154,13)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at rhs.f(155,16)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at rhs.f(155,16)
+         remark #15388: vectorization support: reference rsd_(m,i,j,k) has aligned access   [ rhs.f(156,19) ]
+         remark #15388: vectorization support: reference rsd_(m,i,j,k) has aligned access   [ rhs.f(156,34) ]
+         remark #15389: vectorization support: reference u_(m,i-2,j,k) has unaligned access   [ rhs.f(157,43) ]
+         remark #15389: vectorization support: reference u_(m,i-1,j,k) has unaligned access   [ rhs.f(158,43) ]
+         remark #15389: vectorization support: reference u_(m,i,j,k) has unaligned access   [ rhs.f(159,43) ]
+         remark #15389: vectorization support: reference u_(m,i+1,j,k) has unaligned access   [ rhs.f(160,43) ]
+         remark #15389: vectorization support: reference u_(m,i+2,j,k) has unaligned access   [ rhs.f(161,43) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.414
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15442: entire loop may be executed in remainder
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 5 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 27 
+         remark #15477: vector cost: 14.500 
+         remark #15478: estimated potential speedup: 1.190 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at rhs.f(155,16)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at rhs.f(166,13)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at rhs.f(190,7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at rhs.f(192,13)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between flux(1,j) (193:16) and flux (201:16)
+      remark #15346: vector dependence: assumed ANTI dependence between flux (201:16) and flux(1,j) (193:16)
+   LOOP END
+
+   LOOP BEGIN at rhs.f(204,13)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at rhs.f(205,16)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at rhs.f(205,16)
+         remark #15388: vectorization support: reference rsd_(m,i,j,k) has aligned access   [ rhs.f(206,19) ]
+         remark #15388: vectorization support: reference rsd_(m,i,j,k) has aligned access   [ rhs.f(206,35) ]
+         remark #15388: vectorization support: reference flux(m,j+1) has aligned access   [ rhs.f(206,35) ]
+         remark #15388: vectorization support: reference flux(m,j-1) has aligned access   [ rhs.f(206,35) ]
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.800
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15442: entire loop may be executed in remainder
+         remark #15448: unmasked aligned unit stride loads: 3 
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 11 
+         remark #15477: vector cost: 5.000 
+         remark #15478: estimated potential speedup: 1.170 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at rhs.f(205,16)
+      <Alternate Alignment Vectorized Loop>
+      LOOP END
+
+      LOOP BEGIN at rhs.f(205,16)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at rhs.f(211,13)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between flux(2,j) (225:16) and flux (228:16)
+      remark #15346: vector dependence: assumed ANTI dependence between flux (228:16) and flux(2,j) (225:16)
+   LOOP END
+
+   LOOP BEGIN at rhs.f(236,13)
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <rsd_(1,i,j,k)>, stride is unknown to compiler   [ rhs.f(238,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <rsd_(1,i,j,k)>, stride is unknown to compiler   [ rhs.f(238,31) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(1,i,j-1,k)>, stride is unknown to compiler   [ rhs.f(239,48) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(1,i,j,k)>, stride is unknown to compiler   [ rhs.f(240,48) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(1,i,j+1,k)>, stride is unknown to compiler   [ rhs.f(241,48) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <rsd_(2,i,j,k)>, stride is unknown to compiler   [ rhs.f(243,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <rsd_(2,i,j,k)>, stride is unknown to compiler   [ rhs.f(243,31) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <flux(2,j+1)>, stride is 5   [ rhs.f(244,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <flux(2,j)>, stride is 5   [ rhs.f(244,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(2,i,j-1,k)>, stride is unknown to compiler   [ rhs.f(245,48) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(2,i,j,k)>, stride is unknown to compiler   [ rhs.f(246,48) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(2,i,j+1,k)>, stride is unknown to compiler   [ rhs.f(247,48) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <rsd_(3,i,j,k)>, stride is unknown to compiler   [ rhs.f(249,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <rsd_(3,i,j,k)>, stride is unknown to compiler   [ rhs.f(249,31) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <flux(3,j+1)>, stride is 5   [ rhs.f(250,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <flux(3,j)>, stride is 5   [ rhs.f(250,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(3,i,j-1,k)>, stride is unknown to compiler   [ rhs.f(251,48) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(3,i,j,k)>, stride is unknown to compiler   [ rhs.f(252,48) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(3,i,j+1,k)>, stride is unknown to compiler   [ rhs.f(253,48) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <rsd_(4,i,j,k)>, stride is unknown to compiler   [ rhs.f(255,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <rsd_(4,i,j,k)>, stride is unknown to compiler   [ rhs.f(255,31) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <flux(4,j+1)>, stride is 5   [ rhs.f(256,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <flux(4,j)>, stride is 5   [ rhs.f(256,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(4,i,j-1,k)>, stride is unknown to compiler   [ rhs.f(257,48) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(4,i,j,k)>, stride is unknown to compiler   [ rhs.f(258,48) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(4,i,j+1,k)>, stride is unknown to compiler   [ rhs.f(259,48) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <rsd_(5,i,j,k)>, stride is unknown to compiler   [ rhs.f(261,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <rsd_(5,i,j,k)>, stride is unknown to compiler   [ rhs.f(261,31) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <flux(5,j+1)>, stride is 5   [ rhs.f(262,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <flux(5,j)>, stride is 5   [ rhs.f(262,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(5,i,j-1,k)>, stride is unknown to compiler   [ rhs.f(263,48) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(5,i,j,k)>, stride is unknown to compiler   [ rhs.f(264,48) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(5,i,j+1,k)>, stride is unknown to compiler   [ rhs.f(265,48) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.092
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15452: unmasked strided loads: 28 
+      remark #15453: unmasked strided stores: 5 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 136 
+      remark #15477: vector cost: 120.000 
+      remark #15478: estimated potential speedup: 1.130 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at rhs.f(236,13)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at rhs.f(277,7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at rhs.f(280,16)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at rhs.f(281,16)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at rhs.f(281,16)
+         remark #15388: vectorization support: reference rsd_(m,i,2,k) has aligned access   [ rhs.f(282,19) ]
+         remark #15388: vectorization support: reference rsd_(m,i,2,k) has aligned access   [ rhs.f(282,34) ]
+         remark #15389: vectorization support: reference u_(m,i,2,k) has unaligned access   [ rhs.f(283,44) ]
+         remark #15389: vectorization support: reference u_(m,i,3,k) has unaligned access   [ rhs.f(284,41) ]
+         remark #15389: vectorization support: reference u_(m,i,4,k) has unaligned access   [ rhs.f(285,41) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.450
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15442: entire loop may be executed in remainder
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 3 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 19 
+         remark #15477: vector cost: 10.000 
+         remark #15478: estimated potential speedup: 1.170 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at rhs.f(281,16)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at rhs.f(290,16)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at rhs.f(291,16)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at rhs.f(291,16)
+         remark #15388: vectorization support: reference rsd_(m,i,3,k) has aligned access   [ rhs.f(292,19) ]
+         remark #15388: vectorization support: reference rsd_(m,i,3,k) has aligned access   [ rhs.f(292,34) ]
+         remark #15389: vectorization support: reference u_(m,i,2,k) has unaligned access   [ rhs.f(293,44) ]
+         remark #15389: vectorization support: reference u_(m,i,3,k) has unaligned access   [ rhs.f(294,41) ]
+         remark #15389: vectorization support: reference u_(m,i,4,k) has unaligned access   [ rhs.f(295,41) ]
+         remark #15389: vectorization support: reference u_(m,i,5,k) has unaligned access   [ rhs.f(296,41) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.404
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15442: entire loop may be executed in remainder
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 4 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 25 
+         remark #15477: vector cost: 13.000 
+         remark #15478: estimated potential speedup: 1.220 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at rhs.f(291,16)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at rhs.f(301,16)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at rhs.f(302,16)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at rhs.f(302,16)
+         remark #15388: vectorization support: reference rsd_(m,i,ny-2,k) has aligned access   [ rhs.f(303,19) ]
+         remark #15388: vectorization support: reference rsd_(m,i,ny-2,k) has aligned access   [ rhs.f(303,37) ]
+         remark #15389: vectorization support: reference u_(m,i,ny-4,k) has unaligned access   [ rhs.f(304,41) ]
+         remark #15389: vectorization support: reference u_(m,i,ny-3,k) has unaligned access   [ rhs.f(305,41) ]
+         remark #15389: vectorization support: reference u_(m,i,ny-2,k) has unaligned access   [ rhs.f(306,41) ]
+         remark #15389: vectorization support: reference u_(m,i,ny-1,k) has unaligned access   [ rhs.f(307,41) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.404
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15442: entire loop may be executed in remainder
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 4 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 24 
+         remark #15477: vector cost: 13.000 
+         remark #15478: estimated potential speedup: 1.180 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at rhs.f(302,16)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at rhs.f(312,16)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at rhs.f(313,16)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at rhs.f(313,16)
+         remark #15388: vectorization support: reference rsd_(m,i,ny-1,k) has aligned access   [ rhs.f(314,19) ]
+         remark #15388: vectorization support: reference rsd_(m,i,ny-1,k) has aligned access   [ rhs.f(314,37) ]
+         remark #15389: vectorization support: reference u_(m,i,ny-3,k) has unaligned access   [ rhs.f(315,41) ]
+         remark #15389: vectorization support: reference u_(m,i,ny-2,k) has unaligned access   [ rhs.f(316,41) ]
+         remark #15389: vectorization support: reference u_(m,i,ny-1,k) has unaligned access   [ rhs.f(317,41) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.450
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15442: entire loop may be executed in remainder
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 3 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 19 
+         remark #15477: vector cost: 10.000 
+         remark #15478: estimated potential speedup: 1.170 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at rhs.f(313,16)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at rhs.f(322,16)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at rhs.f(323,16)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at rhs.f(323,16)
+         remark #15388: vectorization support: reference rsd_(m,i,j,k) has aligned access   [ rhs.f(324,19) ]
+         remark #15388: vectorization support: reference rsd_(m,i,j,k) has aligned access   [ rhs.f(324,34) ]
+         remark #15389: vectorization support: reference u_(m,i,j-2,k) has unaligned access   [ rhs.f(325,43) ]
+         remark #15389: vectorization support: reference u_(m,i,j-1,k) has unaligned access   [ rhs.f(326,43) ]
+         remark #15389: vectorization support: reference u_(m,i,j,k) has unaligned access   [ rhs.f(327,43) ]
+         remark #15389: vectorization support: reference u_(m,i,j+1,k) has unaligned access   [ rhs.f(328,43) ]
+         remark #15389: vectorization support: reference u_(m,i,j+2,k) has unaligned access   [ rhs.f(329,43) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.414
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15442: entire loop may be executed in remainder
+         remark #15448: unmasked aligned unit stride loads: 1 
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 5 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 27 
+         remark #15477: vector cost: 14.500 
+         remark #15478: estimated potential speedup: 1.190 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at rhs.f(323,16)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at rhs.f(346,7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at rhs.f(348,13)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at rhs.f(349,16)
+         remark #15388: vectorization support: reference utmp(Impl_lp+1,k) has aligned access
+         remark #15389: vectorization support: reference u_(Impl_lp+1,i,j,k) has unaligned access
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.375
+         remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 4 
+         remark #15477: vector cost: 2.000 
+         remark #15478: estimated potential speedup: 1.330 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at rhs.f(349,16)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at rhs.f(356,13)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between flux(1,k) (357:16) and flux (365:16)
+      remark #15346: vector dependence: assumed ANTI dependence between flux (365:16) and flux(1,k) (357:16)
+   LOOP END
+
+   LOOP BEGIN at rhs.f(368,13)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at rhs.f(369,16)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at rhs.f(369,16)
+         remark #15389: vectorization support: reference rtmp(m,k) has unaligned access   [ rhs.f(370,19) ]
+         remark #15389: vectorization support: reference rsd_(m,i,j,k) has unaligned access   [ rhs.f(370,32) ]
+         remark #15388: vectorization support: reference flux(m,k+1) has aligned access   [ rhs.f(370,32) ]
+         remark #15388: vectorization support: reference flux(m,k-1) has aligned access   [ rhs.f(370,32) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.682
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15442: entire loop may be executed in remainder
+         remark #15448: unmasked aligned unit stride loads: 2 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 11 
+         remark #15477: vector cost: 5.500 
+         remark #15478: estimated potential speedup: 1.050 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at rhs.f(369,16)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at rhs.f(375,13)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between flux(2,k) (390:16) and flux (393:16)
+      remark #15346: vector dependence: assumed ANTI dependence between flux (393:16) and flux(2,k) (390:16)
+   LOOP END
+
+   LOOP BEGIN at rhs.f(401,13)
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <rtmp(1,k)>, stride is 5   [ rhs.f(402,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <rtmp(1,k)>, stride is 5   [ rhs.f(402,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <utmp(1,k-1)>, stride is 6   [ rhs.f(403,27) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <utmp(1,k)>, stride is 6   [ rhs.f(403,27) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <utmp(1,k+1)>, stride is 6   [ rhs.f(404,36) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <rtmp(2,k)>, stride is 5   [ rhs.f(406,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <rtmp(2,k)>, stride is 5   [ rhs.f(406,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <flux(2,k+1)>, stride is 5   [ rhs.f(407,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <flux(2,k)>, stride is 5   [ rhs.f(407,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <utmp(2,k-1)>, stride is 6   [ rhs.f(408,27) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <utmp(2,k)>, stride is 6   [ rhs.f(408,27) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <utmp(2,k+1)>, stride is 6   [ rhs.f(409,36) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <rtmp(3,k)>, stride is 5   [ rhs.f(411,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <rtmp(3,k)>, stride is 5   [ rhs.f(411,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <flux(3,k+1)>, stride is 5   [ rhs.f(412,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <flux(3,k)>, stride is 5   [ rhs.f(412,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <utmp(3,k-1)>, stride is 6   [ rhs.f(413,27) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <utmp(3,k)>, stride is 6   [ rhs.f(413,27) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <utmp(3,k+1)>, stride is 6   [ rhs.f(414,36) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <rtmp(4,k)>, stride is 5   [ rhs.f(416,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <rtmp(4,k)>, stride is 5   [ rhs.f(416,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <flux(4,k+1)>, stride is 5   [ rhs.f(417,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <flux(4,k)>, stride is 5   [ rhs.f(417,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <utmp(4,k-1)>, stride is 6   [ rhs.f(418,27) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <utmp(4,k)>, stride is 6   [ rhs.f(418,27) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <utmp(4,k+1)>, stride is 6   [ rhs.f(419,36) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <rtmp(5,k)>, stride is 5   [ rhs.f(421,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <rtmp(5,k)>, stride is 5   [ rhs.f(421,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <flux(5,k+1)>, stride is 5   [ rhs.f(422,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <flux(5,k)>, stride is 5   [ rhs.f(422,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <utmp(5,k-1)>, stride is 6   [ rhs.f(423,27) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <utmp(5,k)>, stride is 6   [ rhs.f(423,27) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <utmp(5,k+1)>, stride is 6   [ rhs.f(424,36) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.075
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15452: unmasked strided loads: 28 
+      remark #15453: unmasked strided stores: 5 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 136 
+      remark #15477: vector cost: 120.000 
+      remark #15478: estimated potential speedup: 1.130 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at rhs.f(431,13)
+   LOOP END
+
+   LOOP BEGIN at rhs.f(401,13)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at rhs.f(443,13)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at rhs.f(444,16)
+         remark #15389: vectorization support: reference rsd_(m,i,j,k) has unaligned access   [ rhs.f(445,19) ]
+         remark #15389: vectorization support: reference rtmp(m,k) has unaligned access   [ rhs.f(445,19) ]
+         remark #15388: vectorization support: reference utmp(m,k-2) has aligned access   [ rhs.f(445,19) ]
+         remark #15388: vectorization support: reference utmp(m,k-1) has aligned access   [ rhs.f(445,19) ]
+         remark #15388: vectorization support: reference utmp(m,k) has aligned access   [ rhs.f(447,31) ]
+         remark #15388: vectorization support: reference utmp(m,k+1) has aligned access   [ rhs.f(448,31) ]
+         remark #15388: vectorization support: reference utmp(m,k+2) has aligned access   [ rhs.f(449,31) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.143
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 5 
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 27 
+         remark #15477: vector cost: 14.000 
+         remark #15478: estimated potential speedup: 1.480 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at rhs.f(444,16)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at rhs.f(454,13)
+   LOOP END
+LOOP END
+===========================================================================

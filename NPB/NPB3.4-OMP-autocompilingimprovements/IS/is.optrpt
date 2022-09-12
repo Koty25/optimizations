@@ -1,0 +1,739 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: main(int, char **)
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at is.c(892,5)
+   remark #15388: vectorization support: reference test_index_array[i] has aligned access   [ is.c(912,17) ]
+   remark #15388: vectorization support: reference C_test_index_array[i] has aligned access   [ is.c(912,39) ]
+   remark #15388: vectorization support: reference test_rank_array[i] has aligned access   [ is.c(913,17) ]
+   remark #15388: vectorization support: reference C_test_rank_array[i] has aligned access   [ is.c(913,39) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 2 
+   remark #15449: unmasked aligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 2.690 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at is.c(892,5)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at is.c(501,5) inlined into is.c(943,5)
+   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria   [ is.c(483,9) ]
+LOOP END
+
+LOOP BEGIN at is.c(961,5)
+   remark #15382: vectorization support: call to function printf(const char *__restrict__, ...) cannot be vectorized   [ is.c(963,28) ]
+   remark #15382: vectorization support: call to function rank(int) cannot be vectorized   [ is.c(964,9) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+LOOP END
+
+LOOP BEGIN at is.c(505,5) inlined into is.c(943,5)
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+   LOOP BEGIN at is.c(505,5) inlined into is.c(943,5)
+      remark #15389: vectorization support: reference key_buff2[U2_V] has unaligned access   [ is.c(507,9) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.500
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 1.500 
+      remark #15478: estimated potential speedup: 1.230 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at is.c(505,5) inlined into is.c(943,5)
+   <Remainder>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at is.c(590,5) inlined into is.c(976,5)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at is.c(590,5) inlined into is.c(976,5)
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.854
+   remark #15355: vectorization support: at (593:13) is int type reduction   [ is.c(593,13) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 21 
+   remark #15477: vector cost: 3.000 
+   remark #15478: estimated potential speedup: 6.990 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at is.c(590,5) inlined into is.c(976,5)
+<Remainder loop for vectorization>
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.625
+   remark #15355: vectorization support: at (593:13) is int type reduction   [ is.c(593,13) ]
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 21 
+   remark #15477: vector cost: 3.000 
+   remark #15478: estimated potential speedup: 6.990 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at is.c(590,5) inlined into is.c(976,5)
+<Remainder loop for vectorization>
+LOOP END
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at is.c(546,5) inlined into is.c(976,5)
+   remark #15543: loop was not vectorized: loop with function call not considered an optimization candidate.
+
+   LOOP BEGIN at is.c(546,5) inlined into is.c(976,5)
+      remark #15536: loop was not vectorized: inner loop throttling prevents vectorization of this outer loop. Refer to inner loop message for more details.   [ is.c(549,9) ]
+
+      LOOP BEGIN at is.c(549,9) inlined into is.c(976,5)
+         remark #15523: loop was not vectorized: loop control variable i was found, but loop iteration count cannot be computed before executing the loop
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: rank(int)
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at is.c(628,5)
+   remark #15389: vectorization support: reference partial_verify_vals[i] has unaligned access   [ is.c(629,9) ]
+   remark #15388: vectorization support: reference test_index_array[i] has aligned access   [ is.c(629,44) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15328: vectorization support: irregularly indexed load was emulated for the variable <key_array[test_index_array[i]]>, part of index is read from memory   [ is.c(629,34) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.056
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15462: unmasked indexed (or gather) loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 13.500 
+   remark #15478: estimated potential speedup: 0.470 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at is.c(780,5)
+   remark #15382: vectorization support: call to function printf(const char *__restrict__, ...) cannot be vectorized   [ is.c(847,17) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+LOOP END
+
+LOOP BEGIN at is.c(660,5)
+   remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+LOOP END
+
+LOOP BEGIN at is.c(664,5)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between work_buff[key_array[i]] (666:9) and key_array[i] (666:9)
+   remark #15346: vector dependence: assumed ANTI dependence between key_array[i] (666:9) and work_buff[key_array[i]] (666:9)
+LOOP END
+
+LOOP BEGIN at is.c(664,5)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at is.c(671,5)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between bucket_size[k][0] (672:9) and bucket_ptrs[0] (672:9)
+   remark #15346: vector dependence: assumed FLOW dependence between bucket_ptrs[0] (672:9) and bucket_size[k][0] (672:9)
+LOOP END
+
+LOOP BEGIN at is.c(671,5)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at is.c(674,5)
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+   LOOP BEGIN at is.c(676,9)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between bucket_ptrs[i] (677:13) and bucket_ptrs[i] (677:13)
+      remark #15346: vector dependence: assumed ANTI dependence between bucket_ptrs[i] (677:13) and bucket_ptrs[i] (677:13)
+   LOOP END
+
+   LOOP BEGIN at is.c(676,9)
+   <Remainder>
+   LOOP END
+
+   LOOP BEGIN at is.c(678,9)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between bucket_ptrs[i] (679:13) and bucket_ptrs[i] (679:13)
+      remark #15346: vector dependence: assumed ANTI dependence between bucket_ptrs[i] (679:13) and bucket_ptrs[i] (679:13)
+   LOOP END
+
+   LOOP BEGIN at is.c(678,9)
+   <Remainder>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at is.c(684,5)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between bucket_ptrs[k] (688:19) and bucket_ptrs[k] (688:19)
+   remark #15346: vector dependence: assumed FLOW dependence between bucket_ptrs[k] (688:19) and bucket_ptrs[k] (688:19)
+LOOP END
+
+LOOP BEGIN at is.c(684,5)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at is.c(693,9)
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+   LOOP BEGIN at is.c(694,13)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between bucket_ptrs[i] (695:17) and bucket_ptrs[i] (695:17)
+      remark #15346: vector dependence: assumed ANTI dependence between bucket_ptrs[i] (695:17) and bucket_ptrs[i] (695:17)
+   LOOP END
+
+   LOOP BEGIN at is.c(694,13)
+   <Remainder>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at is.c(714,9)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at is.c(714,9)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at is.c(714,9)
+      remark #15388: vectorization support: reference key_buff_ptr has aligned access   [ is.c(715,13) ]
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 3.333
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 3 
+      remark #15477: vector cost: 0.750 
+      remark #15478: estimated potential speedup: 1.940 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at is.c(714,9)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at is.c(731,9)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between key_buff_ptr (732:13) and key_buff_ptr (732:13)
+LOOP END
+
+LOOP BEGIN at is.c(731,9)
+<Remainder>
+LOOP END
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at is.c(709,5)
+   remark #15543: loop was not vectorized: loop with function call not considered an optimization candidate.
+
+   LOOP BEGIN at is.c(709,5)
+      remark #15536: loop was not vectorized: inner loop throttling prevents vectorization of this outer loop. Refer to inner loop message for more details.   [ is.c(723,9) ]
+
+      LOOP BEGIN at is.c(723,9)
+         remark #15523: loop was not vectorized: loop control variable k was found, but loop iteration count cannot be computed before executing the loop
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: create_seq(double, double)
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at is.c(408,7) inlined into is.c(454,6)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at is.c(333,9) inlined into is.c(454,6)
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 11
+      remark #15309: vectorization support: normalized vectorization overhead 0.288
+      remark #15355: vectorization support: at (335:11) is double type reduction   [ is.c(335,11) ]
+      remark #15355: vectorization support: at (336:11) is double type reduction   [ is.c(336,11) ]
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 11 
+      remark #15477: vector cost: 6.000 
+      remark #15478: estimated potential speedup: 1.390 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at is.c(338,9) inlined into is.c(454,6)
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 3.167
+      remark #15355: vectorization support: at (340:11) is double type reduction   [ is.c(340,11) ]
+      remark #15355: vectorization support: at (341:11) is double type reduction   [ is.c(341,11) ]
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 11 
+      remark #15477: vector cost: 6.000 
+      remark #15478: estimated potential speedup: 1.610 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at is.c(333,9) inlined into is.c(454,6)
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 11
+      remark #15309: vectorization support: normalized vectorization overhead 0.288
+      remark #15355: vectorization support: at (335:11) is double type reduction   [ is.c(335,11) ]
+      remark #15355: vectorization support: at (336:11) is double type reduction   [ is.c(336,11) ]
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 11 
+      remark #15477: vector cost: 6.000 
+      remark #15478: estimated potential speedup: 1.390 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at is.c(338,9) inlined into is.c(454,6)
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 3.167
+      remark #15355: vectorization support: at (340:11) is double type reduction   [ is.c(340,11) ]
+      remark #15355: vectorization support: at (341:11) is double type reduction   [ is.c(341,11) ]
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 11 
+      remark #15477: vector cost: 6.000 
+      remark #15478: estimated potential speedup: 1.610 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at is.c(333,9) inlined into is.c(454,6)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at is.c(333,9) inlined into is.c(454,6)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at is.c(333,9) inlined into is.c(454,6)
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 11
+   remark #15309: vectorization support: normalized vectorization overhead 0.288
+   remark #15355: vectorization support: at (335:11) is double type reduction   [ is.c(335,11) ]
+   remark #15355: vectorization support: at (336:11) is double type reduction   [ is.c(336,11) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 6.000 
+   remark #15478: estimated potential speedup: 1.390 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at is.c(333,9) inlined into is.c(454,6)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at is.c(338,9) inlined into is.c(454,6)
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 3.167
+   remark #15355: vectorization support: at (340:11) is double type reduction   [ is.c(340,11) ]
+   remark #15355: vectorization support: at (341:11) is double type reduction   [ is.c(341,11) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 6.000 
+   remark #15478: estimated potential speedup: 1.610 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at is.c(333,9) inlined into is.c(461,10)
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 11
+   remark #15309: vectorization support: normalized vectorization overhead 0.288
+   remark #15355: vectorization support: at (335:24) is double type reduction   [ is.c(335,24) ]
+   remark #15355: vectorization support: at (336:23) is double type reduction   [ is.c(336,23) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 6.000 
+   remark #15478: estimated potential speedup: 1.390 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at is.c(333,9) inlined into is.c(461,10)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at is.c(338,9) inlined into is.c(461,10)
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 3.167
+   remark #15355: vectorization support: at (340:24) is double type reduction   [ is.c(340,24) ]
+   remark #15355: vectorization support: at (341:23) is double type reduction   [ is.c(341,23) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 6.000 
+   remark #15478: estimated potential speedup: 1.610 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at is.c(333,9) inlined into is.c(462,11)
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 11
+   remark #15309: vectorization support: normalized vectorization overhead 0.288
+   remark #15355: vectorization support: at (335:24) is double type reduction   [ is.c(335,24) ]
+   remark #15355: vectorization support: at (336:23) is double type reduction   [ is.c(336,23) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 6.000 
+   remark #15478: estimated potential speedup: 1.390 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at is.c(333,9) inlined into is.c(462,11)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at is.c(338,9) inlined into is.c(462,11)
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 3.167
+   remark #15355: vectorization support: at (340:24) is double type reduction   [ is.c(340,24) ]
+   remark #15355: vectorization support: at (341:23) is double type reduction   [ is.c(341,23) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 6.000 
+   remark #15478: estimated potential speedup: 1.610 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at is.c(333,9) inlined into is.c(463,15)
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 11
+   remark #15309: vectorization support: normalized vectorization overhead 0.288
+   remark #15355: vectorization support: at (335:24) is double type reduction   [ is.c(335,24) ]
+   remark #15355: vectorization support: at (336:23) is double type reduction   [ is.c(336,23) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 6.000 
+   remark #15478: estimated potential speedup: 1.390 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at is.c(333,9) inlined into is.c(463,15)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at is.c(338,9) inlined into is.c(463,15)
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 3.167
+   remark #15355: vectorization support: at (340:24) is double type reduction   [ is.c(340,24) ]
+   remark #15355: vectorization support: at (341:23) is double type reduction   [ is.c(341,23) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 6.000 
+   remark #15478: estimated potential speedup: 1.610 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at is.c(333,9) inlined into is.c(464,11)
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 11
+   remark #15309: vectorization support: normalized vectorization overhead 0.288
+   remark #15355: vectorization support: at (335:24) is double type reduction   [ is.c(335,24) ]
+   remark #15355: vectorization support: at (336:23) is double type reduction   [ is.c(336,23) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 6.000 
+   remark #15478: estimated potential speedup: 1.390 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at is.c(333,9) inlined into is.c(464,11)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at is.c(338,9) inlined into is.c(464,11)
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 3.167
+   remark #15355: vectorization support: at (340:24) is double type reduction   [ is.c(340,24) ]
+   remark #15355: vectorization support: at (341:23) is double type reduction   [ is.c(341,23) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 6.000 
+   remark #15478: estimated potential speedup: 1.610 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at is.c(459,2)
+   remark #15532: loop was not vectorized: compile time constraints prevent loop optimization. Consider using -O3.
+LOOP END
+===========================================================================
+
+Begin optimization report for: randlc(double *, double *)
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at is.c(333,9)
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 11
+   remark #15309: vectorization support: normalized vectorization overhead 0.288
+   remark #15355: vectorization support: at (335:24) is double type reduction   [ is.c(335,24) ]
+   remark #15355: vectorization support: at (336:23) is double type reduction   [ is.c(336,23) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 6.000 
+   remark #15478: estimated potential speedup: 1.390 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at is.c(333,9)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at is.c(338,9)
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 3.167
+   remark #15355: vectorization support: at (340:24) is double type reduction   [ is.c(340,24) ]
+   remark #15355: vectorization support: at (341:23) is double type reduction   [ is.c(341,23) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 6.000 
+   remark #15478: estimated potential speedup: 1.610 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+===========================================================================
+
+Begin optimization report for: find_my_seed(int, int, long, double, double)
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at is.c(408,7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at is.c(333,9) inlined into is.c(411,19)
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 11
+      remark #15309: vectorization support: normalized vectorization overhead 0.288
+      remark #15355: vectorization support: at (335:11) is double type reduction   [ is.c(335,11) ]
+      remark #15355: vectorization support: at (336:11) is double type reduction   [ is.c(336,11) ]
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 11 
+      remark #15477: vector cost: 6.000 
+      remark #15478: estimated potential speedup: 1.390 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at is.c(338,9) inlined into is.c(411,19)
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 3.167
+      remark #15355: vectorization support: at (340:11) is double type reduction   [ is.c(340,11) ]
+      remark #15355: vectorization support: at (341:11) is double type reduction   [ is.c(341,11) ]
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 11 
+      remark #15477: vector cost: 6.000 
+      remark #15478: estimated potential speedup: 1.610 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at is.c(333,9) inlined into is.c(415,19)
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 11
+      remark #15309: vectorization support: normalized vectorization overhead 0.288
+      remark #15355: vectorization support: at (335:11) is double type reduction   [ is.c(335,11) ]
+      remark #15355: vectorization support: at (336:11) is double type reduction   [ is.c(336,11) ]
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 11 
+      remark #15477: vector cost: 6.000 
+      remark #15478: estimated potential speedup: 1.390 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at is.c(338,9) inlined into is.c(415,19)
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 3.167
+      remark #15355: vectorization support: at (340:11) is double type reduction   [ is.c(340,11) ]
+      remark #15355: vectorization support: at (341:11) is double type reduction   [ is.c(341,11) ]
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 11 
+      remark #15477: vector cost: 6.000 
+      remark #15478: estimated potential speedup: 1.610 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at is.c(333,9) inlined into is.c(411,19)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at is.c(333,9) inlined into is.c(415,19)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at is.c(333,9) inlined into is.c(419,13)
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 11
+   remark #15309: vectorization support: normalized vectorization overhead 0.288
+   remark #15355: vectorization support: at (335:24) is double type reduction   [ is.c(335,24) ]
+   remark #15355: vectorization support: at (336:23) is double type reduction   [ is.c(336,23) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 6.000 
+   remark #15478: estimated potential speedup: 1.390 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at is.c(333,9) inlined into is.c(419,13)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at is.c(338,9) inlined into is.c(419,13)
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 3.167
+   remark #15355: vectorization support: at (340:24) is double type reduction   [ is.c(340,24) ]
+   remark #15355: vectorization support: at (341:23) is double type reduction   [ is.c(341,23) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 6.000 
+   remark #15478: estimated potential speedup: 1.610 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+===========================================================================
+
+Begin optimization report for: alloc_key_buff(void)
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at is.c(501,5)
+   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria   [ is.c(483,9) ]
+LOOP END
+
+LOOP BEGIN at is.c(505,5)
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+   LOOP BEGIN at is.c(505,5)
+      remark #15389: vectorization support: reference key_buff2[U2_V] has unaligned access   [ is.c(507,9) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.500
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 2 
+      remark #15477: vector cost: 1.500 
+      remark #15478: estimated potential speedup: 1.230 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at is.c(505,5)
+   <Remainder>
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: full_verify(void)
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at is.c(590,5)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at is.c(590,5)
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.854
+   remark #15355: vectorization support: at (593:13) is int type reduction   [ is.c(593,13) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 21 
+   remark #15477: vector cost: 3.000 
+   remark #15478: estimated potential speedup: 6.990 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at is.c(590,5)
+<Remainder loop for vectorization>
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.625
+   remark #15355: vectorization support: at (593:13) is int type reduction   [ is.c(593,13) ]
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 21 
+   remark #15477: vector cost: 3.000 
+   remark #15478: estimated potential speedup: 6.990 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at is.c(590,5)
+<Remainder loop for vectorization>
+LOOP END
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at is.c(546,5)
+   remark #15543: loop was not vectorized: loop with function call not considered an optimization candidate.
+
+   LOOP BEGIN at is.c(546,5)
+      remark #15536: loop was not vectorized: inner loop throttling prevents vectorization of this outer loop. Refer to inner loop message for more details.   [ is.c(549,9) ]
+
+      LOOP BEGIN at is.c(549,9)
+         remark #15523: loop was not vectorized: loop control variable i was found, but loop iteration count cannot be computed before executing the loop
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================

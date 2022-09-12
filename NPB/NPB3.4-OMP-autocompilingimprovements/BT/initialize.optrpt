@@ -1,0 +1,247 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: INITIALIZE
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at initialize.f(31,7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at initialize.f(33,13)
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <u_(m,i,j,k)>, stride is unknown to compiler   [ initialize.f(35,19) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <u_(m,i,j,k)>, stride is unknown to compiler   [ initialize.f(35,19) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <u_(m,i,j,k)>, stride is unknown to compiler   [ initialize.f(35,19) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <u_(m,i,j,k)>, stride is unknown to compiler   [ initialize.f(35,19) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <u_(m,i,j,k)>, stride is unknown to compiler   [ initialize.f(35,19) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15453: unmasked strided stores: 5 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 18 
+      remark #15477: vector cost: 15.000 
+      remark #15478: estimated potential speedup: 1.190 
+      remark #15488: --- end vector cost summary ---
+
+      LOOP BEGIN at initialize.f(35,19)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at initialize.f(33,13)
+   <Remainder loop for vectorization>
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.333
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15453: unmasked strided stores: 5 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 18 
+      remark #15477: vector cost: 15.000 
+      remark #15478: estimated potential speedup: 1.190 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at initialize.f(33,13)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at initialize.f(49,7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at initialize.f(53,13)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at initialize.f(56,16)
+         remark #15382: vectorization support: call to function exact_solution_ cannot be vectorized   [ initialize.f(57,24) ]
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between at (57:39) and at (57:24)
+         remark #15346: vector dependence: assumed OUTPUT dependence between at (57:24) and at (57:39)
+      LOOP END
+
+      LOOP BEGIN at initialize.f(61,16)
+         remark #15382: vectorization support: call to function exact_solution_ cannot be vectorized   [ initialize.f(62,24) ]
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between at (62:43) and at (62:24)
+         remark #15346: vector dependence: assumed OUTPUT dependence between at (62:24) and at (62:43)
+      LOOP END
+
+      LOOP BEGIN at initialize.f(66,16)
+         remark #15382: vectorization support: call to function exact_solution_ cannot be vectorized   [ initialize.f(67,24) ]
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between at (67:48) and at (67:24)
+         remark #15346: vector dependence: assumed OUTPUT dependence between at (67:24) and at (67:48)
+      LOOP END
+
+      LOOP BEGIN at initialize.f(72,19)
+         remark #15389: vectorization support: reference pface(m,1,2) has unaligned access
+         remark #15388: vectorization support: reference pface(m,1,1) has aligned access   [ initialize.f(73,33) ]
+         remark #15388: vectorization support: reference pface(m,2,2) has aligned access   [ initialize.f(74,19) ]
+         remark #15389: vectorization support: reference pface(m,2,1) has unaligned access   [ initialize.f(75,33) ]
+         remark #15389: vectorization support: reference pface(m,3,2) has unaligned access   [ initialize.f(76,19) ]
+         remark #15388: vectorization support: reference pface(m,3,1) has aligned access   [ initialize.f(77,33) ]
+         remark #15389: vectorization support: reference u_(m,i,j,k) has unaligned access   [ initialize.f(79,19) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 0.397
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 3 
+         remark #15450: unmasked unaligned unit stride loads: 3 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 71 
+         remark #15477: vector cost: 34.000 
+         remark #15478: estimated potential speedup: 1.510 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at initialize.f(72,19)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at initialize.f(99,7)
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.026
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 45 
+   remark #15477: vector cost: 76.000 
+   remark #15478: estimated potential speedup: 0.590 
+   remark #15482: vectorized math library calls: 2 
+   remark #15487: type converts: 2 
+   remark #15488: --- end vector cost summary ---
+
+   LOOP BEGIN at initialize.f(105,16)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at initialize.f(99,7)
+   remark #15382: vectorization support: call to function exact_solution_ cannot be vectorized   [ initialize.f(103,18) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between zeta (101:13) and zeta (103:18)
+   remark #15346: vector dependence: assumed OUTPUT dependence between zeta (103:18) and zeta (101:13)
+LOOP END
+
+LOOP BEGIN at initialize.f(118,7)
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.026
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 45 
+   remark #15477: vector cost: 76.000 
+   remark #15478: estimated potential speedup: 0.590 
+   remark #15482: vectorized math library calls: 2 
+   remark #15487: type converts: 2 
+   remark #15488: --- end vector cost summary ---
+
+   LOOP BEGIN at initialize.f(124,16)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at initialize.f(118,7)
+   remark #15382: vectorization support: call to function exact_solution_ cannot be vectorized   [ initialize.f(122,18) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between zeta (120:13) and zeta (122:18)
+   remark #15346: vector dependence: assumed OUTPUT dependence between zeta (122:18) and zeta (120:13)
+LOOP END
+
+LOOP BEGIN at initialize.f(136,7)
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.026
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 45 
+   remark #15477: vector cost: 76.000 
+   remark #15478: estimated potential speedup: 0.590 
+   remark #15482: vectorized math library calls: 2 
+   remark #15487: type converts: 2 
+   remark #15488: --- end vector cost summary ---
+
+   LOOP BEGIN at initialize.f(142,16)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at initialize.f(136,7)
+   remark #15382: vectorization support: call to function exact_solution_ cannot be vectorized   [ initialize.f(140,18) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between zeta (138:13) and zeta (140:18)
+   remark #15346: vector dependence: assumed OUTPUT dependence between zeta (140:18) and zeta (138:13)
+LOOP END
+
+LOOP BEGIN at initialize.f(155,7)
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.026
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 45 
+   remark #15477: vector cost: 76.000 
+   remark #15478: estimated potential speedup: 0.590 
+   remark #15482: vectorized math library calls: 2 
+   remark #15487: type converts: 2 
+   remark #15488: --- end vector cost summary ---
+
+   LOOP BEGIN at initialize.f(161,16)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at initialize.f(155,7)
+   remark #15382: vectorization support: call to function exact_solution_ cannot be vectorized   [ initialize.f(159,18) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between zeta (157:13) and zeta (159:18)
+   remark #15346: vector dependence: assumed OUTPUT dependence between zeta (159:18) and zeta (157:13)
+LOOP END
+
+LOOP BEGIN at initialize.f(173,7)
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.026
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 45 
+   remark #15477: vector cost: 76.000 
+   remark #15478: estimated potential speedup: 0.590 
+   remark #15482: vectorized math library calls: 2 
+   remark #15487: type converts: 2 
+   remark #15488: --- end vector cost summary ---
+
+   LOOP BEGIN at initialize.f(179,16)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at initialize.f(173,7)
+   remark #15382: vectorization support: call to function exact_solution_ cannot be vectorized   [ initialize.f(177,18) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between eta (175:13) and eta (177:18)
+   remark #15346: vector dependence: assumed OUTPUT dependence between eta (177:18) and eta (175:13)
+LOOP END
+
+LOOP BEGIN at initialize.f(191,7)
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.026
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 45 
+   remark #15477: vector cost: 76.000 
+   remark #15478: estimated potential speedup: 0.590 
+   remark #15482: vectorized math library calls: 2 
+   remark #15487: type converts: 2 
+   remark #15488: --- end vector cost summary ---
+
+   LOOP BEGIN at initialize.f(197,16)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at initialize.f(191,7)
+   remark #15382: vectorization support: call to function exact_solution_ cannot be vectorized   [ initialize.f(195,18) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between eta (193:13) and eta (195:18)
+   remark #15346: vector dependence: assumed OUTPUT dependence between eta (195:18) and eta (193:13)
+LOOP END
+===========================================================================

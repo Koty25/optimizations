@@ -1,0 +1,1925 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: MORTAR
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at mason.f(635,17)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (635:17) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.770 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(641,17)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (641:17) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.530 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(641,17)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at mason.f(650,17)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (650:17) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.530 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(650,17)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at mason.f(657,17)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (657:17) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.410 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(657,17)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at mason.f(669,17)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (669:17) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.530 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(669,17)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at mason.f(676,17)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (676:17) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.410 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(676,17)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at mason.f(686,17)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (686:17) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.410 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(686,17)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at mason.f(695,17)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (695:17) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.330 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(695,17)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at mason.f(579,15)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (579:15) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.410 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(579,15)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at mason.f(587,15)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (587:15) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.330 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(587,15)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at mason.f(597,13)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (597:13) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.330 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(597,13)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at mason.f(608,15)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (608:15) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.410 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(608,15)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at mason.f(616,15)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (616:15) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.330 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(616,15)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at mason.f(421,17)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (421:17) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.770 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(466,17)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (466:17) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.770 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(510,17)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (510:17) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.770 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(564,11)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (564:11) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.330 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(564,11)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at mason.f(243,17)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (243:17) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.770 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(264,17)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (264:17) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.770 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(298,19)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (298:19) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.770 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(312,19)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (312:19) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.770 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(345,17)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (345:17) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.770 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(368,17)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (368:17) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.770 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(388,17)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (388:17) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.770 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(551,11)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (551:11) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.250
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 2.130 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(217,13)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (217:13) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.770 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(222,13)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (222:13) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.770 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(227,13)
+   remark #15389: vectorization support: reference vassign_(Impl_lp+1,iel) has unaligned access
+   remark #15388: vectorization support: reference at (227:13) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: MATERIALIZED LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 1.770 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(715,7)
+   remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+   LOOP BEGIN at mason.f(715,7)
+      remark #15389: vectorization support: reference front_(iel) has unaligned access   [ mason.f(717,9) ]
+      remark #15389: vectorization support: reference newc_(iel) has unaligned access   [ mason.f(717,9) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.750
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 2.000 
+      remark #15478: estimated potential speedup: 1.770 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at mason.f(715,7)
+   <Remainder>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at mason.f(729,7)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+
+   LOOP BEGIN at mason.f(734,9)
+      remark #15382: vectorization support: call to function MORTAR_VERTEX cannot be vectorized   [ mason.f(739,16) ]
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed ANTI dependence between iel (738:11) and iel (739:16)
+      remark #15346: vector dependence: assumed FLOW dependence between iel (739:16) and iel (738:11)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at mason.f(777,7)
+<Distributed chunk1>
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at mason.f(777,7)
+   <Peeled loop for vectorization, Distributed chunk1>
+   LOOP END
+
+   LOOP BEGIN at mason.f(777,7)
+   <Distributed chunk1>
+      remark #15389: vectorization support: reference newc_(iel) has unaligned access   [ mason.f(781,9) ]
+      remark #15388: vectorization support: reference newe_(iel) has aligned access   [ mason.f(782,9) ]
+      remark #15388: vectorization support: reference newi_(iel) has aligned access   [ mason.f(783,9) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 1.417
+      remark #15301: PARTIAL LOOP WAS VECTORIZED
+      remark #15449: unmasked aligned unit stride stores: 2 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 6 
+      remark #15477: vector cost: 3.000 
+      remark #15478: estimated potential speedup: 1.730 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at mason.f(777,7)
+   <Alternate Alignment Vectorized Loop, Distributed chunk1>
+   LOOP END
+
+   LOOP BEGIN at mason.f(777,7)
+   <Remainder loop for vectorization, Distributed chunk1>
+   LOOP END
+
+   LOOP BEGIN at mason.f(777,7)
+   <Distributed chunk2>
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed OUTPUT dependence between eassign_(11,iel) (799:13) and eassign_(3,iel) (1171:11)
+      remark #15346: vector dependence: assumed OUTPUT dependence between eassign_(3,iel) (1171:11) and eassign_(11,iel) (799:13)
+   LOOP END
+
+   LOOP BEGIN at mason.f(777,7)
+   <Peeled loop for vectorization, Distributed chunk3>
+   LOOP END
+
+   LOOP BEGIN at mason.f(777,7)
+   <Distributed chunk3>
+      remark #15388: vectorization support: reference newc_(iel) has aligned access   [ mason.f(1327,9) ]
+      remark #15388: vectorization support: reference newe_(iel) has aligned access   [ mason.f(1327,19) ]
+      remark #15389: vectorization support: reference newi_(iel) has unaligned access   [ mason.f(1327,31) ]
+      remark #15388: vectorization support: reference newe_(iel) has aligned access   [ mason.f(1327,19) ]
+      remark #15388: vectorization support: reference newe_(iel) has aligned access   [ mason.f(1327,19) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 1.545
+      remark #15301: PARTIAL LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 2.750 
+      remark #15478: estimated potential speedup: 2.130 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at mason.f(777,7)
+   <Alternate Alignment Vectorized Loop, Distributed chunk3>
+   LOOP END
+
+   LOOP BEGIN at mason.f(777,7)
+   <Remainder loop for vectorization, Distributed chunk3>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at mason.f(1336,7)
+   remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+   LOOP BEGIN at mason.f(1336,7)
+      remark #15389: vectorization support: reference front_(iel) has unaligned access   [ mason.f(1338,9) ]
+      remark #15389: vectorization support: reference newc_(iel) has unaligned access   [ mason.f(1338,9) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.750
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 2.000 
+      remark #15478: estimated potential speedup: 1.770 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at mason.f(1336,7)
+   <Remainder>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at mason.f(1353,7)
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+   LOOP BEGIN at mason.f(1356,9)
+      remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+      LOOP BEGIN at mason.f(1379,11)
+         remark #15382: vectorization support: call to function MOR_ASSIGN cannot be vectorized   [ mason.f(1383,20) ]
+         remark #15382: vectorization support: call to function MOR_EDGE cannot be vectorized   [ mason.f(1385,20) ]
+         remark #15382: vectorization support: call to function MOR_EDGE cannot be vectorized   [ mason.f(1396,20) ]
+         remark #15382: vectorization support: call to function MOR_EDGE cannot be vectorized   [ mason.f(1402,22) ]
+         remark #15382: vectorization support: call to function MOR_EDGE cannot be vectorized   [ mason.f(1403,22) ]
+         remark #15382: vectorization support: call to function MOR_EDGE cannot be vectorized   [ mason.f(1409,22) ]
+         remark #15382: vectorization support: call to function MOR_EDGE cannot be vectorized   [ mason.f(1410,22) ]
+         remark #15382: vectorization support: call to function MOR_EDGE cannot be vectorized   [ mason.f(1419,24) ]
+         remark #15382: vectorization support: call to function MOR_EDGE cannot be vectorized   [ mason.f(1420,24) ]
+         remark #15382: vectorization support: call to function MOR_NE cannot be vectorized   [ mason.f(1427,24) ]
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      LOOP END
+
+      LOOP BEGIN at mason.f(1445,19)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between count (1444:19) and count (1444:19)
+         remark #15346: vector dependence: assumed OUTPUT dependence between count (1444:19) and count (1444:19)
+
+         LOOP BEGIN at mason.f(1443,17)
+            remark #15389: vectorization support: reference idmo_(ii,jj,1,1,i,iel) has unaligned access   [ mason.f(1445,19) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15305: vectorization support: vector length 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.714
+            remark #15451: unmasked unaligned unit stride stores: 1 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 3 
+            remark #15477: vector cost: 3.500 
+            remark #15478: estimated potential speedup: 0.600 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at mason.f(1443,17)
+         LOOP END
+
+         LOOP BEGIN at mason.f(1443,17)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at mason.f(1457,21)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between count (1457:21) and count (1457:21)
+         remark #15346: vector dependence: assumed OUTPUT dependence between count (1457:21) and count (1457:21)
+
+         LOOP BEGIN at mason.f(1456,19)
+            remark #15389: vectorization support: reference idmo_(ii,jj,1,1,i,iel) has unaligned access   [ mason.f(1458,21) ]
+            remark #15389: vectorization support: reference idmo_(ii,jj,1,1,jface,ntemp) has unaligned access   [ mason.f(1459,21) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15305: vectorization support: vector length 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.615
+            remark #15451: unmasked unaligned unit stride stores: 2 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 5 
+            remark #15477: vector cost: 6.500 
+            remark #15478: estimated potential speedup: 0.570 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at mason.f(1456,19)
+         LOOP END
+
+         LOOP BEGIN at mason.f(1456,19)
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at mason.f(1474,7)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+
+   LOOP BEGIN at mason.f(1475,9)
+      remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+
+      LOOP BEGIN at mason.f(1488,17)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed FLOW dependence between idmo_(ii,jj,iii,jjj,i,iel) (1491:21) and idmo_(5,5,2,2,jface,ntemp) (1498:17)
+         remark #15346: vector dependence: assumed ANTI dependence between idmo_(5,5,2,2,jface,ntemp) (1498:17) and idmo_(ii,jj,iii,jjj,i,iel) (1491:21)
+
+         LOOP BEGIN at mason.f(1492,32)
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed FLOW dependence between idmo_(ii,jj,iii,jjj,i,iel) (1491:21) and idmo_(5,5,2,2,jface,ntemp) (1498:17)
+            remark #15346: vector dependence: assumed ANTI dependence between idmo_(5,5,2,2,jface,ntemp) (1498:17) and idmo_(ii,jj,iii,jjj,i,iel) (1491:21)
+
+            LOOP BEGIN at mason.f(1489,17)
+               remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+               remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(ii,jj,iii,jjj,i,iel)>, stride is unknown to compiler   [ mason.f(1491,21) ]
+               remark #15328: vectorization support: non-unit strided load was emulated for the variable <idmo_(ii,jj,1,1,jface,ntemp)>, stride is unknown to compiler   [ mason.f(1491,21) ]
+               remark #15305: vectorization support: vector length 2
+               remark #15309: vectorization support: normalized vectorization overhead 0.364
+               remark #15452: unmasked strided loads: 1 
+               remark #15453: unmasked strided stores: 1 
+               remark #15475: --- begin vector cost summary ---
+               remark #15476: scalar cost: 4 
+               remark #15477: vector cost: 5.500 
+               remark #15478: estimated potential speedup: 0.660 
+               remark #15488: --- end vector cost summary ---
+
+               LOOP BEGIN at mason.f(1490,19)
+                  remark #15389: vectorization support: reference idmo_(ii,jj,iii,jjj,i,iel) has unaligned access   [ mason.f(1491,21) ]
+                  remark #15389: vectorization support: reference idmo_(ii,jj,1,1,jface,ntemp) has unaligned access   [ mason.f(1491,21) ]
+                  remark #15381: vectorization support: unaligned access used inside loop body
+                  remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+                  remark #15305: vectorization support: vector length 2
+                  remark #15399: vectorization support: unroll factor set to 2
+                  remark #15309: vectorization support: normalized vectorization overhead 0.375
+                  remark #15450: unmasked unaligned unit stride loads: 1 
+                  remark #15451: unmasked unaligned unit stride stores: 1 
+                  remark #15475: --- begin vector cost summary ---
+                  remark #15476: scalar cost: 4 
+                  remark #15477: vector cost: 4.000 
+                  remark #15478: estimated potential speedup: 0.760 
+                  remark #15488: --- end vector cost summary ---
+               LOOP END
+
+               LOOP BEGIN at mason.f(1490,19)
+               LOOP END
+
+               LOOP BEGIN at mason.f(1490,19)
+               LOOP END
+
+               LOOP BEGIN at mason.f(1490,19)
+               LOOP END
+
+               LOOP BEGIN at mason.f(1490,19)
+               LOOP END
+            LOOP END
+
+            LOOP BEGIN at mason.f(1489,17)
+
+               LOOP BEGIN at mason.f(1490,19)
+               LOOP END
+
+               LOOP BEGIN at mason.f(1490,19)
+               LOOP END
+
+               LOOP BEGIN at mason.f(1490,19)
+               LOOP END
+
+               LOOP BEGIN at mason.f(1490,19)
+               LOOP END
+
+               LOOP BEGIN at mason.f(1490,19)
+               LOOP END
+            LOOP END
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at mason.f(40,7)
+   remark #15534: loop was not vectorized: loop contains arithmetic if or computed goto. Consider using if-then-else statement.    [ mason.f(94,17) ]
+LOOP END
+===========================================================================
+
+Begin optimization report for: MOR_EDGE
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at mason.f(1601,11)
+   remark #15389: vectorization support: reference idmo_(nn,1,1,1,face,iel) has unaligned access
+   remark #15389: vectorization support: reference mor_v(nn-1) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.750
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.660 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1606,11)
+   remark #15389: vectorization support: reference mor_v(nn-1) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(5,nn,1,1,face,iel)>, stride is unknown to compiler
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.375
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15453: unmasked strided stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.800 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1611,11)
+   remark #15389: vectorization support: reference idmo_(nn,5,1,1,face,iel) has unaligned access
+   remark #15389: vectorization support: reference mor_v(nn-1) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.750
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.660 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1616,11)
+   remark #15389: vectorization support: reference mor_v(nn-1) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(1,nn,1,1,face,iel)>, stride is unknown to compiler
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.375
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15453: unmasked strided stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.800 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+===========================================================================
+
+Begin optimization report for: MORTAR_VERTEX
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at mason.f(1835,7)
+   remark #15388: vectorization support: reference ntempx(l) has aligned access   [ mason.f(1836,9) ]
+   remark #15388: vectorization support: reference ifntempx(l) has aligned access   [ mason.f(1837,9) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 2.660 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1845,9)
+   remark #15388: vectorization support: reference face_a(l) has aligned access
+   remark #15389: vectorization support: reference f_c(l,i) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.600
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 2.500 
+   remark #15478: estimated potential speedup: 1.000 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1559,11) inlined into mason.f(1993,22)
+LOOP END
+
+LOOP BEGIN at mason.f(1845,9)
+<Distributed chunk2>
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between ntempx(iintempx(itemp)) (1886:11) and ntempx(iintempx(itemp)) (1899:15)
+   remark #15346: vector dependence: assumed OUTPUT dependence between ntempx(iintempx(itemp)) (1899:15) and ntempx(iintempx(itemp)) (1886:11)
+LOOP END
+
+LOOP BEGIN at mason.f(1906,7)
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+   LOOP BEGIN at mason.f(1932,13)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed OUTPUT dependence between ntempx(temp) (1949:21) and ntempx(temp) (1962:21)
+      remark #15346: vector dependence: assumed OUTPUT dependence between ntempx(temp) (1962:21) and ntempx(temp) (1949:21)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at mason.f(1529,8) inlined into mason.f(2142,14)
+   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria   [ mason.f(1530,24) ]
+LOOP END
+
+LOOP BEGIN at mason.f(1529,8) inlined into mason.f(2149,14)
+   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria   [ mason.f(1530,24) ]
+LOOP END
+
+LOOP BEGIN at mason.f(1529,8) inlined into mason.f(2156,14)
+   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria   [ mason.f(1530,24) ]
+LOOP END
+
+LOOP BEGIN at mason.f(1529,8) inlined into mason.f(2162,14)
+   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria   [ mason.f(1530,24) ]
+LOOP END
+
+LOOP BEGIN at mason.f(1529,8) inlined into mason.f(2169,14)
+   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria   [ mason.f(1530,24) ]
+LOOP END
+
+LOOP BEGIN at mason.f(1529,8) inlined into mason.f(2177,14)
+   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria   [ mason.f(1530,24) ]
+LOOP END
+
+LOOP BEGIN at mason.f(1529,8) inlined into mason.f(2184,14)
+   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria   [ mason.f(1530,24) ]
+LOOP END
+
+LOOP BEGIN at mason.f(1529,8) inlined into mason.f(2191,14)
+   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria   [ mason.f(1530,24) ]
+LOOP END
+===========================================================================
+
+Begin optimization report for: MOR_ASSIGN
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at mason.f(1578,9)
+   remark #15389: vectorization support: reference mor_v(i) has unaligned access   [ mason.f(1579,9) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 2 
+   remark #15477: vector cost: 3.000 
+   remark #15478: estimated potential speedup: 0.540 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+===========================================================================
+
+Begin optimization report for: MOR_NE
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at mason.f(2222,11)
+   remark #15388: vectorization support: reference mor_s_v(i-1) has aligned access   [ mason.f(2223,13) ]
+   remark #15389: vectorization support: reference mor_v(i-1) has unaligned access   [ mason.f(2223,13) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.600
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 2.500 
+   remark #15478: estimated potential speedup: 1.000 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(2228,11)
+   remark #15389: vectorization support: reference mor_s_v(i) has unaligned access   [ mason.f(2229,13) ]
+   remark #15389: vectorization support: reference mor_v(i-1) has unaligned access   [ mason.f(2229,13) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.375
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.800 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(2235,11)
+   remark #15388: vectorization support: reference mor_s_v(i-1) has aligned access   [ mason.f(2236,13) ]
+   remark #15389: vectorization support: reference mor_v(i-1) has unaligned access   [ mason.f(2236,13) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.600
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 2.500 
+   remark #15478: estimated potential speedup: 1.000 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(2241,11)
+   remark #15389: vectorization support: reference mor_s_v(i) has unaligned access   [ mason.f(2242,13) ]
+   remark #15389: vectorization support: reference mor_v(i-1) has unaligned access   [ mason.f(2242,13) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.375
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.800 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(2248,11)
+   remark #15388: vectorization support: reference mor_s_v(i-1) has aligned access   [ mason.f(2249,13) ]
+   remark #15389: vectorization support: reference mor_v(i-1) has unaligned access   [ mason.f(2249,13) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.600
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 2.500 
+   remark #15478: estimated potential speedup: 1.000 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(2254,11)
+   remark #15389: vectorization support: reference mor_s_v(i) has unaligned access   [ mason.f(2255,13) ]
+   remark #15389: vectorization support: reference mor_v(i-1) has unaligned access   [ mason.f(2255,13) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.375
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.800 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(2261,11)
+   remark #15388: vectorization support: reference mor_s_v(i-1) has aligned access   [ mason.f(2262,14) ]
+   remark #15389: vectorization support: reference mor_v(i-1) has unaligned access   [ mason.f(2262,14) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.600
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 2.500 
+   remark #15478: estimated potential speedup: 1.000 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(2267,11)
+   remark #15389: vectorization support: reference mor_s_v(i) has unaligned access   [ mason.f(2268,14) ]
+   remark #15389: vectorization support: reference mor_v(i-1) has unaligned access   [ mason.f(2268,14) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.375
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.800 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+===========================================================================
+
+Begin optimization report for: MOR_S_E_NN
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at mason.f(1778,15)
+   remark #15389: vectorization support: reference idmo_(i,1,1,1,face,iel) has unaligned access
+   remark #15389: vectorization support: reference mor_s_v(i-1) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.750
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 2.000 
+   remark #15478: estimated potential speedup: 1.140 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1782,14)
+   remark #15389: vectorization support: reference idmo_(i,1,1,2,face,iel) has unaligned access
+   remark #15389: vectorization support: reference mor_s_v(i) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.750
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 2.000 
+   remark #15478: estimated potential speedup: 1.140 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1788,13)
+   remark #15389: vectorization support: reference mor_s_v(i-1) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(5,i,1,2,face,iel)>, stride is unknown to compiler
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.188
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15453: unmasked strided stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.840 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1792,13)
+   remark #15389: vectorization support: reference mor_s_v(i) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(5,i,2,2,face,iel)>, stride is unknown to compiler
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.188
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15453: unmasked strided stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.840 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1798,14)
+   remark #15389: vectorization support: reference idmo_(i,5,2,1,face,iel) has unaligned access
+   remark #15389: vectorization support: reference mor_s_v(i-1) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.750
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 2.000 
+   remark #15478: estimated potential speedup: 1.140 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1802,13)
+   remark #15389: vectorization support: reference idmo_(i,5,2,2,face,iel) has unaligned access
+   remark #15389: vectorization support: reference mor_s_v(i) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.750
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 2.000 
+   remark #15478: estimated potential speedup: 1.140 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1808,13)
+   remark #15389: vectorization support: reference mor_s_v(i-1) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(1,i,1,1,face,iel)>, stride is unknown to compiler
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.188
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15453: unmasked strided stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.840 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1812,13)
+   remark #15389: vectorization support: reference mor_s_v(i) has unaligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(1,i,2,1,face,iel)>, stride is unknown to compiler
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.188
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15453: unmasked strided stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 0.840 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+===========================================================================
+
+Begin optimization report for: EDGECOPY_S
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at mason.f(1647,26)
+   remark #15388: vectorization support: reference mor_s_v(i-1,1) has aligned access   [ mason.f(1647,11) ]
+   remark #15389: vectorization support: reference idmo_(i,1,1,1,jjface(face),ntemp1) has unaligned access   [ mason.f(1647,11) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.600
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 2.500 
+   remark #15478: estimated potential speedup: 1.400 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1666,26)
+   remark #15388: vectorization support: reference mor_s_v(i-1,1) has aligned access   [ mason.f(1666,11) ]
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <idmo_(5,i,1,1,jjface(face),ntemp2)>, stride is unknown to compiler   [ mason.f(1666,11) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15452: unmasked strided loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 6.500 
+   remark #15478: estimated potential speedup: 1.050 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1671,8)
+   remark #15389: vectorization support: reference mor_s_v(i,2) has unaligned access   [ mason.f(1672,11) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <idmo_(5,i,1,1,jjface(face),ntemp4)>, stride is unknown to compiler   [ mason.f(1672,11) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15452: unmasked strided loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 8.000 
+   remark #15478: estimated potential speedup: 0.910 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1647,26)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at mason.f(1650,8)
+   remark #15388: vectorization support: reference mor_s_v(i,2) has aligned access   [ mason.f(1651,11) ]
+   remark #15389: vectorization support: reference idmo_(i,1,1,1,jjface(face),ntemp2) has unaligned access   [ mason.f(1651,11) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.600
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 1.250 
+   remark #15478: estimated potential speedup: 3.500 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1683,26)
+   remark #15388: vectorization support: reference mor_s_v(i-1,1) has aligned access   [ mason.f(1683,11) ]
+   remark #15389: vectorization support: reference idmo_(i,5,1,1,jjface(face),ntemp3) has unaligned access   [ mason.f(1683,11) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.600
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 2.500 
+   remark #15478: estimated potential speedup: 1.400 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1688,8)
+   remark #15389: vectorization support: reference mor_s_v(i,2) has unaligned access   [ mason.f(1689,11) ]
+   remark #15389: vectorization support: reference idmo_(i,5,1,1,jjface(face),ntemp4) has unaligned access   [ mason.f(1689,11) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.375
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 4.000 
+   remark #15478: estimated potential speedup: 1.160 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1700,26)
+   remark #15388: vectorization support: reference mor_s_v(i-1,1) has aligned access   [ mason.f(1700,11) ]
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <idmo_(1,i,1,1,jjface(face),ntemp1)>, stride is unknown to compiler   [ mason.f(1700,11) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15452: unmasked strided loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 6.500 
+   remark #15478: estimated potential speedup: 1.050 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1704,8)
+   remark #15388: vectorization support: reference mor_s_v(i,2) has aligned access   [ mason.f(1705,11) ]
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <idmo_(1,i,1,1,jjface(face),ntemp3)>, stride is unknown to compiler   [ mason.f(1705,11) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15452: unmasked strided loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 6.500 
+   remark #15478: estimated potential speedup: 1.070 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1683,26)
+<Remainder loop for vectorization>
+LOOP END
+===========================================================================
+
+Begin optimization report for: MOR_S_E..0
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at mason.f(1731,12)
+   remark #15389: vectorization support: reference idmo_(i,1,1,1,face,iel) has unaligned access
+   remark #15389: vectorization support: reference mor_s_v(i-1,1) has unaligned access
+   remark #15389: vectorization support: reference idmo_(i,1,1,2,face,iel) has unaligned access   [ mason.f(1734,12) ]
+   remark #15389: vectorization support: reference mor_s_v(i,2) has unaligned access   [ mason.f(1734,12) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.375
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15451: unmasked unaligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 8.000 
+   remark #15478: estimated potential speedup: 0.630 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1733,10)
+LOOP END
+
+LOOP BEGIN at mason.f(1738,11)
+   remark #15389: vectorization support: reference mor_s_v(i-1,1) has unaligned access
+   remark #15389: vectorization support: reference mor_s_v(i,2) has unaligned access   [ mason.f(1741,11) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(5,i,1,2,face,iel)>, stride is unknown to compiler
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(5,i,2,2,face,iel)>, stride is unknown to compiler   [ mason.f(1741,11) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.188
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15453: unmasked strided stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 8.000 
+   remark #15478: estimated potential speedup: 0.730 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1740,10)
+LOOP END
+
+LOOP BEGIN at mason.f(1745,12)
+   remark #15389: vectorization support: reference idmo_(i,5,2,1,face,iel) has unaligned access
+   remark #15389: vectorization support: reference mor_s_v(i-1,1) has unaligned access
+   remark #15389: vectorization support: reference idmo_(i,5,2,2,face,iel) has unaligned access   [ mason.f(1748,12) ]
+   remark #15389: vectorization support: reference mor_s_v(i,2) has unaligned access   [ mason.f(1748,12) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.375
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15451: unmasked unaligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 8.000 
+   remark #15478: estimated potential speedup: 0.630 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1747,10)
+LOOP END
+
+LOOP BEGIN at mason.f(1752,12)
+   remark #15389: vectorization support: reference mor_s_v(i-1,1) has unaligned access
+   remark #15389: vectorization support: reference mor_s_v(i,2) has unaligned access   [ mason.f(1755,12) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(1,i,1,1,face,iel)>, stride is unknown to compiler
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(1,i,2,1,face,iel)>, stride is unknown to compiler   [ mason.f(1755,12) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.188
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15453: unmasked strided stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 8.000 
+   remark #15478: estimated potential speedup: 0.730 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1754,10)
+LOOP END
+===========================================================================
+
+Begin optimization report for: MOR_S_E..1
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at mason.f(1731,12)
+   remark #15389: vectorization support: reference idmo_(i,1,1,1,face,iel) has unaligned access
+   remark #15389: vectorization support: reference mor_s_v(i-1,1) has unaligned access
+   remark #15389: vectorization support: reference idmo_(i,1,1,2,face,iel) has unaligned access   [ mason.f(1734,12) ]
+   remark #15389: vectorization support: reference mor_s_v(i,2) has unaligned access   [ mason.f(1734,12) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.375
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15451: unmasked unaligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 8.000 
+   remark #15478: estimated potential speedup: 0.630 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1733,10)
+LOOP END
+
+LOOP BEGIN at mason.f(1738,11)
+   remark #15389: vectorization support: reference mor_s_v(i-1,1) has unaligned access
+   remark #15389: vectorization support: reference mor_s_v(i,2) has unaligned access   [ mason.f(1741,11) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(5,i,1,2,face,iel)>, stride is unknown to compiler
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(5,i,2,2,face,iel)>, stride is unknown to compiler   [ mason.f(1741,11) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.188
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15453: unmasked strided stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 8.000 
+   remark #15478: estimated potential speedup: 0.730 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1740,10)
+LOOP END
+
+LOOP BEGIN at mason.f(1745,12)
+   remark #15389: vectorization support: reference idmo_(i,5,2,1,face,iel) has unaligned access
+   remark #15389: vectorization support: reference mor_s_v(i-1,1) has unaligned access
+   remark #15389: vectorization support: reference idmo_(i,5,2,2,face,iel) has unaligned access   [ mason.f(1748,12) ]
+   remark #15389: vectorization support: reference mor_s_v(i,2) has unaligned access   [ mason.f(1748,12) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.375
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15451: unmasked unaligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 8.000 
+   remark #15478: estimated potential speedup: 0.630 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1747,10)
+LOOP END
+
+LOOP BEGIN at mason.f(1752,12)
+   remark #15389: vectorization support: reference mor_s_v(i-1,1) has unaligned access
+   remark #15389: vectorization support: reference mor_s_v(i,2) has unaligned access   [ mason.f(1755,12) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(1,i,1,1,face,iel)>, stride is unknown to compiler
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(1,i,2,1,face,iel)>, stride is unknown to compiler   [ mason.f(1755,12) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.188
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15453: unmasked strided stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 8.000 
+   remark #15478: estimated potential speedup: 0.730 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1754,10)
+LOOP END
+===========================================================================
+
+Begin optimization report for: MOR_S_E..2
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at mason.f(1731,12)
+   remark #15389: vectorization support: reference idmo_(i,1,1,1,face,iel) has unaligned access
+   remark #15389: vectorization support: reference mor_s_v(i-1,1) has unaligned access
+   remark #15389: vectorization support: reference idmo_(i,1,1,2,face,iel) has unaligned access   [ mason.f(1734,12) ]
+   remark #15389: vectorization support: reference mor_s_v(i,2) has unaligned access   [ mason.f(1734,12) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.375
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15451: unmasked unaligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 8.000 
+   remark #15478: estimated potential speedup: 0.630 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1733,10)
+LOOP END
+
+LOOP BEGIN at mason.f(1738,11)
+   remark #15389: vectorization support: reference mor_s_v(i-1,1) has unaligned access
+   remark #15389: vectorization support: reference mor_s_v(i,2) has unaligned access   [ mason.f(1741,11) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(5,i,1,2,face,iel)>, stride is unknown to compiler
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(5,i,2,2,face,iel)>, stride is unknown to compiler   [ mason.f(1741,11) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.188
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15453: unmasked strided stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 8.000 
+   remark #15478: estimated potential speedup: 0.730 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1740,10)
+LOOP END
+
+LOOP BEGIN at mason.f(1745,12)
+   remark #15389: vectorization support: reference idmo_(i,5,2,1,face,iel) has unaligned access
+   remark #15389: vectorization support: reference mor_s_v(i-1,1) has unaligned access
+   remark #15389: vectorization support: reference idmo_(i,5,2,2,face,iel) has unaligned access   [ mason.f(1748,12) ]
+   remark #15389: vectorization support: reference mor_s_v(i,2) has unaligned access   [ mason.f(1748,12) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.375
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15451: unmasked unaligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 8.000 
+   remark #15478: estimated potential speedup: 0.630 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1747,10)
+LOOP END
+
+LOOP BEGIN at mason.f(1752,12)
+   remark #15389: vectorization support: reference mor_s_v(i-1,1) has unaligned access
+   remark #15389: vectorization support: reference mor_s_v(i,2) has unaligned access   [ mason.f(1755,12) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(1,i,1,1,face,iel)>, stride is unknown to compiler
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(1,i,2,1,face,iel)>, stride is unknown to compiler   [ mason.f(1755,12) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.188
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15453: unmasked strided stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 8.000 
+   remark #15478: estimated potential speedup: 0.730 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1754,10)
+LOOP END
+===========================================================================
+
+Begin optimization report for: MOR_S_E..3
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at mason.f(1731,12)
+   remark #15389: vectorization support: reference idmo_(i,1,1,1,face,iel) has unaligned access
+   remark #15389: vectorization support: reference mor_s_v(i-1,1) has unaligned access
+   remark #15389: vectorization support: reference idmo_(i,1,1,2,face,iel) has unaligned access   [ mason.f(1734,12) ]
+   remark #15389: vectorization support: reference mor_s_v(i,2) has unaligned access   [ mason.f(1734,12) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.375
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15451: unmasked unaligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 8.000 
+   remark #15478: estimated potential speedup: 0.630 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1733,10)
+LOOP END
+
+LOOP BEGIN at mason.f(1738,11)
+   remark #15389: vectorization support: reference mor_s_v(i-1,1) has unaligned access
+   remark #15389: vectorization support: reference mor_s_v(i,2) has unaligned access   [ mason.f(1741,11) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(5,i,1,2,face,iel)>, stride is unknown to compiler
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(5,i,2,2,face,iel)>, stride is unknown to compiler   [ mason.f(1741,11) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.188
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15453: unmasked strided stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 8.000 
+   remark #15478: estimated potential speedup: 0.730 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1740,10)
+LOOP END
+
+LOOP BEGIN at mason.f(1745,12)
+   remark #15389: vectorization support: reference idmo_(i,5,2,1,face,iel) has unaligned access
+   remark #15389: vectorization support: reference mor_s_v(i-1,1) has unaligned access
+   remark #15389: vectorization support: reference idmo_(i,5,2,2,face,iel) has unaligned access   [ mason.f(1748,12) ]
+   remark #15389: vectorization support: reference mor_s_v(i,2) has unaligned access   [ mason.f(1748,12) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.375
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15451: unmasked unaligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 8.000 
+   remark #15478: estimated potential speedup: 0.630 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1747,10)
+LOOP END
+
+LOOP BEGIN at mason.f(1752,12)
+   remark #15389: vectorization support: reference mor_s_v(i-1,1) has unaligned access
+   remark #15389: vectorization support: reference mor_s_v(i,2) has unaligned access   [ mason.f(1755,12) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(1,i,1,1,face,iel)>, stride is unknown to compiler
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(1,i,2,1,face,iel)>, stride is unknown to compiler   [ mason.f(1755,12) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.188
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15453: unmasked strided stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 8.000 
+   remark #15478: estimated potential speedup: 0.730 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1754,10)
+LOOP END
+===========================================================================
+
+Begin optimization report for: MOR_S_E
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at mason.f(1731,12)
+   remark #15389: vectorization support: reference idmo_(i,1,1,1,face,iel) has unaligned access
+   remark #15389: vectorization support: reference mor_s_v(i-1,1) has unaligned access
+   remark #15389: vectorization support: reference idmo_(i,1,1,2,face,iel) has unaligned access   [ mason.f(1734,12) ]
+   remark #15389: vectorization support: reference mor_s_v(i,2) has unaligned access   [ mason.f(1734,12) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.375
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15451: unmasked unaligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 8.000 
+   remark #15478: estimated potential speedup: 0.630 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1733,10)
+LOOP END
+
+LOOP BEGIN at mason.f(1738,11)
+   remark #15389: vectorization support: reference mor_s_v(i-1,1) has unaligned access
+   remark #15389: vectorization support: reference mor_s_v(i,2) has unaligned access   [ mason.f(1741,11) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(5,i,1,2,face,iel)>, stride is unknown to compiler
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(5,i,2,2,face,iel)>, stride is unknown to compiler   [ mason.f(1741,11) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.188
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15453: unmasked strided stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 8.000 
+   remark #15478: estimated potential speedup: 0.730 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1740,10)
+LOOP END
+
+LOOP BEGIN at mason.f(1745,12)
+   remark #15389: vectorization support: reference idmo_(i,5,2,1,face,iel) has unaligned access
+   remark #15389: vectorization support: reference mor_s_v(i-1,1) has unaligned access
+   remark #15389: vectorization support: reference idmo_(i,5,2,2,face,iel) has unaligned access   [ mason.f(1748,12) ]
+   remark #15389: vectorization support: reference mor_s_v(i,2) has unaligned access   [ mason.f(1748,12) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.375
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15451: unmasked unaligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 8.000 
+   remark #15478: estimated potential speedup: 0.630 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1747,10)
+LOOP END
+
+LOOP BEGIN at mason.f(1752,12)
+   remark #15389: vectorization support: reference mor_s_v(i-1,1) has unaligned access
+   remark #15389: vectorization support: reference mor_s_v(i,2) has unaligned access   [ mason.f(1755,12) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(1,i,1,1,face,iel)>, stride is unknown to compiler
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <idmo_(1,i,2,1,face,iel)>, stride is unknown to compiler   [ mason.f(1755,12) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.188
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15453: unmasked strided stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 8.000 
+   remark #15478: estimated potential speedup: 0.730 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at mason.f(1754,10)
+LOOP END
+===========================================================================
+
+Begin optimization report for: GET_EMO
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at mason.f(1529,8)
+   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria   [ mason.f(1530,24) ]
+LOOP END
+===========================================================================

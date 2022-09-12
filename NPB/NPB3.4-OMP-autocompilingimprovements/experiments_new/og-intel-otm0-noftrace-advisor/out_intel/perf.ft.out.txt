@@ -1,0 +1,23 @@
+# started on Thu May 20 22:51:42 2021
+
+
+ Performance counter stats for 'bin/bin_intel/ft.C.x !':
+
+   161,623,570,140      L1-dcache-loads                                               (36.36%)
+    59,822,875,248      L1-dcache-load-misses     #   37.01% of all L1-dcache hits    (36.36%)
+        60,498,291      L1-icache-load-misses                                         (36.36%)
+     1,780,296,913      LLC-loads                                                     (36.36%)
+     1,455,600,220      LLC-load-misses           #   81.76% of all LL-cache hits     (36.36%)
+                 0      fp_arith_inst_retired.scalar_single #     22.8 GFLOPs                   (36.36%)
+       520,536,376      fp_arith_inst_retired.scalar_double                                     (36.37%)
+   203,985,995,959      fp_arith_inst_retired.128b_packed_double                                     (36.37%)
+        66,596,529      fp_arith_inst_retired.128b_packed_single                                     (36.37%)
+       473,891,506      fp_arith_inst_retired.256b_packed_double                                     (36.36%)
+                 0      fp_arith_inst_retired.256b_packed_single                                     (36.37%)
+
+      17.992990477 seconds time elapsed
+
+     141.236303000 seconds user
+       1.364838000 seconds sys
+
+

@@ -1,0 +1,52 @@
+Date: Thu Apr 15 10:41:42 -03 2021
+Host: tsubasa
+
+>>> make ncc/bt.C.x - successful
+>>> make ncc/cg.C.x - successful
+>>> make ncc/ep.C.x - successful
+>>> make ncc/ft.C.x - successful
+>>> make ncc/is.C.x - successful
+>>> make ncc/lu.C.x - successful
+>>> make ncc/mg.C.x - successful
+>>> make ncc/sp.C.x - successful
+>>> make ncc/ua.C.x - successful
+*** make intel/bt.C.x - FAILED
+*** make intel/cg.C.x - FAILED
+*** make intel/ep.C.x - FAILED
+*** make intel/ft.C.x - FAILED
+*** make intel/is.C.x - FAILED
+*** make intel/lu.C.x - FAILED
+*** make intel/mg.C.x - FAILED
+*** make intel/sp.C.x - FAILED
+*** make intel/ua.C.x - FAILED
+
+Date: Thu Apr 15 10:42:02 -03 2021
+Total number of cases: 18
+Total number of FAILED cases: 9
+
+Date: Thu Apr 15 10:47:48 -03 2021
+Host: tsubasa
+
+>>> make ncc/bt.C.x - successful
+>>> make ncc/cg.C.x - successful
+>>> make ncc/ep.C.x - successful
+>>> make ncc/ft.C.x - successful
+>>> make ncc/is.C.x - successful
+>>> make ncc/lu.C.x - successful
+>>> make ncc/mg.C.x - successful
+>>> make ncc/sp.C.x - successful
+>>> make ncc/ua.C.x - successful
+>>> make intel/bt.C.x - successful
+>>> make intel/cg.C.x - successful
+>>> make intel/ep.C.x - successful
+>>> make intel/ft.C.x - successful
+>>> make intel/is.C.x - successful
+>>> make intel/lu.C.x - successful
+>>> make intel/mg.C.x - successful
+>>> make intel/sp.C.x - successful
+>>> make intel/ua.C.x - successful
+
+Date: Thu Apr 15 10:48:29 -03 2021
+Total number of cases: 18
+Total number of FAILED cases: 0
+

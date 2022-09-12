@@ -1,0 +1,23 @@
+# started on Fri May 21 02:20:55 2021
+
+
+ Performance counter stats for 'bin/bin_intel/sp.C.x !':
+
+   727,123,548,930      L1-dcache-loads                                               (36.36%)
+    85,002,006,334      L1-dcache-load-misses     #   11.69% of all L1-dcache hits    (36.36%)
+       220,961,249      L1-icache-load-misses                                         (36.36%)
+     3,355,097,713      LLC-loads                                                     (36.36%)
+     3,183,767,472      LLC-load-misses           #   94.89% of all LL-cache hits     (36.36%)
+                 0      fp_arith_inst_retired.scalar_single #     22.4 GFLOPs                   (36.37%)
+   469,152,184,185      fp_arith_inst_retired.scalar_double                                     (36.37%)
+   448,432,735,261      fp_arith_inst_retired.128b_packed_double                                     (36.37%)
+                 0      fp_arith_inst_retired.128b_packed_single                                     (36.36%)
+                 0      fp_arith_inst_retired.256b_packed_double                                     (36.36%)
+                 0      fp_arith_inst_retired.256b_packed_single                                     (36.36%)
+
+      61.018653506 seconds time elapsed
+
+     486.705783000 seconds user
+       0.476979000 seconds sys
+
+

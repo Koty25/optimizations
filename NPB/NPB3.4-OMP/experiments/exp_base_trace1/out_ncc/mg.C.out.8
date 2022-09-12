@@ -1,0 +1,85 @@
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - MG Benchmark
+
+ No input file. Using compiled defaults 
+ Size:  512x 512x 512  (class C)
+ Iterations:                     20
+ Number of available threads:     8
+
+ Initialization time:           0.340 seconds
+
+  iter   1
+  iter   5
+  iter  10
+  iter  15
+  iter  20
+
+ Benchmark completed 
+ VERIFICATION SUCCESSFUL 
+ L2 Norm is  0.5706732285740E-06
+ Error is    0.8571657168178E-13
+
+
+ MG Benchmark Completed.
+ Class           =                        C
+ Size            =            512x 512x 512
+ Iterations      =                       20
+ Time in seconds =                     1.15
+ Total threads   =                        8
+ Avail threads   =                        8
+ Mop/s total     =                135085.15
+ Mop/s/thread    =                 16885.64
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                      3.4
+ Compile date    =              11 Feb 2021
+
+ Compile options:
+    F77          = nfort
+    FLINK        = $(FC)
+    F_LIB        = (none)
+    F_INC        = (none)
+    FFLAGS       = -O2 -fopenmp -report-all -fdiag-inline=2 -f...
+    FLINKFLAGS   = $(FFLAGS)
+    RAND         = randi8
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+  SECTION   Time (secs)
+         benchmk :    1.153  ( 100.00 %)
+         mg3P    :    0.875  (  75.91 %)
+         psinv   :    0.317  (  27.50 %)
+         resid   :    0.561  (  48.64 %)
+        mg-resid :    0.303  (  26.30 %)
+         rprj3   :    0.144  (  12.53 %)
+         interp  :    0.094  (   8.15 %)
+         norm2   :    0.020  (   1.73 %)
+         comm3   :    0.011  (   0.92 %)
+            ********  Program  Information  ********
+  Real Time (sec)                         :             1.514852
+  User Time (sec)                         :            11.328140
+  Vector Time (sec)                       :             9.582468
+  Inst. Count                             :          12684943609
+  V. Inst. Count                          :           1770633425
+  V. Element Count                        :         338059920921
+  V. Load Element Count                   :         164751693371
+  FLOP Count                              :         167899604076
+  MOPS                                    :         32232.379802
+  MOPS (Real)                             :        252278.672942
+  MFLOPS                                  :         14160.917584
+  MFLOPS (Real)                           :        110835.672626
+  A. V. Length                            :           190.925979
+  V. Op. Ratio (%)                        :            97.144083
+  L1 Cache Miss (sec)                     :             0.125428
+  VLD LLC Hit Element Ratio (%)           :            69.655292
+  Memory Size Used (MB)                   :          4932.000000
+  Non Swappable Memory Size Used (MB)     :            98.000000
+
+  Start Time (date)        :        Thu Feb 11 10:56:55 2021 -03
+  End   Time (date)        :        Thu Feb 11 10:56:57 2021 -03

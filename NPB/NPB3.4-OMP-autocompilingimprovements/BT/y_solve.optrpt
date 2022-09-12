@@ -1,0 +1,387 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: Y_SOLVE
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at y_solve.f(47,7)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at y_solve.f(49,13)
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <fjac(1,1,j)>, stride is 25   [ y_solve.f(55,16) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <fjac(1,2,j)>, stride is 25   [ y_solve.f(56,16) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <fjac(1,3,j)>, stride is 25   [ y_solve.f(57,16) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <fjac(1,4,j)>, stride is 25   [ y_solve.f(58,16) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <fjac(1,5,j)>, stride is 25   [ y_solve.f(59,16) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <fjac(2,4,j)>, stride is 25   [ y_solve.f(65,16) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <fjac(2,5,j)>, stride is 25   [ y_solve.f(66,16) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <fjac(4,2,j)>, stride is 25   [ y_solve.f(78,16) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <fjac(4,5,j)>, stride is 25   [ y_solve.f(81,16) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <njac(1,1,j)>, stride is 25   [ y_solve.f(96,16) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <njac(1,2,j)>, stride is 25   [ y_solve.f(97,16) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <njac(1,3,j)>, stride is 25   [ y_solve.f(98,16) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <njac(1,4,j)>, stride is 25   [ y_solve.f(99,16) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <njac(1,5,j)>, stride is 25   [ y_solve.f(100,16) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <njac(2,3,j)>, stride is 25   [ y_solve.f(104,16) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <njac(2,4,j)>, stride is 25   [ y_solve.f(105,16) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <njac(2,5,j)>, stride is 25   [ y_solve.f(106,16) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <njac(3,2,j)>, stride is 25   [ y_solve.f(109,16) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <njac(3,4,j)>, stride is 25   [ y_solve.f(111,16) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <njac(3,5,j)>, stride is 25   [ y_solve.f(112,16) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <njac(4,2,j)>, stride is 25   [ y_solve.f(115,16) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <njac(4,3,j)>, stride is 25   [ y_solve.f(116,16) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <njac(4,5,j)>, stride is 25   [ y_solve.f(118,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <rho_i_(i,j,k)>, stride is unknown to compiler   [ y_solve.f(51,16) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <fjac(2,1,j)>, stride is 25   [ y_solve.f(61,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(2,i,j,k)>, stride is unknown to compiler   [ y_solve.f(61,34) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(3,i,j,k)>, stride is unknown to compiler   [ y_solve.f(61,45) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <fjac(2,2,j)>, stride is 25   [ y_solve.f(63,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(3,i,j,k)>, stride is unknown to compiler   [ y_solve.f(63,30) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <fjac(2,3,j)>, stride is 25   [ y_solve.f(64,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(2,i,j,k)>, stride is unknown to compiler   [ y_solve.f(64,30) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <fjac(3,1,j)>, stride is 25   [ y_solve.f(68,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <qs_(i,j,k)>, stride is unknown to compiler   [ y_solve.f(69,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(3,i,j,k)>, stride is unknown to compiler   [ y_solve.f(68,34) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(3,i,j,k)>, stride is unknown to compiler   [ y_solve.f(68,45) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <fjac(3,2,j)>, stride is 25   [ y_solve.f(70,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(2,i,j,k)>, stride is unknown to compiler   [ y_solve.f(70,38) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <fjac(3,3,j)>, stride is 25   [ y_solve.f(71,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(3,i,j,k)>, stride is unknown to compiler   [ y_solve.f(72,24) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <fjac(3,4,j)>, stride is 25   [ y_solve.f(73,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(4,i,j,k)>, stride is unknown to compiler   [ y_solve.f(73,37) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <fjac(3,5,j)>, stride is 25   [ y_solve.f(74,16) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <fjac(4,1,j)>, stride is 25   [ y_solve.f(76,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(3,i,j,k)>, stride is unknown to compiler   [ y_solve.f(76,34) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(4,i,j,k)>, stride is unknown to compiler   [ y_solve.f(76,45) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <fjac(4,3,j)>, stride is 25   [ y_solve.f(79,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(4,i,j,k)>, stride is unknown to compiler   [ y_solve.f(79,30) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <fjac(4,4,j)>, stride is 25   [ y_solve.f(80,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(3,i,j,k)>, stride is unknown to compiler   [ y_solve.f(80,30) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <fjac(5,1,j)>, stride is 25   [ y_solve.f(83,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <square_(i,j,k)>, stride is unknown to compiler   [ y_solve.f(83,45) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(5,i,j,k)>, stride is unknown to compiler   [ y_solve.f(84,28) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(3,i,j,k)>, stride is unknown to compiler   [ y_solve.f(85,23) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <fjac(5,2,j)>, stride is 25   [ y_solve.f(86,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(2,i,j,k)>, stride is unknown to compiler   [ y_solve.f(86,37) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(3,i,j,k)>, stride is unknown to compiler   [ y_solve.f(86,48) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <fjac(5,3,j)>, stride is 25   [ y_solve.f(88,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(5,i,j,k)>, stride is unknown to compiler   [ y_solve.f(88,35) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <qs_(i,j,k)>, stride is unknown to compiler   [ y_solve.f(90,25) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(3,i,j,k)>, stride is unknown to compiler   [ y_solve.f(91,23) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(3,i,j,k)>, stride is unknown to compiler   [ y_solve.f(91,34) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <fjac(5,4,j)>, stride is 25   [ y_solve.f(92,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(3,i,j,k)>, stride is unknown to compiler   [ y_solve.f(92,39) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(4,i,j,k)>, stride is unknown to compiler   [ y_solve.f(92,50) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <fjac(5,5,j)>, stride is 25   [ y_solve.f(94,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(3,i,j,k)>, stride is unknown to compiler   [ y_solve.f(94,35) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <njac(2,1,j)>, stride is 25   [ y_solve.f(102,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(2,i,j,k)>, stride is unknown to compiler   [ y_solve.f(102,46) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <njac(2,2,j)>, stride is 25   [ y_solve.f(103,16) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <njac(3,1,j)>, stride is 25   [ y_solve.f(108,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(3,i,j,k)>, stride is unknown to compiler   [ y_solve.f(108,54) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <njac(3,3,j)>, stride is 25   [ y_solve.f(110,16) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <njac(4,1,j)>, stride is 25   [ y_solve.f(114,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(4,i,j,k)>, stride is unknown to compiler   [ y_solve.f(114,46) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <njac(4,4,j)>, stride is 25   [ y_solve.f(117,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(2,i,j,k)>, stride is unknown to compiler   [ y_solve.f(121,51) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(3,i,j,k)>, stride is unknown to compiler   [ y_solve.f(123,51) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(4,i,j,k)>, stride is unknown to compiler   [ y_solve.f(124,60) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <njac(5,1,j)>, stride is 25   [ y_solve.f(120,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(5,i,j,k)>, stride is unknown to compiler   [ y_solve.f(125,38) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <njac(5,2,j)>, stride is 25   [ y_solve.f(127,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(2,i,j,k)>, stride is unknown to compiler   [ y_solve.f(127,57) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <njac(5,3,j)>, stride is 25   [ y_solve.f(128,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(3,i,j,k)>, stride is unknown to compiler   [ y_solve.f(129,40) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <njac(5,4,j)>, stride is 25   [ y_solve.f(130,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <u_(4,i,j,k)>, stride is unknown to compiler   [ y_solve.f(130,56) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <njac(5,5,j)>, stride is 25   [ y_solve.f(131,16) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.118
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15452: unmasked strided loads: 37 
+      remark #15453: unmasked strided stores: 50 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 418 
+      remark #15477: vector cost: 389.500 
+      remark #15478: estimated potential speedup: 1.070 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at y_solve.f(49,13)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at y_solve.f(139,13)
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(1,1,1,j)>, stride is 75   [ y_solve.f(144,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(1,1,j-1)>, stride is 25   [ y_solve.f(144,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(1,1,j-1)>, stride is 25   [ y_solve.f(144,32) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(1,2,1,j)>, stride is 75   [ y_solve.f(147,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(1,2,j-1)>, stride is 25   [ y_solve.f(147,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(1,2,j-1)>, stride is 25   [ y_solve.f(147,32) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(1,3,1,j)>, stride is 75   [ y_solve.f(149,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(1,3,j-1)>, stride is 25   [ y_solve.f(149,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(1,3,j-1)>, stride is 25   [ y_solve.f(149,32) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(1,4,1,j)>, stride is 75   [ y_solve.f(151,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(1,4,j-1)>, stride is 25   [ y_solve.f(151,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(1,4,j-1)>, stride is 25   [ y_solve.f(151,32) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(1,5,1,j)>, stride is 75   [ y_solve.f(153,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(1,5,j-1)>, stride is 25   [ y_solve.f(153,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(1,5,j-1)>, stride is 25   [ y_solve.f(153,32) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(2,1,1,j)>, stride is 75   [ y_solve.f(156,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(2,1,j-1)>, stride is 25   [ y_solve.f(156,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(2,1,j-1)>, stride is 25   [ y_solve.f(156,32) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(2,2,1,j)>, stride is 75   [ y_solve.f(158,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(2,2,j-1)>, stride is 25   [ y_solve.f(158,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(2,2,j-1)>, stride is 25   [ y_solve.f(158,32) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(2,3,1,j)>, stride is 75   [ y_solve.f(161,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(2,3,j-1)>, stride is 25   [ y_solve.f(161,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(2,3,j-1)>, stride is 25   [ y_solve.f(161,32) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(2,4,1,j)>, stride is 75   [ y_solve.f(163,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(2,4,j-1)>, stride is 25   [ y_solve.f(163,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(2,4,j-1)>, stride is 25   [ y_solve.f(163,32) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(2,5,1,j)>, stride is 75   [ y_solve.f(165,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(2,5,j-1)>, stride is 25   [ y_solve.f(165,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(2,5,j-1)>, stride is 25   [ y_solve.f(165,32) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(3,1,1,j)>, stride is 75   [ y_solve.f(168,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(3,1,j-1)>, stride is 25   [ y_solve.f(168,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(3,1,j-1)>, stride is 25   [ y_solve.f(168,32) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(3,2,1,j)>, stride is 75   [ y_solve.f(170,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(3,2,j-1)>, stride is 25   [ y_solve.f(170,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(3,2,j-1)>, stride is 25   [ y_solve.f(170,32) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(3,3,1,j)>, stride is 75   [ y_solve.f(172,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(3,3,j-1)>, stride is 25   [ y_solve.f(172,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(3,3,j-1)>, stride is 25   [ y_solve.f(172,32) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(3,4,1,j)>, stride is 75   [ y_solve.f(175,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(3,4,j-1)>, stride is 25   [ y_solve.f(175,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(3,4,j-1)>, stride is 25   [ y_solve.f(175,32) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(3,5,1,j)>, stride is 75   [ y_solve.f(177,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(3,5,j-1)>, stride is 25   [ y_solve.f(177,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(3,5,j-1)>, stride is 25   [ y_solve.f(177,32) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(4,1,1,j)>, stride is 75   [ y_solve.f(180,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(4,1,j-1)>, stride is 25   [ y_solve.f(180,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(4,1,j-1)>, stride is 25   [ y_solve.f(180,32) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(4,2,1,j)>, stride is 75   [ y_solve.f(182,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(4,2,j-1)>, stride is 25   [ y_solve.f(182,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(4,2,j-1)>, stride is 25   [ y_solve.f(182,32) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(4,3,1,j)>, stride is 75   [ y_solve.f(184,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(4,3,j-1)>, stride is 25   [ y_solve.f(184,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(4,3,j-1)>, stride is 25   [ y_solve.f(184,32) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(4,4,1,j)>, stride is 75   [ y_solve.f(186,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(4,4,j-1)>, stride is 25   [ y_solve.f(186,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(4,4,j-1)>, stride is 25   [ y_solve.f(186,32) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(4,5,1,j)>, stride is 75   [ y_solve.f(189,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(4,5,j-1)>, stride is 25   [ y_solve.f(189,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(4,5,j-1)>, stride is 25   [ y_solve.f(189,32) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(5,1,1,j)>, stride is 75   [ y_solve.f(192,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(5,1,j-1)>, stride is 25   [ y_solve.f(192,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(5,1,j-1)>, stride is 25   [ y_solve.f(192,32) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(5,2,1,j)>, stride is 75   [ y_solve.f(194,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(5,2,j-1)>, stride is 25   [ y_solve.f(194,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(5,2,j-1)>, stride is 25   [ y_solve.f(194,32) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(5,3,1,j)>, stride is 75   [ y_solve.f(196,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(5,3,j-1)>, stride is 25   [ y_solve.f(196,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(5,3,j-1)>, stride is 25   [ y_solve.f(196,32) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(5,4,1,j)>, stride is 75   [ y_solve.f(198,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(5,4,j-1)>, stride is 25   [ y_solve.f(198,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(5,4,j-1)>, stride is 25   [ y_solve.f(198,32) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(5,5,1,j)>, stride is 75   [ y_solve.f(200,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(5,5,j-1)>, stride is 25   [ y_solve.f(200,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(5,5,j-1)>, stride is 25   [ y_solve.f(200,32) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(1,1,2,j)>, stride is 75   [ y_solve.f(204,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(1,1,j)>, stride is 25   [ y_solve.f(205,28) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(1,2,2,j)>, stride is 75   [ y_solve.f(207,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(1,2,j)>, stride is 25   [ y_solve.f(207,37) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(1,3,2,j)>, stride is 75   [ y_solve.f(208,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(1,3,j)>, stride is 25   [ y_solve.f(208,37) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(1,4,2,j)>, stride is 75   [ y_solve.f(209,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(1,4,j)>, stride is 25   [ y_solve.f(209,37) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(1,5,2,j)>, stride is 75   [ y_solve.f(210,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(1,5,j)>, stride is 25   [ y_solve.f(210,37) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(2,1,2,j)>, stride is 75   [ y_solve.f(212,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(2,1,j)>, stride is 25   [ y_solve.f(212,37) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(2,2,2,j)>, stride is 75   [ y_solve.f(213,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(2,2,j)>, stride is 25   [ y_solve.f(214,28) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(2,3,2,j)>, stride is 75   [ y_solve.f(216,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(2,3,j)>, stride is 25   [ y_solve.f(216,37) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(2,4,2,j)>, stride is 75   [ y_solve.f(217,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(2,4,j)>, stride is 25   [ y_solve.f(217,37) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(2,5,2,j)>, stride is 75   [ y_solve.f(218,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(2,5,j)>, stride is 25   [ y_solve.f(218,37) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(3,1,2,j)>, stride is 75   [ y_solve.f(220,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(3,1,j)>, stride is 25   [ y_solve.f(220,37) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(3,2,2,j)>, stride is 75   [ y_solve.f(221,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(3,2,j)>, stride is 25   [ y_solve.f(221,37) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(3,3,2,j)>, stride is 75   [ y_solve.f(222,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(3,3,j)>, stride is 25   [ y_solve.f(223,28) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(3,4,2,j)>, stride is 75   [ y_solve.f(225,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(3,4,j)>, stride is 25   [ y_solve.f(225,37) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(3,5,2,j)>, stride is 75   [ y_solve.f(226,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(3,5,j)>, stride is 25   [ y_solve.f(226,37) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(4,1,2,j)>, stride is 75   [ y_solve.f(228,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(4,1,j)>, stride is 25   [ y_solve.f(228,37) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(4,2,2,j)>, stride is 75   [ y_solve.f(229,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(4,2,j)>, stride is 25   [ y_solve.f(229,37) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(4,3,2,j)>, stride is 75   [ y_solve.f(230,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(4,3,j)>, stride is 25   [ y_solve.f(230,37) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(4,4,2,j)>, stride is 75   [ y_solve.f(231,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(4,4,j)>, stride is 25   [ y_solve.f(232,28) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(4,5,2,j)>, stride is 75   [ y_solve.f(234,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(4,5,j)>, stride is 25   [ y_solve.f(234,37) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(5,1,2,j)>, stride is 75   [ y_solve.f(236,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(5,1,j)>, stride is 25   [ y_solve.f(236,37) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(5,2,2,j)>, stride is 75   [ y_solve.f(237,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(5,2,j)>, stride is 25   [ y_solve.f(237,37) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(5,3,2,j)>, stride is 75   [ y_solve.f(238,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(5,3,j)>, stride is 25   [ y_solve.f(238,37) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(5,4,2,j)>, stride is 75   [ y_solve.f(239,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(5,4,j)>, stride is 25   [ y_solve.f(239,37) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(5,5,2,j)>, stride is 75   [ y_solve.f(240,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(5,5,j)>, stride is 25   [ y_solve.f(241,28) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(1,1,3,j)>, stride is 75   [ y_solve.f(244,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(1,1,j+1)>, stride is 25   [ y_solve.f(244,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(1,1,j+1)>, stride is 25   [ y_solve.f(244,38) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(1,2,3,j)>, stride is 75   [ y_solve.f(247,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(1,2,j+1)>, stride is 25   [ y_solve.f(247,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(1,2,j+1)>, stride is 25   [ y_solve.f(247,38) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(1,3,3,j)>, stride is 75   [ y_solve.f(249,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(1,3,j+1)>, stride is 25   [ y_solve.f(249,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(1,3,j+1)>, stride is 25   [ y_solve.f(249,38) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(1,4,3,j)>, stride is 75   [ y_solve.f(251,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(1,4,j+1)>, stride is 25   [ y_solve.f(251,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(1,4,j+1)>, stride is 25   [ y_solve.f(251,38) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(1,5,3,j)>, stride is 75   [ y_solve.f(253,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(1,5,j+1)>, stride is 25   [ y_solve.f(253,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(1,5,j+1)>, stride is 25   [ y_solve.f(253,38) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(2,1,3,j)>, stride is 75   [ y_solve.f(256,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(2,1,j+1)>, stride is 25   [ y_solve.f(256,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(2,1,j+1)>, stride is 25   [ y_solve.f(256,38) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(2,2,3,j)>, stride is 75   [ y_solve.f(258,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(2,2,j+1)>, stride is 25   [ y_solve.f(258,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(2,2,j+1)>, stride is 25   [ y_solve.f(258,38) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(2,3,3,j)>, stride is 75   [ y_solve.f(261,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(2,3,j+1)>, stride is 25   [ y_solve.f(261,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(2,3,j+1)>, stride is 25   [ y_solve.f(261,38) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(2,4,3,j)>, stride is 75   [ y_solve.f(263,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(2,4,j+1)>, stride is 25   [ y_solve.f(263,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(2,4,j+1)>, stride is 25   [ y_solve.f(263,38) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(2,5,3,j)>, stride is 75   [ y_solve.f(265,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(2,5,j+1)>, stride is 25   [ y_solve.f(265,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(2,5,j+1)>, stride is 25   [ y_solve.f(265,38) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(3,1,3,j)>, stride is 75   [ y_solve.f(268,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(3,1,j+1)>, stride is 25   [ y_solve.f(268,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(3,1,j+1)>, stride is 25   [ y_solve.f(268,38) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(3,2,3,j)>, stride is 75   [ y_solve.f(270,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(3,2,j+1)>, stride is 25   [ y_solve.f(270,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(3,2,j+1)>, stride is 25   [ y_solve.f(270,38) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(3,3,3,j)>, stride is 75   [ y_solve.f(272,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(3,3,j+1)>, stride is 25   [ y_solve.f(272,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(3,3,j+1)>, stride is 25   [ y_solve.f(272,38) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(3,4,3,j)>, stride is 75   [ y_solve.f(275,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(3,4,j+1)>, stride is 25   [ y_solve.f(275,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(3,4,j+1)>, stride is 25   [ y_solve.f(275,38) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(3,5,3,j)>, stride is 75   [ y_solve.f(277,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(3,5,j+1)>, stride is 25   [ y_solve.f(277,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(3,5,j+1)>, stride is 25   [ y_solve.f(277,38) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(4,1,3,j)>, stride is 75   [ y_solve.f(280,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(4,1,j+1)>, stride is 25   [ y_solve.f(280,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(4,1,j+1)>, stride is 25   [ y_solve.f(280,38) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(4,2,3,j)>, stride is 75   [ y_solve.f(282,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(4,2,j+1)>, stride is 25   [ y_solve.f(282,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(4,2,j+1)>, stride is 25   [ y_solve.f(282,38) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(4,3,3,j)>, stride is 75   [ y_solve.f(284,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(4,3,j+1)>, stride is 25   [ y_solve.f(284,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(4,3,j+1)>, stride is 25   [ y_solve.f(284,38) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(4,4,3,j)>, stride is 75   [ y_solve.f(286,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(4,4,j+1)>, stride is 25   [ y_solve.f(286,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(4,4,j+1)>, stride is 25   [ y_solve.f(286,38) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(4,5,3,j)>, stride is 75   [ y_solve.f(289,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(4,5,j+1)>, stride is 25   [ y_solve.f(289,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(4,5,j+1)>, stride is 25   [ y_solve.f(289,38) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(5,1,3,j)>, stride is 75   [ y_solve.f(292,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(5,1,j+1)>, stride is 25   [ y_solve.f(292,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(5,1,j+1)>, stride is 25   [ y_solve.f(292,38) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(5,2,3,j)>, stride is 75   [ y_solve.f(294,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(5,2,j+1)>, stride is 25   [ y_solve.f(294,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(5,2,j+1)>, stride is 25   [ y_solve.f(294,38) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(5,3,3,j)>, stride is 75   [ y_solve.f(296,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(5,3,j+1)>, stride is 25   [ y_solve.f(296,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(5,3,j+1)>, stride is 25   [ y_solve.f(296,38) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(5,4,3,j)>, stride is 75   [ y_solve.f(298,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(5,4,j+1)>, stride is 25   [ y_solve.f(298,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(5,4,j+1)>, stride is 25   [ y_solve.f(298,38) ]
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <lhs(5,5,3,j)>, stride is 75   [ y_solve.f(300,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <fjac(5,5,j+1)>, stride is 25   [ y_solve.f(300,16) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <njac(5,5,j+1)>, stride is 25   [ y_solve.f(300,38) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.172
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15452: unmasked strided loads: 125 
+      remark #15453: unmasked strided stores: 75 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 907 
+      remark #15477: vector cost: 815.000 
+      remark #15478: estimated potential speedup: 1.110 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at y_solve.f(139,13)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at y_solve.f(332,13)
+      remark #15382: vectorization support: call to function matvec_sub_ cannot be vectorized   [ y_solve.f(339,21) ]
+      remark #15382: vectorization support: call to function matmul_sub_ cannot be vectorized   [ y_solve.f(345,21) ]
+      remark #15382: vectorization support: call to function binvcrhs_ cannot be vectorized   [ y_solve.f(353,21) ]
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   LOOP END
+
+   LOOP BEGIN at y_solve.f(390,13)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between rhs_(m,i,j,k) (393:22) and rhs_(n,i,j+1,k) (393:22)
+      remark #15346: vector dependence: assumed ANTI dependence between rhs_(n,i,j+1,k) (393:22) and rhs_(m,i,j,k) (393:22)
+
+      LOOP BEGIN at y_solve.f(392,19)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between rhs_(m,i,j,k) (393:22) and rhs_(m,i,j,k) (393:22)
+         remark #15346: vector dependence: assumed OUTPUT dependence between rhs_(m,i,j,k) (393:22) and rhs_(m,i,j,k) (393:22)
+
+         LOOP BEGIN at y_solve.f(391,16)
+            remark #15389: vectorization support: reference rhs_(m,i,j,k) has unaligned access   [ y_solve.f(393,22) ]
+            remark #15389: vectorization support: reference rhs_(m,i,j,k) has unaligned access   [ y_solve.f(393,37) ]
+            remark #15389: vectorization support: reference lhs(m,n,3,j) has unaligned access   [ y_solve.f(393,37) ]
+            remark #15381: vectorization support: unaligned access used inside loop body
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15305: vectorization support: vector length 2
+            remark #15399: vectorization support: unroll factor set to 2
+            remark #15309: vectorization support: normalized vectorization overhead 0.542
+            remark #15450: unmasked unaligned unit stride loads: 2 
+            remark #15451: unmasked unaligned unit stride stores: 1 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 9 
+            remark #15477: vector cost: 6.000 
+            remark #15478: estimated potential speedup: 0.970 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+
+         LOOP BEGIN at y_solve.f(391,16)
+         LOOP END
+
+         LOOP BEGIN at y_solve.f(391,16)
+         LOOP END
+
+         LOOP BEGIN at y_solve.f(391,16)
+         LOOP END
+
+         LOOP BEGIN at y_solve.f(391,16)
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================

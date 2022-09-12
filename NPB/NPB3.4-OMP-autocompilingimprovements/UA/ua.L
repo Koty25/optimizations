@@ -1,0 +1,637 @@
+NEC Fortran Compiler (3.2.0) for Vector Engine   Fri May 21 01:36:58 2021
+FILE NAME : ua.f
+
+  COMPILER OPTIONS : -c -O4 -fopenmp -report-all -fdiag-inline=2 -fdiag-parallel=2 -fdiag-vector=2 -finline-functions -fouterloop-unroll
+
+  PARAMETER : 
+
+      Optimization Options : 
+        -On                                      : 4
+        -fargument-alias                         : disable
+        -fargument-noalias                       : enable
+        -fassociative-math                       : enable
+        -faggressive-associative-math            : disable
+        -fassume-contiguous                      : disable
+        -fcopyin-intent-out                      : enable
+        -fcse-after-vectorization                : disable
+        -ffast-formatted-io                      : enable
+        -ffast-math                              : enable
+        -fignore-asynchronous                    : disable
+        -fignore-induction-variable-overflow     : enable
+        -fignore-volatile                        : enable
+        -fivdep                                  : disable
+        -floop-collapse                          : enable
+        -floop-count                             : 5000
+        -floop-fusion                            : enable
+        -floop-interchange                       : enable
+        -floop-normalize                         : enable
+        -floop-split                             : disable
+        -floop-strip-mine                        : enable
+        -floop-unroll                            : enable
+        -floop-unroll-complete                   : 4
+        -floop-unroll-complete-nest              : 3
+        -floop-unroll-max-times                  : auto
+        -fmatrix-multiply                        : enable
+        -fmove-loop-invariants                   : enable
+        -fmove-loop-invariants-if                : enable
+        -fmove-loop-invariants-unsafe            : enable
+        -fmove-nested-loop-invariants-outer      : enable
+        -fnamed-alias                            : disable
+        -fnamed-noalias                          : enable
+        -fnamed-noalias-aggressive               : disable
+        -fouterloop-unroll                       : enable
+        -fouterloop-unroll-max-size              : 4
+        -fouterloop-unroll-max-times             : 4
+        -fprecise-math                           : disable
+        -freciprocal-math                        : enable
+        -freorder-logical-expression             : enable
+        -freplace-loop-equation                  : enable
+        -marray-io                               : enable
+        -mlist-vector                            : disable
+        -mretain-all                             : enable
+        -mretain-list-vector                     : disable
+        -mretain-none                            : disable
+        -msched-none                             : disable
+        -msched-insns                            : enable
+        -msched-block                            : disable
+        -mstack-arrays                           : enable
+        -mno-stack-arrays                        : disable
+        -mvector                                 : enable
+        -mvector-advance-gather                  : enable
+        -mvector-advance-gather-limit            : 56
+        -mvector-dependency-test                 : enable
+        -mvector-floating-divide-instruction     : disable
+        -mvector-fma                             : enable
+        -mvector-intrinsic-check                 : disable
+        -mvector-iteration                       : enable
+        -mvector-iteration-unsafe                : enable
+        -mvector-loop-count-test                 : disable
+        -mvector-low-precise-divide-function     : disable
+        -mvector-merge-conditional               : enable
+        -mvector-packed                          : disable
+        -mvector-power-to-explog                 : disable
+        -mvector-power-to-sqrt                   : enable
+        -mvector-reduction                       : enable
+        -mvector-shortloop-reduction             : disable
+        -mvector-sqrt-instruction                : disable
+        -mvector-threshold                       : 5
+        -mwork-vector-kind=none                  : disable
+
+      Parallelization Options : 
+        -fopenmp                                 : enable
+        -mparallel                               : disable
+        -mparallel-innerloop                     : disable
+        -mparallel-omp-routine                   : enable
+        -mparallel-outerloop-strip-mine          : disable
+        -mparallel-sections                      : disable
+        -mparallel-threshold                     : 2000
+        -mschedule-dynamic                       : disable
+        -mschedule-runtime                       : disable
+        -mschedule-static                        : disable
+        -mschedule-chunk-size                    : 0
+        -pthread                                 : disable
+
+      Inlining Options : 
+        -finline-copy-arguments                  : disable
+        -finline-functions                       : enable
+        -finline-max-depth                       : 2
+        -finline-max-function-size               : 50
+        -finline-max-times                       : 6
+
+      Code Generation Options : 
+        -finstrument-functions                   : disable
+        -fpic | -fPIC                            : disable
+        -ftrace                                  : disable
+        -p                                       : disable
+
+      Debugging Options : 
+        -fbounds-check                           : disable
+        -fcheck=all                              : disable
+        -fcheck=alias                            : disable
+        -fcheck=bits                             : disable
+        -fcheck=bounds                           : disable
+        -fcheck=dangling                         : disable
+        -fcheck=do                               : disable
+        -fcheck=iovf                             : disable
+        -fcheck=pointer                          : disable
+        -fcheck=present                          : disable
+        -fcheck=recursion                        : disable
+        -g                                       : disable
+        -minit-stack                             : not specified
+        -mmemory-trace                           : disable
+        -mmemory-trace-full                      : disable
+        -traceback                               : disable
+
+      Language Options : 
+        -bss                                     : disable
+        -fdefault-integer                        : 4
+        -fdefault-double                         : 8
+        -fdefault-real                           : 4
+        -fextend-source                          : disable
+        -ffree-form                              : disable
+        -ffixed-form                             : enable
+        -ff90-sign                               : disable
+        -fmax-continuation-lines                 : 1023
+        -frealloc-lhs                            : enable
+        -frealloc-lhs-array                      : enable
+        -frealloc-lhs-scalar                     : enable
+        -save                                    : disable
+        -std                                     : Fortran 2008
+
+      Message Options : 
+        -Wall                                    : disable
+        -Werror                                  : disable
+        -Wextension                              : enable
+        -Wobsolescent                            : enable
+        -Woverflow                               : disable
+        -Woverflow-errors                        : disable
+        -fdiag-inline                            : 2
+        -fdiag-parallel                          : 2
+        -fdiag-vector                            : 2
+        -pedantic-errors                         : disable
+        -w                                       : disable
+
+      List Output Options : 
+        -report-file                             : not specified
+        -report-append-mode                      : disable
+        -report-all                              : enable
+        -report-cg                               : enable
+        -report-diagnostics                      : enable
+        -report-format                           : enable
+        -report-inline                           : enable
+        -report-option                           : enable
+        -report-vector                           : enable
+
+      Directory Options : 
+        -fintrinsic-modules-path                 : /opt/nec/ve/nfort/3.2.0/include
+        -module                                  : not specified
+
+      Miscellaneous Options : 
+        -v                                       : disable
+
+
+NEC Fortran Compiler (3.2.0) for Vector Engine   Fri May 21 01:36:58 2021
+FILE NAME: ua.f
+
+PROCEDURE NAME: UA
+DIAGNOSTIC LIST
+
+ LINE              DIAGNOSTIC MESSAGE
+
+    65: inl(1212): Source for routine not found.: CHECK_TIMER_FLAG
+   122: vec( 103): Unvectorized loop.
+   122: vec( 110): Vectorization obstructive procedure reference.: TIMER_CLEAR
+   123: inl(1212): Source for routine not found.: TIMER_CLEAR
+   125: inl(1212): Source for routine not found.: TIMER_START
+   127: inl(1212): Source for routine not found.: ALLOC_SPACE
+   130: inl(1212): Source for routine not found.: CREATE_INITIAL_GRID
+   132: inl(1212): Source for routine not found.: R_INIT_OMP
+   133: inl(1212): Source for routine not found.: NR_INIT_OMP
+   135: inl(1212): Source for routine not found.: INIT_LOCKS
+   138: inl(1212): Source for routine not found.: COEF
+   139: inl(1212): Source for routine not found.: GEOM1
+   142: inl(1212): Source for routine not found.: SETDEF
+   145: inl(1212): Source for routine not found.: SETPCMO_PRE
+   149: inl(1212): Source for routine not found.: MORTAR
+   150: inl(1212): Source for routine not found.: PREPWORK
+   151: inl(1212): Source for routine not found.: ADAPTATION
+   152: inl(1212): Source for routine not found.: TIMER_STOP
+   157: opt(3008): Reference within a conditional branch moved outside loop.
+   162: inl(1212): Source for routine not found.: R_INIT
+   166: vec( 103): Unvectorized loop.
+   166: vec( 110): Vectorization obstructive procedure reference.: TIMER_CLEAR
+   173: inl(1212): Source for routine not found.: CONVECT
+   177: inl(1212): Source for routine not found.: TRANSF
+   182: par(1801): Parallel routine generated.: MAIN_$1
+   184: vec( 110): Vectorization obstructive procedure reference.: LAPLACIAN
+   184: par(1803): Parallelized by "do".
+   184: vec( 103): Unvectorized loop.
+   185: inl(1212): Source for routine not found.: LAPLACIAN
+   190: par(1803): Parallelized by "do".
+   190: vec( 103): Unvectorized loop.
+   190: vec( 113): Overhead of loop division is too large.
+   191: vec( 101): Vectorized loop.
+   192: opt(1418): Constant-length loop is expanded.
+   193: opt(1418): Constant-length loop is expanded.
+   202: inl(1212): Source for routine not found.: TRANSFB
+   208: par(1801): Parallel routine generated.: MAIN_$2
+   209: opt(3008): Reference within a conditional branch moved outside loop.
+   209: par(1803): Parallelized by "do".
+   210: opt(3008): Reference within a conditional branch moved outside loop.
+   210: vec( 103): Unvectorized loop.
+   210: vec( 110): Vectorization obstructive procedure reference.: FACEV
+   212: inl(1212): Source for routine not found.: FACEV
+   218: inl(1212): Source for routine not found.: COL2
+   221: inl(1212): Source for routine not found.: DIFFUSION
+   225: inl(1212): Source for routine not found.: ADD2
+   242: inl(1212): Source for routine not found.: TIMER_READ
+   244: inl(1212): Source for routine not found.: VERIFY
+   250: inl(1212): Source for routine not found.: PRINT_RESULTS
+   260: vec( 103): Unvectorized loop.
+   260: vec( 110): Vectorization obstructive procedure reference.: TIMER_READ
+   267: opt(3008): Reference within a conditional branch moved outside loop.
+   267: vec( 103): Unvectorized loop.
+   267: vec( 180): I/O statement obstructs vectorization.
+   268: opt(1118): This I/O statement inhibits optimization of loop.
+
+
+NEC Fortran Compiler (3.2.0) for Vector Engine   Fri May 21 01:36:58 2021
+FILE NAME: ua.f
+
+PROCEDURE NAME: UA
+FORMAT LIST
+
+ Loop Mark                              Line Mark
+ ---------                              ---------
+ C - Conditionally Vectorized           C - Vector Scatter
+ P - Parallelized                       F - Fused-multiply-add
+ S - Partially Vectorized               G - Vector Gather
+ U - Unrolled                           I - Inlined
+ V - Vectorized                         M - Vector Matrix Multiply
+ W - Collapsed and Vectorized           R - Retain
+ Y - Parallelized and Vectorized        V - Vreg
+ X - Interchanged and Vectorized        
+ + - Not Vectorized                     
+ * - Expanded                           
+
+ LINE   LOOP      STATEMENT
+
+    44:                 program ua
+    45:           
+    46:                 use ua_data
+    47:                 implicit none
+    48:           
+    49:                 integer          step, ie,iside,i,j, fstatus,k
+    50:                 external         timer_read
+    51:                 double precision timer_read, mflops, tmax, nelt_tot
+    52:                 character        class
+    53:                 logical          ifmortar, verified
+    54:           !$    integer          omp_get_max_threads
+    55:           !$    external         omp_get_max_threads
+    56:           
+    57:                 double precision t2, trecs(t_last)
+    58:                 character t_names(t_last)*10
+    59:           
+    60:           c---------------------------------------------------------------------
+    61:           c     Read input file (if it exists), else take
+    62:           c     defaults from parameters
+    63:           c---------------------------------------------------------------------
+    64:            
+    65:                 call check_timer_flag( timeron )
+    66:                 if (timeron) then
+    67:                    t_names(t_total) = 'total'
+    68:                    t_names(t_init) = 'init'
+    69:                    t_names(t_convect) = 'convect'
+    70:                    t_names(t_transfb_c) = 'transfb_c'
+    71:                    t_names(t_diffusion) = 'diffusion'
+    72:                    t_names(t_transf) = 'transf'
+    73:                    t_names(t_transfb) = 'transfb'
+    74: +======>           t_names(t_adaptation) = 'adaptation'
+    75:                    t_names(t_transf2) = 'transf+b'
+    76:                    t_names(t_add2) = 'add2'
+    77:                 endif
+    78:           
+    79:                 write (*,1000)
+    80:                 open (unit=2,file='inputua.data',status='old', iostat=fstatus)
+    81:           
+    82:                 if (fstatus .eq. 0) then
+    83:                   write(*,233)
+    84:            233    format(' Reading from input file inputua.data')
+    85:                   read (2,*) fre
+    86:                   read (2,*) niter
+    87:                   read (2,*) nmxh
+    88:                   read (2,*) alpha
+    89:                   class = 'U'
+    90:                   close(2)
+    91:                 else
+    92:                   write(*,234)
+    93:                   fre        = fre_default
+    94:                   niter      = niter_default
+    95:                   nmxh       = nmxh_default
+    96:                   alpha      = alpha_default
+    97:                   class      = class_default
+    98:                 endif
+    99:            234  format(' No input file inputua.data. Using compiled defaults')
+   100:           
+   101:                 dlmin = 0.5d0**refine_max
+   102:                 dtime = 0.04d0*dlmin
+   103:           
+   104:                 write (*,1001) refine_max
+   105:                 write (*,1002) fre
+   106:                 write (*,1003) niter, dtime
+   107:                 write (*,1004) nmxh
+   108:                 write (*,1005) alpha
+   109:           !$    write (*,1006) omp_get_max_threads()
+   110:                 write (*,*)
+   111:           
+   112:           
+   113:            1000 format(//,' NAS Parallel Benchmarks (NPB3.4-OMP)',
+   114:                >          ' - UA Benchmark', /)
+   115:            1001 format(' Levels of refinement:        ', i8)
+   116:            1002 format(' Adaptation frequency:        ', i8)
+   117:            1003 format(' Time steps:                  ', i8, '    dt: ', g15.6)
+   118:            1004 format(' CG iterations:               ', i8)
+   119:            1005 format(' Heat source radius:          ', f8.4)
+   120:            1006 format(' Number of available threads: ', i8)
+   121:           
+   122: +------>        do i = 1, t_last
+   123: |                  call timer_clear(i)
+   124: +------         end do
+   125:                 if (timeron) call timer_start(t_init)
+   126:           
+   127:                 call alloc_space
+   128:           
+   129:           c.....set up initial mesh (single element) and solution (all zero)
+   130:                 call create_initial_grid
+   131:           
+   132:                 call r_init_omp(ta1,ntot,0.d0)
+   133:                 call nr_init_omp(sje,4*6*nelt,0)
+   134:           
+   135:                 call init_locks
+   136:           
+   137:           c.....compute tables of coefficients and weights
+   138:                 call coef
+   139:                 call geom1
+   140:           
+   141:           c.....compute the discrete laplacian operators
+   142:                 call setdef
+   143:           
+   144:           c.....prepare for the preconditioner
+   145:                 call setpcmo_pre
+   146:           
+   147:           c.....refine initial mesh and do some preliminary work
+   148:                 time = 0.d0
+   149:                 call mortar
+   150:                 call prepwork
+   151:                 call adaptation(ifmortar,0)
+   152:                 if (timeron) call timer_stop(t_init)
+   153:           
+   154:                 call timer_clear(1)
+   155:           
+   156:                 time = 0.d0
+   157: +------>        do step= 0, niter
+   158: |         
+   159: |                 if (step .eq. 1) then
+   160: |         c.........reset the solution and start the timer, keep track of total no elms
+   161: |         
+   162: |                   call r_init(ta1,ntot,0.d0)
+   163: |         
+   164: |                   time = 0.d0
+   165: |                   nelt_tot = 0.d0
+   166: |+----->            do i = 1, t_last
+   167: ||                     if (i.ne.t_init) call timer_clear(i)
+   168: |+-----             end do
+   169: |                   call timer_start(1)
+   170: |                 endif
+   171: |         
+   172: |         c.......advance the convection step
+   173: |                 call convect(ifmortar)
+   174: |         
+   175: |                 if (timeron) call timer_start(t_transf2)
+   176: |         c.......prepare the intital guess for cg
+   177: |                 call transf(tmort,ta1)
+   178: |         
+   179: |         c.......compute residual for diffusion term based on intital guess
+   180: |         
+   181: |         c.......compute the left hand side of equation, lapacian t
+   182: |         c$OMP PARALLEL DEFAULT(SHARED) PRIVATE(ie,k,j,i)
+   183: |         c$OMP DO
+   184: |P----->          do ie = 1,nelt
+   185: ||                  call laplacian(ta2(1,1,1,ie),ta1(1,1,1,ie),size_e(ie))
+   186: |P-----           end do
+   187: |         c$OMP END DO
+   188: |         c.......compute the residual
+   189: |         c$OMP DO
+   190: |P----->          do ie = 1, nelt
+   191: ||V---->            do k=1,lx1
+   192: |||*--->              do j=1,lx1
+   193: ||||*-->                do i=1,lx1
+   194: |||||                     trhs(i,j,k,ie) = trhs(i,j,k,ie) - ta2(i,j,k,ie)
+   195: ||||*--                 end do
+   196: |||*---               end do
+   197: ||V----             end do
+   198: |P-----           end do
+   199: |         c$OMP END DO
+   200: |         c$OMP END PARALLEL
+   201: |         c.......get the residual on mortar
+   202: |                 call transfb(rmor,trhs)
+   203: |                 if (timeron) call timer_stop(t_transf2)
+   204: |         
+   205: |         c.......apply boundary condition: zero out the residual on domain boundaries
+   206: |         
+   207: |         c.......apply boundary conidtion to trhs
+   208: |         c$OMP PARALLEL DO DEFAULT(SHARED) PRIVATE(ie,iside)
+   209: |P----->          do ie=1,nelt
+   210: ||+---->            do iside=1,nsides
+   211: |||                   if (cbc(iside,ie).eq.0) then
+   212: |||                     call facev(trhs(1,1,1,ie),iside,0.d0)
+   213: |||                   end if
+   214: ||+----             end do
+   215: |P-----           end do
+   216: |         c$OMP END PARALLELDO
+   217: |         c.......apply boundary condition to rmor
+   218: |                 call col2(rmor,tmmor,nmor)
+   219: |         
+   220: |         c.......call the conjugate gradient iterative solver
+   221: |                 call diffusion(ifmortar)
+   222: |         
+   223: |         c.......add convection and diffusion
+   224: |                 if (timeron) call timer_start(t_add2)
+   225: |                 call add2(ta1,t,ntot)
+   226: |                 if (timeron) call timer_stop(t_add2)
+   227: |         
+   228: |          
+   229: |         c.......perform mesh adaptation
+   230: |                 time=time+dtime
+   231: |                 if ((step.ne.0).and.(step/fre*fre .eq. step)) then
+   232: |                    if (step .ne. niter) then
+   233: |                      call adaptation(ifmortar,step)
+   234: |                    end if
+   235: |                 else
+   236: |                   ifmortar = .false.
+   237: |                 end if
+   238: |                 nelt_tot = nelt_tot + dble(nelt)
+   239: +------         end do
+   240:           
+   241:                 call timer_stop(1)
+   242:                 tmax = timer_read(1)
+   243:            
+   244:                 call verify(class, verified)
+   245:           
+   246:           c.....compute millions of collocation points advanced per second.
+   247:           c.....diffusion: nmxh advancements, convection: 1 advancement
+   248:                 mflops = nelt_tot*dble(lx1*lx1*lx1*(nmxh+1))/(tmax*1.d6)
+   249:           
+   250:                 call print_results('UA', class, refine_max, 0, 0, niter,
+   251:                &     tmax, mflops, '    coll. point advanced',
+   252:                &     verified, npbversion,compiletime, cs1, cs2, cs3, cs4, cs5,
+   253:                &     cs6, '(none)')
+   254:           
+   255:           c---------------------------------------------------------------------
+   256:           c      More timers
+   257:           c---------------------------------------------------------------------
+   258:                 if (.not.timeron) goto 999
+   259:           
+   260: +------>        do i=1, t_last
+   261: |                  trecs(i) = timer_read(i)
+   262: +------         end do
+   263:                 if (tmax .eq. 0.0) tmax = 1.0
+   264:           
+   265:                 write(*,800)
+   266:            800  format('  SECTION     Time (secs)')
+   267: +------>        do i=1, t_last
+   268: |                  write(*,810) t_names(i), trecs(i), trecs(i)*100./tmax
+   269: |                  if (i.eq.t_transfb_c) then
+   270: |                     t2 = trecs(t_convect) - trecs(t_transfb_c)
+   271: |                     write(*,820) 'sub-convect ', t2, t2*100./tmax
+   272: |                  else if (i.eq.t_transfb) then
+   273: |                     t2 = trecs(t_diffusion) - trecs(t_transf) - trecs(t_transfb)
+   274: |                     write(*,820) 'sub-diffuse ', t2, t2*100./tmax
+   275: |                  endif
+   276: |          810     format(2x,a15,' :',f9.3,'  ( ',f6.2,' %)')
+   277: |          820     format(2x,a15,':',f9.3,'  ( ',f6.2,' %)')
+   278: +------         end do
+   279:           
+   280:            999  continue
+   281:           
+   282:                 end
+
+
+NEC Fortran Compiler (3.2.0) for Vector Engine   Fri May 21 01:36:58 2021
+FILE NAME: ua.f
+
+PROCEDURE NAME: UA
+INLINE LIST
+
+  ROOT: UA (ua.f:44)
+  -> NOINLINE: CHECK_TIMER_FLAG (ua.f:65)
+     *** Source for routine not found.
+  -> NOINLINE: TIMER_CLEAR (ua.f:123)
+     *** Source for routine not found.
+  -> NOINLINE: TIMER_START (ua.f:125)
+     *** Source for routine not found.
+  -> NOINLINE: ALLOC_SPACE (ua.f:127)
+     *** Source for routine not found.
+  -> NOINLINE: CREATE_INITIAL_GRID (ua.f:130)
+     *** Source for routine not found.
+  -> NOINLINE: R_INIT_OMP (ua.f:132)
+     *** Source for routine not found.
+  -> NOINLINE: NR_INIT_OMP (ua.f:133)
+     *** Source for routine not found.
+  -> NOINLINE: INIT_LOCKS (ua.f:135)
+     *** Source for routine not found.
+  -> NOINLINE: COEF (ua.f:138)
+     *** Source for routine not found.
+  -> NOINLINE: GEOM1 (ua.f:139)
+     *** Source for routine not found.
+  -> NOINLINE: SETDEF (ua.f:142)
+     *** Source for routine not found.
+  -> NOINLINE: SETPCMO_PRE (ua.f:145)
+     *** Source for routine not found.
+  -> NOINLINE: MORTAR (ua.f:149)
+     *** Source for routine not found.
+  -> NOINLINE: PREPWORK (ua.f:150)
+     *** Source for routine not found.
+  -> NOINLINE: ADAPTATION (ua.f:151)
+     *** Source for routine not found.
+  -> NOINLINE: TIMER_STOP (ua.f:152)
+     *** Source for routine not found.
+  -> NOINLINE: TIMER_CLEAR (ua.f:154)
+     *** Source for routine not found.
+  -> NOINLINE: R_INIT (ua.f:162)
+     *** Source for routine not found.
+  -> NOINLINE: TIMER_CLEAR (ua.f:167)
+     *** Source for routine not found.
+  -> NOINLINE: TIMER_START (ua.f:169)
+     *** Source for routine not found.
+  -> NOINLINE: CONVECT (ua.f:173)
+     *** Source for routine not found.
+  -> NOINLINE: TIMER_START (ua.f:175)
+     *** Source for routine not found.
+  -> NOINLINE: TRANSF (ua.f:177)
+     *** Source for routine not found.
+  -> NOINLINE: LAPLACIAN (ua.f:185)
+     *** Source for routine not found.
+  -> NOINLINE: TRANSFB (ua.f:202)
+     *** Source for routine not found.
+  -> NOINLINE: TIMER_STOP (ua.f:203)
+     *** Source for routine not found.
+  -> NOINLINE: FACEV (ua.f:212)
+     *** Source for routine not found.
+  -> NOINLINE: COL2 (ua.f:218)
+     *** Source for routine not found.
+  -> NOINLINE: DIFFUSION (ua.f:221)
+     *** Source for routine not found.
+  -> NOINLINE: TIMER_START (ua.f:224)
+     *** Source for routine not found.
+  -> NOINLINE: ADD2 (ua.f:225)
+     *** Source for routine not found.
+  -> NOINLINE: TIMER_STOP (ua.f:226)
+     *** Source for routine not found.
+  -> NOINLINE: ADAPTATION (ua.f:233)
+     *** Source for routine not found.
+  -> NOINLINE: TIMER_STOP (ua.f:241)
+     *** Source for routine not found.
+  -> NOINLINE: TIMER_READ (ua.f:242)
+     *** Source for routine not found.
+  -> NOINLINE: VERIFY (ua.f:244)
+     *** Source for routine not found.
+  -> NOINLINE: PRINT_RESULTS (ua.f:250)
+     *** Source for routine not found.
+  -> NOINLINE: TIMER_READ (ua.f:261)
+     *** Source for routine not found.
+
+
+NEC Fortran Compiler (3.2.0) for Vector Engine   Fri May 21 01:36:58 2021
+FILE NAME: ua.f
+
+PROCEDURE NAME: UA
+VECTORIZATION LIST
+
+  LOOP BEGIN: (ua.f:209)
+    <Unvectorized loop.>
+
+    LOOP BEGIN: (ua.f:210)
+      <Unvectorized loop.>
+      *** Vectorization obstructive procedure reference. : FACEV (ua.f:210)
+    LOOP END
+  LOOP END
+
+
+NEC Fortran Compiler (3.2.0) for Vector Engine   Fri May 21 01:36:58 2021
+FILE NAME: ua.f
+
+PROCEDURE NAME: UA
+CODE GENERATION LIST
+
+  Hardware registers
+    Reserved                   : 10 [sl fp lr sp s12 s13 tp got plt s17]
+    Callee-saved               : 16 [s18-s33]
+    Assigned
+      Scalar registers         : 24 [s0-s2 s8-s12 s15-s16 s18 s23-s27 s31-s33 s59-s63]
+      Vector registers         :  0
+      Vector mask registers    :  0
+      VREG directive           :  0
+
+  Routine stack
+    Total size                 : 224 bytes
+      Register spill area      :   0 bytes
+      Parameter area           :  24 bytes
+      Register save area       : 176 bytes
+      User data area           :  16 bytes
+      Others                   :   8 bytes
+
+    Note: Total size of Routine stack does not include
+          the size extended by alloca() and so on.
+
+  LOOP BEGIN: (ua.f:209)
+    *** Estimated execution cycle                       : 5
+    *** The number of SCALAR REGISTER TRANSFER          : 1
+
+    LOOP BEGIN: (ua.f:210)
+      *** Estimated execution cycle                     : 28
+      *** The number of SCALAR REGISTER TRANSFER        : 6
+    LOOP END
+  LOOP END
+
+

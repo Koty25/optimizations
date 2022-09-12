@@ -1,0 +1,80 @@
+#!/bin/csh
+#export PATH=/opt/nec/ve/nfort/3.0.4/bin:$PATH
+#export PATH=/opt/nec/ve/ncc/3.0.4/bin:$PATH
+#source /home/intel/compilers_and_libraries/linux/bin/compilervars.sh intel64
+
+csh ./comp
+
+set logfile=npb-run.log
+touch $logfile
+set tmpf=npb.tmp.$$
+
+set timestamp=`date +"%Y%m%d_%I%M"`
+set expdir=experiments/exp_$timestamp
+if ( ! -d $expdir) mkdir -p $expdir
+
+echo "Date: `date`" >> $logfile
+echo "Host: `hostname`" >> $logfile
+module list >>& $logfile
+echo "" >> $logfile
+
+set cnt=0
+set cntf=0
+set cntp=0
+
+set aps=()
+set spv=()
+set c="B"
+setenv NPB_TIMER_FLAG 1
+
+foreach nt (4)
+foreach cf (ncc intel)
+
+set bindir=bin/bin_$cf
+set outdir=bin/out_$cf
+if ( ! -d $outdir) mkdir -p $outdir
+
+foreach ap (bt cg ep ft mg sp ua)
+   set pgm=${ap}.${c}.x
+   set pgmx=$bindir/$pgm
+   @ cnt++
+   if ( -e $pgmx ) then
+      set outf=$outdir/${ap}.${c}.out.$nt
+      touch $outf
+      setenv OMP_NUM_THREADS $nt
+      $pgmx >&! $tmpf
+      
+      grep -i successful $tmpf >& /dev/null
+      if ( $status == 0 ) then
+         echo ">>> run $cf/$pgm nt=$nt - successful" | tee -a $logfile
+      else
+         echo "*** run $cf/$pgm nt=$nt - FAILED" | tee -a $logfile
+         @ cntf++
+      endif
+      cat $tmpf >> $outf
+      cat $outf | grep "NAS Parallel Benchmarks (NPB3.4-OMP)" | awk '{printf "%s,", $6}' >> times.${cf}.csv
+      cat $outf | grep "Time in seconds =" | awk '{print $5}' >> times.${cf}.csv
+      \rm $tmpf
+   else
+      echo "... run $cf/$pgm nt=$nt - not present" | tee -a $logfile
+      @ cntp++
+   endif
+end
+cp -r $outdir $expdir
+
+end
+end
+
+
+
+echo "" >> $logfile
+echo "Date: `date`" >> $logfile
+echo "Total number of cases: $cnt" | tee -a $logfile
+echo "Total number of FAILED cases: $cntf" | tee -a $logfile
+echo "Total number of not present cases: $cntp" | tee -a $logfile
+echo "" >> $logfile
+cp $logfile $expdir
+cp npb-make.log $expdir
+cp npb-make.out $expdir
+cp times.csv $expdir
+

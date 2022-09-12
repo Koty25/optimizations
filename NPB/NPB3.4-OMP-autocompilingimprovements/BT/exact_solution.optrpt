@@ -1,0 +1,50 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.1 Build 20201112_000000
+
+Compiler options: -c -O4 -fopenmp -qopt-report=5 -qopt-report-phase=vec
+
+Begin optimization report for: EXACT_SOLUTION
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at exact_solution.f(21,69)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at exact_solution.f(21,69)
+   remark #15389: vectorization support: reference dtemp(m) has unaligned access   [ exact_solution.f(20,10) ]
+   remark #15388: vectorization support: reference ce(m,1) has aligned access   [ exact_solution.f(20,10) ]
+   remark #15389: vectorization support: reference ce(m,2) has unaligned access   [ exact_solution.f(20,10) ]
+   remark #15388: vectorization support: reference ce(m,5) has aligned access   [ exact_solution.f(20,10) ]
+   remark #15389: vectorization support: reference ce(m,8) has unaligned access   [ exact_solution.f(20,10) ]
+   remark #15388: vectorization support: reference ce(m,11) has aligned access   [ exact_solution.f(20,10) ]
+   remark #15388: vectorization support: reference ce(m,3) has aligned access   [ exact_solution.f(20,30) ]
+   remark #15389: vectorization support: reference ce(m,6) has unaligned access   [ exact_solution.f(20,30) ]
+   remark #15388: vectorization support: reference ce(m,9) has aligned access   [ exact_solution.f(20,30) ]
+   remark #15389: vectorization support: reference ce(m,12) has unaligned access   [ exact_solution.f(20,30) ]
+   remark #15389: vectorization support: reference ce(m,4) has unaligned access
+   remark #15388: vectorization support: reference ce(m,7) has aligned access
+   remark #15389: vectorization support: reference ce(m,10) has unaligned access
+   remark #15388: vectorization support: reference ce(m,13) has aligned access
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.521
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 7 
+   remark #15450: unmasked unaligned unit stride loads: 6 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 65 
+   remark #15477: vector cost: 35.500 
+   remark #15478: estimated potential speedup: 1.330 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at exact_solution.f(21,69)
+<Remainder loop for vectorization>
+LOOP END
+===========================================================================
